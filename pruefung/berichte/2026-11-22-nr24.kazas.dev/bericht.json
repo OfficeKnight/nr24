@@ -1,0 +1,292 @@
+{
+  "werkzeug": "nr24-Abnahmepruefung 1.0.0",
+  "ziel": "https://nr24.kazas.dev/",
+  "hauptadresse": null,
+  "modus": "demo",
+  "beginn": "2026-11-22T21:27:12+01:00",
+  "abrufe": 5,
+  "erfasste_html_seiten": 0,
+  "gesamtergebnis": "nicht bestanden",
+  "pruefungen": [
+    {
+      "nummer": 1,
+      "titel": "Adressen und Weiterleitungen",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "http leitet per 301 auf https um",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "http://nr24.kazas.dev/",
+              "fundstelle": "Erster Abruf",
+              "befund": "Verbindung fehlgeschlagen (Name nicht auflösbar)",
+              "art": "hinweis"
+            },
+            {
+              "adresse": "http://www.nr24.kazas.dev/",
+              "fundstelle": "DNS",
+              "befund": "Variante hat keinen DNS-Eintrag, im Modus demo nur ein Hinweis",
+              "art": "hinweis"
+            }
+          ]
+        },
+        {
+          "name": "Eine Hauptadresse für alle Varianten",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Startseite",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://nr24.kazas.dev/",
+          "fundstelle": "Weiterleitungsliste",
+          "befund": "Keine Datei mit --weiterleitungen angegeben, alte Adressen wurden nicht geprüft",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 2,
+      "titel": "TLS",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Nur TLS 1.2 und 1.3 werden angenommen",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Verbindung",
+              "befund": "Ausgehende Verbindungen laufen über den Proxy http://127.0.0.1:33161. Ein Proxy kann TLS neu aufbauen, dann würde der Proxy statt des Servers geprüft. Bitte ohne Proxy ausführen.",
+              "art": "hinweis"
+            }
+          ]
+        },
+        {
+          "name": "Zertifikat gilt noch mindestens 30 Tage",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Verbindung",
+              "befund": "Ausgehende Verbindungen laufen über den Proxy http://127.0.0.1:33161. Ein Proxy kann TLS neu aufbauen, dann würde der Proxy statt des Servers geprüft. Bitte ohne Proxy ausführen.",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 3,
+      "titel": "Sicherheitsheader und Cookies",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 4,
+      "titel": "Vor Einwilligung",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 5,
+      "titel": "Auffindbarkeit",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 6,
+      "titel": "Strukturierte Daten",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 7,
+      "titel": "Pflichtangaben",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 8,
+      "titel": "Barrierefreiheit",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 9,
+      "titel": "Leistung",
+      "status": "nicht prüfbar",
+      "teilpruefungen": [
+        {
+          "name": "Voraussetzung",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "https://nr24.kazas.dev/",
+              "fundstelle": "Prüflauf",
+              "befund": "Startseite nicht erreichbar, https://nr24.kazas.dev/ liefert Verbindung fehlgeschlagen (Proxy verweigert die Verbindung mit Status 502)",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 10,
+      "titel": "E-Mail-DNS",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "SPF endet auf -all oder ~all",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "nr24.kazas.dev",
+              "fundstelle": "TXT nr24.kazas.dev",
+              "befund": "Domain existiert nicht",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "DMARC vorhanden",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "nr24.kazas.dev",
+              "fundstelle": "TXT _dmarc.kazas.dev",
+              "befund": "v=DMARC1; p=none;",
+              "art": "ok"
+            },
+            {
+              "adresse": "nr24.kazas.dev",
+              "fundstelle": "TXT _dmarc.kazas.dev",
+              "befund": "Gilt über die Organisationsdomain kazas.dev",
+              "art": "hinweis"
+            },
+            {
+              "adresse": "nr24.kazas.dev",
+              "fundstelle": "TXT _dmarc.kazas.dev",
+              "befund": "Richtlinie none beobachtet nur und schützt nicht vor Fälschungen",
+              "art": "hinweis"
+            }
+          ]
+        },
+        {
+          "name": "DKIM unter dem angegebenen Selektor",
+          "status": "nicht prüfbar",
+          "belege": [
+            {
+              "adresse": "nr24.kazas.dev",
+              "fundstelle": "--dkim-selektor",
+              "befund": "Kein Selektor angegeben. Den Selektor nennt der E-Mail-Anbieter, etwa in einer Kopfzeile DKIM-Signature mit s=",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "nr24.kazas.dev",
+          "fundstelle": "Abfrage",
+          "befund": "Domain nr24.kazas.dev, abgefragt über DNS über HTTPS (https://dns.google/resolve)",
+          "art": "hinweis"
+        }
+      ]
+    }
+  ]
+}

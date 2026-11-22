@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://{{HOST}}/</loc></url>
+  <url><loc>https://{{HOST}}/ersatzteile/</loc></url>
+  <url><loc>https://{{HOST}}/ersatzteile/displays/</loc></url>
+  <url><loc>https://{{HOST}}/ersatzteile/displays/displaykabel-x72/</loc></url>
+  <url><loc>https://{{HOST}}/notebook-reparatur/</loc></url>
+  <url><loc>https://{{HOST}}/impressum/</loc></url>
+  <url><loc>https://{{HOST}}/datenschutz/</loc></url>
+  <url><loc>https://{{HOST}}/agb/</loc></url>
+  <url><loc>https://{{HOST}}/widerruf/</loc></url>
+  <url><loc>https://{{HOST}}/widerruf/erklaeren/</loc></url>
+</urlset>

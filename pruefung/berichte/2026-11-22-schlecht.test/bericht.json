@@ -1,0 +1,1322 @@
+{
+  "werkzeug": "nr24-Abnahmepruefung 1.0.0",
+  "ziel": "https://schlecht.test/",
+  "hauptadresse": "https://schlecht.test/",
+  "modus": "demo",
+  "beginn": "2026-11-22T21:25:14+01:00",
+  "abrufe": 19,
+  "erfasste_html_seiten": 5,
+  "gesamtergebnis": "nicht bestanden",
+  "pruefungen": [
+    {
+      "nummer": 1,
+      "titel": "Adressen und Weiterleitungen",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "http leitet per 301 auf https um",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "http://schlecht.test/",
+              "fundstelle": "Statuscode erster Antwort",
+              "befund": "Status 302 statt 301",
+              "art": "fehler"
+            },
+            {
+              "adresse": "http://www.schlecht.test/",
+              "fundstelle": "Statuscode erster Antwort",
+              "befund": "Status 302 statt 301",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Eine Hauptadresse für alle Varianten",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "http://schlecht.test/",
+              "fundstelle": "Weiterleitungskette",
+              "befund": "Zwischenschritt ohne 301, Kette http://schlecht.test/ (302) nach https://schlecht.test/ (200)",
+              "art": "fehler"
+            },
+            {
+              "adresse": "http://www.schlecht.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Endet auf https://www.schlecht.test/ statt auf https://schlecht.test/, Kette http://www.schlecht.test/ (302) nach https://www.schlecht.test/ (200)",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://www.schlecht.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Endet auf https://www.schlecht.test/ statt auf https://schlecht.test/, Kette https://www.schlecht.test/ (200)",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Landet auf https://schlecht.test/ nach 0 Weiterleitung(en)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Alte Adressen leiten per 301 weiter",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/alt/displaykabel.html",
+              "fundstelle": "CSV Zeile 2",
+              "befund": "Status 302 statt 301",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/alt/agb.html",
+              "fundstelle": "CSV Zeile 3",
+              "befund": "Ziel https://schlecht.test/agb/ liefert 404",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 2,
+      "titel": "TLS",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Nur TLS 1.2 und 1.3 werden angenommen",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "schlecht.test:443 TLS 1.0",
+              "befund": "Veraltete Version wird angenommen. Handschlag mit TLSv1 und ECDHE-RSA-AES256-SHA",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "schlecht.test:443 TLS 1.1",
+              "befund": "Veraltete Version wird angenommen. Handschlag mit TLSv1.1 und ECDHE-RSA-AES256-SHA",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "schlecht.test:443 TLS 1.2",
+              "befund": "Angenommen. Handschlag mit TLSv1.2 und ECDHE-RSA-AES256-GCM-SHA384",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "schlecht.test:443 TLS 1.3",
+              "befund": "Angenommen. Handschlag mit TLSv1.3 und TLS_AES_256_GCM_SHA384",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Zertifikat gilt noch mindestens 30 Tage",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Zertifikat schlecht.test",
+              "befund": "Gültig bis Dec  2 20:24:16 2026 GMT, noch 10 Tage, ausgestellt von Beispiel Test-CA, weniger als 30 Tage",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://www.schlecht.test/",
+              "fundstelle": "Zertifikat www.schlecht.test",
+              "befund": "Gültig bis Dec  2 20:24:16 2026 GMT, noch 10 Tage, ausgestellt von Beispiel Test-CA, weniger als 30 Tage",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 3,
+      "titel": "Sicherheitsheader und Cookies",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "HSTS gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "Header Strict-Transport-Security fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "Header Strict-Transport-Security fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "Header Strict-Transport-Security fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "Header Strict-Transport-Security fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "Header Strict-Transport-Security fehlt",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Content-Security-Policy gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "Header Content-Security-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "Header Content-Security-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "Header Content-Security-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "Header Content-Security-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "Header Content-Security-Policy fehlt",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "X-Content-Type-Options gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "Header X-Content-Type-Options fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "Header X-Content-Type-Options fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "Header X-Content-Type-Options fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "Header X-Content-Type-Options fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "Header X-Content-Type-Options fehlt",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Referrer-Policy gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "Header Referrer-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "Header Referrer-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "Header Referrer-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "Header Referrer-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "Header Referrer-Policy fehlt",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Permissions-Policy gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "Header Permissions-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "Header Permissions-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "Header Permissions-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "Header Permissions-Policy fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "Header Permissions-Policy fehlt",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Schutz gegen Einbetten gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "Weder X-Frame-Options noch CSP frame-ancestors im Header",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "Weder X-Frame-Options noch CSP frame-ancestors im Header",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "Weder X-Frame-Options noch CSP frame-ancestors im Header",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "Weder X-Frame-Options noch CSP frame-ancestors im Header",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "Weder X-Frame-Options noch CSP frame-ancestors im Header",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Cookies tragen Secure, HttpOnly und SameSite",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Set-Cookie sitzung",
+              "befund": "Secure fehlt, SameSite fehlt, HttpOnly fehlt bei einem Sitzungs- oder Anmeldecookie",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Set-Cookie werbung_id",
+              "befund": "Secure fehlt, SameSite fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Set-Cookie werbung_id",
+              "befund": "Ohne HttpOnly, für Skripte lesbar. Bitte prüfen, ob das nötig ist",
+              "art": "hinweis"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Umfang",
+          "befund": "Geprüft wurden Cookies aus Set-Cookie-Headern der Endantworten. Per Skript gesetzte Cookies stehen in Prüfung 4",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 4,
+      "titel": "Vor Einwilligung",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Keine Anfragen an fremde Hosts",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Anfrage script an drittanbieter.test",
+              "befund": "GET https://drittanbieter.test/tracker.js",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Anfrage fetch an drittanbieter.test",
+              "befund": "GET https://drittanbieter.test/pixel.gif",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "2 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "2 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "2 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Nur technisch nötige Cookies",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Cookie werbung_id auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Cookie dritt_id auf drittanbieter.test",
+              "befund": "Cookie eines fremden Hosts vor Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Cookie _verfolgung auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Cookie werbung_id auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Cookie werbung_id auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Cookie werbung_id auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Cookie werbung_id auf schlecht.test",
+              "befund": "Nicht als technisch nötig eingestuft, gesetzt ohne Einwilligung",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Cookie sitzung auf schlecht.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Cookie sitzung auf schlecht.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Cookie sitzung auf schlecht.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Cookie sitzung auf schlecht.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Cookie sitzung auf schlecht.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Verfahren",
+          "befund": "Jede Seite wurde in einem neu gestarteten Chromium 157.0.8103.78 geladen, ohne Klick und ohne gespeicherte Daten. Erfasst wurde nach dem Laden und einer kurzen Wartezeit",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 5,
+      "titel": "Auffindbarkeit",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Eigener Titel je Seite",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<title>",
+              "befund": "Titel Shop kommt auf 2 Seiten vor",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "<title>",
+              "befund": "Titel Shop kommt auf 2 Seiten vor",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "<title>",
+              "befund": "Impressum",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "<title>",
+              "befund": "Datenschutz",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "<title>",
+              "befund": "Kasse",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Meta-Beschreibung vorhanden",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "Fehlt oder ist leer",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "12 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "9 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "11 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "5 Zeichen",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Genau eine H1",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<h1>",
+              "befund": "2 Überschriften erster Ebene (Willkommen und Notebook-Ersatzteile)",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "<h1>",
+              "befund": "Displaykabel für Asus X72",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "<h1>",
+              "befund": "Impressum",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "<h1>",
+              "befund": "Datenschutz",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "<h1>",
+              "befund": "Kasse",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Canonical vorhanden",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "0 Angaben statt genau einer",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "/ersatzteile/displays/kabel/ ist keine absolute Adresse",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://andere-domain.example/impressum/ zeigt auf einen anderen Host als schlecht.test",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://schlecht.test/datenschutz/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://schlecht.test/kasse/",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "lang-Attribut gesetzt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<html lang>",
+              "befund": "Attribut lang fehlt",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Bilder mit Alt-Text und festen Maßen",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<img src=/assets/kabel.svg>",
+              "befund": "Es fehlt alt, width und height",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "<img src=/assets/kabel.svg>",
+              "befund": "Es fehlt width und height",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "noindex passend zum Modus demo",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex, im Modus demo Pflicht",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "meta robots",
+              "befund": "meta robots noindex, nofollow",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "meta robots",
+              "befund": "meta robots noindex, nofollow",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "meta robots",
+              "befund": "meta robots noindex, nofollow",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "meta robots",
+              "befund": "meta robots noindex, nofollow",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Keine toten internen Links",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<a href=\"/gibt-es-nicht/\">",
+              "befund": "Ziel https://schlecht.test/gibt-es-nicht/ liefert 404",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "<a href>",
+              "befund": "14 interne Links auf 5 Seiten geprüft",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "sitemap.xml vorhanden und gültig",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/sitemap.xml",
+              "fundstelle": "Sitemap",
+              "befund": "Status 404",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "robots.txt vorhanden",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/robots.txt",
+              "fundstelle": "robots.txt",
+              "befund": "Liefert 404",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 6,
+      "titel": "Strukturierte Daten",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "JSON-LD lesbar",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "script application/ld+json Nr. 1",
+              "befund": "JSON nicht lesbar in Zeile 2, Spalte 84 (Illegal trailing comma before end of object)",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Artikelseiten mit Product, Preis, Währung und Verfügbarkeit",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "JSON-LD Product",
+              "befund": "Artikelseite (Pfad passt zu ^/ersatzteile/[^/]+/[^/]+/$) ohne Product",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Artikelseiten mit BreadcrumbList",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "JSON-LD BreadcrumbList",
+              "befund": "Artikelseite ohne BreadcrumbList",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "FAQ-Bereiche mit FAQPage",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Überschrift FAQ",
+              "befund": "FAQ-Bereich ohne FAQPage",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Startseite mit Firmendaten",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "JSON-LD",
+              "befund": "Keine Firmendaten (Organization, LocalBusiness oder Store)",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 7,
+      "titel": "Pflichtangaben",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Impressum von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Link Impressum",
+              "befund": "Von 5 von 5 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Datenschutz von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Link Datenschutz",
+              "befund": "Von 5 von 5 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "AGB von jeder Seite erreichbar",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Link AGB",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Link AGB",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Link AGB",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Link AGB",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Link AGB",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Widerruf von jeder Seite erreichbar",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Kein Link auf dieser Seite gefunden",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Widerrufsfunktion auffindbar",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Links und Knöpfe",
+              "befund": "Auf 5 Seiten kein Link oder Knopf wie Vertrag widerrufen gefunden",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Preise mit Hinweis auf Mehrwertsteuer und Versand",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Preis 19,90 €",
+              "befund": "Kein Hinweis auf Mehrwertsteuer und Versandkosten",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Preis 11,90 €",
+              "befund": "Kein Hinweis auf Versandkosten",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "Bestellknopf eindeutig beschriftet",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Knopf Bestellen",
+              "befund": "Beschriftung nicht eindeutig, etwa zahlungspflichtig bestellen",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Umfang",
+          "befund": "Geprüft wird nur das Vorhandensein, nicht die inhaltliche oder rechtliche Richtigkeit",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 8,
+      "titel": "Barrierefreiheit",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "axe-core WCAG 2.2 A und AA",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "color-contrast (serious) .blass",
+              "befund": "Elements must meet minimum color contrast ratio thresholds. <p class=\"blass\">Displaykabel für Asus X72 für 19,90 €</p>",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "html-has-lang (serious) html",
+              "befund": "<html> element must have a lang attribute. <html>",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "image-alt (critical) img",
+              "befund": "Images must have alternative text. <img src=\"/assets/kabel.svg\">",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "meta-viewport (moderate) meta[name=\"viewport\"]",
+              "befund": "Zooming and scaling must not be disabled. <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Zoomen am Handy nicht gesperrt",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "Zoomen gesperrt durch user-scalable=no",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Werkzeug",
+          "befund": "axe-core 4.14.0 mit den Regelgruppen wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22a, wcag22aa. Automatische Tests finden nur einen Teil der Barrieren, eine Prüfung von Hand bleibt nötig",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 9,
+      "titel": "Leistung",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Übertragene Daten je Seite unter 0,5 MB",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,603 MB in 6 Anfragen, größte Datei https://schlecht.test/assets/gross.js mit 0,600 MB, Grenze 0,500 MB",
+              "art": "fehler"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,002 MB in 3 Anfragen, größte Datei https://schlecht.test/ersatzteile/displays/kabel/ mit 0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,001 MB in 2 Anfragen, größte Datei https://schlecht.test/impressum/ mit 0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,001 MB in 2 Anfragen, größte Datei https://schlecht.test/datenschutz/ mit 0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,001 MB in 2 Anfragen, größte Datei https://schlecht.test/kasse/ mit 0,001 MB",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Größte Dateien",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://schlecht.test/assets/gross.js",
+              "befund": "0,600 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://schlecht.test/",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/kasse/",
+              "fundstelle": "Datei https://schlecht.test/kasse/",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/ersatzteile/displays/kabel/",
+              "fundstelle": "Datei https://schlecht.test/ersatzteile/displays/kabel/",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/impressum/",
+              "fundstelle": "Datei https://schlecht.test/impressum/",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/datenschutz/",
+              "fundstelle": "Datei https://schlecht.test/datenschutz/",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://schlecht.test/assets/kabel.svg",
+              "befund": "0,001 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://drittanbieter.test/tracker.js",
+              "befund": "0,000 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://schlecht.test/assets/style.css",
+              "befund": "0,000 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://schlecht.test/",
+              "fundstelle": "Datei https://drittanbieter.test/pixel.gif",
+              "befund": "0,000 MB",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Zahl der Anfragen",
+          "befund": "Je Seite zwischen 2 und 6, im Mittel 3,0",
+          "art": "hinweis"
+        },
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Messung",
+          "befund": "Gezählt werden Header und Inhalt jeder Antwort beim ersten Laden ohne Zwischenspeicher. Die Grenze beträgt 500000 Byte",
+          "art": "hinweis"
+        },
+        {
+          "adresse": "https://schlecht.test/",
+          "fundstelle": "Lighthouse",
+          "befund": "Lighthouse ist nicht installiert und wurde deshalb nicht ausgeführt",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 10,
+      "titel": "E-Mail-DNS",
+      "status": "nicht bestanden",
+      "teilpruefungen": [
+        {
+          "name": "SPF endet auf -all oder ~all",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "schlecht.test",
+              "fundstelle": "TXT schlecht.test",
+              "befund": "v=spf1 a mx +all endet auf +all statt auf -all oder ~all",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "DMARC vorhanden",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "schlecht.test",
+              "fundstelle": "TXT _dmarc.schlecht.test",
+              "befund": "Kein Eintrag mit v=DMARC1",
+              "art": "fehler"
+            }
+          ]
+        },
+        {
+          "name": "DKIM unter dem angegebenen Selektor",
+          "status": "nicht bestanden",
+          "belege": [
+            {
+              "adresse": "schlecht.test",
+              "fundstelle": "TXT mail._domainkey.schlecht.test",
+              "befund": "Schlüssel p= ist leer, der Schlüssel ist widerrufen",
+              "art": "fehler"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "schlecht.test",
+          "fundstelle": "Abfrage",
+          "befund": "Domain schlecht.test, abgefragt über Nameserver 127.0.0.1:5353",
+          "art": "hinweis"
+        }
+      ]
+    }
+  ]
+}

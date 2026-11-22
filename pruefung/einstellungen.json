@@ -1,0 +1,29 @@
+{
+  "_beschreibung": "Grenzwerte und Muster der Abnahmeprüfung. Eine eigene Datei kann mit --einstellungen angegeben werden, fehlende Schlüssel werden aus dieser Datei ergänzt.",
+  "max_seiten": 200,
+  "pause_sekunden": 1.0,
+  "zeitlimit_sekunden": 20,
+  "zertifikat_mindesttage": 30,
+  "hsts_mindestalter_sekunden": 15552000,
+  "max_bytes_je_seite": 500000,
+  "browser_wartezeit_ms": 2000,
+  "eigene_hosts": [],
+  "ausschliessen": [
+    "(?i)(logout|abmelden|login|anmelden|registrieren|/konto|/account|/wp-admin)",
+    "(?i)[?&](add-to-cart|add_to_cart|action|aktion)="
+  ],
+  "artikel_muster": [
+    "^/ersatzteile/[^/]+/[^/]+/$"
+  ],
+  "noetige_cookies": [
+    "^(PHPSESSID|JSESSIONID|ASP\\.NET_SessionId|sitzung|session|sessionid|sess_id|sid)$",
+    "^(csrf|csrftoken|xsrf|XSRF-TOKEN|_csrf)$",
+    "^(warenkorb|cart|cart_id|wk)$",
+    "^(cookie_consent|cookieconsent|cookie-einwilligung|einwilligung|consent|CookieConsent|borlabs-cookie)$",
+    "^(__cf_bm|cf_clearance)$"
+  ],
+  "httponly_pflicht_muster": "(?i)(sess|sid|sitzung|auth|token|login|remember)",
+  "httponly_ausnahmen_muster": "(?i)(csrf|xsrf)",
+  "doh_adresse": "https://dns.google/resolve",
+  "axe_tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22a", "wcag22aa"]
+}

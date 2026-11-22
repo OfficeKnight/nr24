@@ -1,0 +1,1616 @@
+{
+  "werkzeug": "nr24-Abnahmepruefung 1.0.0",
+  "ziel": "https://live.test/",
+  "hauptadresse": "https://live.test/",
+  "modus": "live",
+  "beginn": "2026-11-22T21:25:47+01:00",
+  "abrufe": 27,
+  "erfasste_html_seiten": 11,
+  "gesamtergebnis": "bestanden",
+  "pruefungen": [
+    {
+      "nummer": 1,
+      "titel": "Adressen und Weiterleitungen",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "http leitet per 301 auf https um",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "http://live.test/",
+              "fundstelle": "Location",
+              "befund": "301 nach https://live.test/",
+              "art": "ok"
+            },
+            {
+              "adresse": "http://www.live.test/",
+              "fundstelle": "Location",
+              "befund": "301 nach https://live.test/",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Eine Hauptadresse für alle Varianten",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "http://live.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Landet auf https://live.test/ nach 1 Weiterleitung(en)",
+              "art": "ok"
+            },
+            {
+              "adresse": "http://www.live.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Landet auf https://live.test/ nach 1 Weiterleitung(en)",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Landet auf https://live.test/ nach 0 Weiterleitung(en)",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://www.live.test/",
+              "fundstelle": "Endadresse",
+              "befund": "Landet auf https://live.test/ nach 1 Weiterleitung(en)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Alte Adressen leiten per 301 weiter",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/alt/displaykabel.html",
+              "fundstelle": "CSV Zeile 2",
+              "befund": "301 nach https://live.test/ersatzteile/displays/displaykabel-x72/, Ziel liefert 200",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/shop/index.php",
+              "fundstelle": "CSV Zeile 3",
+              "befund": "301 nach https://live.test/, Ziel liefert 200",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/alt/agb.html",
+              "fundstelle": "CSV Zeile 4",
+              "befund": "301 nach https://live.test/agb/, Ziel liefert 200",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 2,
+      "titel": "TLS",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Nur TLS 1.2 und 1.3 werden angenommen",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "live.test:443 TLS 1.0",
+              "befund": "Abgelehnt (TLSV1_ALERT_PROTOCOL_VERSION)",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "live.test:443 TLS 1.1",
+              "befund": "Abgelehnt (TLSV1_ALERT_PROTOCOL_VERSION)",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "live.test:443 TLS 1.2",
+              "befund": "Angenommen. Handschlag mit TLSv1.2 und ECDHE-RSA-AES256-GCM-SHA384",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "live.test:443 TLS 1.3",
+              "befund": "Angenommen. Handschlag mit TLSv1.3 und TLS_AES_256_GCM_SHA384",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Zertifikat gilt noch mindestens 30 Tage",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Zertifikat live.test",
+              "befund": "Gültig bis Nov 22 20:24:16 2027 GMT, noch 365 Tage, ausgestellt von Beispiel Test-CA",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://www.live.test/",
+              "fundstelle": "Zertifikat www.live.test",
+              "befund": "Gültig bis Nov 22 20:24:16 2027 GMT, noch 365 Tage, ausgestellt von Beispiel Test-CA",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 3,
+      "titel": "Sicherheitsheader und Cookies",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "HSTS gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader Strict-Transport-Security",
+              "befund": "max-age=31536000; includeSubDomains (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Content-Security-Policy gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader Content-Security-Policy",
+              "befund": "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none' (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "X-Content-Type-Options gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader X-Content-Type-Options",
+              "befund": "nosniff (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Referrer-Policy gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader Referrer-Policy",
+              "befund": "strict-origin-when-cross-origin (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Permissions-Policy gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader Permissions-Policy",
+              "befund": "camera=(), microphone=(), geolocation=(), payment=() (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Schutz gegen Einbetten gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Antwortheader X-Frame-Options oder CSP frame-ancestors",
+              "befund": "CSP frame-ancestors 'none' (auf 11 von 11 Seiten)",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Cookies tragen Secure, HttpOnly und SameSite",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Set-Cookie sitzung",
+              "befund": "Attribute secure, httponly, samesite=Lax",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Umfang",
+          "befund": "Geprüft wurden Cookies aus Set-Cookie-Headern der Endantworten. Per Skript gesetzte Cookies stehen in Prüfung 4",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 4,
+      "titel": "Vor Einwilligung",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Keine Anfragen an fremde Hosts",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "4 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "Netzwerkanfragen",
+              "befund": "3 Anfragen, alle an eigene Hosts",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Nur technisch nötige Cookies",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "Cookie sitzung auf live.test",
+              "befund": "Steht auf der Liste technisch nötiger Cookies",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Verfahren",
+          "befund": "Jede Seite wurde in einem neu gestarteten Chromium 157.0.8103.78 geladen, ohne Klick und ohne gespeicherte Daten. Erfasst wurde nach dem Laden und einer kurzen Wartezeit",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 5,
+      "titel": "Auffindbarkeit",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Eigener Titel je Seite",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<title>",
+              "befund": "Beispielshop für Notebook-Ersatzteile und Reparatur",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "<title>",
+              "befund": "Ersatzteile für Notebooks im Überblick",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "<title>",
+              "befund": "Notebook-Reparatur in der Werkstatt",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "<title>",
+              "befund": "Kasse und Bestellübersicht",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "<title>",
+              "befund": "Displaykabel für Asus X72 kaufen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "<title>",
+              "befund": "Impressum des Beispielshops",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "<title>",
+              "befund": "Datenschutzerklärung des Beispielshops",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "<title>",
+              "befund": "Allgemeine Geschäftsbedingungen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "<title>",
+              "befund": "Widerrufsbelehrung des Beispielshops",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "<title>",
+              "befund": "Vertrag online widerrufen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "<title>",
+              "befund": "Displays und Displaykabel für Notebooks",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Meta-Beschreibung vorhanden",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "89 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "57 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "69 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "34 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "89 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "40 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "46 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "68 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "44 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "53 Zeichen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "meta name=\"description\"",
+              "befund": "82 Zeichen",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Genau eine H1",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<h1>",
+              "befund": "Notebook-Ersatzteile und Reparatur",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "<h1>",
+              "befund": "Ersatzteile",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "<h1>",
+              "befund": "Notebook-Reparatur",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "<h1>",
+              "befund": "Kasse",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "<h1>",
+              "befund": "Displaykabel für Asus X72",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "<h1>",
+              "befund": "Impressum",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "<h1>",
+              "befund": "Datenschutz",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "<h1>",
+              "befund": "AGB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "<h1>",
+              "befund": "Widerrufsbelehrung",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "<h1>",
+              "befund": "Vertrag widerrufen",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "<h1>",
+              "befund": "Displays und Displaykabel",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Canonical vorhanden",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/ersatzteile/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/notebook-reparatur/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/kasse/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/impressum/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/datenschutz/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/agb/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/widerruf/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/widerruf/erklaeren/",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "link rel=\"canonical\"",
+              "befund": "https://live.test/ersatzteile/displays/",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "lang-Attribut gesetzt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "<html lang>",
+              "befund": "de",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Bilder mit Alt-Text und festen Maßen",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "<img>",
+              "befund": "2 Bilder mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "<img>",
+              "befund": "1 Bild mit alt, width und height",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "noindex passend zum Modus live",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "meta robots und X-Robots-Tag",
+              "befund": "Kein noindex",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Keine toten internen Links",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<a href>",
+              "befund": "106 interne Links auf 11 Seiten geprüft",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "sitemap.xml vorhanden und gültig",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/sitemap.xml",
+              "fundstelle": "Sitemap",
+              "befund": "10 Adressen gefunden",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "robots.txt vorhanden",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/robots.txt",
+              "fundstelle": "robots.txt",
+              "befund": "Status 200, 4 Zeilen",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 6,
+      "titel": "Strukturierte Daten",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "JSON-LD lesbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "script application/ld+json",
+              "befund": "Lesbar, Typen ComputerStore, PostalAddress",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "script application/ld+json",
+              "befund": "Lesbar, Typen BreadcrumbList, ListItem",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "script application/ld+json",
+              "befund": "Lesbar, Typen Answer, BreadcrumbList, FAQPage, ListItem, Question",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "script application/ld+json",
+              "befund": "Lesbar, Typen BreadcrumbList, ListItem, Offer, Product",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "script application/ld+json",
+              "befund": "Lesbar, Typen BreadcrumbList, ListItem",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Artikelseiten mit Product, Preis, Währung und Verfügbarkeit",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Product Displaykabel für Asus X72",
+              "befund": "Preis 11.90 EUR, InStock",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Artikelseiten mit BreadcrumbList",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "JSON-LD BreadcrumbList",
+              "befund": "4 Stufen",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "FAQ-Bereiche mit FAQPage",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "JSON-LD FAQPage",
+              "befund": "2 Fragen mit Antwort",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Startseite mit Firmendaten",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "JSON-LD ComputerStore",
+              "befund": "Beispielshop Notebookteile mit address, telephone, email",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": []
+    },
+    {
+      "nummer": 7,
+      "titel": "Pflichtangaben",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Impressum von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "Link Impressum",
+              "befund": "Von 11 von 11 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Datenschutz von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "Link Datenschutz",
+              "befund": "Von 11 von 11 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "AGB von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Link AGB",
+              "befund": "Von 11 von 11 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Widerruf von jeder Seite erreichbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Von 10 von 11 Seiten verlinkt, Status 200",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "Link Widerruf",
+              "befund": "Von 1 von 11 Seiten verlinkt, Status 200",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Widerrufsfunktion auffindbar",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "<button> Widerruf bestätigen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "<a> Vertrag widerrufen",
+              "befund": "Element zur Widerrufsfunktion gefunden",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Preise mit Hinweis auf Mehrwertsteuer und Versand",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Preis 11,90 €",
+              "befund": "1 Preise, Hinweis inkl. MwSt und zzgl. Versand",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "Preis 29,00 €",
+              "befund": "2 Preise, Hinweis inkl. MwSt und zzgl. Versand",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Preis 11,90 €",
+              "befund": "2 Preise, Hinweis inkl. MwSt und zzgl. Versand",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Preis 11,90 €",
+              "befund": "1 Preise, Hinweis inkl. MwSt und zzgl. Versand",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Preis 4,90 €",
+              "befund": "1 Preise, Hinweis inkl. MwSt und Versandkosten",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "Preis 11,90 €",
+              "befund": "1 Preise, Hinweis inkl. MwSt und zzgl. Versand",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Bestellknopf eindeutig beschriftet",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Knopf Zahlungspflichtig bestellen",
+              "befund": "Beschriftung eindeutig",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Umfang",
+          "befund": "Geprüft wird nur das Vorhandensein, nicht die inhaltliche oder rechtliche Richtigkeit",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 8,
+      "titel": "Barrierefreiheit",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "axe-core WCAG 2.2 A und AA",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "axe-core",
+              "befund": "Keine Verstöße",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Zoomen am Handy nicht gesperrt",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "meta name=\"viewport\"",
+              "befund": "width=device-width, initial-scale=1",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Werkzeug",
+          "befund": "axe-core 4.14.0 mit den Regelgruppen wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22a, wcag22aa. Automatische Tests finden nur einen Teil der Barrieren, eine Prüfung von Hand bleibt nötig",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 9,
+      "titel": "Leistung",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "Übertragene Daten je Seite unter 0,5 MB",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,005 MB in 3 Anfragen, größte Datei https://live.test/ mit 0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,005 MB in 3 Anfragen, größte Datei https://live.test/ersatzteile/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,005 MB in 3 Anfragen, größte Datei https://live.test/notebook-reparatur/ mit 0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,005 MB in 3 Anfragen, größte Datei https://live.test/kasse/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,007 MB in 4 Anfragen, größte Datei https://live.test/ersatzteile/displays/displaykabel-x72/ mit 0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,004 MB in 3 Anfragen, größte Datei https://live.test/impressum/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/datenschutz/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,004 MB in 3 Anfragen, größte Datei https://live.test/datenschutz/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,004 MB in 3 Anfragen, größte Datei https://live.test/agb/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,004 MB in 3 Anfragen, größte Datei https://live.test/widerruf/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,004 MB in 3 Anfragen, größte Datei https://live.test/widerruf/erklaeren/ mit 0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "Übertragene Daten",
+              "befund": "0,005 MB in 3 Anfragen, größte Datei https://live.test/ersatzteile/displays/ mit 0,003 MB",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "Größte Dateien",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "fundstelle": "Datei https://live.test/ersatzteile/displays/displaykabel-x72/",
+              "befund": "0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/notebook-reparatur/",
+              "fundstelle": "Datei https://live.test/notebook-reparatur/",
+              "befund": "0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/",
+              "fundstelle": "Datei https://live.test/",
+              "befund": "0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/displays/",
+              "fundstelle": "Datei https://live.test/ersatzteile/displays/",
+              "befund": "0,003 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/ersatzteile/",
+              "fundstelle": "Datei https://live.test/ersatzteile/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/kasse/",
+              "fundstelle": "Datei https://live.test/kasse/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/erklaeren/",
+              "fundstelle": "Datei https://live.test/widerruf/erklaeren/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/widerruf/",
+              "fundstelle": "Datei https://live.test/widerruf/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/agb/",
+              "fundstelle": "Datei https://live.test/agb/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            },
+            {
+              "adresse": "https://live.test/impressum/",
+              "fundstelle": "Datei https://live.test/impressum/",
+              "befund": "0,002 MB",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Zahl der Anfragen",
+          "befund": "Je Seite zwischen 3 und 4, im Mittel 3,1",
+          "art": "hinweis"
+        },
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Messung",
+          "befund": "Gezählt werden Header und Inhalt jeder Antwort beim ersten Laden ohne Zwischenspeicher. Die Grenze beträgt 500000 Byte",
+          "art": "hinweis"
+        },
+        {
+          "adresse": "https://live.test/",
+          "fundstelle": "Lighthouse",
+          "befund": "Lighthouse ist nicht installiert und wurde deshalb nicht ausgeführt",
+          "art": "hinweis"
+        }
+      ]
+    },
+    {
+      "nummer": 10,
+      "titel": "E-Mail-DNS",
+      "status": "bestanden",
+      "teilpruefungen": [
+        {
+          "name": "SPF endet auf -all oder ~all",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "live.test",
+              "fundstelle": "TXT live.test",
+              "befund": "v=spf1 include:_spf.live.test ~all",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "DMARC vorhanden",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "live.test",
+              "fundstelle": "TXT _dmarc.live.test",
+              "befund": "v=DMARC1; p=quarantine",
+              "art": "ok"
+            }
+          ]
+        },
+        {
+          "name": "DKIM unter dem angegebenen Selektor",
+          "status": "bestanden",
+          "belege": [
+            {
+              "adresse": "live.test",
+              "fundstelle": "TXT mail._domainkey.live.test",
+              "befund": "Öffentlicher Schlüssel mit 58 Zeichen",
+              "art": "ok"
+            }
+          ]
+        }
+      ],
+      "hinweise": [
+        {
+          "adresse": "live.test",
+          "fundstelle": "Abfrage",
+          "befund": "Domain live.test, abgefragt über Nameserver 127.0.0.1:5353",
+          "art": "hinweis"
+        }
+      ]
+    }
+  ]
+}

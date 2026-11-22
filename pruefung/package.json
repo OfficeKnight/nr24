@@ -1,0 +1,11 @@
+{
+  "name": "nr24-abnahmepruefung",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browserteil der Abnahmeprüfung (Playwright und axe-core)",
+  "type": "module",
+  "dependencies": {
+    "axe-core": "4.14.0",
+    "playwright": "1.63.0"
+  }
+}
