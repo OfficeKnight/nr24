@@ -12,6 +12,7 @@
     </div>
   </div>
 
+  <noscript><p class="hinweis hinweis--info">Warenkorb und Kasse benötigen JavaScript. In dieser Demo ist keine Bestellung möglich.</p></noscript>
   <form class="kasse" data-kasse novalidate>
     <ol class="schritte">
       <li data-schritt-anzeige="1" aria-current="step"><span class="schritte__nummer">1</span><span class="schritte__name">Adresse</span></li>
@@ -74,7 +75,7 @@
           </div>
           <label class="auswahl auswahl--zeile"><input type="checkbox" name="liefer_abweichend" value="1" aria-controls="kasse-lieferadresse" data-lieferadresse-umschalter><span>Lieferung an eine abweichende Adresse</span></label>
           <div class="lieferadresse" id="kasse-lieferadresse" data-lieferadresse hidden>
-            <h3 class="lieferadresse__titel">Lieferadresse</h3>
+            <h2 class="lieferadresse__titel">Lieferadresse</h2>
             <div class="feld-raster">
               <div class="feld">
                 <label class="feld__label" for="kasse-liefer-vorname">Vorname <span class="feld__pflicht">Pflichtfeld</span></label>
@@ -134,23 +135,27 @@
           <legend class="schritt__titel">Übersicht</legend>
           <div class="uebersicht">
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Adresse</h3><button class="knopf-text" type="button" data-gehe-zu="1">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Adresse</h2><button class="knopf-text" type="button" data-gehe-zu="1">Ändern</button></div>
               <div data-uebersicht-adresse></div>
             </div>
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Versand</h3><button class="knopf-text" type="button" data-gehe-zu="2">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Versand</h2><button class="knopf-text" type="button" data-gehe-zu="2">Ändern</button></div>
               <div data-uebersicht-versand></div>
             </div>
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Zahlart</h3><button class="knopf-text" type="button" data-gehe-zu="3">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Zahlart</h2><button class="knopf-text" type="button" data-gehe-zu="3">Ändern</button></div>
               <div data-uebersicht-zahlung></div>
             </div>
           </div>
-          <h3 class="uebersicht__titel">Artikel</h3>
+          <h2 class="uebersicht__titel">Artikel</h2>
           <ul class="uebersicht__positionen" data-uebersicht-positionen></ul>
           <div class="feld">
             <label class="auswahl auswahl--zeile"><input type="checkbox" name="agb" value="1" required aria-describedby="kasse-agb-fehler" data-fehler="Bitte bestätigen Sie die AGB und die Widerrufsbelehrung."><span>Ich habe die <a href="{{ root }}agb/">AGB</a> und die <a href="{{ root }}widerruf/">Widerrufsbelehrung</a> gelesen.</span></label>
             <p class="feld__fehler" id="kasse-agb-fehler" hidden></p>
+          </div>
+          <div class="feld" data-nur-reparatur hidden>
+            <label class="auswahl auswahl--zeile"><input type="checkbox" name="sofort_beginn" value="1" required aria-describedby="kasse-sofort-fehler" data-fehler="Bitte bestätigen Sie, dass wir vor Ablauf der Widerrufsfrist mit der Reparatur beginnen sollen."><span>Ich verlange ausdrücklich, dass Sie vor Ablauf der Widerrufsfrist mit der Reparatur beginnen. Mir ist bekannt, dass ich mein Widerrufsrecht bei vollständiger Vertragserfüllung verliere.</span></label>
+            <p class="feld__fehler" id="kasse-sofort-fehler" hidden></p>
           </div>
           <button class="knopf knopf--primaer knopf--block" type="submit" disabled aria-describedby="demo-bestellhinweis">Zahlungspflichtig bestellen</button>
           <p class="hinweis hinweis--info" id="demo-bestellhinweis">{{ s.demo_text }}</p>
@@ -169,6 +174,7 @@
           <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
           <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
         </dl>
+        <p class="wk-summe__hinweis" data-wk-diff-hinweis hidden><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>Differenzbesteuerte Artikel nach § 25a UStG enthalten keine gesondert ausgewiesene Umsatzsteuer.</p>
         <p class="wk-summe__hinweis"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>{{ shop.demo_hinweis }}</p>
       </aside>
     </div>

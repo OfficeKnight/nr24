@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/schriften.css">
 <link rel="stylesheet" href="../../assets/css/themen.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/daten.js" defer></script>
 <script src="../../assets/js/shop.js" defer></script>
@@ -92,7 +92,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -121,9 +121,10 @@
   <div class="seitenkopf__text"><p>Ein defektes Display muss nicht das Ende Ihres Notebooks sein. Wir bieten gebrauchte Displays an, die wir vor dem Verkauf testen, dazu originale Displaykabel. Jedes Teil ist voll funktionsfähig, und Sie erhalten 1 Jahr Gewährleistung.</p><p>Achten Sie beim Kauf auf die genaue Bezeichnung Ihres Displays, etwa N17306-L02 oder LTN170X2-L02. Sind Sie unsicher, nennen Sie uns die Bezeichnung Ihres Displays, und wir prüfen, ob das Teil zu Ihrem Notebook passt.</p></div>
 </div>
 <div class="huelle">
+  <noscript><p class="hinweis hinweis--info">Filter, Sortierung und Warenkorb benötigen JavaScript. Alle Artikel finden Sie in der Liste unten.</p></noscript>
   <div class="katalog" data-katalog>
     <aside class="filter" id="filter" aria-labelledby="filter-titel">
-      <h2 id="filter-titel">Filter</h2>
+      <h2 id="filter-titel" tabindex="-1">Filter</h2>
       <form data-filter>
         <fieldset class="feld-gruppe"><legend>Hersteller</legend><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Asus"><span>Asus <span class="filter__anzahl">(2)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Chi Mei"><span>Chi Mei <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Samsung"><span>Samsung <span class="filter__anzahl">(1)</span></span></label></fieldset>
         <fieldset class="feld-gruppe">
@@ -131,16 +132,17 @@
           <div class="filter__preis">
             <div class="feld">
               <label class="feld__label" for="preis-min">Von</label>
-              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+              <input class="eingabe" id="preis-min" name="preis_min" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
             </div>
             <div class="feld">
               <label class="feld__label" for="preis-max">Bis</label>
-              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="60">
+              <input class="eingabe" id="preis-max" name="preis_max" type="text" inputmode="decimal" autocomplete="off" placeholder="60">
             </div>
           </div>
         </fieldset>
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
         <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+        <button class="knopf knopf--primaer knopf--block filter__fertig" type="button" data-filter-fertig>4 Artikel anzeigen</button>
       </form>
     </aside>
     <div class="katalog__liste">
@@ -160,7 +162,7 @@
       <div class="raster-produkte" data-katalog-raster>
 <article class="produkt" data-id="a18" data-name="17,3 Zoll LED-Display N17306-L02, glänzend" data-preis="59.00" data-hersteller="Chi Mei" data-zustand="Gebraucht" data-kategorie="displays" data-rang="160" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/displays/led-display-17-3-zoll-n17306-l02-glaenzend/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp" srcset="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp 400w, ../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="LED-Display N17306-L02 von hinten mit Typenschild und Anschluss">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp" srcset="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp 400w, ../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" decoding="async" alt="LED-Display N17306-L02 von hinten mit Typenschild und Anschluss">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Displays</p>
@@ -176,7 +178,7 @@
 
 <article class="produkt" data-id="a20" data-name="Displaykabel für Asus X72, X72D und X72DR" data-preis="11.90" data-hersteller="Asus" data-zustand="Gebraucht" data-kategorie="displays" data-rang="170" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/displays/displaykabel-asus-x72-x72d-x72dr/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp" srcset="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, ../../assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Displaykabel für Asus X72 in voller Länge">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp" srcset="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, ../../assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" decoding="async" alt="Displaykabel für Asus X72 in voller Länge">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Displays</p>
@@ -192,7 +194,7 @@
 
 <article class="produkt" data-id="a21" data-name="Displaykabel für Asus X70AB, X70AC, X70A und X70AF" data-preis="9.90" data-hersteller="Asus" data-zustand="Gebraucht" data-kategorie="displays" data-rang="180" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/displays/displaykabel-asus-x70ab-x70ac-x70a-x70af/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp" srcset="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, ../../assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Symbolbild, Displaykabel eines ähnlichen Asus-Modells">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp" srcset="../../assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, ../../assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" decoding="async" alt="Symbolbild, Displaykabel eines ähnlichen Asus-Modells">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Displays</p>
@@ -208,7 +210,7 @@
 
 <article class="produkt" data-id="a19" data-name="17 Zoll TFT-Display Samsung LTN170X2-L02, glänzend" data-preis="34.90" data-hersteller="Samsung" data-zustand="Gebraucht" data-kategorie="displays" data-rang="190" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/displays/tft-display-17-zoll-samsung-ltn170x2-l02-glaenzend/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/display-480.webp" srcset="../../assets/bilder/fotos/display-480.webp 480w, ../../assets/bilder/fotos/display-960.webp 960w, ../../assets/bilder/fotos/display-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Notebook-Display">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp" srcset="../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp 400w, ../../assets/bilder/produkte/led-display-17-3-n17306-l02-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Symbolbild, Display eines ähnlichen Modells">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Displays</p>
@@ -225,7 +227,8 @@
       </div>
       <div class="hinweis hinweis--info" data-katalog-leer hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+        <div><p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie direkt bei uns an</a>.</p>
+          <button class="knopf knopf--zweit knopf--klein hinweis__knopf" type="button" data-filter-leeren>Filter zurücksetzen</button></div>
       </div>
     </div>
   </div>
@@ -281,7 +284,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../assets/css/schriften.css">
 <link rel="stylesheet" href="../assets/css/themen.css">
 <link rel="stylesheet" href="../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../assets/js/demo.js"></script>
 <script src="../assets/js/daten.js" defer></script>
 <script src="../assets/js/shop.js" defer></script>
@@ -86,7 +86,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -123,6 +123,7 @@
     </div>
   </div>
 
+  <noscript><p class="hinweis hinweis--info">Warenkorb und Kasse benötigen JavaScript. In dieser Demo ist keine Bestellung möglich.</p></noscript>
   <form class="kasse" data-kasse novalidate>
     <ol class="schritte">
       <li data-schritt-anzeige="1" aria-current="step"><span class="schritte__nummer">1</span><span class="schritte__name">Adresse</span></li>
@@ -185,7 +186,7 @@
           </div>
           <label class="auswahl auswahl--zeile"><input type="checkbox" name="liefer_abweichend" value="1" aria-controls="kasse-lieferadresse" data-lieferadresse-umschalter><span>Lieferung an eine abweichende Adresse</span></label>
           <div class="lieferadresse" id="kasse-lieferadresse" data-lieferadresse hidden>
-            <h3 class="lieferadresse__titel">Lieferadresse</h3>
+            <h2 class="lieferadresse__titel">Lieferadresse</h2>
             <div class="feld-raster">
               <div class="feld">
                 <label class="feld__label" for="kasse-liefer-vorname">Vorname <span class="feld__pflicht">Pflichtfeld</span></label>
@@ -222,7 +223,7 @@
         <fieldset class="schritt karte" data-schritt="2" hidden>
           <legend class="schritt__titel">Versandart</legend>
           <div class="auswahl-liste">
-<label class="auswahl auswahl--option"><input type="radio" name="versand" value="standard" required checked><span class="auswahl__inhalt"><span class="auswahl__titel">Standardversand</span><span class="auswahl__text">Kostenlos innerhalb Deutschlands. Zustellung in <span class="ph">[3 bis 5 Werktagen]</span>.</span></span><span class="auswahl__preis preis">0,00 €</span></label>
+<label class="auswahl auswahl--option"><input type="radio" name="versand" value="standard" required checked><span class="auswahl__inhalt"><span class="auswahl__titel">Standardversand</span><span class="auswahl__text">Kostenlos innerhalb Deutschlands. Zustellung in 3 bis 5 Tagen.</span></span><span class="auswahl__preis preis">0,00 €</span></label>
 <label class="auswahl auswahl--option"><input type="radio" name="versand" value="abholung" required><span class="auswahl__inhalt"><span class="auswahl__titel">Selbstabholung</span><span class="auswahl__text">Kostenlos in Musterstadt. Wir benachrichtigen Sie per E-Mail, sobald Ihre Bestellung bereitliegt.</span></span><span class="auswahl__preis preis">0,00 €</span></label>
           </div>
           <div class="schritt__knoepfe">
@@ -250,23 +251,27 @@
           <legend class="schritt__titel">Übersicht</legend>
           <div class="uebersicht">
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Adresse</h3><button class="knopf-text" type="button" data-gehe-zu="1">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Adresse</h2><button class="knopf-text" type="button" data-gehe-zu="1">Ändern</button></div>
               <div data-uebersicht-adresse></div>
             </div>
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Versand</h3><button class="knopf-text" type="button" data-gehe-zu="2">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Versand</h2><button class="knopf-text" type="button" data-gehe-zu="2">Ändern</button></div>
               <div data-uebersicht-versand></div>
             </div>
             <div class="uebersicht__block">
-              <div class="uebersicht__kopf"><h3>Zahlart</h3><button class="knopf-text" type="button" data-gehe-zu="3">Ändern</button></div>
+              <div class="uebersicht__kopf"><h2>Zahlart</h2><button class="knopf-text" type="button" data-gehe-zu="3">Ändern</button></div>
               <div data-uebersicht-zahlung></div>
             </div>
           </div>
-          <h3 class="uebersicht__titel">Artikel</h3>
+          <h2 class="uebersicht__titel">Artikel</h2>
           <ul class="uebersicht__positionen" data-uebersicht-positionen></ul>
           <div class="feld">
             <label class="auswahl auswahl--zeile"><input type="checkbox" name="agb" value="1" required aria-describedby="kasse-agb-fehler" data-fehler="Bitte bestätigen Sie die AGB und die Widerrufsbelehrung."><span>Ich habe die <a href="../agb/">AGB</a> und die <a href="../widerruf/">Widerrufsbelehrung</a> gelesen.</span></label>
             <p class="feld__fehler" id="kasse-agb-fehler" hidden></p>
+          </div>
+          <div class="feld" data-nur-reparatur hidden>
+            <label class="auswahl auswahl--zeile"><input type="checkbox" name="sofort_beginn" value="1" required aria-describedby="kasse-sofort-fehler" data-fehler="Bitte bestätigen Sie, dass wir vor Ablauf der Widerrufsfrist mit der Reparatur beginnen sollen."><span>Ich verlange ausdrücklich, dass Sie vor Ablauf der Widerrufsfrist mit der Reparatur beginnen. Mir ist bekannt, dass ich mein Widerrufsrecht bei vollständiger Vertragserfüllung verliere.</span></label>
+            <p class="feld__fehler" id="kasse-sofort-fehler" hidden></p>
           </div>
           <button class="knopf knopf--primaer knopf--block" type="submit" disabled aria-describedby="demo-bestellhinweis">Zahlungspflichtig bestellen</button>
           <p class="hinweis hinweis--info" id="demo-bestellhinweis">In dieser Demo kann nicht bestellt werden. Der Bestellknopf ist deshalb gesperrt, und Ihre Eingaben werden nicht übertragen. Sie bleiben nur in diesem Browserfenster gespeichert, bis Sie es schließen.</p>
@@ -285,6 +290,7 @@
           <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
           <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
         </dl>
+        <p class="wk-summe__hinweis" data-wk-diff-hinweis hidden><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>Differenzbesteuerte Artikel nach § 25a UStG enthalten keine gesondert ausgewiesene Umsatzsteuer.</p>
         <p class="wk-summe__hinweis"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>Demo für ein Redesign, keine Bestellung möglich</p>
       </aside>
     </div>
@@ -341,7 +347,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

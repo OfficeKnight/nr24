@@ -34,6 +34,7 @@ import html
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.parse import quote
 
@@ -69,6 +70,10 @@ SKRIPT_404 = ("(function(){var p=location.pathname;"
               "var r=/^\\/nr24(\\/|$)/.test(p)?'/nr24/':'/';"
               "var b=document.createElement('base');b.href=r;"
               "document.head.appendChild(b);})();")
+
+# sizes der Produktkarten. Unter 600 px ist das Kartenbild 104 px breit (style.css .produkt),
+# ab 600 px liegt es im Raster mit Spalten ab 230 px. shop.js nutzt denselben Wert.
+KARTEN_SIZES = "(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px"
 
 WARNUNGEN = []
 FEHLER = []
@@ -142,8 +147,34 @@ def seitentitel(title):
         return title + zusatz
     if len(title) <= 60:
         return title
-    stueck = title[:61].rsplit(" ", 1)[0]
-    return stueck.rstrip(",;:. ")
+    woerter = title[:61].rsplit(" ", 1)[0].split()
+    # Nicht hinter einem Füllwort wie „mit“ oder „für“ abschneiden.
+    while len(woerter) > 1 and woerter[-1].lower().strip(",;:.") in FUELLWOERTER:
+        woerter.pop()
+    return " ".join(woerter).rstrip(",;:. ")
+
+
+FUELLWOERTER = {"mit", "für", "und", "oder", "im", "in", "am", "an", "auf", "aus", "von", "vom", "zum", "zur",
+                "der", "die", "das", "den", "dem", "des", "ein", "eine", "einem", "einen", "einer", "bei", "ohne"}
+
+
+def artikelnummer(a):
+    """Sprechende Artikelnummer aus der internen ID, z. B. a18 -> NR24-0018."""
+    ziffern = re.sub(r"\D", "", a.get("id", ""))
+    return f"NR24-{int(ziffern):04d}" if ziffern else a.get("id", "")
+
+
+def ist_platzhalter(wert):
+    """True, wenn der Wert fehlt oder nur ein Platzhalter in eckigen Klammern ist."""
+    return not wert or bool(re.fullmatch(r"\s*\[[^\]]*\]\s*", str(wert)))
+
+
+def such_norm(wert):
+    """Gleiche Normalisierung wie norm() in assets/js/shop.js (für die Trefferprüfung im Build)."""
+    s = str(wert or "").lower()
+    s = "".join(z for z in unicodedata.normalize("NFD", s) if not unicodedata.combining(z))
+    s = s.replace("ß", "ss").replace("ae", "a").replace("oe", "o").replace("ue", "u")
+    return re.sub(r"[\s\-\u2010\u2011_]+", "", s)
 
 
 # ---------------------------------------------------------------------------
@@ -313,6 +344,36 @@ class Build:
         self.fehlende_bilder = set()
         self.preloads = self.schrift_preloads()
 
+    # ----- Suche (wie shop.js) ----------------------------------------------
+
+    def heuhaufen(self, a):
+        kat = self.kat_nach_slug.get(a["kategorie"], {"name": a["kategorie"]})
+        teile = [a["name"], a.get("teilenummer"), "|".join(a.get("modelle", [])), a.get("hersteller"),
+                 kat["name"], "|".join(a.get("suchbegriffe", []))]
+        return "|".join(such_norm(x) for x in teile)
+
+    def treffer(self, anfrage):
+        """Anzahl der Suchtreffer für anfrage, nach derselben Regel wie suchen() in shop.js."""
+        ganz = such_norm(anfrage)
+        woerter = [w for w in str(anfrage or "").split() if such_norm(w)]
+        if not ganz or not woerter:
+            return 0
+
+        def varianten(w):
+            v = [such_norm(w)]
+            if "-" in w:
+                vorn = such_norm(w.rsplit("-", 1)[0])
+                if len(vorn) >= 4:
+                    v.append(vorn)
+            return v
+
+        anzahl = 0
+        for a in self.artikel:
+            h = self.heuhaufen(a)
+            if ganz in h or all(any(v in h for v in varianten(w)) for w in woerter):
+                anzahl += 1
+        return anzahl
+
     # ----- Adressen ---------------------------------------------------------
 
     @staticmethod
@@ -394,14 +455,22 @@ class Build:
             "h": eintrag["h"],
         }
 
-    def bild(self, root, schluessel, alt, sizes, klasse="", erstes=False, bevorzugt=800):
-        """Erzeugt ein vollständiges <img> oder einen neutralen Bildrahmen."""
+    def bild(self, root, schluessel, alt, sizes, klasse="", erstes=False, bevorzugt=800, sofort=False):
+        """Erzeugt ein vollständiges <img> oder einen neutralen Bildrahmen.
+
+        erstes=True: großes erstes Bild mit fetchpriority="high". sofort=True: ohne lazy, aber ohne Vorrang
+        (z. B. die erste Reihe Produktkarten, die beim Laden schon sichtbar ist)."""
         d = self.bild_daten(schluessel, bevorzugt)
         if not d:
             return (f'<span class="bildrahmen {esc(klasse)}" role="img" aria-label="{esc(alt)}">'
                     f'<svg class="ico" aria-hidden="true"><use href="#i-display"></use></svg></span>')
         srcset = ", ".join(root + teil for teil in d["srcset"].split(", "))
-        laden = 'fetchpriority="high" decoding="async"' if erstes else 'loading="lazy" decoding="async"'
+        if erstes:
+            laden = 'fetchpriority="high" decoding="async"'
+        elif sofort:
+            laden = 'decoding="async"'
+        else:
+            laden = 'loading="lazy" decoding="async"'
         klasse_attr = f' class="{esc(klasse)}"' if klasse else ""
         return (f'<img{klasse_attr} src="{root}{d["src"]}" srcset="{srcset}" sizes="{esc(sizes)}" '
                 f'width="{d["w"]}" height="{d["h"]}" {laden} alt="{esc(alt)}">')
@@ -413,7 +482,7 @@ class Build:
             return f"{a.get('zustand', 'Dienstleistung')} · " + ("sofort buchbar" if a.get("verfuegbar") else "derzeit nicht buchbar")
         return f"{a.get('zustand', '')} · " + ("sofort lieferbar" if a.get("verfuegbar") else "derzeit nicht lieferbar")
 
-    def produktkarte(self, root, a, ebene="h3", erstes=False):
+    def produktkarte(self, root, a, ebene="h3", erstes=False, sofort=False):
         """Produktkarte genau nach Markup-Vertrag (Bauplan Abschnitt 8)."""
         bild = a["bilder"][0] if a.get("bilder") else {"datei": "", "alt": a["name"]}
         kat = self.kat_nach_slug.get(a["kategorie"], {"name": a["kategorie"]})
@@ -428,8 +497,7 @@ class Build:
             "verfuegbar": "1" if a.get("verfuegbar") else "0",
             "zustand_satz": self.zustand_satz(a),
             "bild": self.bild(root, bild["datei"], bild.get("alt", a["name"]),
-                              "(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw",
-                              "produkt__bild", erstes=erstes, bevorzugt=400),
+                              KARTEN_SIZES, "produkt__bild", erstes=erstes, bevorzugt=400, sofort=sofort),
         }
         return self.vorlagen.fuelle("_produktkarte", daten)
 
@@ -440,8 +508,9 @@ class Build:
             return ""
         return f'<span class="{klasse}">{esc(a["preis_label"])}</span> '
 
-    def karten(self, root, liste, ebene="h3"):
-        return "\n".join(self.produktkarte(root, a, ebene) for a in liste)
+    def karten(self, root, liste, ebene="h3", sofort=0):
+        """Produktkarten. sofort = Anzahl der ersten Karten, deren Bild ohne lazy geladen wird."""
+        return "\n".join(self.produktkarte(root, a, ebene, sofort=i < sofort) for i, a in enumerate(liste))
 
     def faq_html(self, eintraege):
         teile = []
@@ -525,9 +594,12 @@ class Build:
         return bool(h.get("seite")) and isinstance(self.seite.get(h["slug"]), dict)
 
     def hersteller_link(self, root, h):
+        """Eigene Seite, sonst Suche. Findet die Suche nichts, führt der Link zur Reparaturanfrage."""
         if self.hat_herstellerseite(h):
             return f"{root}notebook-reparatur/{h['slug']}/"
-        return f"{root}suche/?q={quote(h['name'])}"
+        if self.treffer(h["name"]):
+            return f"{root}suche/?q={quote(h['name'])}"
+        return f"{root}notebook-reparatur/anfrage/?hersteller={wert_slug(h['name'])}"
 
     def kennzahlen_html(self):
         teile = []
@@ -659,7 +731,7 @@ class Build:
             "faq": self.faq_html(faq),
             "hersteller": hersteller,
             "schnellsuche": schnellsuche,
-            "foto_werkstatt": self.bild(root, "fotos/hero", "Notebook-Mainboard auf der Werkbank in unserer Werkstatt",
+            "foto_werkstatt": self.bild(root, "fotos/werkbank", "Arbeitsplatz mit Lötstation und Oszilloskop in unserer Werkstatt",
                                         "(min-width: 1024px) 560px, 100vw", "foto", erstes=False),
         }
         jsonld = [dict({"@context": "https://schema.org"}, **self.organisation())]
@@ -703,14 +775,16 @@ class Build:
         if not kategorie:
             namen = {k["slug"]: k["name"] for k in self.kategorien}
             filter_html += gruppe("kategorie", "Kategorie", [a["kategorie"] for a in liste], namen)
-        filter_html += gruppe("hersteller", "Hersteller", [a["hersteller"] for a in liste])
+        filter_html += gruppe("hersteller", "Hersteller", [a["hersteller"] for a in liste
+                                                         if not ist_platzhalter(a.get("hersteller"))])
         filter_html += gruppe("zustand", "Zustand", [a["zustand"] for a in liste])
         daten = {
             "k": kopf,
             "filter_gruppen": filter_html,
             "anzahl": f"{len(liste)} Artikel",
-            "raster": self.karten(root, liste, "h2"),
+            "raster": self.karten(root, liste, "h2", sofort=3),
             "preis_max": int(max(a["preis"] for a in liste) + 1) if liste else 0,
+            "katalog_klasse": "" if kategorie else " katalog--alle",
         }
         self.seite_schreiben(pfad, "katalog", daten, title, description, kette=kette)
 
@@ -718,14 +792,24 @@ class Build:
         """Meta-Description für Produktseiten (120 bis 160 Zeichen) aus den Artikeldaten."""
         if a.get("description"):
             return a["description"]
-        teile = [a.get("kurz", a["name"]).rstrip(".") + "."]
+        kurz = a.get("kurz", a["name"]).rstrip(".") + "."
+        teile = [kurz]
+        betrag = preis_text(a["preis"]).replace(chr(160), " ")
+        steuer = ", differenzbesteuert." if a.get("differenzbesteuert") else " inkl. MwSt."
         if a.get("art") == "reparatur":
             art = a.get("preis_label") or "Festpreis"
-            teile.append(f"{art} {preis_text(a['preis']).replace(chr(160), ' ')} inkl. MwSt.")
+            if art.lower() in kurz.lower():
+                art = "Preis"
+            teile.append(f"{art} {betrag}{steuer}")
             teile.append("Mit 1 Jahr Gewährleistung auf die Reparatur.")
         else:
-            teile.append(f"{a.get('zustand', '')} für {preis_text(a['preis']).replace(chr(160), ' ')} inkl. MwSt.")
-            teile.append("Geprüft von Notebook Reparatur 24.")
+            zustand = a.get("zustand", "")
+            if zustand and zustand.lower() not in kurz.lower():
+                teile.append(f"{zustand} für {betrag}{steuer}")
+            else:
+                teile.append(f"Preis {betrag}{steuer}")
+            if zustand != "Neu":
+                teile.append("Geprüft von Notebook Reparatur 24.")
         teile.append("Jetzt bei Notebook Reparatur 24 ansehen.")
         text = ""
         for t in teile:
@@ -741,6 +825,9 @@ class Build:
         haupt = self.bild(root, bilder[0]["datei"], bilder[0].get("alt", a["name"]),
                           "(min-width: 1024px) 560px, (min-width: 720px) 50vw, 100vw",
                           "galerie__bild", erstes=True)
+        # Bilder, die es nur klein gibt (z. B. 400 px), nicht über ihre Größe hinaus aufziehen.
+        groesse = (self.manifest.get(bilder[0]["datei"]) or {}).get("w", 800)
+        galerie_klasse = " galerie__haupt--klein" if groesse < 800 else ""
         weitere = "".join(
             f'<li>{self.bild(root, b["datei"], b.get("alt", a["name"]), "(min-width: 1024px) 180px, 30vw", "galerie__klein", bevorzugt=400)}</li>'
             for b in bilder[1:])
@@ -761,6 +848,8 @@ class Build:
             "ist_reparatur": ist_rep,
             "lieferzeit_label": "Bearbeitungszeit" if ist_rep else "Lieferzeit",
             "galerie_haupt": haupt,
+            "galerie_klasse": galerie_klasse,
+            "artikelnummer": artikelnummer(a),
             "galerie_weitere": weitere,
             "merkmale": merkmale,
             "modelle": modelle,
@@ -772,8 +861,7 @@ class Build:
             "@context": "https://schema.org",
             "@type": "Product",
             "name": a["name"],
-            "sku": a["id"],
-            "brand": {"@type": "Brand", "name": a.get("hersteller", "")},
+            "sku": artikelnummer(a),
             "description": ohne_tags(a.get("kurz") or a.get("beschreibung", "")),
             "category": kat["name"],
             "url": self.basis + pfad,
@@ -788,7 +876,12 @@ class Build:
         }
         if a.get("teilenummer"):
             produkt_ld["mpn"] = a["teilenummer"]
-        zustand = {"Neu": "NewCondition", "Gebraucht": "UsedCondition", "Generalüberholt": "RefurbishedCondition"}
+        # Marke nur, wenn sie bekannt ist. Ein Platzhalter wie [Hersteller] gehört nicht in strukturierte Daten.
+        if not ist_platzhalter(a.get("hersteller")):
+            produkt_ld["brand"] = {"@type": "Brand", "name": a["hersteller"]}
+        # Dienstleistungen (Reparaturen) gelten als neue Leistung, damit offers vollständig ist.
+        zustand = {"Neu": "NewCondition", "Gebraucht": "UsedCondition", "Generalüberholt": "RefurbishedCondition",
+                   "Dienstleistung": "NewCondition"}
         if a.get("zustand") in zustand:
             produkt_ld["offers"]["itemCondition"] = "https://schema.org/" + zustand[a["zustand"]]
         bilder_abs = []
@@ -871,7 +964,11 @@ class Build:
         pfad = f"notebook-reparatur/{h['slug']}/"
         root = self.root_fuer(pfad)
         passend = [a for a in self.artikel if a.get("hersteller") == h["name"] and a.get("art") == "reparatur"]
-        modelle = "".join(f'<li><a href="{root}suche/?q={quote(m)}">{esc(m)}</a></li>' for m in s.get("modelle", []))
+        anfrage = f"{root}notebook-reparatur/anfrage/?hersteller={h['slug']}"
+        modelle = "".join(
+            f'<li><a href="{root}suche/?q={quote(m)}">{esc(m)}</a></li>' if self.treffer(m)
+            else f'<li><a href="{anfrage}">{esc(m)} anfragen</a></li>'
+            for m in s.get("modelle", []))
         fehler_html = "\n".join(
             f'<li class="fehlerbild"><h3 class="fehlerbild__titel">{esc(f["titel"])}</h3><p>{esc(f["text"])}</p></li>'
             for f in s.get("fehlerbilder", []))
@@ -943,8 +1040,9 @@ class Build:
     def werkstatt(self):
         root = self.root_fuer("werkstatt/")
         s = self.seite["werkstatt"]
-        fotos = ["fotos/werkbank", "fotos/messgeraet", "fotos/loeten", "fotos/mainboard"]
-        alt = ["Arbeitsplatz mit Werkzeug in der Werkstatt", "Messgerät bei der Fehlersuche an einer Platine",
+        # fotos/werkbank ist dem Titelbild vorbehalten, damit kein Foto doppelt untereinander steht.
+        fotos = ["fotos/notebook-offen", "fotos/messgeraet", "fotos/loeten", "fotos/mainboard"]
+        alt = ["Geöffnetes Notebook mit Mainboard, Festplatte und Lüfter", "Messgerät bei der Fehlersuche an einer Platine",
                "Löten an einer Notebook-Platine", "Notebook-Mainboard in Nahaufnahme"]
         abschnitte = []
         for i, x in enumerate(s.get("abschnitte", [])):
@@ -986,8 +1084,8 @@ class Build:
                 f'<h3 class="nachweis__titel">{esc(f.get("motiv", ""))}</h3><dl class="nachweis__daten">'
                 f'<div><dt>Titel</dt><dd>{esc(name if titel else "ohne Titel")}</dd></div>'
                 f'<div><dt>Urheber</dt><dd>{esc(f.get("urheber", ""))}</dd></div>'
-                f'<div><dt>Quelle</dt><dd><a href="{esc(f.get("quelle_url", ""))}" rel="noopener">{esc(quelle_text)}</a></dd></div>'
-                f'<div><dt>Lizenz</dt><dd><a href="{esc(f.get("lizenz_url", ""))}" rel="noopener license">{esc(f.get("lizenz", ""))}'
+                f'<div><dt>Quelle</dt><dd><a href="{esc(f.get("quelle_url", ""))}" rel="noopener nofollow">{esc(quelle_text)}</a></dd></div>'
+                f'<div><dt>Lizenz</dt><dd><a href="{esc(f.get("lizenz_url", ""))}" rel="noopener nofollow license">{esc(f.get("lizenz", ""))}'
                 f'<span class="sr-only"> Lizenztext für das Foto {esc(name)}</span></a></dd></div>'
                 f'</dl></div></li>')
         daten = {"s": s, "nachweise": "\n".join(eintraege)}
@@ -1039,10 +1137,12 @@ class Build:
             liste.append({
                 "id": a["id"], "name": a["name"], "url": self.artikel_pfad(a),
                 "kategorie": a["kategorie"], "kategorie_name": kat["name"],
-                "hersteller": a.get("hersteller", ""), "modelle": a.get("modelle", []),
+                "hersteller": a.get("hersteller") or "", "modelle": a.get("modelle", []),
                 "teilenummer": a.get("teilenummer"), "preis": float(a["preis"]),
                 "zustand": a.get("zustand", ""), "verfuegbar": bool(a.get("verfuegbar")),
                 "art": a.get("art", "ware"), "kurz": a.get("kurz", ""), "rang": a.get("rang", 999),
+                "differenzbesteuert": bool(a.get("differenzbesteuert")),
+                "suchbegriffe": a.get("suchbegriffe", []),
                 "bild": ({"src": d["src"], "srcset": d["srcset"], "w": d["w"], "h": d["h"],
                           "alt": b.get("alt", a["name"])} if d else None),
             })

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/schriften.css">
 <link rel="stylesheet" href="../../assets/css/themen.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/daten.js" defer></script>
 <script src="../../assets/js/shop.js" defer></script>
@@ -149,7 +149,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -221,7 +221,7 @@
     <div class="raster-produkte">
 <article class="produkt" data-id="a01" data-name="Acer Nitro 5 AN515 Mainboard-Reparatur LA-H431P" data-preis="189.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="10" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-nitro-5-an515-mainboard-reparatur-la-h431p/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Notebook-Mainboard in Nahaufnahme">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Notebook-Mainboard in Nahaufnahme">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -237,7 +237,7 @@
 
 <article class="produkt" data-id="a04" data-name="Acer Predator 17 G9-793 Reparatur" data-preis="189.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="40" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-predator-17-g9-793-reparatur/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Messung mit einem Messgerät">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Messung mit einem Messgerät">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -253,7 +253,7 @@
 
 <article class="produkt" data-id="a07" data-name="Acer Mainboard-Diagnose mit Kostenvoranschlag" data-preis="59.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="70" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-mainboard-diagnose-kostenvoranschlag/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Fehlersuche mit einem Messgerät">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/hero-480.webp" srcset="../../assets/bilder/fotos/hero-480.webp 480w, ../../assets/bilder/fotos/hero-960.webp 960w, ../../assets/bilder/fotos/hero-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild geöffnetes Notebook mit Mainboard und Arbeitsspeicher">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -269,7 +269,7 @@
 
 <article class="produkt" data-id="a12" data-name="Acer Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="100" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -290,7 +290,7 @@
 <div class="huelle text-und-faq">
   <div class="text-und-faq__text">
 <section class="abschnitt-text"><h2>Acer-Reparatur auf Bauteilebene</h2><p>Viele Defekte an Acer-Notebooks sitzen auf dem Mainboard. Statt die ganze Platine zu tauschen, suchen wir das defekte Bauteil und ersetzen es, zum Beispiel einen Spannungswandler, einen Kondensator oder den Grafikchip. Das ist oft deutlich günstiger als ein neues Mainboard.</p><p>Für einzelne Platinen bieten wir feste Preise an, etwa für das Mainboard LA-H431P aus dem Acer Nitro 5 AN515.</p></section>
-<section class="abschnitt-text"><h2>Gaming-Notebooks der Reihen Nitro und Predator</h2><p>Nitro und Predator sind für Spiele gebaut und haben eine eigene Grafikeinheit. Unter Last entsteht viel Wärme. Verstaubte Lüfter und ausgetrocknete Wärmeleitpaste lassen die Temperatur weiter steigen und belasten Bauteile und Lötstellen.</p><p>Bei jeder Reparatur reinigen wir deshalb das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Gerät ausführlich.</p></section>
+<section class="abschnitt-text"><h2>Gaming-Notebooks der Reihen Nitro und Predator</h2><p>Nitro und Predator sind für Spiele gebaut und haben eine eigene Grafikeinheit. Unter Last entsteht viel Wärme. Verstaubte Lüfter und ausgetrocknete Wärmeleitpaste lassen die Temperatur weiter steigen und belasten Bauteile und Lötstellen.</p><p>Bei Reparaturen mit Reinigung reinigen wir deshalb das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Gerät ausführlich.</p></section>
 <section class="abschnitt-text"><h2>Aspire, Swift, TravelMate und Extensa</h2><p>Aspire und Swift sind verbreitete Modelle für Zuhause und unterwegs, TravelMate und Extensa richten sich vor allem an Unternehmen. Für alle Reihen gilt derselbe Ablauf.</p><ol><li>Sie buchen die Diagnose und senden das Gerät mit Netzteil und Akku ein.</li><li>Wir suchen den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail.</li><li>Nach Ihrer Freigabe reparieren wir das Gerät. Lehnen Sie ab, senden wir das Notebook auf unsere Kosten zurück.</li></ol></section>
   </div>
   <div class="faq">
@@ -393,7 +393,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

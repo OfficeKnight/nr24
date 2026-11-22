@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/schriften.css">
 <link rel="stylesheet" href="../../assets/css/themen.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/daten.js" defer></script>
 <script src="../../assets/js/shop.js" defer></script>
@@ -92,7 +92,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -121,9 +121,10 @@
   <div class="seitenkopf__text"><p>Ihr Notebook startet nicht, das Bild bleibt dunkel oder das Gerät schaltet sich sofort wieder ab? In unserer Werkstatt reparieren wir Notebook-Mainboards bis auf Bauteilebene, auch mit BGA-Rework. Hier finden Sie unsere Festpreise für Diagnose und Reparatur, geordnet nach Hersteller und Modell.</p><p>Sie buchen das passende Angebot, senden Ihr Gerät gut verpackt ein und erhalten nach der Prüfung eine Rückmeldung von uns. Auf jede Reparatur geben wir 1 Jahr Gewährleistung. Ist Ihr Modell nicht dabei, stellen Sie uns einfach eine Reparaturanfrage.</p></div>
 </div>
 <div class="huelle">
+  <noscript><p class="hinweis hinweis--info">Filter, Sortierung und Warenkorb benötigen JavaScript. Alle Artikel finden Sie in der Liste unten.</p></noscript>
   <div class="katalog" data-katalog>
     <aside class="filter" id="filter" aria-labelledby="filter-titel">
-      <h2 id="filter-titel">Filter</h2>
+      <h2 id="filter-titel" tabindex="-1">Filter</h2>
       <form data-filter>
         <fieldset class="feld-gruppe"><legend>Hersteller</legend><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Acer"><span>Acer <span class="filter__anzahl">(4)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Apple"><span>Apple <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Asus"><span>Asus <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Dell"><span>Dell <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="HP"><span>HP <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Lenovo"><span>Lenovo <span class="filter__anzahl">(4)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Medion"><span>Medion <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Samsung"><span>Samsung <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="Sony"><span>Sony <span class="filter__anzahl">(1)</span></span></label></fieldset>
         <fieldset class="feld-gruppe">
@@ -131,16 +132,17 @@
           <div class="filter__preis">
             <div class="feld">
               <label class="feld__label" for="preis-min">Von</label>
-              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+              <input class="eingabe" id="preis-min" name="preis_min" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
             </div>
             <div class="feld">
               <label class="feld__label" for="preis-max">Bis</label>
-              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="250">
+              <input class="eingabe" id="preis-max" name="preis_max" type="text" inputmode="decimal" autocomplete="off" placeholder="250">
             </div>
           </div>
         </fieldset>
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
         <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+        <button class="knopf knopf--primaer knopf--block filter__fertig" type="button" data-filter-fertig>15 Artikel anzeigen</button>
       </form>
     </aside>
     <div class="katalog__liste">
@@ -160,7 +162,7 @@
       <div class="raster-produkte" data-katalog-raster>
 <article class="produkt" data-id="a01" data-name="Acer Nitro 5 AN515 Mainboard-Reparatur LA-H431P" data-preis="189.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="10" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-nitro-5-an515-mainboard-reparatur-la-h431p/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Notebook-Mainboard in Nahaufnahme">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" decoding="async" alt="Symbolbild Notebook-Mainboard in Nahaufnahme">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -176,7 +178,7 @@
 
 <article class="produkt" data-id="a02" data-name="Dell Precision 7560 Mainboard-Reparatur LA-K621P" data-preis="189.00" data-hersteller="Dell" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="20" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/dell-precision-7560-mainboard-reparatur-la-k621p/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Lötarbeit an einer Platine">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" decoding="async" alt="Symbolbild Lötarbeit an einer Platine">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -192,7 +194,7 @@
 
 <article class="produkt" data-id="a03" data-name="Lenovo Legion Pro 5 16IRX9 Reparatur" data-preis="199.00" data-hersteller="Lenovo" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="30" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/lenovo-legion-pro-5-16irx9-reparatur/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/notebook-offen-480.webp" srcset="../../assets/bilder/fotos/notebook-offen-480.webp 480w, ../../assets/bilder/fotos/notebook-offen-960.webp 960w, ../../assets/bilder/fotos/notebook-offen-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild geöffnetes Notebook">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/notebook-offen-480.webp" srcset="../../assets/bilder/fotos/notebook-offen-480.webp 480w, ../../assets/bilder/fotos/notebook-offen-960.webp 960w, ../../assets/bilder/fotos/notebook-offen-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" decoding="async" alt="Symbolbild geöffnetes Notebook">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -208,7 +210,7 @@
 
 <article class="produkt" data-id="a04" data-name="Acer Predator 17 G9-793 Reparatur" data-preis="189.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="40" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-predator-17-g9-793-reparatur/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Messung mit einem Messgerät">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Messung mit einem Messgerät">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -224,7 +226,7 @@
 
 <article class="produkt" data-id="a05" data-name="Lenovo Legion 7 Reparatur" data-preis="249.00" data-hersteller="Lenovo" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="50" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/lenovo-legion-7-reparatur/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/werkzeug-480.webp" srcset="../../assets/bilder/fotos/werkzeug-480.webp 480w, ../../assets/bilder/fotos/werkzeug-960.webp 960w, ../../assets/bilder/fotos/werkzeug-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Elektronikwerkzeug">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Löten an einer Platine">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -240,7 +242,7 @@
 
 <article class="produkt" data-id="a06" data-name="Apple MacBook Pro Logicboard-Reparatur" data-preis="179.00" data-hersteller="Apple" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="60" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/apple-macbook-pro-logicboard-reparatur/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Platine in Nahaufnahme">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Symbolbild Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -256,7 +258,7 @@
 
 <article class="produkt" data-id="a07" data-name="Acer Mainboard-Diagnose mit Kostenvoranschlag" data-preis="59.00" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="70" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-mainboard-diagnose-kostenvoranschlag/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Fehlersuche mit einem Messgerät">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/hero-480.webp" srcset="../../assets/bilder/fotos/hero-480.webp 480w, ../../assets/bilder/fotos/hero-960.webp 960w, ../../assets/bilder/fotos/hero-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild geöffnetes Notebook mit Mainboard und Arbeitsspeicher">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -272,7 +274,7 @@
 
 <article class="produkt" data-id="a08" data-name="Lenovo Mainboard-Diagnose mit Kostenvoranschlag" data-preis="59.00" data-hersteller="Lenovo" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="80" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/lenovo-mainboard-diagnose-kostenvoranschlag/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/notebook-offen-480.webp" srcset="../../assets/bilder/fotos/notebook-offen-480.webp 480w, ../../assets/bilder/fotos/notebook-offen-960.webp 960w, ../../assets/bilder/fotos/notebook-offen-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild geöffnetes Notebook">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Fehlersuche mit einem Messgerät">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -288,7 +290,7 @@
 
 <article class="produkt" data-id="a09" data-name="Sony PlayStation 4 Wartung mit Reinigung und Wärmeleitpaste" data-preis="59.90" data-hersteller="Sony" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="90" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/playstation-4-wartung-reinigung-waermeleitpaste/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/konsole-480.webp" srcset="../../assets/bilder/fotos/konsole-480.webp 480w, ../../assets/bilder/fotos/konsole-960.webp 960w, ../../assets/bilder/fotos/konsole-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Spielkonsole">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/konsole-480.webp" srcset="../../assets/bilder/fotos/konsole-480.webp 480w, ../../assets/bilder/fotos/konsole-960.webp 960w, ../../assets/bilder/fotos/konsole-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Spielkonsole">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -304,7 +306,7 @@
 
 <article class="produkt" data-id="a12" data-name="Acer Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Acer" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="100" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -320,7 +322,7 @@
 
 <article class="produkt" data-id="a13" data-name="Asus Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Asus" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="110" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/asus-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/notebook-offen-480.webp" srcset="../../assets/bilder/fotos/notebook-offen-480.webp 480w, ../../assets/bilder/fotos/notebook-offen-960.webp 960w, ../../assets/bilder/fotos/notebook-offen-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild geöffnetes Notebook">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -336,7 +338,7 @@
 
 <article class="produkt" data-id="a14" data-name="HP Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="HP" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="120" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/hp-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/messgeraet-480.webp" srcset="../../assets/bilder/fotos/messgeraet-480.webp 480w, ../../assets/bilder/fotos/messgeraet-960.webp 960w, ../../assets/bilder/fotos/messgeraet-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Fehlersuche mit einem Messgerät">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -352,7 +354,7 @@
 
 <article class="produkt" data-id="a15" data-name="Lenovo Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Lenovo" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="130" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/lenovo-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/mainboard-480.webp" srcset="../../assets/bilder/fotos/mainboard-480.webp 480w, ../../assets/bilder/fotos/mainboard-960.webp 960w, ../../assets/bilder/fotos/mainboard-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Notebook-Mainboard">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -368,7 +370,7 @@
 
 <article class="produkt" data-id="a16" data-name="Medion Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Medion" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="140" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/medion-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/werkzeug-480.webp" srcset="../../assets/bilder/fotos/werkzeug-480.webp 480w, ../../assets/bilder/fotos/werkzeug-960.webp 960w, ../../assets/bilder/fotos/werkzeug-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Elektronikwerkzeug">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -384,7 +386,7 @@
 
 <article class="produkt" data-id="a17" data-name="Samsung Notebook-Reparatur mit Diagnose und Reinigung" data-preis="29.90" data-hersteller="Samsung" data-zustand="Dienstleistung" data-kategorie="reparaturen" data-rang="150" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/reparaturen/samsung-notebook-reparatur-diagnose-reinigung/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Lötarbeit an einer Platine">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp" srcset="../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, ../../assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" loading="lazy" decoding="async" alt="Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Reparaturen</p>
@@ -401,7 +403,8 @@
       </div>
       <div class="hinweis hinweis--info" data-katalog-leer hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+        <div><p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie direkt bei uns an</a>.</p>
+          <button class="knopf knopf--zweit knopf--klein hinweis__knopf" type="button" data-filter-leeren>Filter zurücksetzen</button></div>
       </div>
     </div>
   </div>
@@ -457,7 +460,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

@@ -3,6 +3,7 @@
   <h1>{{ s.h1 }}</h1>
 </div>
 <div class="huelle">
+  <noscript><p class="hinweis hinweis--info">Warenkorb und Kasse benötigen JavaScript. In dieser Demo ist keine Bestellung möglich.</p></noscript>
   <div class="warenkorb" data-warenkorb>
     <div class="leer-zustand karte" data-wk-leer hidden>
       <svg class="ico leer-zustand__ico" aria-hidden="true"><use href="#i-korb"></use></svg>
@@ -26,6 +27,7 @@
           <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
           <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
         </dl>
+        <p class="wk-summe__hinweis" data-wk-diff-hinweis hidden><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>Differenzbesteuerte Artikel nach § 25a UStG enthalten keine gesondert ausgewiesene Umsatzsteuer.</p>
         <a class="knopf knopf--primaer knopf--block" href="{{ root }}kasse/">Zur Kasse</a>
         <p class="wk-summe__hinweis"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>{{ shop.demo_hinweis }}</p>
       </aside>

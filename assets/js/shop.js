@@ -13,7 +13,9 @@
   var MENGE_MIN = 1;
   var MENGE_MAX = 99;
   var MELDUNG_DAUER = 6000;
-  var VORSCHLAEGE_MAX = 6;
+  /* sizes der Produktkarten, gleich wie KARTEN_SIZES in src/build.py (unter 600 px ist das Bild 104 px breit). */
+  var KARTEN_SIZES = '(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px';
+  var VORSCHLAEGE_MAX = 5;
   var SUCHE_MIN_ZEICHEN = 2;
   var EMAIL_MUSTER = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var KATALOG_PARAMETER = ['kategorie', 'hersteller', 'zustand', 'preis_min', 'preis_max', 'lieferbar', 'sort'];
@@ -181,7 +183,7 @@
     if (a.bild && a.bild.src) {
       bild = '<img class="produkt__bild" src="' + esc(ROOT + a.bild.src) + '"' +
         (a.bild.srcset ? ' srcset="' + esc(bildSrcset(a.bild.srcset)) + '"' : '') +
-        ' sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw"' +
+        ' sizes="' + KARTEN_SIZES + '"' +
         ' width="' + esc(a.bild.w || 800) + '" height="' + esc(a.bild.h || 600) + '"' +
         ' loading="lazy" decoding="async" alt="' + esc(a.bild.alt || a.name) + '">';
     } else {
@@ -236,13 +238,18 @@
     meldungTimer = setTimeout(function () {
       if (!el) { return; }
       var gefragt = el.contains(document.activeElement);
-      try { gefragt = gefragt || el.matches(':hover'); } catch (e) { /* nichts */ }
+      /* Auf Touch-Geräten bleibt :hover nach dem Antippen hängen, dort zählt nur der Fokus. */
+      try { gefragt = gefragt || (zeigerKannSchweben() && el.matches(':hover')); } catch (e) { /* nichts */ }
       if (gefragt) {
         meldungPlanen();
         return;
       }
       el.innerHTML = '';
     }, MELDUNG_DAUER);
+  }
+
+  function zeigerKannSchweben() {
+    try { return window.matchMedia('(hover: hover) and (pointer: fine)').matches; } catch (e) { return true; }
   }
 
   /* Sichtbare Meldung in #meldung (role="status"). Der Fokus bleibt, wo er ist. */
@@ -330,6 +337,9 @@
       el.textContent = String(summe);
       el.setAttribute('data-anzahl', String(summe));
     });
+    alle(document, '[data-wk-zaehler-wort]').forEach(function (el) {
+      el.textContent = summe === 1 ? ' Artikel' : ' Artikeln';
+    });
   }
 
   function korbGeaendert() {
@@ -343,11 +353,20 @@
   function summenSetzen(bereich, versandPreis, gebuehr) {
     var pos = korbPositionen();
     var zwischen = 0;
-    pos.forEach(function (p) { zwischen += cent(NACH_ID[p.id].preis) * p.menge; });
+    var regel = 0;
+    var diff = false;
+    pos.forEach(function (p) {
+      var betrag = cent(NACH_ID[p.id].preis) * p.menge;
+      zwischen += betrag;
+      /* Differenzbesteuerte Artikel (§ 25a UStG) enthalten keine ausweisbare Umsatzsteuer. */
+      if (NACH_ID[p.id].differenzbesteuert) { diff = true; } else { regel += betrag; }
+    });
     var versand = pos.length ? cent(versandPreis) : 0;
     var zusatz = pos.length ? cent(gebuehr || 0) : 0;
     var gesamt = zwischen + versand + zusatz;
-    var mwst = Math.round(gesamt - gesamt / (1 + MWST / 100));
+    var steuerbar = regel + versand + zusatz;
+    var mwst = Math.round(steuerbar - steuerbar / (1 + MWST / 100));
+    alle(bereich, '[data-wk-diff-hinweis]').forEach(function (el) { el.hidden = !diff; });
     var werte = {
       '[data-wk-zwischensumme]': zwischen,
       '[data-wk-versand]': versand,
@@ -443,12 +462,12 @@
     var name = esc(a.name);
     var bild = a.bild && a.bild.src
       ? '<img class="wk-position__bild" src="' + esc(ROOT + a.bild.src) + '" width="' + esc(a.bild.w || 400) +
-        '" height="' + esc(a.bild.h || 300) + '" alt="">'
+        '" height="' + esc(a.bild.h || 300) + '" loading="lazy" decoding="async" alt="">'
       : '<span class="bildrahmen wk-position__bild" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-display"></use></svg></span>';
     return '<li class="wk-position" data-id="' + id + '">' + bild +
       '<div class="wk-position__text"><a class="wk-position__name" href="' + esc(ROOT + a.url) + '">' + text(a.name) + '</a>' +
       (a.teilenummer ? '<p class="wk-position__nummer teilenummer">' + esc(a.teilenummer) + '</p>' : '') +
-      '<p class="wk-position__einzel">Einzelpreis ' + preis(a.preis) + '</p></div>' +
+      '<p class="wk-position__einzel">Einzelpreis ' + preis(a.preis) + '</p>' + lieferHinweis(a) + '</div>' +
       '<div class="menge"><button class="menge__knopf" type="button" data-wk-minus aria-label="Menge von ' + name + ' verringern">' +
       '<svg class="ico" aria-hidden="true"><use href="#i-minus"></use></svg></button>' +
       '<label class="sr-only" for="wk-menge-' + id + '">Menge von ' + name + '</label>' +
@@ -459,6 +478,14 @@
       '<button class="knopf-text wk-position__entfernen" type="button" data-wk-entfernen aria-label="' + name + ' entfernen">' +
       '<svg class="ico" aria-hidden="true"><use href="#i-x"></use></svg><span>Entfernen</span></button>' +
       '</li>';
+  }
+
+  /* Hinweis an Positionen, die derzeit nicht lieferbar oder buchbar sind. */
+  function lieferHinweis(a) {
+    if (!a || a.verfuegbar) { return ''; }
+    return '<p class="wk-position__hinweis">' + (a.art === 'reparatur'
+      ? 'Derzeit nicht buchbar. Fragen Sie uns gern nach dem nächsten Termin.'
+      : 'Derzeit nicht lieferbar. Fragen Sie uns gern nach dem nächsten Liefertermin.') + '</p>';
   }
 
   function warenkorbSeite(wurzel) {
@@ -797,6 +824,19 @@
     var leiste = form.querySelector('.schritte');
     var aktuell = 1;
     var letzter = schritte.length ? Number(schritte[schritte.length - 1].getAttribute('data-schritt')) : 1;
+    /* Nach „Ändern“ in der Übersicht führt Weiter direkt zurück zur Übersicht. */
+    var zurUebersicht = false;
+
+    function weiterBeschriften() {
+      schritte.forEach(function (s) {
+        alle(s, '[data-weiter]').forEach(function (k) {
+          var span = k.querySelector('span');
+          if (!span) { return; }
+          if (!k.hasAttribute('data-text')) { k.setAttribute('data-text', span.textContent); }
+          span.textContent = zurUebersicht ? 'Zurück zur Übersicht' : k.getAttribute('data-text');
+        });
+      });
+    }
 
     function schritt(n) {
       for (var i = 0; i < schritte.length; i += 1) {
@@ -808,6 +848,8 @@
     function zeige(n, mitFokus) {
       n = Math.max(1, Math.min(letzter, n));
       aktuell = n;
+      if (n === letzter) { zurUebersicht = false; }
+      weiterBeschriften();
       schritte.forEach(function (s) { s.hidden = Number(s.getAttribute('data-schritt')) !== n; });
       anzeigen.forEach(function (li) {
         var m = Number(li.getAttribute('data-schritt-anzeige'));
@@ -831,6 +873,18 @@
     function weiter() {
       var el = schritt(aktuell);
       if (el && !bereichPruefen(el, true)) { return false; }
+      if (zurUebersicht) {
+        /* Alle folgenden Schritte waren schon gültig, sonst beim ersten ungültigen anhalten. */
+        for (var m = aktuell + 1; m < letzter; m += 1) {
+          if (schritt(m) && !bereichPruefen(schritt(m), false)) {
+            zurUebersicht = false;
+            zeige(m, true);
+            return true;
+          }
+        }
+        zeige(letzter, true);
+        return true;
+      }
       if (aktuell < letzter) { zeige(aktuell + 1, true); }
       return true;
     }
@@ -842,10 +896,14 @@
       if (knopf.hasAttribute('data-weiter')) {
         weiter();
       } else if (knopf.hasAttribute('data-zurueck')) {
+        zurUebersicht = false;
         zeige(aktuell - 1, true);
       } else {
         var ziel = Number(knopf.getAttribute('data-gehe-zu'));
-        if (ziel >= 1 && ziel <= aktuell) { zeige(ziel, true); }
+        if (ziel >= 1 && ziel <= aktuell) {
+          zurUebersicht = aktuell === letzter && ziel < letzter;
+          zeige(ziel, true);
+        }
       }
     });
 
@@ -865,7 +923,14 @@
     var bestellen = alle(form, 'button[type="submit"], input[type="submit"]');
     var lieferUmschalter = form.querySelector('[data-lieferadresse-umschalter]');
     var lieferBereich = form.querySelector('[data-lieferadresse]');
+    var nurReparatur = alle(form, '[data-nur-reparatur]');
     var bereit = false;
+
+    /* Zustimmung zum sofortigen Beginn nur zeigen, wenn eine Reparatur im Warenkorb liegt. */
+    function reparaturZustimmung() {
+      var rep = korbPositionen().some(function (p) { return NACH_ID[p.id].art === 'reparatur'; });
+      nurReparatur.forEach(function (el) { el.hidden = !rep; });
+    }
 
     function sperren() {
       bestellen.forEach(function (k) {
@@ -925,7 +990,10 @@
           wert('email'),
           wert('telefon') ? 'Telefon ' + wert('telefon') : ''
         ]);
-        if (wert('liefer_abweichend')) {
+        var abholung = gewaehlterVersand() && gewaehlterVersand().abholung;
+        if (wert('liefer_abweichend') && abholung) {
+          html += '<p><strong>Lieferadresse</strong></p><p>Entfällt bei Selbstabholung.</p>';
+        } else if (wert('liefer_abweichend')) {
           html += '<p><strong>Lieferadresse</strong></p>' + zeilen([
             (wert('liefer_vorname') + ' ' + wert('liefer_nachname')).trim(),
             wert('liefer_strasse'),
@@ -949,7 +1017,9 @@
       if (positionen) {
         positionen.innerHTML = korbPositionen().map(function (p) {
           var a = NACH_ID[p.id];
-          return '<li><span>' + p.menge + ' × ' + text(a.name) + '</span><span class="preis">' +
+          return '<li><span>' + p.menge + ' × ' + text(a.name) +
+            (a.verfuegbar ? '' : '<span class="uebersicht__hinweis">' + (a.art === 'reparatur' ? 'Derzeit nicht buchbar' : 'Derzeit nicht lieferbar') + '</span>') +
+            '</span><span class="preis">' +
             esc(preis(cent(a.preis) * p.menge / 100)) + '</span></li>';
         }).join('');
       }
@@ -960,7 +1030,7 @@
       if (!bereit) { return; }
       var werte = {};
       alle(form, 'input[name], select[name], textarea[name]').forEach(function (el) {
-        if (el.name === 'agb' || el.type === 'submit' || el.type === 'button') { return; }
+        if (el.name === 'agb' || el.name === 'sofort_beginn' || el.type === 'submit' || el.type === 'button') { return; }
         if (el.type === 'radio') {
           if (el.checked) { werte[el.name] = el.value; }
         } else if (el.type === 'checkbox') {
@@ -981,7 +1051,7 @@
       Object.keys(daten.werte).forEach(function (name) {
         var w = daten.werte[name];
         alle(form, '[name="' + cssWert(name) + '"]').forEach(function (el) {
-          if (el.name === 'agb') { return; }
+          if (el.name === 'agb' || el.name === 'sofort_beginn') { return; }
           if (el.type === 'radio') {
             el.checked = el.value === w;
           } else if (el.type === 'checkbox') {
@@ -1006,6 +1076,7 @@
       var istLeer = korbPositionen().length === 0;
       if (leer) { leer.hidden = !istLeer; }
       form.hidden = istLeer;
+      reparaturZustimmung();
       summen();
       if (maschine.aktuell() === 4) { uebersichtFuellen(); }
     }
@@ -1020,7 +1091,7 @@
       var el = e.target;
       if (el === lieferUmschalter) { lieferadresseZeigen(); }
       if (el.name === 'versand' || el.name === 'zahlung') { summen(); }
-      if (el.name === 'agb') { sperren(); }
+      if (el.name === 'agb' || el.name === 'sofort_beginn') { sperren(); }
       speichern();
     });
 
@@ -1138,27 +1209,41 @@
   function norm(wert) {
     var s = String(wert == null ? '' : wert).toLowerCase();
     try { s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); } catch (e) { /* nichts */ }
-    return s.replace(/ß/g, 'ss').replace(/[\s\-\u2010\u2011_]+/g, '');
+    /* „ae“, „oe“ und „ue“ wie ä, ö und ü behandeln (Waermeleitpaste findet Wärmeleitpaste). */
+    return s.replace(/ß/g, 'ss').replace(/ae/g, 'a').replace(/oe/g, 'o').replace(/ue/g, 'u')
+      .replace(/[\s\-\u2010\u2011_]+/g, '');
+  }
+
+  /* Ein Suchwort mit Bindestrich am Ende (AN515-54) findet auch die Modellreihe davor (AN515). */
+  function wortVarianten(wort) {
+    var v = [norm(wort)];
+    if (/-/.test(wort)) {
+      var vorn = norm(wort.replace(/-[^-]*$/, ''));
+      if (vorn.length >= 4) { v.push(vorn); }
+    }
+    return v.filter(function (x) { return x; });
   }
 
   var heuhaufen = {};
 
   function heu(a) {
     if (!heuhaufen[a.id]) {
-      heuhaufen[a.id] = [a.name, a.teilenummer, (a.modelle || []).join('|'), a.hersteller, a.kategorie_name]
-        .map(norm).join('|');
+      heuhaufen[a.id] = [a.name, a.teilenummer, (a.modelle || []).join('|'), a.hersteller, a.kategorie_name,
+        (a.suchbegriffe || []).join('|')].map(norm).join('|');
     }
     return heuhaufen[a.id];
   }
 
   function suchen(anfrage) {
     var ganz = norm(anfrage);
-    var woerter = String(anfrage || '').split(/\s+/).map(norm).filter(function (w) { return w; });
+    var woerter = String(anfrage || '').split(/\s+/).map(wortVarianten).filter(function (w) { return w.length; });
     if (!ganz || !woerter.length) { return []; }
     var treffer = [];
     ARTIKEL.forEach(function (a) {
       var h = heu(a);
-      var passt = woerter.every(function (w) { return h.indexOf(w) !== -1; }) || h.indexOf(ganz) !== -1;
+      var passt = h.indexOf(ganz) !== -1 || woerter.every(function (varianten) {
+        return varianten.some(function (w) { return h.indexOf(w) !== -1; });
+      });
       if (!passt) { return; }
       var punkte = 0;
       var tn = norm(a.teilenummer);
@@ -1353,6 +1438,11 @@
     var anzahl = wurzel.querySelector('[data-katalog-anzahl]');
     var leer = wurzel.querySelector('[data-katalog-leer]');
     var sortierung = wurzel.querySelector('[data-sortierung]');
+    var umschalterKnopf = wurzel.querySelector('[data-filter-umschalter]');
+    var umschalterText = umschalterKnopf ? umschalterKnopf.querySelector('span') : null;
+    var fertig = wurzel.querySelector('[data-filter-fertig]');
+    var leeren = wurzel.querySelector('[data-filter-leeren]');
+    var GRUPPEN = ['kategorie', 'hersteller', 'zustand'];
     if (!raster) { return; }
     var karten = alle(raster, '.produkt');
     var reihenfolge = karten.slice();
@@ -1390,6 +1480,36 @@
       if (z.preis_max !== null && !(p <= z.preis_max)) { return false; }
       if (z.lieferbar && karte.getAttribute('data-verfuegbar') !== '1') { return false; }
       return true;
+    }
+
+    /* Zahlen hinter den Filteroptionen passen sich den übrigen Filtern an. Optionen ohne Treffer
+       werden gesperrt, solange sie nicht gewählt sind. */
+    function facettenZaehlen(z) {
+      if (!form) { return; }
+      GRUPPEN.forEach(function (gruppe) {
+        var ohne = {};
+        Object.keys(z).forEach(function (k) { ohne[k] = z[k]; });
+        ohne[gruppe] = [];
+        var zaehler = {};
+        karten.forEach(function (k) {
+          if (!passt(k, ohne)) { return; }
+          var w = k.getAttribute('data-' + gruppe);
+          zaehler[w] = (zaehler[w] || 0) + 1;
+        });
+        alle(form, 'input[name="' + gruppe + '"]').forEach(function (el) {
+          var n = zaehler[el.value] || 0;
+          var label = el.closest('label');
+          var anz = label ? label.querySelector('.filter__anzahl') : null;
+          if (anz) { anz.textContent = '(' + n + ')'; }
+          el.disabled = n === 0 && !el.checked;
+          if (label) { label.classList.toggle('ist-leer', el.disabled); }
+        });
+      });
+    }
+
+    function aktiveFilter(z) {
+      return z.kategorie.length + z.hersteller.length + z.zustand.length +
+        (z.preis_min !== null ? 1 : 0) + (z.preis_max !== null ? 1 : 0) + (z.lieferbar ? 1 : 0);
     }
 
     function vergleich(art) {
@@ -1436,6 +1556,10 @@
       if (anzahl) { anzahl.textContent = sichtbar + ' Artikel'; }
       if (leer) { leer.hidden = sichtbar > 0; }
       raster.hidden = sichtbar === 0;
+      facettenZaehlen(z);
+      var aktiv = aktiveFilter(z);
+      if (umschalterText) { umschalterText.textContent = aktiv ? 'Filter (' + aktiv + ')' : 'Filter'; }
+      if (fertig) { fertig.textContent = sichtbar === 1 ? '1 Artikel anzeigen' : sichtbar + ' Artikel anzeigen'; }
       if (schreiben) { urlSchreiben(z); }
     }
 
@@ -1452,7 +1576,7 @@
       ['preis_min', 'preis_max'].forEach(function (k) {
         var el = form ? form.querySelector('[name="' + k + '"]') : null;
         var w = p.get(k);
-        if (el && w !== null && w !== '' && !isNaN(parseFloat(w))) { el.value = String(parseFloat(w)); }
+        if (el && w !== null && w !== '' && !isNaN(parseFloat(w))) { el.value = String(parseFloat(w)).replace('.', ','); }
       });
       var lieferbar = form ? form.querySelector('input[name="lieferbar"]') : null;
       if (lieferbar && p.get('lieferbar') === '1') { lieferbar.checked = true; }
@@ -1465,7 +1589,7 @@
     if (form) {
       form.addEventListener('change', function () { anwenden(true); });
       form.addEventListener('input', function (e) {
-        if (e.target && e.target.type === 'number') { anwenden(true); }
+        if (e.target && (e.target.name === 'preis_min' || e.target.name === 'preis_max')) { anwenden(true); }
       });
       form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -1479,13 +1603,29 @@
       sortierung.addEventListener('change', function () { anwenden(true); });
     }
 
+    /* Zur Trefferliste: Panel schließen (Handy und Tablet) und die Anzahl über der Liste fokussieren. */
+    function zurListe() {
+      if (umschalterKnopf && umschalterKnopf.getAttribute('aria-expanded') === 'true') { umschalterKnopf.click(); }
+      if (anzahl) {
+        fokus(anzahl);
+        try { anzahl.scrollIntoView({ block: 'start' }); } catch (e) { /* nichts */ }
+      }
+    }
+    if (fertig) { fertig.addEventListener('click', zurListe); }
+    if (leeren && form) {
+      leeren.addEventListener('click', function () {
+        form.reset();
+        setTimeout(function () { anwenden(true); fokus(anzahl); }, 0);
+      });
+    }
+
     ausUrlLesen();
     anwenden(false);
   }
 
   /* ---------- Umschalter: Menü und Filter ---------- */
 
-  function umschalter(knopf, ziel, nurWennSichtbar) {
+  function umschalter(knopf, ziel, nurWennSichtbar, fokusZiel) {
     if (!knopf || !ziel) { return; }
 
     function setzen(offen) {
@@ -1497,7 +1637,10 @@
 
     knopf.addEventListener('click', function (e) {
       e.preventDefault();
-      setzen(!istOffen());
+      var oeffnen = !istOffen();
+      setzen(oeffnen);
+      /* Fokus in das geöffnete Panel, damit Tab dort weitergeht (Filter steht im DOM vor dem Knopf). */
+      if (oeffnen && fokusZiel) { fokus(fokusZiel); }
     });
 
     document.addEventListener('keydown', function (e) {
@@ -1510,6 +1653,24 @@
     });
 
     setzen(false);
+  }
+
+  /* ---------- Sprunglinks bei gesetztem <base> (404-Seite) ---------- */
+
+  /* Auf der 404-Seite setzt ein Skript <base> auf die Wurzel. Links wie href="#inhalt" würden dann
+     zur Startseite führen. Hier springen sie im aktuellen Dokument. */
+  function sprunglinksBinden() {
+    if (!document.querySelector('base[href]')) { return; }
+    document.addEventListener('click', function (e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!link || e.defaultPrevented) { return; }
+      var id = link.getAttribute('href').slice(1);
+      var ziel = id ? document.getElementById(id) : null;
+      if (!ziel) { return; }
+      e.preventDefault();
+      try { ziel.scrollIntoView({ block: 'start' }); } catch (err) { /* nichts */ }
+      fokus(ziel);
+    });
   }
 
   /* ---------- Start ---------- */
@@ -1527,7 +1688,8 @@
     });
     sicher(function () {
       alle(document, '[data-filter-umschalter]').forEach(function (knopf) {
-        umschalter(knopf, document.getElementById(knopf.getAttribute('aria-controls') || 'filter'), true);
+        var panel = document.getElementById(knopf.getAttribute('aria-controls') || 'filter');
+        umschalter(knopf, panel, true, panel ? panel.querySelector('#filter-titel, h2') : null);
       });
     });
 
@@ -1543,6 +1705,9 @@
       if (kasse) { kasseAnsicht = kasseSeite(kasse); }
     });
     sicher(function () { alle(document, 'form[data-formular]').forEach(formular); });
+    /* Absendeknöpfe sind ohne JavaScript gesperrt, damit nichts als GET-Parameter übertragen wird. */
+    sicher(function () { alle(document, '[data-js-frei]').forEach(function (k) { k.disabled = false; }); });
+    sicher(sprunglinksBinden);
 
     var meldungEl = document.getElementById('meldung');
     if (meldungEl) {

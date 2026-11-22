@@ -8,13 +8,13 @@
 <meta name="robots" content="noindex, nofollow">
 <title>{{ titel_voll }}</title>
 <meta name="description" content="{{ description }}">
-<link rel="canonical" href="{{ canonical }}">
+{% if not ist_404 %}<link rel="canonical" href="{{ canonical }}">{% endif %}
 <link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
 {{{ preloads }}}
 <link rel="stylesheet" href="{{ root }}assets/css/schriften.css">
 <link rel="stylesheet" href="{{ root }}assets/css/themen.css">
 <link rel="stylesheet" href="{{ root }}assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="{{ root }}assets/js/demo.js"></script>
 <script src="{{ root }}assets/js/daten.js" defer></script>
 <script src="{{ root }}assets/js/shop.js" defer></script>
@@ -33,7 +33,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="{{ root }}notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="{{ root }}warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="{{ root }}warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">

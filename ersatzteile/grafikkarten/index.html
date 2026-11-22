@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; form-action &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;">
 <meta name="robots" content="noindex, nofollow">
-<title>Grafikkarten für iMac und Notebook | Notebook Reparatur 24</title>
+<title>Grafikkarten für den iMac 27 Zoll | Notebook Reparatur 24</title>
 <meta name="description" content="Generalüberholte ATI HD 6970M mit neuem Grafikchip für den iMac 27 Zoll A1312 aus 2010 und 2011, als Kauf oder im Austausch gegen Ihre defekte Karte.">
 <link rel="canonical" href="https://nr24.kazas.dev/ersatzteile/grafikkarten/">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/schriften.css">
 <link rel="stylesheet" href="../../assets/css/themen.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/daten.js" defer></script>
 <script src="../../assets/js/shop.js" defer></script>
@@ -92,7 +92,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -117,13 +117,14 @@
 <main id="inhalt" tabindex="-1">
 
 <div class="huelle seitenkopf">
-  <h1>Grafikkarten für iMac und Notebook</h1>
+  <h1>Grafikkarten für den iMac 27 Zoll</h1>
   <div class="seitenkopf__text"><p>Streifen, Bildfehler oder ein schwarzes Bild können beim iMac auf eine defekte Grafikkarte hindeuten. Wir bieten die ATI HD 6970M für den iMac 27 Zoll A1312 aus den Jahren 2010 und 2011 generalüberholt und mit neuem Grafikchip an. Jede Karte wird vor dem Versand getestet.</p><p>Sie können eine Karte direkt kaufen oder Ihre defekte Karte einsenden und im Austausch eine generalüberholte Karte erhalten. Ist eine Karte gerade nicht vorrätig, fragen Sie gern nach dem nächsten Liefertermin.</p></div>
 </div>
 <div class="huelle">
+  <noscript><p class="hinweis hinweis--info">Filter, Sortierung und Warenkorb benötigen JavaScript. Alle Artikel finden Sie in der Liste unten.</p></noscript>
   <div class="katalog" data-katalog>
     <aside class="filter" id="filter" aria-labelledby="filter-titel">
-      <h2 id="filter-titel">Filter</h2>
+      <h2 id="filter-titel" tabindex="-1">Filter</h2>
       <form data-filter>
 
         <fieldset class="feld-gruppe">
@@ -131,16 +132,17 @@
           <div class="filter__preis">
             <div class="feld">
               <label class="feld__label" for="preis-min">Von</label>
-              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+              <input class="eingabe" id="preis-min" name="preis_min" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
             </div>
             <div class="feld">
               <label class="feld__label" for="preis-max">Bis</label>
-              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="290">
+              <input class="eingabe" id="preis-max" name="preis_max" type="text" inputmode="decimal" autocomplete="off" placeholder="290">
             </div>
           </div>
         </fieldset>
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
         <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+        <button class="knopf knopf--primaer knopf--block filter__fertig" type="button" data-filter-fertig>2 Artikel anzeigen</button>
       </form>
     </aside>
     <div class="katalog__liste">
@@ -160,7 +162,7 @@
       <div class="raster-produkte" data-katalog-raster>
 <article class="produkt" data-id="a22" data-name="Grafikkarte ATI HD 6970M 1 GB für iMac 27 Zoll A1312 mit neuem Grafikchip" data-preis="289.00" data-hersteller="AMD" data-zustand="Generalüberholt" data-kategorie="grafikkarten" data-rang="220" data-verfuegbar="0">
   <a class="produkt__bildlink" href="../../ersatzteile/grafikkarten/grafikkarte-imac-27-a1312-ati-hd-6970m-1gb-neuer-grafikchip/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp" srcset="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, ../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp" srcset="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, ../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" decoding="async" alt="Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Grafikkarten</p>
@@ -176,7 +178,7 @@
 
 <article class="produkt" data-id="a23" data-name="Grafikkarte ATI HD 6970M für iMac 27 Zoll A1312 im Austausch" data-preis="219.00" data-hersteller="AMD" data-zustand="Generalüberholt" data-kategorie="grafikkarten" data-rang="230" data-verfuegbar="0">
   <a class="produkt__bildlink" href="../../ersatzteile/grafikkarten/grafikkarte-imac-27-a1312-ati-hd-6970m-austausch/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp" srcset="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, ../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="800" height="600" loading="lazy" decoding="async" alt="Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht">
+    <img class="produkt__bild" src="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp" srcset="../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, ../../assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="800" height="600" decoding="async" alt="Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Grafikkarten</p>
@@ -193,7 +195,8 @@
       </div>
       <div class="hinweis hinweis--info" data-katalog-leer hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+        <div><p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie direkt bei uns an</a>.</p>
+          <button class="knopf knopf--zweit knopf--klein hinweis__knopf" type="button" data-filter-leeren>Filter zurücksetzen</button></div>
       </div>
     </div>
   </div>
@@ -249,7 +252,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

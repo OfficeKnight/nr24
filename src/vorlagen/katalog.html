@@ -4,9 +4,10 @@
   <div class="seitenkopf__text">{{{ k.einleitung }}}</div>
 </div>
 <div class="huelle">
-  <div class="katalog" data-katalog>
+  <noscript><p class="hinweis hinweis--info">Filter, Sortierung und Warenkorb benötigen JavaScript. Alle Artikel finden Sie in der Liste unten.</p></noscript>
+  <div class="katalog{{ katalog_klasse }}" data-katalog>
     <aside class="filter" id="filter" aria-labelledby="filter-titel">
-      <h2 id="filter-titel">Filter</h2>
+      <h2 id="filter-titel" tabindex="-1">Filter</h2>
       <form data-filter>
         {{{ filter_gruppen }}}
         <fieldset class="feld-gruppe">
@@ -14,16 +15,17 @@
           <div class="filter__preis">
             <div class="feld">
               <label class="feld__label" for="preis-min">Von</label>
-              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+              <input class="eingabe" id="preis-min" name="preis_min" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
             </div>
             <div class="feld">
               <label class="feld__label" for="preis-max">Bis</label>
-              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="{{ preis_max }}">
+              <input class="eingabe" id="preis-max" name="preis_max" type="text" inputmode="decimal" autocomplete="off" placeholder="{{ preis_max }}">
             </div>
           </div>
         </fieldset>
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
         <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+        <button class="knopf knopf--primaer knopf--block filter__fertig" type="button" data-filter-fertig>{{ anzahl }} anzeigen</button>
       </form>
     </aside>
     <div class="katalog__liste">
@@ -45,7 +47,8 @@
       </div>
       <div class="hinweis hinweis--info" data-katalog-leer hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="{{ root }}notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+        <div><p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="{{ root }}notebook-reparatur/anfrage/">fragen Sie direkt bei uns an</a>.</p>
+          <button class="knopf knopf--zweit knopf--klein hinweis__knopf" type="button" data-filter-leeren>Filter zurücksetzen</button></div>
       </div>
     </div>
   </div>

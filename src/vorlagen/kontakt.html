@@ -40,7 +40,8 @@
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="datenschutz" value="1" required aria-describedby="kontakt-datenschutz-fehler" data-fehler="Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu."><span>Ich bin einverstanden, dass meine Angaben zur Beantwortung verwendet werden. Mehr dazu in der <a href="{{ root }}datenschutz/">Datenschutzerklärung</a>.</span></label>
         <p class="feld__fehler" id="kontakt-datenschutz-fehler" hidden></p>
       </div>
-      <button class="knopf knopf--primaer" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><span>Nachricht senden</span></button>
+      <noscript><p class="hinweis hinweis--info">Das Formular benötigt JavaScript. In dieser Demo wird ohnehin nichts übertragen.</p></noscript>
+      <button class="knopf knopf--primaer" type="submit" disabled data-js-frei><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><span>Nachricht senden</span></button>
     </form>
     <div class="formular-erfolg karte" data-formular-erfolg hidden tabindex="-1">
       <svg class="ico formular-erfolg__ico" aria-hidden="true"><use href="#i-check"></use></svg>

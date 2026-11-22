@@ -260,6 +260,18 @@
   });
 
   if (document.readyState === "loading") {
+    /* Die Leiste kommt in den Body, sobald der Skiplink geparst ist, also noch vor dem ersten Zeichnen
+       des Kopfs. So springt die Seite beim Laden nicht um die Höhe der Leiste nach unten. */
+    if (window.MutationObserver) {
+      var beobachter = new MutationObserver(function () {
+        if (leiste) { beobachter.disconnect(); return; }
+        if (document.body && document.querySelector(".skiplink, header")) {
+          beobachter.disconnect();
+          leisteBauen();
+        }
+      });
+      beobachter.observe(html, { childList: true, subtree: true });
+    }
     document.addEventListener("DOMContentLoaded", leisteBauen);
   } else {
     leisteBauen();

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../assets/css/schriften.css">
 <link rel="stylesheet" href="../assets/css/themen.css">
 <link rel="stylesheet" href="../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../assets/js/demo.js"></script>
 <script src="../assets/js/daten.js" defer></script>
 <script src="../assets/js/shop.js" defer></script>
@@ -30,7 +30,7 @@
    "name": "Wie lange dauert eine Reparatur?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von [2 bis 3 Werktagen]. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil [1 bis 14 Werktage]."
+    "text": "Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von 2 bis 3 Werktagen. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil 1 bis 14 Werktage."
    }
   },
   {
@@ -54,7 +54,7 @@
    "name": "Was ist in der Reparatur enthalten?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Wir ersetzen das defekte Bauteil, reinigen das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Notebook ausführlich."
+    "text": "Wir ersetzen das defekte Bauteil und testen das Notebook vor dem Rückversand ausführlich. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads."
    }
   },
   {
@@ -159,7 +159,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -225,7 +225,7 @@
 <li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">1</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-dokument"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 1. </span>Anfrage</h3><p>Sie buchen die Diagnose ab 29,90 € oder eine Reparatur zum Festpreis im Shop. Oder Sie senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.</p></li>
 <li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">2</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-paket"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 2. </span>Einsenden</h3><p>Sie schicken uns das Notebook mit Netzteil und Akku gut gepolstert zu. Legen Sie Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</p></li>
 <li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">3</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 3. </span>Diagnose und Reparatur</h3><p>Nach einer Diagnose erhalten Sie einen Kostenvoranschlag per E-Mail, repariert wird erst nach Ihrer Freigabe. Eine gebuchte Festpreis-Reparatur führen wir direkt aus.</p></li>
-<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">4</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-lkw"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 4. </span>Rückversand</h3><p>Nach Reinigung und ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p></li>
+<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">4</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-lkw"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 4. </span>Rückversand</h3><p>Nach ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p></li>
     </ol>
   </div>
 </section>
@@ -271,7 +271,7 @@
       <h2 id="faq-titel">Häufige Fragen</h2>
 <details class="faq__eintrag">
   <summary class="faq__frage"><span>Wie lange dauert eine Reparatur?</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-unten"></use></svg></summary>
-  <div class="faq__antwort"><p>Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von <span class="ph">[2 bis 3 Werktagen]</span>. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil <span class="ph">[1 bis 14 Werktage]</span>.</p></div>
+  <div class="faq__antwort"><p>Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von 2 bis 3 Werktagen. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil 1 bis 14 Werktage.</p></div>
 </details>
 
 <details class="faq__eintrag">
@@ -286,7 +286,7 @@
 
 <details class="faq__eintrag">
   <summary class="faq__frage"><span>Was ist in der Reparatur enthalten?</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-unten"></use></svg></summary>
-  <div class="faq__antwort"><p>Wir ersetzen das defekte Bauteil, reinigen das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Notebook ausführlich.</p></div>
+  <div class="faq__antwort"><p>Wir ersetzen das defekte Bauteil und testen das Notebook vor dem Rückversand ausführlich. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</p></div>
 </details>
 
 <details class="faq__eintrag">
@@ -314,7 +314,7 @@
       <h2 id="hersteller-titel">Reparatur nach Hersteller</h2>
       <p>Wir reparieren Notebooks aller gängigen Hersteller. Wählen Sie Ihre Marke und finden Sie passende Angebote.</p>
       <ul class="hersteller__liste">
-        <li><a class="hersteller__link" href="../notebook-reparatur/acer/">Acer</a></li><li><a class="hersteller__link" href="../suche/?q=Apple">Apple</a></li><li><a class="hersteller__link" href="../suche/?q=Asus">Asus</a></li><li><a class="hersteller__link" href="../suche/?q=Dell">Dell</a></li><li><a class="hersteller__link" href="../suche/?q=HP">HP</a></li><li><a class="hersteller__link" href="../suche/?q=Lenovo">Lenovo</a></li><li><a class="hersteller__link" href="../suche/?q=Medion">Medion</a></li><li><a class="hersteller__link" href="../suche/?q=MSI">MSI</a></li><li><a class="hersteller__link" href="../suche/?q=Samsung">Samsung</a></li><li><a class="hersteller__link" href="../suche/?q=Sony">Sony</a></li>
+        <li><a class="hersteller__link" href="../notebook-reparatur/acer/">Acer</a></li><li><a class="hersteller__link" href="../suche/?q=Apple">Apple</a></li><li><a class="hersteller__link" href="../suche/?q=Asus">Asus</a></li><li><a class="hersteller__link" href="../suche/?q=Dell">Dell</a></li><li><a class="hersteller__link" href="../suche/?q=HP">HP</a></li><li><a class="hersteller__link" href="../suche/?q=Lenovo">Lenovo</a></li><li><a class="hersteller__link" href="../suche/?q=Medion">Medion</a></li><li><a class="hersteller__link" href="../notebook-reparatur/anfrage/?hersteller=msi">MSI</a></li><li><a class="hersteller__link" href="../suche/?q=Samsung">Samsung</a></li><li><a class="hersteller__link" href="../suche/?q=Sony">Sony</a></li>
       </ul>
     </div>
   </div>
@@ -385,7 +385,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

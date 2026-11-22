@@ -30,8 +30,8 @@
     {
       "slug": "grafikkarten",
       "name": "Grafikkarten",
-      "h1": "Grafikkarten für iMac und Notebook",
-      "title": "Grafikkarten für iMac und Notebook",
+      "h1": "Grafikkarten für den iMac 27 Zoll",
+      "title": "Grafikkarten für den iMac 27 Zoll",
       "description": "Generalüberholte ATI HD 6970M mit neuem Grafikchip für den iMac 27 Zoll A1312 aus 2010 und 2011, als Kauf oder im Austausch gegen Ihre defekte Karte.",
       "kurz": "Generalüberholte Grafikkarten mit neuem Grafikchip.",
       "einleitung": "<p>Streifen, Bildfehler oder ein schwarzes Bild können beim iMac auf eine defekte Grafikkarte hindeuten. Wir bieten die ATI HD 6970M für den iMac 27 Zoll A1312 aus den Jahren 2010 und 2011 generalüberholt und mit neuem Grafikchip an. Jede Karte wird vor dem Versand getestet.</p><p>Sie können eine Karte direkt kaufen oder Ihre defekte Karte einsenden und im Austausch eine generalüberholte Karte erhalten. Ist eine Karte gerade nicht vorrätig, fragen Sie gern nach dem nächsten Liefertermin.</p>",
@@ -84,7 +84,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur des Mainboards LA-H431P für das Acer Nitro 5 AN515 zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Acer Nitro 5 AN515. Das Angebot gilt für Geräte mit der Platine LA-H431P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Acer Nitro 5 AN515. Das Angebot gilt für Geräte mit der Platine LA-H431P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -120,7 +120,8 @@
       "beliebt": true,
       "rang": 10,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "title": "Acer Nitro 5 Mainboard LA-H431P"
     },
     {
       "id": "a02",
@@ -138,7 +139,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur des Mainboards LA-K621P für die Dell Precision 7560 zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Dell Precision 7560. Das Angebot gilt für Geräte mit der Platine LA-K621P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Dell Precision 7560. Das Angebot gilt für Geräte mit der Platine LA-K621P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -174,7 +175,8 @@
       "beliebt": true,
       "rang": 20,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "title": "Dell Precision 7560 Mainboard"
     },
     {
       "id": "a03",
@@ -192,7 +194,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur für Ihr Lenovo Legion Pro 5 16IRX9 zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion Pro 5 16IRX9. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion Pro 5 16IRX9. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -242,7 +244,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur für Ihr Acer Predator 17 G9-793 zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Acer Predator 17 G9-793. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Acer Predator 17 G9-793. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -292,7 +294,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur für Ihr Lenovo Legion 7 zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion 7. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion 7. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -317,8 +319,8 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/werkzeug",
-          "alt": "Symbolbild Elektronikwerkzeug"
+          "datei": "fotos/loeten",
+          "alt": "Symbolbild Löten an einer Platine"
         }
       ],
       "beliebt": false,
@@ -342,7 +344,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Reparatur des Logicboards Ihres Apple MacBook Pro zum Festpreis.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Logicboards Ihres Apple MacBook Pro. Für welche Modelljahre und Platinen das Angebot gilt, steht hier [Modelljahre und Platinennummern]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Logicboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Logicboards Ihres Apple MacBook Pro. Für welche Modelljahre und Platinen das Angebot gilt, steht hier [Modelljahre und Platinennummern]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie vor dem Einsenden gern bei uns an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Logicboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -367,14 +369,15 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/mainboard",
-          "alt": "Symbolbild Platine in Nahaufnahme"
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Symbolbild Mainboard in der Infrarot-Lötstation unserer Werkstatt"
         }
       ],
       "beliebt": true,
       "rang": 60,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "title": "MacBook Pro Logicboard-Reparatur"
     },
     {
       "id": "a07",
@@ -383,14 +386,21 @@
       "art": "reparatur",
       "name": "Acer Mainboard-Diagnose mit Kostenvoranschlag",
       "hersteller": "Acer",
-      "modelle": [],
+      "modelle": [
+        "Aspire",
+        "Extensa",
+        "Nitro",
+        "Predator",
+        "Swift",
+        "TravelMate"
+      ],
       "teilenummer": null,
       "preis": 59.0,
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Fehlersuche am Mainboard Ihres Acer-Notebooks mit Kostenvoranschlag.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Acer-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../acer-notebook-reparatur-diagnose-reinigung/\">Acer Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Acer-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../acer-notebook-reparatur-diagnose-reinigung/\">Acer Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, senden wir Ihr Notebook auf unsere Kosten unrepariert zurück. Der Preis der Diagnose wird in diesem Fall nicht erstattet.</li></ol>",
       "merkmale": [
         [
           "Leistung",
@@ -415,8 +425,8 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/messgeraet",
-          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
+          "datei": "fotos/hero",
+          "alt": "Symbolbild geöffnetes Notebook mit Mainboard und Arbeitsspeicher"
         }
       ],
       "beliebt": true,
@@ -424,7 +434,8 @@
       "quelle": "ebay",
       "quelle_url": null,
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Acer Mainboard-Diagnose"
     },
     {
       "id": "a08",
@@ -440,7 +451,7 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Fehlersuche am Mainboard Ihres Lenovo-Notebooks mit Kostenvoranschlag.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Lenovo-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../lenovo-notebook-reparatur-diagnose-reinigung/\">Lenovo Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Lenovo-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../lenovo-notebook-reparatur-diagnose-reinigung/\">Lenovo Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, senden wir Ihr Notebook auf unsere Kosten unrepariert zurück. Der Preis der Diagnose wird in diesem Fall nicht erstattet.</li></ol>",
       "merkmale": [
         [
           "Leistung",
@@ -465,8 +476,8 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/notebook-offen",
-          "alt": "Symbolbild geöffnetes Notebook"
+          "datei": "fotos/messgeraet",
+          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
         }
       ],
       "beliebt": false,
@@ -474,7 +485,8 @@
       "quelle": "ebay",
       "quelle_url": null,
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Lenovo Mainboard-Diagnose"
     },
     {
       "id": "a09",
@@ -520,15 +532,19 @@
       "beliebt": true,
       "rang": 90,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "title": "PlayStation 4 Wartung und Reinigung",
+      "suchbegriffe": [
+        "PS4"
+      ]
     },
     {
       "id": "a10",
       "slug": "ddr4-spannung-tester-analyzer",
       "kategorie": "werkstattbedarf",
       "art": "ware",
-      "name": "DDR4 Spannung Tester Analyzer",
-      "hersteller": "[Hersteller]",
+      "name": "DDR4-Spannungstester (Analyzer)",
+      "hersteller": null,
       "modelle": [],
       "teilenummer": null,
       "preis": 89.0,
@@ -575,7 +591,7 @@
       "slug": "ersa-bga-flussmittelcreme",
       "kategorie": "werkstattbedarf",
       "art": "ware",
-      "name": "ERSA BGA Flussmittelcreme",
+      "name": "ERSA BGA-Flussmittelcreme",
       "hersteller": "ERSA",
       "modelle": [],
       "teilenummer": null,
@@ -625,14 +641,21 @@
       "art": "reparatur",
       "name": "Acer Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Acer",
-      "modelle": [],
+      "modelle": [
+        "Aspire",
+        "Extensa",
+        "Nitro",
+        "Predator",
+        "Swift",
+        "TravelMate"
+      ],
       "teilenummer": null,
       "preis": 29.9,
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle Acer-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Acer-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Acer-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Acer-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Acer-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -656,7 +679,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -674,7 +697,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/acer-laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Acer Notebook-Reparatur"
     },
     {
       "id": "a13",
@@ -690,7 +714,7 @@
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle Asus-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Asus-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Asus-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Asus-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Asus-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -714,7 +738,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -723,12 +747,12 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/notebook-offen",
-          "alt": "Symbolbild geöffnetes Notebook"
-        },
-        {
           "datei": "produkte/notebook-reparatur-werkstatt-1",
           "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        },
+        {
+          "datei": "fotos/notebook-offen",
+          "alt": "Symbolbild geöffnetes Notebook"
         }
       ],
       "beliebt": false,
@@ -736,7 +760,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Asus Notebook-Reparatur"
     },
     {
       "id": "a14",
@@ -752,7 +777,7 @@
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle HP-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres HP-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle HP-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres HP-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle HP-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -776,7 +801,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -785,12 +810,12 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/messgeraet",
-          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
-        },
-        {
           "datei": "produkte/notebook-reparatur-werkstatt-1",
           "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        },
+        {
+          "datei": "fotos/messgeraet",
+          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
         }
       ],
       "beliebt": false,
@@ -798,7 +823,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/hp-laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "HP Notebook-Reparatur"
     },
     {
       "id": "a15",
@@ -814,7 +840,7 @@
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle Lenovo-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Lenovo-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Lenovo-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Lenovo-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Lenovo-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -838,7 +864,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -847,12 +873,12 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/mainboard",
-          "alt": "Symbolbild Notebook-Mainboard"
-        },
-        {
           "datei": "produkte/notebook-reparatur-werkstatt-1",
           "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        },
+        {
+          "datei": "fotos/mainboard",
+          "alt": "Symbolbild Notebook-Mainboard"
         }
       ],
       "beliebt": false,
@@ -860,7 +886,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/lenovo-laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Lenovo Notebook-Reparatur"
     },
     {
       "id": "a16",
@@ -876,7 +903,7 @@
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle Medion-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Medion-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Medion-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Medion-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Medion-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -900,7 +927,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -908,10 +935,6 @@
         ]
       ],
       "bilder": [
-        {
-          "datei": "fotos/werkzeug",
-          "alt": "Symbolbild Elektronikwerkzeug"
-        },
         {
           "datei": "produkte/notebook-reparatur-werkstatt-1",
           "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
@@ -922,7 +945,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/medion-laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Medion Notebook-Reparatur"
     },
     {
       "id": "a17",
@@ -938,7 +962,7 @@
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
       "kurz": "Diagnose mit Kostenvoranschlag für alle Samsung-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Samsung-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Samsung-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Samsung-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Samsung-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 1 Jahr Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
@@ -962,7 +986,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate auf die Reparatur"
+          "1 Jahr auf die Reparatur"
         ],
         [
           "Zustand",
@@ -971,12 +995,12 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/loeten",
-          "alt": "Symbolbild Lötarbeit an einer Platine"
-        },
-        {
           "datei": "produkte/notebook-reparatur-werkstatt-1",
           "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        },
+        {
+          "datei": "fotos/loeten",
+          "alt": "Symbolbild Lötarbeit an einer Platine"
         }
       ],
       "beliebt": false,
@@ -984,7 +1008,8 @@
       "quelle": "shop",
       "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/samsung-laptop-notebook-reparatur-detail",
       "preis_label": "Diagnose",
-      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag.",
+      "title": "Samsung Notebook-Reparatur"
     },
     {
       "id": "a18",
@@ -1009,8 +1034,8 @@
       "zustand": "Gebraucht",
       "verfuegbar": true,
       "lieferzeit": "[Lieferzeit]",
-      "kurz": "Gebrauchtes LED-Display mit 1600 x 900 Pixeln, getestet, ohne Kratzer und ohne Pixelfehler.",
-      "beschreibung": "<p>Gebrauchtes LED-Display N17306-L02 von Chi Mei in 17,3 Zoll mit glänzender Oberfläche. Das Display ist getestet und voll funktionsfähig. Es befindet sich in sehr gutem Zustand, ohne Kratzer und ohne Pixelfehler.</p><h3>Technische Daten</h3><ul><li>Hersteller Chi Mei</li><li>Modell N17306-L02</li><li>Typ LED-Display</li><li>Auflösung 1600 x 900 Pixel</li><li>Oberfläche glänzend</li><li>Anschluss 40 Pin, unten auf der linken Seite wie abgebildet</li></ul><h3>Passende Notebooks</h3><p>Das Display passt in diverse Notebooks von Acer, Asus, Fujitsu-Siemens (Amilo), Medion, Samsung, Sony, Gericom, HP, Toshiba und anderen Herstellern. Brauchen Sie ein Display für ein anderes Modell, fragen Sie uns gern per E-Mail. Die Abbildungen dienen als Beispiel.</p><h3>Lieferumfang</h3><p>LED-Display 17,3 Zoll N17306-L02 mit Anschluss links wie abgebildet.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "kurz": "Gebrauchtes LED-Display mit 1600 × 900 Pixeln, getestet, ohne Kratzer und ohne Pixelfehler.",
+      "beschreibung": "<p>Gebrauchtes LED-Display N17306-L02 von Chi Mei in 17,3 Zoll mit glänzender Oberfläche. Das Display ist getestet und voll funktionsfähig. Es befindet sich in sehr gutem Zustand, ohne Kratzer und ohne Pixelfehler.</p><h3>Technische Daten</h3><ul><li>Hersteller Chi Mei</li><li>Modell N17306-L02</li><li>Typ LED-Display</li><li>Auflösung 1600 × 900 Pixel</li><li>Oberfläche glänzend</li><li>Anschluss 40 Pin, unten auf der linken Seite wie abgebildet</li></ul><h3>Passende Notebooks</h3><p>Das Display passt in diverse Notebooks von Acer, Asus, Fujitsu-Siemens (Amilo), Medion, Samsung, Sony, Gericom, HP, Toshiba und anderen Herstellern. Brauchen Sie ein Display für ein anderes Modell, fragen Sie uns gern per E-Mail. Die Abbildungen dienen als Beispiel.</p><h3>Lieferumfang</h3><p>LED-Display 17,3 Zoll N17306-L02 mit Anschluss links wie abgebildet.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Teilenummer",
@@ -1030,7 +1055,7 @@
         ],
         [
           "Auflösung",
-          "1600 x 900 Pixel"
+          "1600 × 900 Pixel"
         ],
         [
           "Oberfläche",
@@ -1054,7 +1079,9 @@
       "beliebt": true,
       "rang": 160,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-343-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-343-detail",
+      "title": "17,3 Zoll LED-Display N17306-L02",
+      "differenzbesteuert": true
     },
     {
       "id": "a19",
@@ -1078,8 +1105,8 @@
       "zustand": "Gebraucht",
       "verfuegbar": true,
       "lieferzeit": "[Lieferzeit]",
-      "kurz": "Gebrauchtes 17-Zoll-Display mit 1440 x 900 Pixeln und CCFL-Beleuchtung, getestet.",
-      "beschreibung": "<p>Gebrauchtes TFT-Display LTN170X2-L02 von Samsung in 17,0 Zoll mit glänzender Oberfläche. Das Display ist getestet, voll funktionsfähig und in gutem Zustand.</p><h3>Technische Daten</h3><ul><li>Modell LTN170X2-L02 von Samsung</li><li>Diagonale 17,0 Zoll</li><li>Auflösung 1440 x 900 Pixel</li><li>Anschluss 30 Pin</li><li>Hintergrundbeleuchtung CCFL</li><li>Oberfläche glänzend</li></ul><h3>Passende Notebooks</h3><p>Geeignet für Notebooks von Fujitsu, Medion, Sony, Acer, Toshiba, Dell und weiteren Herstellern, unter anderem für die Fujitsu-Siemens-Serien XA und XI.</p><h3>Lieferumfang</h3><p>Display 17,0 Zoll, glänzend. Die Abbildung ist ein Symbolbild.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "kurz": "Gebrauchtes 17-Zoll-Display mit 1440 × 900 Pixeln und CCFL-Beleuchtung, getestet.",
+      "beschreibung": "<p>Gebrauchtes TFT-Display LTN170X2-L02 von Samsung in 17,0 Zoll mit glänzender Oberfläche. Das Display ist getestet, voll funktionsfähig und in gutem Zustand.</p><h3>Technische Daten</h3><ul><li>Modell LTN170X2-L02 von Samsung</li><li>Diagonale 17,0 Zoll</li><li>Auflösung 1440 × 900 Pixel</li><li>Anschluss 30 Pin</li><li>Hintergrundbeleuchtung CCFL</li><li>Oberfläche glänzend</li></ul><h3>Passende Notebooks</h3><p>Geeignet für Notebooks von Fujitsu, Medion, Sony, Acer, Toshiba, Dell und weiteren Herstellern, unter anderem für die Fujitsu-Siemens-Serien XA und XI.</p><h3>Lieferumfang</h3><p>Display 17,0 Zoll, glänzend. Die Abbildung ist ein Symbolbild.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
           "Teilenummer",
@@ -1099,7 +1126,7 @@
         ],
         [
           "Auflösung",
-          "1440 x 900 Pixel"
+          "1440 × 900 Pixel"
         ],
         [
           "Oberfläche",
@@ -1116,14 +1143,16 @@
       ],
       "bilder": [
         {
-          "datei": "fotos/display",
-          "alt": "Symbolbild Notebook-Display"
+          "datei": "produkte/led-display-17-3-n17306-l02-1",
+          "alt": "Symbolbild, Display eines ähnlichen Modells"
         }
       ],
       "beliebt": false,
       "rang": 190,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-detail",
+      "title": "17 Zoll TFT-Display LTN170X2-L02",
+      "differenzbesteuert": true
     },
     {
       "id": "a20",
@@ -1175,7 +1204,9 @@
       "beliebt": false,
       "rang": 170,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-344-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-344-detail",
+      "title": "Displaykabel Asus X72, X72D, X72DR",
+      "differenzbesteuert": true
     },
     {
       "id": "a21",
@@ -1228,7 +1259,9 @@
       "beliebt": false,
       "rang": 180,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/displaykabel-für-asus-x70ab-ac-a-af-serie-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/displaykabel-für-asus-x70ab-ac-a-af-serie-detail",
+      "title": "Displaykabel Asus X70A, X70AB, X70AC",
+      "differenzbesteuert": true
     },
     {
       "id": "a22",
@@ -1291,7 +1324,9 @@
       "beliebt": false,
       "rang": 220,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-a1312-2011-2010-ati-hd-6970-1gb-grafikkarte-inkl-neu-gpu-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-a1312-2011-2010-ati-hd-6970-1gb-grafikkarte-inkl-neu-gpu-detail",
+      "title": "ATI HD 6970M 1 GB für iMac A1312",
+      "differenzbesteuert": true
     },
     {
       "id": "a23",
@@ -1310,7 +1345,7 @@
       "verfuegbar": false,
       "lieferzeit": "Derzeit nicht auf Lager",
       "kurz": "Generalüberholte ATI HD 6970M mit neuem Grafikchip im Austausch gegen Ihre defekte Karte.",
-      "beschreibung": "<p>Generalüberholte Grafikkarte ATI HD 6970M mit 1 GB oder 2 GB Grafikspeicher für den iMac 27 Zoll A1312 aus 2010 und 2011, im Austausch gegen Ihre defekte Karte. Die Karte ist getestet, voll funktionsfähig und mit einem neuen Grafikchip aus dem Baujahr 2014 ausgestattet.</p><h3>So funktioniert der Austausch</h3><ol><li>Nach dem Kauf senden Sie uns Ihre defekte Grafikkarte HD 6970M komplett mit Kühler und Sensor.</li><li>Innerhalb von 1 bis 3 Werktagen nach Eingang senden wir Ihnen eine generalüberholte und getestete Grafikkarte mit Kühler, neuem Grafikchip und frischer Wärmeleitpaste.</li></ol><p>Bastelkarten oder vollständig zerstörte Karten, etwa nach einem Aufbacken im Backofen, nehmen wir nicht an. Eine bereits einmal reparierte Karte ist in Ordnung.</p><p>Die Grafikkarte passt nur in den iMac 27 Zoll A1312 aus 2010 und 2011 mit ATI HD 6970M. Weitere Teile für den iMac der Jahre 2009 bis 2011 erhalten Sie auf Anfrage per E-Mail.</p><h3>Gewährleistung</h3><p>Auf die Grafikkarte erhalten Sie 12 Monate Gewährleistung und eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "beschreibung": "<p>Generalüberholte Grafikkarte ATI HD 6970M mit 1 GB oder 2 GB Grafikspeicher für den iMac 27 Zoll A1312 aus 2010 und 2011, im Austausch gegen Ihre defekte Karte. Die Karte ist getestet, voll funktionsfähig und mit einem neuen Grafikchip aus dem Baujahr 2014 ausgestattet.</p><h3>So funktioniert der Austausch</h3><ol><li>Nach dem Kauf senden Sie uns Ihre defekte Grafikkarte HD 6970M komplett mit Kühler und Sensor.</li><li>Innerhalb von 1 bis 3 Werktagen nach Eingang senden wir Ihnen eine generalüberholte und getestete Grafikkarte mit Kühler, neuem Grafikchip und frischer Wärmeleitpaste.</li></ol><p>Bastelkarten oder vollständig zerstörte Karten, etwa nach einem Aufbacken im Backofen, nehmen wir nicht an. Eine bereits einmal reparierte Karte ist in Ordnung.</p><p>Die Grafikkarte passt nur in den iMac 27 Zoll A1312 aus 2010 und 2011 mit ATI HD 6970M. Weitere Teile für den iMac der Jahre 2009 bis 2011 erhalten Sie auf Anfrage per E-Mail.</p><h3>Gewährleistung</h3><p>Auf die Grafikkarte erhalten Sie 1 Jahr Gewährleistung und eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Grafikchip",
@@ -1334,7 +1369,7 @@
         ],
         [
           "Gewährleistung",
-          "12 Monate"
+          "1 Jahr"
         ],
         [
           "Zustand",
@@ -1362,7 +1397,8 @@
       "beliebt": false,
       "rang": 230,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-grafikkarte-gegen-austausch-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-grafikkarte-gegen-austausch-detail",
+      "title": "HD 6970M für iMac A1312 im Austausch"
     },
     {
       "id": "a24",
@@ -1377,7 +1413,7 @@
       "zustand": "Gebraucht",
       "verfuegbar": true,
       "lieferzeit": "[Lieferzeit]",
-      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 2,1 GHz, getestet.",
+      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 × 2,1 GHz, getestet.",
       "beschreibung": "<p>Gebrauchter Notebook-Prozessor AMD Athlon II Dual-Core Mobile P320 in sehr gutem Zustand. Die CPU ist getestet, voll funktionsfähig und hat keine verbogenen Pins.</p><h3>Technische Daten</h3><ul><li>Prozessoraufschrift AMP320SGR22GM</li><li>Serie AMD Athlon II</li><li>Sockel S1</li><li>Zwei Kerne (Dual-Core)</li><li>Taktfrequenz 2100 MHz pro Kern</li></ul><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
@@ -1418,14 +1454,15 @@
       "beliebt": false,
       "rang": 240,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-athlon-ii-dual-core-mobile-p320-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-athlon-ii-dual-core-mobile-p320-detail",
+      "differenzbesteuert": true
     },
     {
       "id": "a25",
       "slug": "amd-turion-64-x2-tl-56",
       "kategorie": "prozessoren",
       "art": "ware",
-      "name": "AMD Turion 64 X2 TL-56 mit 2 x 1,8 GHz",
+      "name": "AMD Turion 64 X2 TL-56 mit 2 × 1,8 GHz",
       "hersteller": "AMD",
       "modelle": [],
       "teilenummer": "TMDTL56HAX5CT",
@@ -1433,7 +1470,7 @@
       "zustand": "Gebraucht",
       "verfuegbar": true,
       "lieferzeit": "[Lieferzeit]",
-      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 1,8 GHz, getestet.",
+      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 × 1,8 GHz, getestet.",
       "beschreibung": "<p>Gebrauchter Notebook-Prozessor AMD Turion 64 X2 TL-56 in sehr gutem Zustand. Die CPU ist getestet, voll funktionsfähig und hat keine verbogenen Pins.</p><h3>Technische Daten</h3><ul><li>Prozessoraufschrift TMDTL56HAX5CT</li><li>Hersteller AMD</li><li>Sockel S1</li><li>Zwei Kerne (Dual-Core)</li><li>Taktfrequenz 1800 MHz pro Kern</li><li>Verlustleistung (TDP) 33 Watt</li><li>Codename Tyler</li></ul><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
       "merkmale": [
         [
@@ -1482,7 +1519,9 @@
       "beliebt": false,
       "rang": 250,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-turion-64-x2-2x1,8-ghz-tl-56-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-turion-64-x2-2x1,8-ghz-tl-56-detail",
+      "title": "AMD Turion 64 X2 TL-56",
+      "differenzbesteuert": true
     }
   ]
 }

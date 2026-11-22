@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../../assets/css/schriften.css">
 <link rel="stylesheet" href="../../assets/css/themen.css">
 <link rel="stylesheet" href="../../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/daten.js" defer></script>
 <script src="../../assets/js/shop.js" defer></script>
@@ -92,7 +92,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -121,26 +121,28 @@
   <div class="seitenkopf__text"><p>Für die Fehlersuche und Reparatur an Notebook-Mainboards bieten wir ausgewählte Messtechnik und Verbrauchsmaterial an.</p><p>Der DDR4-Spannungstester hilft bei der Prüfung von Speichersteckplätzen, die BGA-Flussmittelcreme von ERSA beim Löten an Platinen. Fragen zu Einsatz und Lieferumfang beantworten wir Ihnen gern.</p></div>
 </div>
 <div class="huelle">
+  <noscript><p class="hinweis hinweis--info">Filter, Sortierung und Warenkorb benötigen JavaScript. Alle Artikel finden Sie in der Liste unten.</p></noscript>
   <div class="katalog" data-katalog>
     <aside class="filter" id="filter" aria-labelledby="filter-titel">
-      <h2 id="filter-titel">Filter</h2>
+      <h2 id="filter-titel" tabindex="-1">Filter</h2>
       <form data-filter>
-        <fieldset class="feld-gruppe"><legend>Hersteller</legend><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="ERSA"><span>ERSA <span class="filter__anzahl">(1)</span></span></label><label class="auswahl auswahl--zeile"><input type="checkbox" name="hersteller" value="[Hersteller]"><span><span class="ph">[Hersteller]</span> <span class="filter__anzahl">(1)</span></span></label></fieldset>
+
         <fieldset class="feld-gruppe">
           <legend>Preis in Euro</legend>
           <div class="filter__preis">
             <div class="feld">
               <label class="feld__label" for="preis-min">Von</label>
-              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+              <input class="eingabe" id="preis-min" name="preis_min" type="text" inputmode="decimal" autocomplete="off" placeholder="0">
             </div>
             <div class="feld">
               <label class="feld__label" for="preis-max">Bis</label>
-              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="90">
+              <input class="eingabe" id="preis-max" name="preis_max" type="text" inputmode="decimal" autocomplete="off" placeholder="90">
             </div>
           </div>
         </fieldset>
         <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
         <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+        <button class="knopf knopf--primaer knopf--block filter__fertig" type="button" data-filter-fertig>2 Artikel anzeigen</button>
       </form>
     </aside>
     <div class="katalog__liste">
@@ -158,42 +160,43 @@
         </div>
       </div>
       <div class="raster-produkte" data-katalog-raster>
-<article class="produkt" data-id="a10" data-name="DDR4 Spannung Tester Analyzer" data-preis="89.00" data-hersteller="[Hersteller]" data-zustand="Neu" data-kategorie="werkstattbedarf" data-rang="200" data-verfuegbar="1">
+<article class="produkt" data-id="a10" data-name="DDR4-Spannungstester (Analyzer)" data-preis="89.00" data-hersteller="" data-zustand="Neu" data-kategorie="werkstattbedarf" data-rang="200" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/werkstattbedarf/ddr4-spannung-tester-analyzer/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/arbeitsspeicher-480.webp" srcset="../../assets/bilder/fotos/arbeitsspeicher-480.webp 480w, ../../assets/bilder/fotos/arbeitsspeicher-960.webp 960w, ../../assets/bilder/fotos/arbeitsspeicher-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Arbeitsspeicher-Riegel">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/arbeitsspeicher-480.webp" srcset="../../assets/bilder/fotos/arbeitsspeicher-480.webp 480w, ../../assets/bilder/fotos/arbeitsspeicher-960.webp 960w, ../../assets/bilder/fotos/arbeitsspeicher-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" decoding="async" alt="Symbolbild Arbeitsspeicher-Riegel">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Werkstattbedarf</p>
-    <h2 class="produkt__name"><a href="../../ersatzteile/werkstattbedarf/ddr4-spannung-tester-analyzer/">DDR4 Spannung Tester Analyzer</a></h2>
+    <h2 class="produkt__name"><a href="../../ersatzteile/werkstattbedarf/ddr4-spannung-tester-analyzer/">DDR4-Spannungstester (Analyzer)</a></h2>
 
     <p class="produkt__zustand">Neu · sofort lieferbar</p>
   </div>
   <div class="produkt__fuss">
     <p class="produkt__preis preis">89,00 €</p>
-    <button class="knopf knopf--primaer knopf--klein" type="button" data-wk-add="a10" aria-label="DDR4 Spannung Tester Analyzer in den Warenkorb legen"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
+    <button class="knopf knopf--primaer knopf--klein" type="button" data-wk-add="a10" aria-label="DDR4-Spannungstester (Analyzer) in den Warenkorb legen"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
   </div>
 </article>
 
-<article class="produkt" data-id="a11" data-name="ERSA BGA Flussmittelcreme" data-preis="24.90" data-hersteller="ERSA" data-zustand="Neu" data-kategorie="werkstattbedarf" data-rang="210" data-verfuegbar="1">
+<article class="produkt" data-id="a11" data-name="ERSA BGA-Flussmittelcreme" data-preis="24.90" data-hersteller="ERSA" data-zustand="Neu" data-kategorie="werkstattbedarf" data-rang="210" data-verfuegbar="1">
   <a class="produkt__bildlink" href="../../ersatzteile/werkstattbedarf/ersa-bga-flussmittelcreme/" tabindex="-1" aria-hidden="true">
-    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 90vw" width="1600" height="1067" loading="lazy" decoding="async" alt="Symbolbild Lötarbeit an einer Platine">
+    <img class="produkt__bild" src="../../assets/bilder/fotos/loeten-480.webp" srcset="../../assets/bilder/fotos/loeten-480.webp 480w, ../../assets/bilder/fotos/loeten-960.webp 960w, ../../assets/bilder/fotos/loeten-1600.webp 1600w" sizes="(min-width: 1024px) 280px, (min-width: 600px) 45vw, 104px" width="1600" height="1067" decoding="async" alt="Symbolbild Lötarbeit an einer Platine">
   </a>
   <div class="produkt__text">
     <p class="produkt__kategorie">Werkstattbedarf</p>
-    <h2 class="produkt__name"><a href="../../ersatzteile/werkstattbedarf/ersa-bga-flussmittelcreme/">ERSA BGA Flussmittelcreme</a></h2>
+    <h2 class="produkt__name"><a href="../../ersatzteile/werkstattbedarf/ersa-bga-flussmittelcreme/">ERSA BGA-Flussmittelcreme</a></h2>
 
     <p class="produkt__zustand">Neu · sofort lieferbar</p>
   </div>
   <div class="produkt__fuss">
     <p class="produkt__preis preis">24,90 €</p>
-    <button class="knopf knopf--primaer knopf--klein" type="button" data-wk-add="a11" aria-label="ERSA BGA Flussmittelcreme in den Warenkorb legen"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
+    <button class="knopf knopf--primaer knopf--klein" type="button" data-wk-add="a11" aria-label="ERSA BGA-Flussmittelcreme in den Warenkorb legen"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
   </div>
 </article>
 
       </div>
       <div class="hinweis hinweis--info" data-katalog-leer hidden>
         <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
-        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+        <div><p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="../../notebook-reparatur/anfrage/">fragen Sie direkt bei uns an</a>.</p>
+          <button class="knopf knopf--zweit knopf--klein hinweis__knopf" type="button" data-filter-leeren>Filter zurücksetzen</button></div>
       </div>
     </div>
   </div>
@@ -249,7 +252,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>

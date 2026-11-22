@@ -48,6 +48,10 @@ h1, h2, h3, h4 {
   line-height: 1.2;
   margin: 0 0 .5em;
   color: var(--c-text);
+  /* Lange Wörter wie „Geschäftsbedingungen“ mit Trennstrich umbrechen statt mitten im Wort. */
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 12 5 5;
 }
 h1 { font-size: clamp(1.75rem, 1.35rem + 1.8vw, 2.5rem); }
 h2 { font-size: clamp(1.375rem, 1.2rem + .8vw, 1.75rem); }
@@ -142,8 +146,16 @@ address { font-style: normal; }
 .knopf--zweit-hell:hover { color: var(--c-marke-text); background: color-mix(in srgb, var(--c-marke-text) 14%, transparent); }
 .knopf--klein { padding: .5em .9em; font-size: .9375rem; }
 .knopf--block { display: flex; width: 100%; }
-.knopf[disabled], .knopf[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
-.knopf--primaer[disabled]:hover { background: var(--c-akzent); border-color: var(--c-akzent); }
+/* Gesperrte Knöpfe mit eigenen Farben statt Transparenz, damit der Text lesbar bleibt (mind. 4,5:1).
+   Knöpfe mit data-js-frei sind nur bis zum Start von shop.js gesperrt und sehen normal aus. */
+.knopf[disabled]:not([data-js-frei]), .knopf[disabled]:not([data-js-frei]):hover,
+.knopf[aria-disabled="true"], .knopf[aria-disabled="true"]:hover {
+  background: var(--c-flaeche-2);
+  border-color: var(--c-linie-stark);
+  border-style: dashed;
+  color: var(--c-text-2);
+  cursor: not-allowed;
+}
 
 .knopf-text {
   display: inline-flex;
@@ -286,6 +298,8 @@ address { font-style: normal; }
   grid-area: menue;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 44px;
   gap: 6px;
   min-height: 44px;
   padding: 0 12px;
@@ -333,9 +347,9 @@ address { font-style: normal; }
 .brotkrumen ol {
   display: block;
   margin: 0;
-  padding: 10px 0;
+  padding: 4px 0;
   list-style: none;
-  line-height: 2;
+  line-height: 1.4;
 }
 .brotkrumen li { display: inline; }
 .brotkrumen li + li::before {
@@ -348,7 +362,8 @@ address { font-style: normal; }
   border-right: 1.5px solid currentColor;
   transform: rotate(45deg);
 }
-.brotkrumen a { color: var(--c-text-2); padding-block: 6px; }
+.brotkrumen a, .brotkrumen [aria-current="page"] { display: inline-flex; align-items: center; min-height: 44px; }
+.brotkrumen a { color: var(--c-text-2); }
 .brotkrumen a:hover { color: var(--c-link-hover); }
 .brotkrumen [aria-current="page"] { color: var(--c-text); font-weight: 500; }
 
@@ -479,8 +494,11 @@ address { font-style: normal; }
 .suche--gross .suche__feld { padding-left: 46px; }
 .suche--gross .suche__knopf,
 .suche--seite .suche__knopf { min-height: 56px; padding: 0 18px; }
+/* Unter 1024 px nur die Lupe zeigen. Der Text bleibt für Screenreader lesbar (zugänglicher Name). */
 .suche--gross .suche__knopf span:not(.sr-only),
-.suche--seite .suche__knopf span:not(.sr-only) { display: none; }
+.suche--seite .suche__knopf span:not(.sr-only) {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
 
 .schnellsuche { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 16px 0 0; padding: 0; }
 .schnellsuche a {
@@ -544,12 +562,13 @@ address { font-style: normal; }
 .kennzahl {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: center;
+  align-items: start;
   column-gap: 12px;
   padding: 10px 0;
 }
 .kennzahl .ico {
   grid-row: span 2;
+  align-self: center;
   width: 44px;
   height: 44px;
   padding: 10px;
@@ -735,7 +754,8 @@ address { font-style: normal; }
 .produkt__name a::after { content: ""; position: absolute; inset: 0; border-radius: var(--r-2); }
 .produkt__name a:hover { text-decoration: underline; }
 .produkt__name a:focus-visible { outline: none; }
-.produkt__name a:focus-visible::after { outline: 3px solid var(--c-fokus); outline-offset: 2px; }
+/* Fokusring an der ganzen Karte. Am ::after würde ihn overflow:hidden der Karte abschneiden. */
+.produkt:has(.produkt__name a:focus-visible) { outline: 3px solid var(--c-fokus); outline-offset: 2px; }
 .produkt__nummer { margin: 0 0 4px; color: var(--c-text-2); font-size: .8125rem; }
 .produkt__zustand { margin: 0; color: var(--c-text-2); font-size: .8125rem; }
 
@@ -797,6 +817,12 @@ address { font-style: normal; }
 .filter > form > .auswahl { margin-bottom: 8px; }
 
 .filter-umschalter[aria-expanded="true"] { background: var(--c-flaeche-2); }
+.filter h2:focus { outline: none; }
+.filter h2:focus-visible { outline: 3px solid var(--c-fokus); outline-offset: 2px; }
+.filter .auswahl.ist-leer { color: var(--c-text-2); cursor: not-allowed; }
+.filter .auswahl.ist-leer input { cursor: not-allowed; }
+.filter__fertig { margin-top: 14px; }
+.hinweis__knopf { margin-top: 10px; }
 
 /* ---------- Produktseite ---------- */
 
@@ -810,6 +836,9 @@ address { font-style: normal; }
   background: var(--c-bild-bg);
 }
 .galerie__haupt img, .galerie__haupt .bildrahmen { width: 100%; height: 100%; object-fit: cover; }
+/* Bilder, die es nur klein gibt, in natürlicher Größe mittig zeigen statt unscharf aufzuziehen. */
+.galerie__haupt--klein { display: grid; place-items: center; }
+.galerie__haupt--klein img { width: auto; height: auto; max-width: min(100%, 400px); object-fit: contain; }
 .galerie__weitere {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -831,7 +860,7 @@ address { font-style: normal; }
 .produktseite__kategorie a {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
+  min-height: 44px;
   font-size: .8125rem;
   font-weight: 600;
   letter-spacing: .06em;
@@ -868,6 +897,8 @@ address { font-style: normal; }
 .kaufbox__zeile { display: flex; flex-wrap: wrap; gap: 12px; }
 .kaufbox__zeile .knopf--block { flex: 1 1 200px; width: auto; min-height: 48px; }
 .kaufbox__frage { margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--c-linie); font-size: .9375rem; }
+/* Größere Tippfläche für Textlinks in der Kaufbox, ohne die Zeilen zu verschieben. */
+.kaufbox__mwst a, .kaufbox__frage a { padding-block: 12px; }
 
 .menge {
   display: inline-flex;
@@ -932,7 +963,7 @@ address { font-style: normal; }
 }
 .merkmale { table-layout: fixed; }
 .merkmale td { overflow-wrap: anywhere; }
-.merkmale th { width: 42%; color: var(--c-text-2); font-weight: 500; }
+.merkmale th { width: 42%; color: var(--c-text-2); font-weight: 500; -webkit-hyphens: auto; hyphens: auto; }
 .merkmale tr:last-child > * { border-bottom: 0; }
 
 .modelle { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
@@ -989,9 +1020,10 @@ address { font-style: normal; }
 .preistabelle { width: 100%; font-size: .9375rem; }
 .preistabelle thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .preistabelle tbody { display: grid; gap: 10px; }
+.preistabelle { max-width: 100%; }
 .preistabelle tr {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 4px 12px;
   padding: 14px 16px;
   border: 1px solid var(--c-linie);
@@ -999,7 +1031,8 @@ address { font-style: normal; }
   background: var(--c-flaeche);
 }
 .preistabelle th[scope="row"] { grid-column: 1 / -1; text-align: left; font-weight: 600; }
-.preistabelle th[scope="row"] a { color: var(--c-text); }
+.preistabelle th[scope="row"] a { display: inline-flex; align-items: center; min-height: 44px; color: var(--c-text); overflow-wrap: anywhere; }
+.preistabelle .knopf { white-space: normal; }
 .preistabelle td { display: flex; gap: 6px; align-items: baseline; color: var(--c-text-2); }
 .preistabelle td[data-label]::before { content: attr(data-label); font-size: .8125rem; }
 .preistabelle td.preistabelle__preis { grid-column: 1; color: var(--c-text); }
@@ -1086,6 +1119,7 @@ select.eingabe { cursor: pointer; }
   cursor: pointer;
   line-height: 1.4;
 }
+.auswahl > span { min-width: 0; overflow-wrap: anywhere; -webkit-hyphens: auto; hyphens: auto; }
 .auswahl input {
   flex-shrink: 0;
   width: 20px;
@@ -1185,6 +1219,12 @@ select.eingabe { cursor: pointer; }
 .schritte li.ist-erledigt,
 .schritte li[data-erledigt],
 .schritte li[data-status="erledigt"] { border-top-color: var(--c-link); color: var(--c-text); }
+@media (forced-colors: active) {
+  /* Aktueller Schritt auch im Kontrastmodus erkennbar */
+  .schritte li[aria-current="step"] { border-top-width: 6px; border-top-color: Highlight; }
+  .schritte li[aria-current="step"] .schritte__nummer { forced-color-adjust: none; background: Highlight; border-color: Highlight; color: HighlightText; }
+  .schritte li[aria-current="step"] .schritte__name { text-decoration: underline; }
+}
 .schritte li:not([aria-current="step"]) .schritte__name {
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
 }
@@ -1238,12 +1278,17 @@ select.eingabe { cursor: pointer; }
 
 .kontaktzeile { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 10px; }
 .kontaktzeile .ico { margin-top: .15em; color: var(--c-link); }
-.kontaktzeile a { display: inline-flex; align-items: center; min-height: 32px; margin-top: -4px; }
+.kontaktzeile a { display: inline-flex; align-items: center; min-height: 44px; margin-top: -10px; margin-bottom: -6px; }
 
 .zeiten { width: 100%; font-size: .9375rem; }
 .zeiten th, .zeiten td { padding: 8px 0; border-bottom: 1px solid var(--c-linie); text-align: left; font-weight: 400; vertical-align: top; }
 .zeiten td { text-align: right; font-weight: 600; }
 .zeiten tr:last-child > * { border-bottom: 0; }
+/* In der schmalen Seitenkarte (Kontakt) stehen Tag und Zeit untereinander wie im Fuß. */
+.karte .zeiten tr { display: grid; padding: 8px 0; border-bottom: 1px solid var(--c-linie); }
+.karte .zeiten tr:last-child { border-bottom: 0; }
+.karte .zeiten th, .karte .zeiten td { display: block; padding: 0; border: 0; text-align: left; }
+.ph { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* ---------- Warenkorb und Kasse ---------- */
 
@@ -1292,7 +1337,8 @@ select.eingabe { cursor: pointer; }
 .wk-position__einzel { margin: 2px 0 0; color: var(--c-text-2); font-size: .875rem; }
 .wk-position .menge { grid-area: menge; justify-self: start; }
 .wk-position__summe { grid-area: summe; margin: 0; font-size: 1.125rem; font-weight: 700; text-align: right; }
-.wk-position__entfernen { grid-area: entfernen; justify-self: start; min-height: 40px; color: var(--c-text-2); font-weight: 500; font-size: .9375rem; }
+.wk-position__hinweis { margin: 4px 0 0; color: var(--c-warn); font-size: .875rem; font-weight: 600; }
+.wk-position__entfernen { grid-area: entfernen; justify-self: start; min-height: 44px; color: var(--c-text-2); font-weight: 500; font-size: .9375rem; }
 .wk-position__entfernen:hover { color: var(--c-fehler); }
 
 .wk-summe {
@@ -1313,6 +1359,7 @@ select.eingabe { cursor: pointer; }
 .wk-summe__mwst { font-size: .875rem; padding-top: 0 !important; }
 .wk-summe__hinweis { display: flex; gap: 8px; align-items: flex-start; margin: 14px 0 0; color: var(--c-text-2); font-size: .875rem; }
 .wk-summe__hinweis .ico { margin-top: .1em; }
+.wk-summe__hinweis + .knopf { margin-top: 16px; }
 
 .kasse { padding-bottom: 48px; }
 .kasse__raster { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
@@ -1323,7 +1370,8 @@ select.eingabe { cursor: pointer; }
 .uebersicht { display: grid; gap: 12px; margin-bottom: 20px; }
 .uebersicht__block { padding: 14px 16px; border-radius: var(--r-1); background: var(--c-flaeche-2); }
 .uebersicht__kopf { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.uebersicht__kopf h3 { margin: 0; font-size: 1rem; }
+.uebersicht__kopf h2 { margin: 0; font-size: 1rem; }
+.uebersicht__hinweis { display: block; color: var(--c-warn); font-size: .8125rem; font-weight: 600; }
 .uebersicht__block p { margin: 0; }
 .uebersicht__titel { font-size: 1rem; margin-bottom: 8px; }
 .uebersicht__positionen { list-style: none; margin: 0 0 16px; padding: 0; border-top: 1px solid var(--c-linie); }
@@ -1387,7 +1435,18 @@ select.eingabe { cursor: pointer; }
 }
 .suche__vorschlag:hover,
 .suche__vorschlag[aria-selected="true"] { background: var(--c-flaeche-2); }
-.suche__vorschlag[aria-selected="true"] { box-shadow: inset 3px 0 0 var(--c-marke); }
+.suche__vorschlag[aria-selected="true"] { box-shadow: inset 4px 0 0 var(--c-fokus); }
+/* „Alle Ergebnisse“ bleibt unten in der Liste sichtbar, auch wenn die Liste scrollt. */
+.suche__vorschlag--alle {
+  position: sticky;
+  bottom: -6px;
+  border-top: 1px solid var(--c-linie);
+  border-radius: 0 0 6px 6px;
+  background: var(--c-flaeche);
+}
+@media (forced-colors: active) {
+  .suche__vorschlag[aria-selected="true"] { outline: 2px solid Highlight; outline-offset: -2px; }
+}
 .suche__vorschlag-name { grid-area: name; font-weight: 600; line-height: 1.35; }
 .suche__vorschlag .teilenummer { grid-area: nummer; color: var(--c-text-2); font-size: .8125rem; }
 .suche__vorschlag .preis { grid-area: preis; font-weight: 700; }
@@ -1410,9 +1469,14 @@ select.eingabe { cursor: pointer; }
   font-weight: 600;
   transform: translateX(-50%);
   animation: meldung-ein .2s ease-out;
+  /* Die Meldung blockiert keine Knöpfe darunter, nur der Link ist antippbar. */
+  pointer-events: none;
 }
 .meldung:empty { display: none; }
-.meldung a { color: inherit; margin-left: .5em; }
+.meldung a { color: inherit; margin-left: .5em; pointer-events: auto; }
+@media (max-width: 719px) {
+  .meldung { bottom: 8px; padding: 10px 14px; font-size: .9375rem; }
+}
 @keyframes meldung-ein {
   from { opacity: 0; transform: translate(-50%, 8px); }
   to { opacity: 1; transform: translate(-50%, 0); }
@@ -1469,7 +1533,7 @@ select.eingabe { cursor: pointer; }
 .nachweis__daten div { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 8px; }
 .nachweis__daten dt { color: var(--c-text-2); }
 .nachweis__daten dd { margin: 0; overflow-wrap: anywhere; }
-.nachweis__daten a { display: inline-block; padding-block: 2px; }
+.nachweis__daten a { display: inline-flex; align-items: center; min-height: 44px; }
 
 /* ---------- 404 ---------- */
 
@@ -1539,6 +1603,26 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .kopf__menue span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 
+/* Handy: einzelne Regeln, die nur bis 719 px gelten */
+@media (max-width: 719px) {
+  /* Fünfte Kategorie-Kachel nicht allein lassen: über die volle Breite, Bild links */
+  .kacheln > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .kacheln > :last-child:nth-child(odd) .kachel__link { flex-direction: row; }
+  .kacheln > :last-child:nth-child(odd) .kachel__bild { flex: 0 0 42%; border-bottom: 0; border-right: 1px solid var(--c-linie); }
+  /* Rechtstexte: lange Überschriften passen in die Karte */
+  .rechtstext { padding: 20px 16px; }
+  .rechtstext h1 { font-size: clamp(1.25rem, .75rem + 3vw, 1.875rem); }
+  /* Merkmale: etwas breitere erste Spalte, damit „Bearbeitungszeit“ in eine Zeile passt */
+  .merkmale th { width: 46%; }
+  .merkmale th, .merkmale td { padding: 10px 8px 10px 12px; }
+  /* Schritt-Knöpfe: Hauptaktion oben in voller Breite, Zurück darunter */
+  .schritt__knoepfe { flex-direction: column-reverse; }
+  .schritt__knoepfe > .knopf { width: 100%; }
+}
+@media (max-width: 599px) {
+  .auswahl-raster--breit { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Startseite auf dem Handy: die große Modellsuche ersetzt die Suche im Kopf */
 @media (max-width: 719px) {
   .seite-start .kopf .suche { display: none; }
@@ -1574,45 +1658,22 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .huelle { padding-inline: 24px; max-width: calc(var(--breite) + 48px); }
 
   .kopf__innen {
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    grid-template-areas: "marke suche anfrage korb";
-    gap: 16px;
+    grid-template-columns: auto minmax(0, 1fr) auto auto auto;
+    grid-template-areas: "marke suche anfrage korb menue";
+    gap: 12px;
     padding-block: 12px;
   }
   .wortmarke { font-size: 1.25rem; }
-  .kopf__menue { display: none; }
   .kopf__anfrage { display: inline-flex; padding-inline: 12px; background: transparent; border-color: var(--c-kopf-linie); color: var(--c-kopf-text); }
   .kopf__anfrage:hover { background: color-mix(in srgb, var(--c-kopf-text) 10%, transparent); border-color: var(--c-kopf-text-2); color: var(--c-kopf-text); }
   .kopf__anfrage span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-  .kategorieleiste { display: block; }
-  .kategorieleiste ul {
-    display: flex;
-    gap: 2px;
-    padding: 0;
-    overflow-x: auto;
-    scrollbar-width: thin;
-  }
-  .kategorieleiste li { flex-shrink: 0; border: 0; }
-  .kategorieleiste a:not(.knopf) {
-    min-height: 46px;
-    padding: 0 12px;
-    font-size: .9375rem;
-    white-space: nowrap;
-  }
-  .kategorieleiste a[aria-current="page"],
-  .kategorieleiste a.ist-aktiv { padding-left: 12px; box-shadow: inset 0 -3px 0 var(--c-leiste-aktiv); }
-  .kategorieleiste a:not(.knopf):hover { text-decoration: none; box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--c-leiste-text) 40%, transparent); }
-  .kategorieleiste a[aria-current="page"]:hover,
-  .kategorieleiste a.ist-aktiv:hover { box-shadow: inset 0 -3px 0 var(--c-leiste-aktiv); }
-  .kategorieleiste__trenner { display: block; flex: 1 0 12px; }
-  .kategorieleiste li.kategorieleiste__anfrage { display: none; }
 
   .abschnitt { padding-block: 56px; }
   .karte, .schritt.karte { padding: 28px; }
 
   .vertrauen__liste { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-block: 14px; }
-  .kacheln { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .kacheln { gap: 16px; }
   .ablauf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .ablauf--kompakt { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .leistungen { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
@@ -1664,14 +1725,58 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .fuss__spalte li a { min-height: 34px; }
 }
 
+/* Tablet 720 bis 1023 px: Kacheln im 6er-Raster, damit die letzte Reihe ohne Lücke aufgeht */
+@media (min-width: 720px) and (max-width: 1023px) {
+  .kacheln { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .kacheln > * { grid-column: span 2; }
+  .kacheln > :nth-child(3n+1):nth-last-child(2),
+  .kacheln > :nth-child(3n+1):nth-last-child(2) + * { grid-column: span 3; }
+  .kacheln > :nth-child(3n+1):last-child { grid-column: 1 / -1; }
+  /* Breite Kacheln der letzten Reihe quer, damit sie nicht doppelt so hoch werden */
+  .kacheln > :nth-child(3n+1):nth-last-child(2) .kachel__link,
+  .kacheln > :nth-child(3n+1):nth-last-child(2) + * .kachel__link,
+  .kacheln > :nth-child(3n+1):last-child .kachel__link { flex-direction: row; }
+  .kacheln > :nth-child(3n+1):nth-last-child(2) .kachel__bild,
+  .kacheln > :nth-child(3n+1):nth-last-child(2) + * .kachel__bild,
+  .kacheln > :nth-child(3n+1):last-child .kachel__bild { flex: 0 0 45%; border-bottom: 0; border-right: 1px solid var(--c-linie); }
+}
+
 /* ---------- Desktop ab 1024 px ---------- */
 
 @media (min-width: 1024px) {
   .kopf__innen {
     grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-areas: "marke suche anfrage korb";
     gap: 24px;
     padding-block: 14px;
   }
+  /* Kategorieleiste erst ab 1024 px waagerecht, darunter über den Menüknopf */
+  .kopf__menue { display: none; }
+  .kategorieleiste { display: block; }
+  .kategorieleiste ul {
+    display: flex;
+    gap: 2px;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .kategorieleiste li { flex-shrink: 0; border: 0; }
+  .kategorieleiste a:not(.knopf) {
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: .9375rem;
+    white-space: nowrap;
+  }
+  /* Fokusring nach innen, sonst schneidet overflow der Liste ihn oben und unten ab */
+  .kategorieleiste a:not(.knopf):focus-visible { outline-offset: -3px; }
+  .kategorieleiste a[aria-current="page"],
+  .kategorieleiste a.ist-aktiv { padding-left: 12px; box-shadow: inset 0 -3px 0 var(--c-leiste-aktiv); }
+  .kategorieleiste a:not(.knopf):hover { text-decoration: none; box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--c-leiste-text) 40%, transparent); }
+  .kategorieleiste a[aria-current="page"]:hover,
+  .kategorieleiste a.ist-aktiv:hover { box-shadow: inset 0 -3px 0 var(--c-leiste-aktiv); }
+  .kategorieleiste__trenner { display: block; flex: 1 0 12px; }
+  .kategorieleiste li.kategorieleiste__anfrage { display: none; }
+
   .wortmarke { font-size: 1.375rem; }
   .kopf .suche { max-width: 640px; width: 100%; justify-self: center; }
   .kopf__anfrage, .kopf__anfrage:hover { padding-inline: 1.15em; background: var(--c-akzent); border-color: var(--c-akzent); color: var(--c-akzent-text); }
@@ -1682,7 +1787,7 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .kopf__korb .zaehler { position: static; }
 
 
-  .brotkrumen ol { padding-block: 14px; }
+  .brotkrumen ol { padding-block: 6px; }
 
   .abschnitt { padding-block: 64px; }
   .abschnitt--eng { padding-block: 40px; }
@@ -1693,7 +1798,7 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .hero__intro { font-size: 1.1875rem; }
 
   .suche--gross .suche__knopf span:not(.sr-only),
-  .suche--seite .suche__knopf span:not(.sr-only) { display: inline; }
+  .suche--seite .suche__knopf span:not(.sr-only) { position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
 
   .kacheln { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
   .ablauf { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -1710,7 +1815,9 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
     max-height: calc(100vh - 32px); overflow-y: auto; overscroll-behavior: contain;
     scrollbar-gutter: stable;
   }
-  .filter-umschalter { display: none; }
+  .filter-umschalter, .filter__fertig { display: none; }
+  /* Auf /ersatzteile/ ist der Filter höher als das Fenster, dort scrollt er mit der Seite. */
+  .katalog--alle .filter { position: static; max-height: none; overflow: visible; }
 
   .produktseite { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; padding-top: 8px; }
   .produktdetails { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 56px; padding-block: 48px; }

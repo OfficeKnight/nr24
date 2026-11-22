@@ -4,6 +4,7 @@
     <h1>{{ s.h1 }}</h1>
     <p class="seitenkopf__intro">{{ s.intro }}</p>
 
+    <noscript><p class="hinweis hinweis--info">Das Formular benötigt JavaScript. In dieser Demo wird ohnehin nichts übertragen.</p></noscript>
     <form class="assistent karte" data-formular="anfrage" data-assistent novalidate>
       <ol class="schritte">
         <li data-schritt-anzeige="1" aria-current="step"><span class="schritte__nummer">1</span><span class="schritte__name">Gerät</span></li>
@@ -85,7 +86,7 @@
         </div>
         <div class="schritt__knoepfe">
           <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
-          <button class="knopf knopf--primaer" type="submit"><span>Anfrage absenden</span><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="knopf knopf--primaer" type="submit" disabled data-js-frei><span>Anfrage absenden</span><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></button>
         </div>
       </fieldset>
     </form>

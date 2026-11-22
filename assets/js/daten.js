@@ -18,6 +18,8 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur des Mainboards LA-H431P für das Acer Nitro 5 AN515 zum Festpreis.",
    "rang": 10,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/mainboard-480.webp",
     "srcset": "assets/bilder/fotos/mainboard-480.webp 480w, assets/bilder/fotos/mainboard-960.webp 960w, assets/bilder/fotos/mainboard-1600.webp 1600w",
@@ -43,6 +45,8 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur des Mainboards LA-K621P für die Dell Precision 7560 zum Festpreis.",
    "rang": 20,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/loeten-480.webp",
     "srcset": "assets/bilder/fotos/loeten-480.webp 480w, assets/bilder/fotos/loeten-960.webp 960w, assets/bilder/fotos/loeten-1600.webp 1600w",
@@ -68,6 +72,8 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur für Ihr Lenovo Legion Pro 5 16IRX9 zum Festpreis.",
    "rang": 30,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/notebook-offen-480.webp",
     "srcset": "assets/bilder/fotos/notebook-offen-480.webp 480w, assets/bilder/fotos/notebook-offen-960.webp 960w, assets/bilder/fotos/notebook-offen-1600.webp 1600w",
@@ -93,6 +99,8 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur für Ihr Acer Predator 17 G9-793 zum Festpreis.",
    "rang": 40,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/messgeraet-480.webp",
     "srcset": "assets/bilder/fotos/messgeraet-480.webp 480w, assets/bilder/fotos/messgeraet-960.webp 960w, assets/bilder/fotos/messgeraet-1600.webp 1600w",
@@ -118,12 +126,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur für Ihr Lenovo Legion 7 zum Festpreis.",
    "rang": 50,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/werkzeug-480.webp",
-    "srcset": "assets/bilder/fotos/werkzeug-480.webp 480w, assets/bilder/fotos/werkzeug-960.webp 960w, assets/bilder/fotos/werkzeug-1600.webp 1600w",
+    "src": "assets/bilder/fotos/loeten-480.webp",
+    "srcset": "assets/bilder/fotos/loeten-480.webp 480w, assets/bilder/fotos/loeten-960.webp 960w, assets/bilder/fotos/loeten-1600.webp 1600w",
     "w": 1600,
     "h": 1067,
-    "alt": "Symbolbild Elektronikwerkzeug"
+    "alt": "Symbolbild Löten an einer Platine"
    }
   },
   {
@@ -143,12 +153,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reparatur des Logicboards Ihres Apple MacBook Pro zum Festpreis.",
    "rang": 60,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/mainboard-480.webp",
-    "srcset": "assets/bilder/fotos/mainboard-480.webp 480w, assets/bilder/fotos/mainboard-960.webp 960w, assets/bilder/fotos/mainboard-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Platine in Nahaufnahme"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Symbolbild Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -158,7 +170,14 @@ window.NR24 = {
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Acer",
-   "modelle": [],
+   "modelle": [
+    "Aspire",
+    "Extensa",
+    "Nitro",
+    "Predator",
+    "Swift",
+    "TravelMate"
+   ],
    "teilenummer": null,
    "preis": 59.0,
    "zustand": "Dienstleistung",
@@ -166,12 +185,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Fehlersuche am Mainboard Ihres Acer-Notebooks mit Kostenvoranschlag.",
    "rang": 70,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/messgeraet-480.webp",
-    "srcset": "assets/bilder/fotos/messgeraet-480.webp 480w, assets/bilder/fotos/messgeraet-960.webp 960w, assets/bilder/fotos/messgeraet-1600.webp 1600w",
+    "src": "assets/bilder/fotos/hero-480.webp",
+    "srcset": "assets/bilder/fotos/hero-480.webp 480w, assets/bilder/fotos/hero-960.webp 960w, assets/bilder/fotos/hero-1600.webp 1600w",
     "w": 1600,
     "h": 1067,
-    "alt": "Symbolbild Fehlersuche mit einem Messgerät"
+    "alt": "Symbolbild geöffnetes Notebook mit Mainboard und Arbeitsspeicher"
    }
   },
   {
@@ -189,12 +210,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Fehlersuche am Mainboard Ihres Lenovo-Notebooks mit Kostenvoranschlag.",
    "rang": 80,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/notebook-offen-480.webp",
-    "srcset": "assets/bilder/fotos/notebook-offen-480.webp 480w, assets/bilder/fotos/notebook-offen-960.webp 960w, assets/bilder/fotos/notebook-offen-1600.webp 1600w",
+    "src": "assets/bilder/fotos/messgeraet-480.webp",
+    "srcset": "assets/bilder/fotos/messgeraet-480.webp 480w, assets/bilder/fotos/messgeraet-960.webp 960w, assets/bilder/fotos/messgeraet-1600.webp 1600w",
     "w": 1600,
     "h": 1067,
-    "alt": "Symbolbild geöffnetes Notebook"
+    "alt": "Symbolbild Fehlersuche mit einem Messgerät"
    }
   },
   {
@@ -214,6 +237,10 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Reinigung Ihrer PlayStation 4 und Erneuerung der Wärmeleitpaste zum Festpreis.",
    "rang": 90,
+   "differenzbesteuert": false,
+   "suchbegriffe": [
+    "PS4"
+   ],
    "bild": {
     "src": "assets/bilder/fotos/konsole-480.webp",
     "srcset": "assets/bilder/fotos/konsole-480.webp 480w, assets/bilder/fotos/konsole-960.webp 960w, assets/bilder/fotos/konsole-1600.webp 1600w",
@@ -229,7 +256,14 @@ window.NR24 = {
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Acer",
-   "modelle": [],
+   "modelle": [
+    "Aspire",
+    "Extensa",
+    "Nitro",
+    "Predator",
+    "Swift",
+    "TravelMate"
+   ],
    "teilenummer": null,
    "preis": 29.9,
    "zustand": "Dienstleistung",
@@ -237,6 +271,8 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle Acer-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 100,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
     "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
@@ -260,12 +296,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle Asus-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 110,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/notebook-offen-480.webp",
-    "srcset": "assets/bilder/fotos/notebook-offen-480.webp 480w, assets/bilder/fotos/notebook-offen-960.webp 960w, assets/bilder/fotos/notebook-offen-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild geöffnetes Notebook"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -283,12 +321,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle HP-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 120,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/messgeraet-480.webp",
-    "srcset": "assets/bilder/fotos/messgeraet-480.webp 480w, assets/bilder/fotos/messgeraet-960.webp 960w, assets/bilder/fotos/messgeraet-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Fehlersuche mit einem Messgerät"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -306,12 +346,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle Lenovo-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 130,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/mainboard-480.webp",
-    "srcset": "assets/bilder/fotos/mainboard-480.webp 480w, assets/bilder/fotos/mainboard-960.webp 960w, assets/bilder/fotos/mainboard-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Notebook-Mainboard"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -329,12 +371,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle Medion-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 140,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/werkzeug-480.webp",
-    "srcset": "assets/bilder/fotos/werkzeug-480.webp 480w, assets/bilder/fotos/werkzeug-960.webp 960w, assets/bilder/fotos/werkzeug-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Elektronikwerkzeug"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -352,12 +396,14 @@ window.NR24 = {
    "art": "reparatur",
    "kurz": "Diagnose mit Kostenvoranschlag für alle Samsung-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 150,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/loeten-480.webp",
-    "srcset": "assets/bilder/fotos/loeten-480.webp 480w, assets/bilder/fotos/loeten-960.webp 960w, assets/bilder/fotos/loeten-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Lötarbeit an einer Platine"
+    "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
+    "srcset": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp 400w, assets/bilder/produkte/notebook-reparatur-werkstatt-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
    }
   },
   {
@@ -383,8 +429,10 @@ window.NR24 = {
    "zustand": "Gebraucht",
    "verfuegbar": true,
    "art": "ware",
-   "kurz": "Gebrauchtes LED-Display mit 1600 x 900 Pixeln, getestet, ohne Kratzer und ohne Pixelfehler.",
+   "kurz": "Gebrauchtes LED-Display mit 1600 × 900 Pixeln, getestet, ohne Kratzer und ohne Pixelfehler.",
    "rang": 160,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp",
     "srcset": "assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp 400w, assets/bilder/produkte/led-display-17-3-n17306-l02-1-800.webp 800w",
@@ -412,6 +460,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Originales Displaykabel für die Asus X72, gebraucht, getestet und in sehr gutem Zustand.",
    "rang": 170,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/displaykabel-asus-x72-1-400.webp",
     "srcset": "assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w",
@@ -440,6 +490,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Originales Displaykabel 1422-00HB0AS für die Asus-Serie X70, gebraucht und getestet.",
    "rang": 180,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/displaykabel-asus-x72-1-400.webp",
     "srcset": "assets/bilder/produkte/displaykabel-asus-x72-1-400.webp 400w, assets/bilder/produkte/displaykabel-asus-x72-1-800.webp 800w",
@@ -470,23 +522,25 @@ window.NR24 = {
    "zustand": "Gebraucht",
    "verfuegbar": true,
    "art": "ware",
-   "kurz": "Gebrauchtes 17-Zoll-Display mit 1440 x 900 Pixeln und CCFL-Beleuchtung, getestet.",
+   "kurz": "Gebrauchtes 17-Zoll-Display mit 1440 × 900 Pixeln und CCFL-Beleuchtung, getestet.",
    "rang": 190,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
-    "src": "assets/bilder/fotos/display-480.webp",
-    "srcset": "assets/bilder/fotos/display-480.webp 480w, assets/bilder/fotos/display-960.webp 960w, assets/bilder/fotos/display-1600.webp 1600w",
-    "w": 1600,
-    "h": 1067,
-    "alt": "Symbolbild Notebook-Display"
+    "src": "assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp",
+    "srcset": "assets/bilder/produkte/led-display-17-3-n17306-l02-1-400.webp 400w, assets/bilder/produkte/led-display-17-3-n17306-l02-1-800.webp 800w",
+    "w": 800,
+    "h": 600,
+    "alt": "Symbolbild, Display eines ähnlichen Modells"
    }
   },
   {
    "id": "a10",
-   "name": "DDR4 Spannung Tester Analyzer",
+   "name": "DDR4-Spannungstester (Analyzer)",
    "url": "ersatzteile/werkstattbedarf/ddr4-spannung-tester-analyzer/",
    "kategorie": "werkstattbedarf",
    "kategorie_name": "Werkstattbedarf",
-   "hersteller": "[Hersteller]",
+   "hersteller": "",
    "modelle": [],
    "teilenummer": null,
    "preis": 89.0,
@@ -495,6 +549,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Prüfwerkzeug für DDR4-Speichersteckplätze bei der Fehlersuche an Mainboards.",
    "rang": 200,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/arbeitsspeicher-480.webp",
     "srcset": "assets/bilder/fotos/arbeitsspeicher-480.webp 480w, assets/bilder/fotos/arbeitsspeicher-960.webp 960w, assets/bilder/fotos/arbeitsspeicher-1600.webp 1600w",
@@ -505,7 +561,7 @@ window.NR24 = {
   },
   {
    "id": "a11",
-   "name": "ERSA BGA Flussmittelcreme",
+   "name": "ERSA BGA-Flussmittelcreme",
    "url": "ersatzteile/werkstattbedarf/ersa-bga-flussmittelcreme/",
    "kategorie": "werkstattbedarf",
    "kategorie_name": "Werkstattbedarf",
@@ -518,6 +574,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Flussmittel in Cremeform von ERSA für Lötarbeiten an BGA-Bauteilen.",
    "rang": 210,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/fotos/loeten-480.webp",
     "srcset": "assets/bilder/fotos/loeten-480.webp 480w, assets/bilder/fotos/loeten-960.webp 960w, assets/bilder/fotos/loeten-1600.webp 1600w",
@@ -544,6 +602,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Generalüberholte ATI HD 6970M mit 1 GB und neuem Grafikchip für den iMac 27 Zoll A1312.",
    "rang": 220,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp",
     "srcset": "assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w",
@@ -570,6 +630,8 @@ window.NR24 = {
    "art": "ware",
    "kurz": "Generalüberholte ATI HD 6970M mit neuem Grafikchip im Austausch gegen Ihre defekte Karte.",
    "rang": 230,
+   "differenzbesteuert": false,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp",
     "srcset": "assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-400.webp 400w, assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-800.webp 800w",
@@ -591,8 +653,10 @@ window.NR24 = {
    "zustand": "Gebraucht",
    "verfuegbar": true,
    "art": "ware",
-   "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 2,1 GHz, getestet.",
+   "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 × 2,1 GHz, getestet.",
    "rang": 240,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/amd-notebook-prozessor-1-400.webp",
     "srcset": "assets/bilder/produkte/amd-notebook-prozessor-1-400.webp 400w",
@@ -603,7 +667,7 @@ window.NR24 = {
   },
   {
    "id": "a25",
-   "name": "AMD Turion 64 X2 TL-56 mit 2 x 1,8 GHz",
+   "name": "AMD Turion 64 X2 TL-56 mit 2 × 1,8 GHz",
    "url": "ersatzteile/prozessoren/amd-turion-64-x2-tl-56/",
    "kategorie": "prozessoren",
    "kategorie_name": "Prozessoren",
@@ -614,8 +678,10 @@ window.NR24 = {
    "zustand": "Gebraucht",
    "verfuegbar": true,
    "art": "ware",
-   "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 1,8 GHz, getestet.",
+   "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 × 1,8 GHz, getestet.",
    "rang": 250,
+   "differenzbesteuert": true,
+   "suchbegriffe": [],
    "bild": {
     "src": "assets/bilder/produkte/amd-notebook-prozessor-1-400.webp",
     "srcset": "assets/bilder/produkte/amd-notebook-prozessor-1-400.webp 400w",
@@ -630,12 +696,13 @@ window.NR24 = {
    "id": "standard",
    "name": "Standardversand",
    "preis": 0.0,
-   "text": "Kostenlos innerhalb Deutschlands. Zustellung in [3 bis 5 Werktagen]."
+   "text": "Kostenlos innerhalb Deutschlands. Zustellung in 3 bis 5 Tagen."
   },
   {
    "id": "abholung",
    "name": "Selbstabholung",
    "preis": 0.0,
+   "abholung": true,
    "text": "Kostenlos in Musterstadt. Wir benachrichtigen Sie per E-Mail, sobald Ihre Bestellung bereitliegt."
   }
  ],

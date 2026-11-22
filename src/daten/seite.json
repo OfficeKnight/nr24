@@ -10,7 +10,7 @@
     "telefon_href": "+491234567890",
     "email": "info@example.com",
     "ust_id": "[USt-IdNr.]",
-    "oeffnungszeiten": [["Montag bis Freitag", "[Uhrzeiten]"], ["Samstag", "[nach Vereinbarung]"]],
+    "oeffnungszeiten": [["Montag bis Freitag", "[9:00 bis 18:00 Uhr]"], ["Samstag", "[9:00 bis 13:00 Uhr]"]],
     "bearbeitungszeit": "[Bearbeitungszeit]",
     "basis_url": "https://nr24.kazas.dev/",
     "demo_hinweis": "Demo für ein Redesign, keine Bestellung möglich"
@@ -21,8 +21,8 @@
     {"wert": "1 Jahr", "text": "Gewährleistung auf Reparaturen", "icon": "i-schild"}
   ],
   "versand": [
-    {"id": "standard", "name": "Standardversand", "preis": 0.0, "text": "Kostenlos innerhalb Deutschlands. Zustellung in [3 bis 5 Werktagen]."},
-    {"id": "abholung", "name": "Selbstabholung", "preis": 0.0, "text": "Kostenlos in Musterstadt. Wir benachrichtigen Sie per E-Mail, sobald Ihre Bestellung bereitliegt."}
+    {"id": "standard", "name": "Standardversand", "preis": 0.0, "text": "Kostenlos innerhalb Deutschlands. Zustellung in 3 bis 5 Tagen."},
+    {"id": "abholung", "name": "Selbstabholung", "preis": 0.0, "abholung": true, "text": "Kostenlos in Musterstadt. Wir benachrichtigen Sie per E-Mail, sobald Ihre Bestellung bereitliegt."}
   ],
   "zahlarten": [
     {"id": "paypal", "name": "PayPal", "text": "Sie zahlen über Ihr PayPal-Konto."},
@@ -54,11 +54,11 @@
     {"titel": "Anfrage", "text": "Sie buchen die Diagnose ab 29,90 € oder eine Reparatur zum Festpreis im Shop. Oder Sie senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.", "icon": "i-dokument"},
     {"titel": "Einsenden", "text": "Sie schicken uns das Notebook mit Netzteil und Akku gut gepolstert zu. Legen Sie Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.", "icon": "i-paket"},
     {"titel": "Diagnose und Reparatur", "text": "Nach einer Diagnose erhalten Sie einen Kostenvoranschlag per E-Mail, repariert wird erst nach Ihrer Freigabe. Eine gebuchte Festpreis-Reparatur führen wir direkt aus.", "icon": "i-werkzeug"},
-    {"titel": "Rückversand", "text": "Nach Reinigung und ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.", "icon": "i-lkw"}
+    {"titel": "Rückversand", "text": "Nach ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.", "icon": "i-lkw"}
   ],
   "faq": {
     "start": [
-      {"frage": "Wie läuft eine Reparatur bei Ihnen ab?", "antwort": "<p>Sie buchen die Diagnose oder eine Reparatur zum Festpreis im Shop und senden uns Ihr Notebook zu. Nach der Diagnose schicken wir Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück.</p>"},
+      {"frage": "Wie läuft eine Reparatur bei Ihnen ab?", "antwort": "<p>Sie buchen die Diagnose oder eine Reparatur zum Festpreis im Shop und senden uns Ihr Notebook zu. Nach der Diagnose schicken wir Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren und testen wir das Gerät und senden es Ihnen zurück. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem.</p>"},
       {"frage": "Was kostet die Diagnose?", "antwort": "<p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Dabei prüfen wir das ganze Gerät. Für Acer und Lenovo gibt es zusätzlich eine Mainboard-Diagnose mit Kostenvoranschlag für 59,00 €, bei der wir den Fehler auf der Platine bis auf das einzelne Bauteil eingrenzen. Was die Reparatur selbst kostet, steht im Kostenvoranschlag. Alle Preise verstehen sich inklusive 19 % MwSt.</p>"},
       {"frage": "Was passiert, wenn ich den Kostenvoranschlag ablehne?", "antwort": "<p>Dann senden wir Ihnen Ihr Notebook auf unsere Kosten unrepariert zurück. Der Preis für die Diagnose wird in diesem Fall nicht erstattet, weil die Fehlersuche bereits erbracht wurde.</p>"},
       {"frage": "Welche Gewährleistung erhalte ich?", "antwort": "<p>Auf unsere Reparaturen erhalten Sie 1 Jahr Gewährleistung. Für Ersatzteile gelten die gesetzlichen Rechte und die Angaben im jeweiligen Angebot. Einzelheiten finden Sie in unseren AGB.</p>"},
@@ -67,10 +67,10 @@
       {"frage": "Wie finde ich das passende Ersatzteil für mein Modell?", "antwort": "<p>Geben Sie die Modellbezeichnung oder die Teilenummer in die Suche ein. Die Modellbezeichnung steht meist auf dem Aufkleber an der Unterseite des Notebooks, die Teilenummer direkt auf dem Bauteil. Finden Sie nichts Passendes, fragen Sie uns gern über das Kontaktformular.</p>"}
     ],
     "reparatur": [
-      {"frage": "Wie lange dauert eine Reparatur?", "antwort": "<p>Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von [2 bis 3 Werktagen]. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil [1 bis 14 Werktage].</p>"},
+      {"frage": "Wie lange dauert eine Reparatur?", "antwort": "<p>Nach Eingang Ihres Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von 2 bis 3 Werktagen. Nach Ihrer Freigabe dauert die Reparatur je nach Fehler und Ersatzteil 1 bis 14 Werktage.</p>"},
       {"frage": "Wie verpacke ich mein Notebook für den Versand?", "antwort": "<p>Verwenden Sie einen stabilen Karton und polstern Sie das Notebook rundum gut ab. Legen Sie Netzteil und Akku bei und fügen Sie einen Zettel mit Ihren Kontaktdaten und einer kurzen Fehlerbeschreibung hinzu.</p>"},
       {"frage": "Soll ich die Festplatte mitschicken?", "antwort": "<p>Bitte bauen Sie Festplatte oder SSD vor dem Einsenden aus. Für die Reparatur brauchen wir sie in der Regel nicht. Möchten Sie das Gerät mit Datenträger einsenden, sichern Sie Ihre Daten bitte vorher.</p>"},
-      {"frage": "Was ist in der Reparatur enthalten?", "antwort": "<p>Wir ersetzen das defekte Bauteil, reinigen das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Notebook ausführlich.</p>"},
+      {"frage": "Was ist in der Reparatur enthalten?", "antwort": "<p>Wir ersetzen das defekte Bauteil und testen das Notebook vor dem Rückversand ausführlich. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</p>"},
       {"frage": "Lohnt sich eine Mainboard-Reparatur?", "antwort": "<p>Häufig ja. Wir ersetzen nur das defekte Bauteil statt der ganzen Platine, das ist meist deutlich günstiger als ein neues Mainboard. Der Kostenvoranschlag zeigt Ihnen vorab, mit welchem Betrag Sie rechnen müssen.</p>"},
       {"frage": "Wer trägt die Versandkosten?", "antwort": "<p>Den Versand zu uns tragen Sie selbst. Den Rückversand innerhalb Deutschlands übernehmen wir, auch wenn Sie den Kostenvoranschlag ablehnen.</p>"},
       {"frage": "Wie bezahle ich die Reparatur?", "antwort": "<p>Die Diagnose oder den Festpreis bezahlen Sie bei der Buchung, zum Beispiel per PayPal oder Überweisung. Zusätzliche Kosten laut Kostenvoranschlag fallen erst nach Ihrer Freigabe an. Sie erhalten eine Rechnung mit ausgewiesener Mehrwertsteuer.</p>"},
@@ -152,7 +152,7 @@
     ],
     "abschnitte": [
       {"titel": "Acer-Reparatur auf Bauteilebene", "html": "<p>Viele Defekte an Acer-Notebooks sitzen auf dem Mainboard. Statt die ganze Platine zu tauschen, suchen wir das defekte Bauteil und ersetzen es, zum Beispiel einen Spannungswandler, einen Kondensator oder den Grafikchip. Das ist oft deutlich günstiger als ein neues Mainboard.</p><p>Für einzelne Platinen bieten wir feste Preise an, etwa für das Mainboard LA-H431P aus dem Acer Nitro 5 AN515.</p>"},
-      {"titel": "Gaming-Notebooks der Reihen Nitro und Predator", "html": "<p>Nitro und Predator sind für Spiele gebaut und haben eine eigene Grafikeinheit. Unter Last entsteht viel Wärme. Verstaubte Lüfter und ausgetrocknete Wärmeleitpaste lassen die Temperatur weiter steigen und belasten Bauteile und Lötstellen.</p><p>Bei jeder Reparatur reinigen wir deshalb das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Gerät ausführlich.</p>"},
+      {"titel": "Gaming-Notebooks der Reihen Nitro und Predator", "html": "<p>Nitro und Predator sind für Spiele gebaut und haben eine eigene Grafikeinheit. Unter Last entsteht viel Wärme. Verstaubte Lüfter und ausgetrocknete Wärmeleitpaste lassen die Temperatur weiter steigen und belasten Bauteile und Lötstellen.</p><p>Bei Reparaturen mit Reinigung reinigen wir deshalb das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Vor dem Rückversand testen wir das Gerät ausführlich.</p>"},
       {"titel": "Aspire, Swift, TravelMate und Extensa", "html": "<p>Aspire und Swift sind verbreitete Modelle für Zuhause und unterwegs, TravelMate und Extensa richten sich vor allem an Unternehmen. Für alle Reihen gilt derselbe Ablauf.</p><ol><li>Sie buchen die Diagnose und senden das Gerät mit Netzteil und Akku ein.</li><li>Wir suchen den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail.</li><li>Nach Ihrer Freigabe reparieren wir das Gerät. Lehnen Sie ab, senden wir das Notebook auf unsere Kosten zurück.</li></ol>"}
     ]
   },
@@ -164,7 +164,7 @@
     "abschnitte": [
       {"titel": "Wer hinter der Werkstatt steht", "html": "<p>Inhaber der Werkstatt ist Max Mustermann. [Kurzvorstellung des Inhabers mit Ausbildung und Erfahrung]</p><p>Über eBay haben wir bereits über 4.900 Artikel verkauft und dafür 100 % positive Bewertungen erhalten. Auf unsere Reparaturen geben wir 1 Jahr Gewährleistung.</p>"},
       {"titel": "Fehlersuche mit Messtechnik", "html": "<p>Jede Reparatur beginnt mit einer gründlichen Diagnose. Wir messen Spannungen und Widerstände auf dem Mainboard und grenzen den Fehler so bis auf das einzelne Bauteil ein.</p><p>Erst wenn die Ursache feststeht, erhalten Sie einen Kostenvoranschlag. Ohne Ihre Freigabe reparieren wir nichts.</p>"},
-      {"titel": "Löten und BGA-Arbeiten", "html": "<p>Defekte Bauteile tauschen wir direkt auf der Platine. Größere Chips wie Grafikchips werden im BGA-Verfahren aus- und eingelötet. Dafür nutzen wir [Ausstattung der Werkstatt].</p><p>Nach der Reparatur reinigen wir das Kühlsystem, erneuern die Wärmeleitpaste und testen das Gerät ausführlich, bevor es zurück an Sie geht.</p>"},
+      {"titel": "Löten und BGA-Arbeiten", "html": "<p>Defekte Bauteile tauschen wir direkt auf der Platine. Größere Chips wie Grafikchips werden im BGA-Verfahren aus- und eingelötet. Dafür nutzen wir [Ausstattung der Werkstatt].</p><p>Nach der Reparatur testen wir das Gerät ausführlich, bevor es zurück an Sie geht. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem und erneuern die Wärmeleitpaste.</p>"},
       {"titel": "Getestete Ersatzteile", "html": "<p>Displays, Prozessoren und Grafikkarten aus unserem Shop prüfen wir vor dem Versand auf ihre Funktion. Gebrauchte Teile beschreiben wir ehrlich mit ihrem Zustand.</p><p>Innerhalb Deutschlands versenden wir kostenlos. Nach Absprache können Sie Ihre Bestellung auch in Musterstadt abholen.</p>"}
     ]
   },

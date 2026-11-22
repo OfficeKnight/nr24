@@ -2,7 +2,7 @@
 <div class="huelle">
   <div class="produktseite">
     <div class="galerie">
-      <div class="galerie__haupt">
+      <div class="galerie__haupt{{ galerie_klasse }}">
         {{{ galerie_haupt }}}
       </div>
       {% if galerie_weitere %}<ul class="galerie__weitere" aria-label="Weitere Bilder">{{{ galerie_weitere }}}</ul>{% endif %}
@@ -12,15 +12,15 @@
       <h1 class="produktseite__name">{{ a.name }}</h1>
       <dl class="produktseite__eckdaten">
         {% if a.teilenummer %}<div><dt>Teilenummer</dt><dd class="teilenummer">{{ a.teilenummer }}</dd></div>{% endif %}
-        <div><dt>Hersteller</dt><dd>{{ a.hersteller }}</dd></div>
+        {% if a.hersteller %}<div><dt>Hersteller</dt><dd>{{ a.hersteller }}</dd></div>{% endif %}
         <div><dt>Zustand</dt><dd>{{ a.zustand }}</dd></div>
-        <div><dt>Artikelnummer</dt><dd class="teilenummer">{{ a.id }}</dd></div>
+        <div><dt>Artikelnummer</dt><dd class="teilenummer">{{ artikelnummer }}</dd></div>
       </dl>
       <p class="produktseite__kurz">{{ a.kurz }}</p>
       <form class="kaufbox" data-wk-form="{{ a.id }}">
         <p class="preis preis--gross">{{ preis }}</p>
         {% if a.preis_hinweis %}<p class="kaufbox__hinweis">{{ a.preis_hinweis }}</p>{% endif %}
-        <p class="kaufbox__mwst">inkl. 19 % MwSt., {% if ist_reparatur %}<a href="{{ root }}versand-und-zahlung/">Rückversand</a> innerhalb Deutschlands kostenlos{% else %}<a href="{{ root }}versand-und-zahlung/">versandkostenfrei</a> innerhalb Deutschlands{% endif %}</p>
+        <p class="kaufbox__mwst">{% if a.differenzbesteuert %}Differenzbesteuert nach § 25a UStG, die Umsatzsteuer wird nicht gesondert ausgewiesen. {% else %}inkl. 19 % MwSt., {% endif %}{% if ist_reparatur %}<a href="{{ root }}versand-und-zahlung/">Rückversand</a> innerhalb Deutschlands kostenlos{% else %}{% if a.differenzbesteuert %}<a href="{{ root }}versand-und-zahlung/">Versandkostenfrei</a>{% else %}<a href="{{ root }}versand-und-zahlung/">versandkostenfrei</a>{% endif %} innerhalb Deutschlands.{% endif %}</p>
         <p class="kaufbox__verfuegbar{% if a.verfuegbar %} ist-lieferbar{% endif %}"><svg class="ico" aria-hidden="true"><use href="#{% if a.verfuegbar %}i-check{% else %}i-uhr{% endif %}"></use></svg><span>{{ zustand_satz }}</span></p>
         <p class="kaufbox__lieferzeit">{{ lieferzeit_label }} {{ a.lieferzeit }}</p>
         <div class="kaufbox__zeile">
@@ -30,8 +30,9 @@
             <input class="menge__feld eingabe" id="menge-{{ a.id }}" name="menge" type="number" inputmode="numeric" min="1" max="99" value="1">
             <button class="menge__knopf" type="button" data-menge-plus aria-label="Menge erhöhen"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button>
           </div>
-          <button class="knopf knopf--primaer knopf--block" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
+          <button class="knopf knopf--primaer knopf--block" type="submit" disabled data-js-frei><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
         </div>
+        <noscript><p class="kaufbox__frage">Der Warenkorb benötigt JavaScript. In dieser Demo ist keine Bestellung möglich.</p></noscript>
         {% if ist_reparatur %}<p class="kaufbox__frage">Unsicher, ob das Angebot passt? <a href="{{ anfrage_url }}">Reparatur unverbindlich anfragen</a></p>{% endif %}
       </form>
       <ul class="vorteile">

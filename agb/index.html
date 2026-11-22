@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="../assets/css/schriften.css">
 <link rel="stylesheet" href="../assets/css/themen.css">
 <link rel="stylesheet" href="../assets/css/style.css">
-<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<noscript><style>.kategorieleiste{display:block!important}.kopf__menue,.filter,.filter-umschalter,.katalog__sortierung,[data-wk-add],.kaufbox__zeile,[data-wk-inhalt],form[data-kasse],[data-weiter],[data-zurueck]{display:none!important}.schritt[hidden]{display:block!important}[data-js-frei]{opacity:.55;cursor:not-allowed}</style></noscript>
 <script src="../assets/js/demo.js"></script>
 <script src="../assets/js/daten.js" defer></script>
 <script src="../assets/js/shop.js" defer></script>
@@ -86,7 +86,7 @@
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
     <a class="knopf knopf--primaer kopf__anfrage" href="../notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
-    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <a class="kopf__korb" href="../warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only" data-wk-zaehler-wort> Artikeln</span></a>
     <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
   </div>
   <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
@@ -141,7 +141,7 @@
 
 <h2>§ 4 Preise und Versandkosten</h2>
 <ol>
-  <li>Alle Preise sind Endpreise in Euro und enthalten die gesetzliche Umsatzsteuer.</li>
+  <li>Alle Preise sind Endpreise in Euro und enthalten die gesetzliche Umsatzsteuer. Bei differenzbesteuerten Artikeln nach § 25a UStG wird die Umsatzsteuer nicht gesondert ausgewiesen.</li>
   <li>Innerhalb Deutschlands liefern wir versandkostenfrei. Bei Zahlung per Nachnahme fällt eine Gebühr von 6,90 € an. Zusätzlich erhebt der Zusteller ein Entgelt von 2,00 €, das Sie direkt an ihn zahlen. Einzelheiten finden Sie auf der Seite <a href="../versand-und-zahlung/">Versand und Zahlung</a>.</li>
   <li>Bei Reparaturaufträgen tragen Sie die Kosten für die Einsendung des Geräts. Den Rückversand innerhalb Deutschlands übernehmen wir.</li>
 </ol>
@@ -149,7 +149,7 @@
 <h2>§ 5 Lieferung</h2>
 <ol>
   <li>Wir liefern nur an Adressen in Deutschland. Nach Absprache können Sie Ihre Bestellung auch kostenlos in unserer Werkstatt in Musterstadt abholen. Wir informieren Sie per E-Mail, sobald die Ware bereitliegt.</li>
-  <li>Die Lieferzeit ergibt sich aus dem jeweiligen Angebot. Ist dort nichts angegeben, liefern wir innerhalb von <span class="ph">[3 bis 5 Werktagen]</span> nach Vertragsschluss. Bei Vorkasse beginnt die Frist am Tag nach Ihrem Zahlungsauftrag. Fällt das Fristende auf einen Sonntag oder Feiertag, endet die Frist am nächsten Werktag.</li>
+  <li>Die Lieferzeit ergibt sich aus dem jeweiligen Angebot. Ist dort nichts angegeben, liefern wir innerhalb von 3 bis 5 Tagen nach Vertragsschluss. Bei Vorkasse beginnt die Frist am Tag nach Ihrem Zahlungsauftrag. Fällt das Fristende auf einen Sonntag oder Feiertag, endet die Frist am nächsten Werktag.</li>
   <li>Bestellen Sie mehrere Artikel mit unterschiedlicher Lieferzeit, versenden wir sie gemeinsam, sofern nichts anderes vereinbart ist. Die Lieferzeit richtet sich dann nach dem Artikel mit der längsten Lieferzeit.</li>
   <li>Sind Sie Verbraucher, geht die Gefahr des zufälligen Untergangs und der zufälligen Verschlechterung der Ware erst mit der Übergabe an Sie über. Sind Sie Unternehmer, geht die Gefahr mit der Übergabe an das Transportunternehmen auf Sie über.</li>
 </ol>
@@ -175,6 +175,7 @@
 <h3>Leistungsumfang</h3>
 <ol>
   <li>Bei einer Diagnose schulden wir die fachgerechte Fehlersuche an Ihrem Gerät und einen Kostenvoranschlag für die Reparatur. Bei einer Reparatur schulden wir die Beseitigung des im Auftrag oder im Kostenvoranschlag beschriebenen Fehlers.</li>
+  <li>Es gilt der Preis im jeweiligen Angebot. Die Diagnose mit Kostenvoranschlag kostet ab 29,90 €, die Mainboard-Diagnose mit Kostenvoranschlag 59,00 €. Die Reparatur nach einer Diagnose berechnen wir laut Kostenvoranschlag. Bei einer Reparatur zum Festpreis gilt der genannte Festpreis. Entspricht der Fehler nicht dem Angebot, melden wir uns vor weiteren Arbeiten bei Ihnen.</li>
   <li>Wir verwenden neue oder geprüfte gleichwertige Ersatzteile. Ausgebaute defekte Bauteile entsorgen wir fachgerecht, wenn Sie nicht bei der Freigabe deren Rückgabe wünschen.</li>
 </ol>
 <h3>Ihre Mitwirkung</h3>
@@ -184,17 +185,17 @@
 </ol>
 <h3>Diagnose und Kostenvoranschlag</h3>
 <ol>
-  <li>Nach Eingang des Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von <span class="ph">[2 bis 3 Werktagen]</span> per E-Mail, zusammen mit einem Kostenvoranschlag.</li>
+  <li>Nach Eingang des Geräts erhalten Sie das Ergebnis der Diagnose in der Regel innerhalb von 2 bis 3 Werktagen per E-Mail, zusammen mit einem Kostenvoranschlag.</li>
   <li>Der Kostenvoranschlag nennt den Preis der Reparatur verbindlich. Stellt sich während der Reparatur heraus, dass weitere Arbeiten nötig sind, holen wir vorher Ihre Zustimmung ein.</li>
   <li><span class="ph">[Regelung zur Anrechnung des Diagnosepreises auf die Reparatur]</span></li>
 </ol>
 <h3>Freigabe, Ablehnung und Durchführung</h3>
 <ol>
-  <li>Sie geben die Reparatur per E-Mail oder telefonisch frei. Nach der Freigabe dauert die Reparatur je nach Fehler und Verfügbarkeit der Teile in der Regel <span class="ph">[1 bis 14 Werktage]</span>.</li>
+  <li>Sie geben die Reparatur per E-Mail oder telefonisch frei. Nach der Freigabe dauert die Reparatur je nach Fehler und Verfügbarkeit der Teile in der Regel 1 bis 14 Werktage.</li>
   <li>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihnen das Gerät unrepariert auf unsere Kosten zurück. Der Preis der Diagnose bleibt geschuldet, weil die Fehlersuche bereits erbracht wurde.</li>
   <li>Melden Sie sich trotz zweimaliger Erinnerung nicht innerhalb von <span class="ph">[Frist]</span> auf den Kostenvoranschlag, senden wir Ihnen das Gerät unrepariert zurück.</li>
   <li>Ist eine Reparatur technisch nicht möglich oder wirtschaftlich nicht sinnvoll, teilen wir Ihnen das mit und senden das Gerät zurück.</li>
-  <li>Nach der Reparatur reinigen wir das Kühlsystem, erneuern Wärmeleitpaste und Wärmeleitpads und testen das Gerät ausführlich. Bitte prüfen Sie es nach Erhalt und teilen Sie uns Mängel möglichst zeitnah mit.</li>
+  <li>Nach der Reparatur testen wir das Gerät ausführlich. Bei Angeboten mit Reinigung reinigen wir zusätzlich das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads. Bitte prüfen Sie es nach Erhalt und teilen Sie uns Mängel möglichst zeitnah mit.</li>
 </ol>
 
 <h2>§ 9 Gewährleistung</h2>
@@ -279,7 +280,7 @@
         </address>
         <table class="zeiten zeiten--fuss">
           <caption class="sr-only">Öffnungszeiten</caption>
-          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[Uhrzeiten]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[nach Vereinbarung]</span></td></tr>
+          <tr><th scope="row">Montag bis Freitag</th><td><span class="ph">[9:00 bis 18:00 Uhr]</span></td></tr><tr><th scope="row">Samstag</th><td><span class="ph">[9:00 bis 13:00 Uhr]</span></td></tr>
         </table>
       </div>
     </div>
