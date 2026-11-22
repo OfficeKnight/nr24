@@ -41,7 +41,7 @@
 </script>
 </head>
 <body class="seite-recht">
-<svg hidden xmlns="http://www.w3.org/2000/svg">
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol id="i-suche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
     <symbol id="i-korb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5h2.3l2.5 11.6a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.2l1.6-7.2H5.8"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.3" cy="20" r="1.3"/></symbol>
@@ -81,7 +81,7 @@
     <a class="wortmarke" href="../">Notebook Reparatur <span>24</span></a>
     <form class="suche" role="search" aria-label="Shop durchsuchen" action="../suche/" method="get" data-suche>
       <label class="sr-only" for="suche-kopf">Suche nach Modell, Teilenummer oder Artikel</label>
-      <input class="suche__feld" id="suche-kopf" type="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
+      <input class="suche__feld" id="suche-kopf" type="text" enterkeyhint="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
       <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span class="sr-only">Suchen</span></button>
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
@@ -149,7 +149,7 @@ Musterstraße 1<br>
 
 <h2>Urheberrecht und Bildnachweise</h2>
 <p>Texte, Gestaltung und eigene Fotos dieser Seiten unterliegen dem deutschen Urheberrecht. Eine Verwendung außerhalb der gesetzlichen Grenzen bedarf unserer vorherigen Zustimmung.</p>
-<p>Die Nachweise für Fotos fremder Urheber lauten <span class="ph">[Bildnachweise]</span>.</p>
+<p>Urheber, Quelle und Lizenz der Fotos fremder Urheber finden Sie auf der Seite <a href="../bildnachweise/">Bildnachweise</a>.</p>
 
 <h2>Hinweis zu dieser Demo</h2>
 <p>Diese Seite ist eine Vorschau für das Redesign des Shops Notebook Reparatur 24. Alle Angaben zu Person, Anschrift und Kontakt sind Musterdaten. Bestellungen und Anfragen sind in der Demo nicht möglich.</p>
@@ -195,6 +195,7 @@ Musterstraße 1<br>
           <li><a href="../widerruf/">Widerrufsbelehrung</a></li>
           <li><a href="../datenschutz/">Datenschutz</a></li>
           <li><a href="../versand-und-zahlung/">Versand und Zahlung</a></li>
+          <li><a href="../bildnachweise/">Bildnachweise</a></li>
         </ul>
       </nav>
       <div class="fuss__spalte fuss__kontakt">

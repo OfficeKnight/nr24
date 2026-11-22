@@ -41,7 +41,7 @@
 </script>
 </head>
 <body class="seite-formular">
-<svg hidden xmlns="http://www.w3.org/2000/svg">
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol id="i-suche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
     <symbol id="i-korb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5h2.3l2.5 11.6a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.2l1.6-7.2H5.8"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.3" cy="20" r="1.3"/></symbol>
@@ -81,7 +81,7 @@
     <a class="wortmarke" href="../">Notebook Reparatur <span>24</span></a>
     <form class="suche" role="search" aria-label="Shop durchsuchen" action="../suche/" method="get" data-suche>
       <label class="sr-only" for="suche-kopf">Suche nach Modell, Teilenummer oder Artikel</label>
-      <input class="suche__feld" id="suche-kopf" type="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
+      <input class="suche__feld" id="suche-kopf" type="text" enterkeyhint="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
       <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span class="sr-only">Suchen</span></button>
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
@@ -152,7 +152,7 @@
             </div>
             <div class="feld feld--breit">
               <label class="feld__label" for="kasse-strasse">Straße und Hausnummer <span class="feld__pflicht">Pflichtfeld</span></label>
-              <input class="eingabe" id="kasse-strasse" name="strasse" type="text" required autocomplete="street-address" aria-describedby="kasse-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer an.">
+              <input class="eingabe" id="kasse-strasse" name="strasse" type="text" required autocomplete="address-line1" aria-describedby="kasse-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer an.">
               <p class="feld__fehler" id="kasse-strasse-fehler" hidden></p>
             </div>
             <div class="feld">
@@ -167,10 +167,10 @@
             </div>
             <div class="feld">
               <label class="feld__label" for="kasse-land">Land <span class="feld__pflicht">Pflichtfeld</span></label>
-              <select class="eingabe" id="kasse-land" name="land" required autocomplete="country-name">
+              <select class="eingabe" id="kasse-land" name="land" autocomplete="country-name" aria-describedby="kasse-land-hilfe">
                 <option value="Deutschland">Deutschland</option>
-                <option value="Österreich">Österreich</option>
               </select>
+              <p class="feld__hilfe" id="kasse-land-hilfe">Wir liefern nur innerhalb Deutschlands.</p>
             </div>
             <div class="feld">
               <label class="feld__label" for="kasse-telefon">Telefon <span class="feld__optional">optional</span></label>
@@ -199,7 +199,7 @@
               </div>
               <div class="feld feld--breit">
                 <label class="feld__label" for="kasse-liefer-strasse">Straße und Hausnummer <span class="feld__pflicht">Pflichtfeld</span></label>
-                <input class="eingabe" id="kasse-liefer-strasse" name="liefer_strasse" type="text" required autocomplete="shipping street-address" aria-describedby="kasse-liefer-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer für die Lieferung an.">
+                <input class="eingabe" id="kasse-liefer-strasse" name="liefer_strasse" type="text" required autocomplete="shipping address-line1" aria-describedby="kasse-liefer-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer für die Lieferung an.">
                 <p class="feld__fehler" id="kasse-liefer-strasse-fehler" hidden></p>
               </div>
               <div class="feld">
@@ -237,8 +237,8 @@
 <label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="paypal" required checked><span class="auswahl__inhalt"><span class="auswahl__titel">PayPal</span><span class="auswahl__text">Sie zahlen über Ihr PayPal-Konto.</span></span></label>
 <label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="vorkasse" required><span class="auswahl__inhalt"><span class="auswahl__titel">Vorkasse per Überweisung</span><span class="auswahl__text">Unsere Bankverbindung erhalten Sie mit der Bestellbestätigung. Wir versenden nach Zahlungseingang.</span></span></label>
 <label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="rechnung" required><span class="auswahl__inhalt"><span class="auswahl__titel">Rechnung</span><span class="auswahl__text">Sie zahlen innerhalb von 14 Tagen nach Erhalt der Rechnung.</span></span></label>
-<label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="nachnahme" required><span class="auswahl__inhalt"><span class="auswahl__titel">Nachnahme</span><span class="auswahl__text">Nachnahmegebühr 6,90 €. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen.</span></span></label>
-<label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="bar" required><span class="auswahl__inhalt"><span class="auswahl__titel">Barzahlung bei Abholung</span><span class="auswahl__text">Nur bei Selbstabholung in unserer Werkstatt möglich.</span></span></label>
+<label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="nachnahme" required data-nur-versand="standard" data-kombi-fehler="Nachnahme ist nur mit der Versandart Standardversand möglich. Bitte wählen Sie eine andere Zahlart oder ändern Sie im Schritt Versand die Versandart."><span class="auswahl__inhalt"><span class="auswahl__titel">Nachnahme</span><span class="auswahl__text">Nachnahmegebühr 6,90 €, sie wird in der Gesamtsumme berücksichtigt. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen. Nur mit Standardversand möglich.</span></span><span class="auswahl__preis preis">+ 6,90 €</span></label>
+<label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="bar" required data-nur-versand="abholung" data-kombi-fehler="Barzahlung bei Abholung ist nur mit der Versandart Selbstabholung möglich. Bitte wählen Sie eine andere Zahlart oder ändern Sie im Schritt Versand die Versandart."><span class="auswahl__inhalt"><span class="auswahl__titel">Barzahlung bei Abholung</span><span class="auswahl__text">Nur bei Selbstabholung in unserer Werkstatt möglich.</span></span></label>
           </div>
           <div class="schritt__knoepfe">
             <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
@@ -281,6 +281,7 @@
         <dl class="wk-summe__zeilen">
           <div><dt>Zwischensumme</dt><dd data-wk-zwischensumme></dd></div>
           <div><dt>Versand</dt><dd data-wk-versand></dd></div>
+          <div data-wk-gebuehr-zeile hidden><dt>Gebühr</dt><dd data-wk-gebuehr></dd></div>
           <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
           <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
         </dl>
@@ -328,6 +329,7 @@
           <li><a href="../widerruf/">Widerrufsbelehrung</a></li>
           <li><a href="../datenschutz/">Datenschutz</a></li>
           <li><a href="../versand-und-zahlung/">Versand und Zahlung</a></li>
+          <li><a href="../bildnachweise/">Bildnachweise</a></li>
         </ul>
       </nav>
       <div class="fuss__spalte fuss__kontakt">

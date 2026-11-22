@@ -390,11 +390,15 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Fehlersuche am Mainboard Ihres Acer-Notebooks mit Kostenvoranschlag.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Acer-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Acer-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../acer-notebook-reparatur-diagnose-reinigung/\">Acer Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
       "merkmale": [
         [
           "Leistung",
           "Mainboard-Diagnose mit Kostenvoranschlag"
+        ],
+        [
+          "Preis",
+          "59,00 € für Mainboard-Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -418,7 +422,9 @@
       "beliebt": true,
       "rang": 70,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a08",
@@ -434,11 +440,15 @@
       "verfuegbar": true,
       "lieferzeit": "[Bearbeitungszeit]",
       "kurz": "Fehlersuche am Mainboard Ihres Lenovo-Notebooks mit Kostenvoranschlag.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Lenovo-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Lenovo-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><p>Diese Diagnose ist für Geräte gedacht, bei denen der Fehler auf dem Mainboard liegt, etwa wenn das Notebook nicht startet oder kein Bild zeigt. Wir messen die Platine durch und grenzen den Fehler bis auf das einzelne Bauteil ein. Für eine allgemeine Prüfung des ganzen Notebooks gibt es die <a href=\"../lenovo-notebook-reparatur-diagnose-reinigung/\">Lenovo Notebook-Reparatur mit Diagnose und Reinigung</a> für 29,90 €.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
       "merkmale": [
         [
           "Leistung",
           "Mainboard-Diagnose mit Kostenvoranschlag"
+        ],
+        [
+          "Preis",
+          "59,00 € für Mainboard-Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -462,7 +472,9 @@
       "beliebt": false,
       "rang": 80,
       "quelle": "ebay",
-      "quelle_url": null
+      "quelle_url": null,
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Mainboard-Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a09",
@@ -608,10 +620,10 @@
     },
     {
       "id": "a12",
-      "slug": "acer-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "acer-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "Acer Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "Acer Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Acer",
       "modelle": [],
       "teilenummer": null,
@@ -619,12 +631,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Acer-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Acer-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Acer-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle Acer-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Acer-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Acer-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -656,14 +672,16 @@
       "beliebt": false,
       "rang": 100,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/acer-laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/acer-laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a13",
-      "slug": "asus-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "asus-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "Asus Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "Asus Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Asus",
       "modelle": [],
       "teilenummer": null,
@@ -671,12 +689,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Asus-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Asus-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Asus-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle Asus-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Asus-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Asus-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -712,14 +734,16 @@
       "beliebt": false,
       "rang": 110,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a14",
-      "slug": "hp-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "hp-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "HP Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "HP Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "HP",
       "modelle": [],
       "teilenummer": null,
@@ -727,12 +751,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle HP-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres HP-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle HP-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle HP-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres HP-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle HP-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -768,14 +796,16 @@
       "beliebt": false,
       "rang": 120,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/hp-laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/hp-laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a15",
-      "slug": "lenovo-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "lenovo-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "Lenovo Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "Lenovo Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Lenovo",
       "modelle": [],
       "teilenummer": null,
@@ -783,12 +813,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Lenovo-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Lenovo-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Lenovo-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle Lenovo-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Lenovo-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Lenovo-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -824,14 +858,16 @@
       "beliebt": false,
       "rang": 130,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/lenovo-laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/lenovo-laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a16",
-      "slug": "medion-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "medion-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "Medion Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "Medion Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Medion",
       "modelle": [],
       "teilenummer": null,
@@ -839,12 +875,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Medion-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Medion-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Medion-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle Medion-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Medion-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Medion-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -880,14 +920,16 @@
       "beliebt": false,
       "rang": 140,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/medion-laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/medion-laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a17",
-      "slug": "samsung-notebook-reparatur-diagnose-kostenvoranschlag",
+      "slug": "samsung-notebook-reparatur-diagnose-reinigung",
       "kategorie": "reparaturen",
       "art": "reparatur",
-      "name": "Samsung Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "name": "Samsung Notebook-Reparatur mit Diagnose und Reinigung",
       "hersteller": "Samsung",
       "modelle": [],
       "teilenummer": null,
@@ -895,12 +937,16 @@
       "zustand": "Dienstleistung",
       "verfuegbar": true,
       "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
-      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Samsung-Notebooks.",
-      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Samsung-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Samsung-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "kurz": "Diagnose mit Kostenvoranschlag für alle Samsung-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Samsung-Notebooks mit Kostenvoranschlag für die Reparatur. Der Preis von 29,90 € gilt für Diagnose und Kostenvoranschlag, die Kosten der Reparatur nennt Ihnen der Kostenvoranschlag. Bei der Reparatur reinigen wir zusätzlich das Kühlsystem. Das Angebot gilt für alle Samsung-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
       "merkmale": [
         [
           "Leistung",
-          "Diagnose, Kostenvoranschlag und Reparatur"
+          "Diagnose mit Kostenvoranschlag, Reparatur und Reinigung nach Freigabe"
+        ],
+        [
+          "Preis",
+          "29,90 € für Diagnose und Kostenvoranschlag, Reparatur laut Kostenvoranschlag"
         ],
         [
           "Geräte",
@@ -936,7 +982,9 @@
       "beliebt": false,
       "rang": 150,
       "quelle": "shop",
-      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/samsung-laptop-notebook-reparatur-detail"
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/samsung-laptop-notebook-reparatur-detail",
+      "preis_label": "Diagnose",
+      "preis_hinweis": "Preis für Diagnose und Kostenvoranschlag. Die Reparatur berechnen wir nach Ihrer Freigabe laut Kostenvoranschlag."
     },
     {
       "id": "a18",

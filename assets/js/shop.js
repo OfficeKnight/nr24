@@ -338,23 +338,27 @@
     if (kasseAnsicht) { sicher(kasseAnsicht.korbGeaendert); }
   }
 
-  /* Summen in einem Bereich setzen. versandPreis gilt nur, wenn der Korb nicht leer ist. */
-  function summenSetzen(bereich, versandPreis) {
+  /* Summen in einem Bereich setzen. versandPreis und gebuehr (Zahlart, z. B. Nachnahme)
+     gelten nur, wenn der Korb nicht leer ist. */
+  function summenSetzen(bereich, versandPreis, gebuehr) {
     var pos = korbPositionen();
     var zwischen = 0;
     pos.forEach(function (p) { zwischen += cent(NACH_ID[p.id].preis) * p.menge; });
     var versand = pos.length ? cent(versandPreis) : 0;
-    var gesamt = zwischen + versand;
+    var zusatz = pos.length ? cent(gebuehr || 0) : 0;
+    var gesamt = zwischen + versand + zusatz;
     var mwst = Math.round(gesamt - gesamt / (1 + MWST / 100));
     var werte = {
       '[data-wk-zwischensumme]': zwischen,
       '[data-wk-versand]': versand,
+      '[data-wk-gebuehr]': zusatz,
       '[data-wk-gesamt]': gesamt,
       '[data-wk-mwst]': mwst
     };
     Object.keys(werte).forEach(function (sel) {
       alle(bereich, sel).forEach(function (el) { el.textContent = preis(werte[sel] / 100); });
     });
+    alle(bereich, '[data-wk-gebuehr-zeile]').forEach(function (zeile) { zeile.hidden = zusatz === 0; });
     alle(bereich, '.wk-summe__mwst dt').forEach(function (dt) {
       dt.textContent = 'enthaltene MwSt. (' + MWST + ' %)';
     });
@@ -628,8 +632,18 @@
     return 'Bitte wählen Sie ' + (radios ? 'eine Angabe' : 'mindestens eine Angabe') + ' bei „' + legendText(gruppe) + '“.';
   }
 
+  /* Zahlarten, die nur mit einer bestimmten Versandart gehen (data-nur-versand), z. B. Barzahlung bei Abholung. */
+  function kombiMeldung(radio) {
+    var nur = radio.getAttribute('data-nur-versand');
+    if (!nur || !radio.form) { return ''; }
+    var versand = radio.form.querySelector('input[name="versand"]:checked');
+    if (!versand || versand.value === nur) { return ''; }
+    return radio.getAttribute('data-kombi-fehler') || 'Diese Zahlart passt nicht zur gewählten Versandart.';
+  }
+
   function radioMeldung(radios, bereich) {
-    if (radios.some(function (r) { return r.checked; })) { return ''; }
+    var gewaehlt = radios.filter(function (r) { return r.checked; })[0];
+    if (gewaehlt) { return kombiMeldung(gewaehlt); }
     if (!radios.some(function (r) { return r.required; })) { return ''; }
     var eigene = radios[0].getAttribute('data-fehler');
     if (eigene) { return eigene; }
@@ -876,11 +890,19 @@
       return versandNach(gewaehlt('versand')) || VERSAND[0] || null;
     }
 
+    function gewaehlteZahlart() {
+      return zahlartNach(gewaehlt('zahlung'));
+    }
+
     function summen() {
       var v = gewaehlterVersand();
-      summenSetzen(form, v ? v.preis : 0);
+      var z = gewaehlteZahlart();
+      var gebuehr = z && Number(z.preis) > 0 ? Number(z.preis) : 0;
+      summenSetzen(form, v ? v.preis : 0, gebuehr);
       var dd = form.querySelector('[data-wk-versand]');
       if (dd && v && dd.previousElementSibling) { dd.previousElementSibling.textContent = 'Versand (' + v.name + ')'; }
+      var gd = form.querySelector('[data-wk-gebuehr]');
+      if (gd && z && gebuehr && gd.previousElementSibling) { gd.previousElementSibling.textContent = 'Gebühr (' + z.name + ')'; }
     }
 
     function lieferadresseZeigen() {
@@ -920,7 +942,8 @@
       var zahlung = form.querySelector('[data-uebersicht-zahlung]');
       if (zahlung) {
         var z = zahlartNach(gewaehlt('zahlung'));
-        zahlung.innerHTML = z ? '<p>' + text(z.name) + '</p>' : '<p>Keine Zahlart gewählt</p>';
+        var gebuehrText = z && Number(z.preis) > 0 ? ', Gebühr ' + esc(preis(Number(z.preis))) : '';
+        zahlung.innerHTML = z ? '<p>' + text(z.name) + gebuehrText + '</p>' : '<p>Keine Zahlart gewählt</p>';
       }
       var positionen = form.querySelector('[data-uebersicht-positionen]');
       if (positionen) {
@@ -996,7 +1019,7 @@
     form.addEventListener('change', function (e) {
       var el = e.target;
       if (el === lieferUmschalter) { lieferadresseZeigen(); }
-      if (el.name === 'versand') { summen(); }
+      if (el.name === 'versand' || el.name === 'zahlung') { summen(); }
       if (el.name === 'agb') { sperren(); }
       speichern();
     });

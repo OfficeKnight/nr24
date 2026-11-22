@@ -8,7 +8,7 @@
         <label class="hero__suchlabel" for="suche-start">{{ s.suche_titel }}</label>
         <form class="suche suche--gross" role="search" aria-label="Modellsuche" action="{{ root }}suche/" method="get" data-suche>
           <svg class="ico suche__lupe" aria-hidden="true"><use href="#i-lupe-modell"></use></svg>
-          <input class="suche__feld" id="suche-start" type="search" name="q" placeholder="Modell oder Teilenummer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-start-liste" aria-describedby="suche-start-hilfe">
+          <input class="suche__feld" id="suche-start" type="text" enterkeyhint="search" name="q" placeholder="Modell oder Teilenummer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-start-liste" aria-describedby="suche-start-hilfe">
           <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
           <ul class="suche__vorschlaege" id="suche-start-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
         </form>

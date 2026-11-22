@@ -1,6 +1,8 @@
 # Bildquellen
 
-Diese Seite nennt die Herkunft und die Lizenz aller Fotos und Schriften, die in dieser Demo verwendet werden. Alle Fotos wurden für die Seite zugeschnitten (Seitenverhältnis 3 zu 2), verkleinert und in das WebP-Format umgewandelt, Metadaten wurden dabei entfernt.
+Diese Datei nennt die Herkunft und die Lizenz aller Fotos und Schriften, die in dieser Demo verwendet werden. Alle Fotos wurden für die Seite zugeschnitten (Seitenverhältnis 3 zu 2), verkleinert und in das WebP-Format umgewandelt, Metadaten wurden dabei entfernt.
+
+Auf der Webseite selbst stehen dieselben Angaben auf der Seite `bildnachweise/`, verlinkt im Fuß unter „Rechtliches“ und im Impressum.
 
 ## Fotos von Flickr
 
@@ -29,7 +31,27 @@ Diese Fotos stehen unter Creative Commons Zero 1.0 (CC0). Eine Namensnennung ist
 
 ## Bilder der bestehenden Seite
 
-Wird bei der Zusammenführung ergänzt.
+Diese Bilder stammen aus dem bisherigen Webshop von Notebook Reparatur 24 (notebook-reparatur24.de, Stand 22.11.2026). Es sind überwiegend eigene Fotos des Inhabers, die Rechte liegen beim Shop. Verwendet wurde jeweils das Originalbild, nicht die kleine Vorschau mit 90 x 90 Pixeln.
+
+Verarbeitung für alle Dateien. Das Motiv wurde mit weißem Rand auf das Seitenverhältnis 4 zu 3 eingepasst (nicht beschnitten) und als WebP mit Qualität 80 ohne Metadaten gespeichert. Eine Breite von 800 Pixeln gibt es nur, wenn die Quelle dafür nicht hochgerechnet werden muss, sonst nur 400 Pixel. Alle eigenen Produktfotos trugen einen orangefarbenen Datumsstempel der Kamera. Er wurde unten abgeschnitten oder mit Tischhintergrund überdeckt, das Motiv blieb unverändert. Wasserzeichen oder Vorschauen aus Bildagenturen wurden in keinem verwendeten Bild gefunden.
+
+| Datei im Repo | Originalpfad im bisherigen Shop | Motiv | Hinweis |
+|---|---|---|---|
+| `assets/bilder/produkte/notebook-reparatur-werkstatt-1-*.webp` | `/images/stories/virtuemart/product/s-l16004.jpg` (identisch mit `s-l1600.jpg`) | Notebook-Mainboard in der Infrarot-Lötstation ERSA IR550A | Eigenes Werkstattfoto. Unten um 104 Pixel beschnitten (Datumsstempel 26.05.2012), weißer Randstreifen rechts entfernt. Im bisherigen Shop Bild aller sechs Reparaturen zu 29,90 Euro |
+| `assets/bilder/produkte/led-display-17-3-n17306-l02-1-*.webp` | `/images/stories/virtuemart/product/s-l1700.jpg` | LED-Display 17,3 Zoll N17306-L02 von hinten auf Luftpolsterfolie | Eigenes Foto. Unten um 104 Pixel beschnitten (Datumsstempel 12.08.2015) |
+| `assets/bilder/produkte/displaykabel-asus-x72-1-*.webp` | `/images/stories/virtuemart/product/s-l1800.jpg` | Displaykabel Asus X72, ganzes Kabel auf Holztisch | Eigenes Foto. Datumsstempel mit Tischhintergrund überdeckt. Auch als Symbolbild für das Displaykabel X70 verwendet |
+| `assets/bilder/produkte/displaykabel-asus-x72-2-*.webp` | `/images/stories/virtuemart/product/s-l1900.jpg` | Displaykabel Asus X72, Stecker und Etikett nah | Eigenes Foto. Datumsstempel mit Tischhintergrund überdeckt |
+| `assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-1-*.webp` | `/images/stories/virtuemart/product/s-l1600 (4).jpg` (identisch mit `s-l16003.jpg`) | Grafikkarte ATI HD 6970M (iMac 27 Zoll) auf rosa Schaumstoff | Eigenes Foto. Unten um 104 Pixel beschnitten (Datumsstempel 17.06.2018) |
+| `assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-2-*.webp` | `/images/stories/virtuemart/product/s-l16001.jpg` (identisch mit `s-l1600 (1).jpg`) | Grafikkarte, Grafikchip und Speicher nah | Eigenes Foto. Unten beschnitten (Datumsstempel 29.05.2018) |
+| `assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-3-*.webp` | `/images/stories/virtuemart/product/s-l1600 (1)4.jpg` (identisch mit `s-l1600 (2).jpg`) | AMD-Grafikchip 216-0811000 auf der Karte, Makro | Eigenes Foto. Unten beschnitten (Datumsstempel 29.05.2018) |
+| `assets/bilder/produkte/grafikkarte-imac-27-hd-6970m-4-*.webp` | `/images/stories/virtuemart/product/s-l1600 (2)6.jpg` (identisch mit `s-l1600 (3).jpg`) | Neue AMD-Grafikchips im Tray | Eigenes Foto. Unten beschnitten (Datumsstempel 27.08.2018) |
+| `assets/bilder/produkte/amd-notebook-prozessor-1-400.webp` | `/images/stories/virtuemart/product/s-p100.jpg` | AMD-Notebook-Prozessor (Sockel S1), Vorder- und Rückseite | Kein eigenes Foto, vermutlich Abbildung des Herstellers, nur 300 x 239 Pixel. Als Symbolbild für beide Prozessoren. Vor dem echten Betrieb Nutzungsrecht klären oder durch ein eigenes Foto ersetzen |
+| `assets/bilder/kategorien/reparaturen-400.webp` | `/images/stories/virtuemart/category/Laptop-Motherboard-Mainboard_k.jpg` | Notebook-Mainboard freigestellt | Bisher Bild der leeren Kategorie Notebook Mainboard, 200 x 200 Pixel |
+| `assets/bilder/kategorien/displays-400.webp` | `/images/stories/virtuemart/category/lcd_display_k.jpg` | Notebook-Display freigestellt | Kategoriebild Notebook TFT Display, 200 x 200 Pixel |
+| `assets/bilder/kategorien/grafikkarten-*.webp` | `/images/stories/virtuemart/product/s-l1600 (4).jpg` | Grafikkarte ATI HD 6970M | Eigenes Produktfoto statt des bisherigen Kategoriebilds, das eine fremde Grafikkarte mit großem Markenlogo zeigt. Datumsstempel abgeschnitten |
+| `assets/bilder/kategorien/prozessoren-400.webp` | `/images/stories/virtuemart/category/CPU-top_k.jpg` | AMD-Prozessor freigestellt | Kategoriebild Prozessoren, 250 x 200 Pixel. Zeigt einen Desktop-Prozessor, als Kategoriesymbol vertretbar. Nutzungsrecht vor dem echten Betrieb klären |
+
+Bewusst nicht übernommen wurden Bilder mit Logos fremder Marken (eBay-Shop-Logo, PayPal-Siegel, NVIDIA-Herstellerfoto), Bannerbilder aus Bildagenturen mit eingebranntem Werbetext, das alte Logo als Bild, die Textgrafik „Versandkostenfrei“, eine vermutliche Stock-Illustration sowie die Bilder leerer Kategorien. Zwei Display-Artikel zeigten im bisherigen Shop versehentlich das Werkstattfoto. Sie erhalten in der Demo ein passendes Symbolbild.
 
 ## Schriften
 

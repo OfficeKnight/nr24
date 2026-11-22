@@ -35,6 +35,9 @@ body > main { flex: 1 0 auto; }
 
 [hidden] { display: none !important; }
 
+/* SVG-Sprite mit den Ikonen: unsichtbar, aber nicht display:none, damit <use> überall zuverlässig rendert. */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 
@@ -224,7 +227,6 @@ address { font-style: normal; }
   color: var(--c-suche-text);
 }
 .suche__feld::placeholder { color: var(--c-text-2); opacity: 1; }
-.suche__feld::-webkit-search-cancel-button { cursor: pointer; }
 .suche__feld:focus-visible { outline-offset: 0; }
 
 .suche__knopf {
@@ -529,7 +531,8 @@ address { font-style: normal; }
 .festpreise__link:hover { color: inherit; }
 .festpreise__link:hover .festpreise__name { text-decoration: underline; }
 .festpreise__name { font-size: .9375rem; line-height: 1.35; }
-.festpreise__preis { color: inherit; font-weight: 700; font-size: 1.0625rem; }
+.festpreise__preis { flex: 0 0 auto; color: inherit; font-weight: 700; font-size: 1.0625rem; text-align: right; white-space: nowrap; }
+.festpreise__zusatz { display: block; font-size: .75rem; font-weight: 500; color: color-mix(in srgb, var(--c-marke-text) 82%, var(--c-marke)); }
 .festpreise__aktionen { display: flex; flex-wrap: wrap; gap: 10px; }
 .festpreise__aktionen .knopf { flex: 1 1 auto; }
 
@@ -858,6 +861,7 @@ address { font-style: normal; }
 }
 .preis--gross { margin: 0; font-family: var(--f-kopf); font-size: 2.125rem; font-weight: 700; line-height: 1.1; }
 .kaufbox__mwst { margin: 4px 0 14px; color: var(--c-text-2); font-size: .875rem; }
+.kaufbox__hinweis { margin: 6px 0 0; font-size: .9375rem; font-weight: 600; }
 .kaufbox__verfuegbar { display: flex; align-items: center; gap: 8px; margin: 0 0 2px; color: var(--c-warn); font-weight: 600; }
 .kaufbox__verfuegbar.ist-lieferbar { color: var(--c-erfolg); }
 .kaufbox__lieferzeit { margin: 0 0 16px; color: var(--c-text-2); font-size: .875rem; }
@@ -1001,6 +1005,7 @@ address { font-style: normal; }
 .preistabelle td.preistabelle__preis { grid-column: 1; color: var(--c-text); }
 .preistabelle td.preistabelle__preis::before { display: none; }
 .preistabelle__preis .preis { font-size: 1.125rem; font-weight: 700; }
+.preistabelle__zusatz { color: var(--c-text-2); font-size: .8125rem; font-weight: 500; }
 .preistabelle td.preistabelle__aktion { grid-column: 2; grid-row: span 1; justify-content: flex-end; align-self: center; }
 .preistabelle td:nth-child(2), .preistabelle td:nth-child(3) { grid-column: 1 / -1; }
 .preistabelle__leer { color: var(--c-text-2); }
@@ -1444,6 +1449,28 @@ select.eingabe { cursor: pointer; }
 .rechtstext table { width: 100%; margin-bottom: 1em; }
 .rechtstext th, .rechtstext td { padding: 8px 10px; border-bottom: 1px solid var(--c-linie); text-align: left; vertical-align: top; }
 
+/* ---------- Bildnachweise ---------- */
+
+.nachweise-abschnitt { padding-block: 8px 32px; }
+.nachweise-abschnitt__text { max-width: 75ch; color: var(--c-text-2); }
+.nachweise { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.nachweis {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--c-linie);
+  border-radius: var(--r-2);
+  background: var(--c-flaeche);
+}
+.nachweis__bild { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--c-bild-bg); }
+.nachweis__text { padding: 14px 16px 16px; }
+.nachweis__titel { margin: 0 0 10px; font-size: 1.0625rem; line-height: 1.35; }
+.nachweis__daten { display: grid; gap: 6px; margin: 0; font-size: .9375rem; }
+.nachweis__daten div { display: grid; grid-template-columns: 5.5em minmax(0, 1fr); gap: 8px; }
+.nachweis__daten dt { color: var(--c-text-2); }
+.nachweis__daten dd { margin: 0; overflow-wrap: anywhere; }
+.nachweis__daten a { display: inline-block; padding-block: 2px; }
+
 /* ---------- 404 ---------- */
 
 .fehlerseite { padding-block: 40px 48px; text-align: center; }
@@ -1589,7 +1616,7 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .ablauf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
   .ablauf--kompakt { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .leistungen { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .fehlerbilder { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .fehlerbilder { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 
   .produktseite { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
   .seitenbanner__kennzahlen { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
@@ -1676,7 +1703,13 @@ a.fuss__zeile { align-items: center; min-height: 44px; margin-bottom: 0; }
   .leistungen { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
   .katalog { display: grid; grid-template-columns: 264px minmax(0, 1fr); gap: 32px; align-items: start; }
-  .filter { display: block; position: sticky; top: 16px; margin: 0; }
+  .fehlerbilder { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* Filter bleibt sichtbar, ist er höher als das Fenster, scrollt er für sich. */
+  .filter {
+    display: block; position: sticky; top: 16px; margin: 0;
+    max-height: calc(100vh - 32px); overflow-y: auto; overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
   .filter-umschalter { display: none; }
 
   .produktseite { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; padding-top: 8px; }

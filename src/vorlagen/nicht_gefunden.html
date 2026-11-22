@@ -5,7 +5,7 @@
   <p class="fehlerseite__text">{{ s.text }}</p>
   <form class="suche suche--seite" role="search" aria-label="Seite suchen" action="{{ root }}suche/" method="get" data-suche>
     <label class="sr-only" for="suche-fehler">Suchbegriff</label>
-    <input class="suche__feld" id="suche-fehler" type="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-fehler-liste">
+    <input class="suche__feld" id="suche-fehler" type="text" enterkeyhint="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-fehler-liste">
     <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
     <ul class="suche__vorschlaege" id="suche-fehler-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
   </form>

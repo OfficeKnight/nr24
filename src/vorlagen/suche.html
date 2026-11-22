@@ -6,7 +6,7 @@
   <div class="suchseite" data-suchseite>
     <form class="suche suche--seite" role="search" aria-label="Suchbegriff ändern" action="{{ root }}suche/" method="get" data-suche>
       <label class="sr-only" for="suche-seite">Suchbegriff</label>
-      <input class="suche__feld" id="suche-seite" type="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-seite-liste">
+      <input class="suche__feld" id="suche-seite" type="text" enterkeyhint="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-seite-liste">
       <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
       <ul class="suche__vorschlaege" id="suche-seite-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>

@@ -19,7 +19,8 @@
       <p class="produktseite__kurz">{{ a.kurz }}</p>
       <form class="kaufbox" data-wk-form="{{ a.id }}">
         <p class="preis preis--gross">{{ preis }}</p>
-        <p class="kaufbox__mwst">inkl. 19 % MwSt., zzgl. <a href="{{ root }}versand-und-zahlung/">Versand</a></p>
+        {% if a.preis_hinweis %}<p class="kaufbox__hinweis">{{ a.preis_hinweis }}</p>{% endif %}
+        <p class="kaufbox__mwst">inkl. 19 % MwSt., {% if ist_reparatur %}<a href="{{ root }}versand-und-zahlung/">Rückversand</a> innerhalb Deutschlands kostenlos{% else %}<a href="{{ root }}versand-und-zahlung/">versandkostenfrei</a> innerhalb Deutschlands{% endif %}</p>
         <p class="kaufbox__verfuegbar{% if a.verfuegbar %} ist-lieferbar{% endif %}"><svg class="ico" aria-hidden="true"><use href="#{% if a.verfuegbar %}i-check{% else %}i-uhr{% endif %}"></use></svg><span>{{ zustand_satz }}</span></p>
         <p class="kaufbox__lieferzeit">{{ lieferzeit_label }} {{ a.lieferzeit }}</p>
         <div class="kaufbox__zeile">

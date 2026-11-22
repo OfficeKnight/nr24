@@ -28,8 +28,8 @@
     {"id": "paypal", "name": "PayPal", "text": "Sie zahlen über Ihr PayPal-Konto."},
     {"id": "vorkasse", "name": "Vorkasse per Überweisung", "text": "Unsere Bankverbindung erhalten Sie mit der Bestellbestätigung. Wir versenden nach Zahlungseingang."},
     {"id": "rechnung", "name": "Rechnung", "text": "Sie zahlen innerhalb von 14 Tagen nach Erhalt der Rechnung."},
-    {"id": "nachnahme", "name": "Nachnahme", "text": "Nachnahmegebühr 6,90 €. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen."},
-    {"id": "bar", "name": "Barzahlung bei Abholung", "text": "Nur bei Selbstabholung in unserer Werkstatt möglich."}
+    {"id": "nachnahme", "name": "Nachnahme", "text": "Nachnahmegebühr 6,90 €, sie wird in der Gesamtsumme berücksichtigt. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen. Nur mit Standardversand möglich.", "preis": 6.9, "nur_versand": "standard"},
+    {"id": "bar", "name": "Barzahlung bei Abholung", "text": "Nur bei Selbstabholung in unserer Werkstatt möglich.", "nur_versand": "abholung"}
   ],
   "start": {
     "title": "Notebook-Ersatzteile und Reparatur | Notebook Reparatur 24",
@@ -40,7 +40,7 @@
     "suche_text": "Zum Beispiel Nitro 5, LA-H431P oder iMac A1312",
     "suche_beispiele": ["Nitro 5", "LA-H431P", "iMac A1312", "Legion"],
     "festpreise_titel": "Reparatur zum Festpreis",
-    "festpreise_text": "Sie kennen den Preis, bevor Sie Ihr Gerät einsenden. Die Diagnose mit Kostenvoranschlag gibt es ab 29,90 €.",
+    "festpreise_text": "Sie kennen den Preis, bevor Sie Ihr Gerät einsenden. Die Diagnose mit Kostenvoranschlag gibt es ab 29,90 €, Mainboard-Reparaturen zum Festpreis.",
     "festpreise_ids": ["a01", "a02", "a03", "a06", "a12"],
     "kategorien_titel": "Ersatzteile und Reparaturen nach Kategorie",
     "beliebt_titel": "Beliebte Angebote",
@@ -51,15 +51,15 @@
     "hersteller_text": "Wir reparieren Notebooks aller gängigen Hersteller. Wählen Sie Ihre Marke und finden Sie passende Angebote."
   },
   "ablauf": [
-    {"titel": "Anfrage", "text": "Sie buchen den passenden Festpreis im Shop oder senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.", "icon": "i-dokument"},
+    {"titel": "Anfrage", "text": "Sie buchen die Diagnose ab 29,90 € oder eine Reparatur zum Festpreis im Shop. Oder Sie senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.", "icon": "i-dokument"},
     {"titel": "Einsenden", "text": "Sie schicken uns das Notebook mit Netzteil und Akku gut gepolstert zu. Legen Sie Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.", "icon": "i-paket"},
-    {"titel": "Diagnose und Reparatur", "text": "Wir suchen den Fehler und senden Ihnen einen Kostenvoranschlag per E-Mail. Repariert wird erst nach Ihrer Freigabe.", "icon": "i-werkzeug"},
+    {"titel": "Diagnose und Reparatur", "text": "Nach einer Diagnose erhalten Sie einen Kostenvoranschlag per E-Mail, repariert wird erst nach Ihrer Freigabe. Eine gebuchte Festpreis-Reparatur führen wir direkt aus.", "icon": "i-werkzeug"},
     {"titel": "Rückversand", "text": "Nach Reinigung und ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.", "icon": "i-lkw"}
   ],
   "faq": {
     "start": [
-      {"frage": "Wie läuft eine Reparatur bei Ihnen ab?", "antwort": "<p>Sie buchen die Diagnose oder einen Festpreis im Shop und senden uns Ihr Notebook zu. Wir suchen den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück.</p>"},
-      {"frage": "Was kostet die Diagnose?", "antwort": "<p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Eine gezielte Mainboard-Diagnose für Acer und Lenovo kostet 59,00 €. Alle Preise verstehen sich inklusive 19 % MwSt.</p>"},
+      {"frage": "Wie läuft eine Reparatur bei Ihnen ab?", "antwort": "<p>Sie buchen die Diagnose oder eine Reparatur zum Festpreis im Shop und senden uns Ihr Notebook zu. Nach der Diagnose schicken wir Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück.</p>"},
+      {"frage": "Was kostet die Diagnose?", "antwort": "<p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Dabei prüfen wir das ganze Gerät. Für Acer und Lenovo gibt es zusätzlich eine Mainboard-Diagnose mit Kostenvoranschlag für 59,00 €, bei der wir den Fehler auf der Platine bis auf das einzelne Bauteil eingrenzen. Was die Reparatur selbst kostet, steht im Kostenvoranschlag. Alle Preise verstehen sich inklusive 19 % MwSt.</p>"},
       {"frage": "Was passiert, wenn ich den Kostenvoranschlag ablehne?", "antwort": "<p>Dann senden wir Ihnen Ihr Notebook auf unsere Kosten unrepariert zurück. Der Preis für die Diagnose wird in diesem Fall nicht erstattet, weil die Fehlersuche bereits erbracht wurde.</p>"},
       {"frage": "Welche Gewährleistung erhalte ich?", "antwort": "<p>Auf unsere Reparaturen erhalten Sie 1 Jahr Gewährleistung. Für Ersatzteile gelten die gesetzlichen Rechte und die Angaben im jeweiligen Angebot. Einzelheiten finden Sie in unseren AGB.</p>"},
       {"frage": "Was kostet der Versand?", "antwort": "<p>Innerhalb Deutschlands liefern wir versandkostenfrei. Eine Lieferung ins Ausland bieten wir derzeit nicht an. Nach Absprache können Sie Ihre Bestellung auch kostenlos in unserer Werkstatt abholen.</p>"},
@@ -78,7 +78,7 @@
     ],
     "acer": [
       {"frage": "Welche Acer-Modelle reparieren Sie?", "antwort": "<p>Wir reparieren Notebooks aller Acer-Modellreihen, darunter Aspire, Nitro, Predator, Swift, TravelMate und Extensa. Für einige Modelle wie das Nitro 5 AN515 und das Predator 17 G9-793 gibt es feste Reparaturpreise.</p>"},
-      {"frage": "Was kostet die Diagnose für ein Acer-Notebook?", "antwort": "<p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € und gilt für alle Acer-Modelle. Eine gezielte Diagnose des Mainboards bieten wir für 59,00 € an. Erst nach Ihrer Freigabe reparieren wir.</p>"},
+      {"frage": "Was kostet die Diagnose für ein Acer-Notebook?", "antwort": "<p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € und gilt für alle Acer-Modelle. Liegt der Fehler auf dem Mainboard, grenzt die Mainboard-Diagnose für 59,00 € ihn bis auf das einzelne Bauteil ein. In beiden Fällen erhalten Sie einen Kostenvoranschlag und wir reparieren erst nach Ihrer Freigabe.</p>"},
       {"frage": "Mein Acer-Notebook bleibt schwarz, aber der Lüfter läuft. Was kann das sein?", "antwort": "<p>Häufig liegt die Ursache auf dem Mainboard, etwa bei der Spannungsversorgung, beim Grafikchip oder beim Arbeitsspeicher. Auch ein defektes Display oder Displaykabel ist möglich. Bleibt auch ein externer Monitor dunkel, spricht das eher für das Mainboard. Sicher klärt das die Diagnose.</p>"},
       {"frage": "Wo finde ich die genaue Modellbezeichnung?", "antwort": "<p>Die Bezeichnung steht auf dem Aufkleber an der Unterseite Ihres Acer-Notebooks, zum Beispiel AN515-54 für ein Nitro 5. Mit dieser Angabe finden Sie über unsere Suche passende Angebote.</p>"},
       {"frage": "Lohnt sich die Reparatur eines älteren Aspire oder TravelMate?", "antwort": "<p>Das hängt vom Fehler und vom Zustand des Geräts ab. Unser Kostenvoranschlag nennt Ihnen den Preis, bevor wir mit der Reparatur beginnen. So können Sie in Ruhe entscheiden.</p>"},
@@ -92,14 +92,14 @@
     "intro": "Ihr Notebook startet nicht, das Bild bleibt dunkel oder es schaltet sich sofort wieder ab? Wir finden den Fehler und reparieren das Mainboard bis auf Bauteilebene, statt es nur zu tauschen.",
     "leistungen": [
       {"titel": "Mainboard-Reparatur", "text": "Wir suchen das defekte Bauteil auf der Platine und ersetzen es. Das ist meist günstiger als ein neues Mainboard.", "icon": "i-chip"},
-      {"titel": "Diagnose mit Kostenvoranschlag", "text": "Zum Festpreis grenzen wir den Fehler ein. Sie erhalten einen Kostenvoranschlag per E-Mail und entscheiden selbst.", "icon": "i-herz-puls"},
+      {"titel": "Diagnose mit Kostenvoranschlag", "text": "Ab 29,90 € grenzen wir den Fehler ein. Sie erhalten einen Kostenvoranschlag per E-Mail und entscheiden selbst.", "icon": "i-herz-puls"},
       {"titel": "Grafikchip und BGA-Arbeiten", "text": "Defekte Grafikchips und andere BGA-Bauteile löten wir aus und ersetzen sie, auch bei Grafikkarten für den iMac.", "icon": "i-grafik"},
       {"titel": "Reinigung und Kühlung", "text": "Wir reinigen Lüfter und Kühlkörper und erneuern Wärmeleitpaste und Wärmeleitpads, auch bei der PlayStation 4.", "icon": "i-werkzeug"},
       {"titel": "Display und Displaykabel", "text": "Bei Bildfehlern prüfen wir Display und Kabel. Passende getestete Displays und Kabel finden Sie in unserem Shop.", "icon": "i-display"},
       {"titel": "Getestete Ersatzteile", "text": "Prozessoren, Grafikkarten und Displays prüfen wir vor dem Versand auf ihre Funktion.", "icon": "i-cpu"}
     ],
-    "preise_titel": "Festpreise für Diagnose und Reparatur",
-    "preise_text": "Alle Preise inklusive 19 % MwSt. Sie buchen die Leistung direkt im Shop und senden Ihr Gerät danach ein.",
+    "preise_titel": "Preise für Diagnose und Reparatur",
+    "preise_text": "Alle Preise inklusive 19 % MwSt. Bei Angeboten mit dem Zusatz Diagnose zahlen Sie zunächst Diagnose und Kostenvoranschlag, die Reparatur folgt nach Ihrer Freigabe. Alle anderen Leistungen sind Festpreise.",
     "preise_hinweis": "Sie finden Ihr Modell nicht in der Liste? Senden Sie uns eine unverbindliche Anfrage, und wir melden uns mit einer Einschätzung und einem Preis.",
     "aufruf_titel": "Ihr Gerät ist nicht in der Liste?",
     "aufruf_text": "Senden Sie uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung. Wir melden uns innerhalb von [Antwortzeit] mit einer Einschätzung und einem Preis."
@@ -231,5 +231,17 @@
       "description": "Versand und Zahlung bei Notebook Reparatur 24. Kostenloser Versand in Deutschland, Selbstabholung, Lieferzeiten und Zahlung per PayPal, Rechnung und Vorkasse.",
       "h1": "Versand und Zahlung"
     }
+  },
+  "bildnachweise": {
+    "title": "Bildnachweise | Notebook Reparatur 24",
+    "description": "Bildnachweise von Notebook Reparatur 24. Herkunft, Urheber und Lizenz aller Fotos auf dieser Seite, mit Links zur Quelle und zum Lizenztext.",
+    "h1": "Bildnachweise",
+    "intro": "Hier finden Sie Herkunft und Lizenz aller Fotos, die nicht aus unserer eigenen Werkstatt stammen. Wir haben die Fotos für diese Seite zugeschnitten, verkleinert und in das Format WebP umgewandelt.",
+    "fotos_titel": "Fotos unter freier Lizenz",
+    "fotos_text": "Fotos unter der Lizenz CC BY 2.0 dürfen mit Namensnennung verwendet werden. Fotos unter CC0 1.0 sind gemeinfrei, die Nennung erfolgt hier freiwillig.",
+    "bestand_titel": "Bilder aus dem bisherigen Shop",
+    "bestand_html": "<p>Die Produktbilder der Displays, Displaykabel und Grafikkarten sowie das Foto der Infrarot-Lötstation sind eigene Fotos von Notebook Reparatur 24 aus dem bisherigen Webshop. Für diese Seite wurde der Datumsstempel der Kamera entfernt, das Motiv blieb unverändert.</p><p>Das Bild der Prozessoren ist als Symbolbild gekennzeichnet. Bei diesem Bild und bei den freigestellten Kategoriebildern für Reparaturen, Displays und Prozessoren ist die Herkunft nicht eigenständig belegt. [Nutzungsrecht für diese Bilder bestätigen oder eigene Fotos einsetzen]</p>",
+    "schriften_titel": "Schriften",
+    "schriften_html": "<p>Die Schriften Inter, Space Grotesk, IBM Plex Sans und JetBrains Mono stehen unter der SIL Open Font License 1.1 und werden direkt von diesem Server geladen.</p>"
   }
 }

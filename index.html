@@ -48,7 +48,7 @@
    "name": "Wie läuft eine Reparatur bei Ihnen ab?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Sie buchen die Diagnose oder einen Festpreis im Shop und senden uns Ihr Notebook zu. Wir suchen den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück."
+    "text": "Sie buchen die Diagnose oder eine Reparatur zum Festpreis im Shop und senden uns Ihr Notebook zu. Nach der Diagnose schicken wir Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück."
    }
   },
   {
@@ -56,7 +56,7 @@
    "name": "Was kostet die Diagnose?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Eine gezielte Mainboard-Diagnose für Acer und Lenovo kostet 59,00 €. Alle Preise verstehen sich inklusive 19 % MwSt."
+    "text": "Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Dabei prüfen wir das ganze Gerät. Für Acer und Lenovo gibt es zusätzlich eine Mainboard-Diagnose mit Kostenvoranschlag für 59,00 €, bei der wir den Fehler auf der Platine bis auf das einzelne Bauteil eingrenzen. Was die Reparatur selbst kostet, steht im Kostenvoranschlag. Alle Preise verstehen sich inklusive 19 % MwSt."
    }
   },
   {
@@ -104,7 +104,7 @@
 </script>
 </head>
 <body class="seite-start">
-<svg hidden xmlns="http://www.w3.org/2000/svg">
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol id="i-suche" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
     <symbol id="i-korb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 3.5h2.3l2.5 11.6a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.2l1.6-7.2H5.8"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17.3" cy="20" r="1.3"/></symbol>
@@ -144,7 +144,7 @@
     <a class="wortmarke" href="./">Notebook Reparatur <span>24</span></a>
     <form class="suche" role="search" aria-label="Shop durchsuchen" action="./suche/" method="get" data-suche>
       <label class="sr-only" for="suche-kopf">Suche nach Modell, Teilenummer oder Artikel</label>
-      <input class="suche__feld" id="suche-kopf" type="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
+      <input class="suche__feld" id="suche-kopf" type="text" enterkeyhint="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
       <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span class="sr-only">Suchen</span></button>
       <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
     </form>
@@ -182,7 +182,7 @@
         <label class="hero__suchlabel" for="suche-start">Ersatzteil oder Reparatur für Ihr Modell finden</label>
         <form class="suche suche--gross" role="search" aria-label="Modellsuche" action="./suche/" method="get" data-suche>
           <svg class="ico suche__lupe" aria-hidden="true"><use href="#i-lupe-modell"></use></svg>
-          <input class="suche__feld" id="suche-start" type="search" name="q" placeholder="Modell oder Teilenummer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-start-liste" aria-describedby="suche-start-hilfe">
+          <input class="suche__feld" id="suche-start" type="text" enterkeyhint="search" name="q" placeholder="Modell oder Teilenummer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-start-liste" aria-describedby="suche-start-hilfe">
           <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
           <ul class="suche__vorschlaege" id="suche-start-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
         </form>
@@ -197,9 +197,9 @@
         <svg class="ico" aria-hidden="true"><use href="#i-euro"></use></svg>
         <h2 class="festpreise__titel" id="festpreise-titel">Reparatur zum Festpreis</h2>
       </div>
-      <p class="festpreise__text">Sie kennen den Preis, bevor Sie Ihr Gerät einsenden. Die Diagnose mit Kostenvoranschlag gibt es ab 29,90 €.</p>
+      <p class="festpreise__text">Sie kennen den Preis, bevor Sie Ihr Gerät einsenden. Die Diagnose mit Kostenvoranschlag gibt es ab 29,90 €, Mainboard-Reparaturen zum Festpreis.</p>
       <ul class="festpreise__liste">
-        <li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/acer-nitro-5-an515-mainboard-reparatur-la-h431p/"><span class="festpreise__name">Acer Nitro 5 AN515 Mainboard-Reparatur LA-H431P</span><span class="festpreise__preis preis">189,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/dell-precision-7560-mainboard-reparatur-la-k621p/"><span class="festpreise__name">Dell Precision 7560 Mainboard-Reparatur LA-K621P</span><span class="festpreise__preis preis">189,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/lenovo-legion-pro-5-16irx9-reparatur/"><span class="festpreise__name">Lenovo Legion Pro 5 16IRX9 Reparatur</span><span class="festpreise__preis preis">199,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/apple-macbook-pro-logicboard-reparatur/"><span class="festpreise__name">Apple MacBook Pro Logicboard-Reparatur</span><span class="festpreise__preis preis">179,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-kostenvoranschlag/"><span class="festpreise__name">Acer Notebook-Reparatur mit Diagnose und Kostenvoranschlag</span><span class="festpreise__preis preis">29,90 €</span></a></li>
+        <li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/acer-nitro-5-an515-mainboard-reparatur-la-h431p/"><span class="festpreise__name">Acer Nitro 5 AN515 Mainboard-Reparatur LA-H431P</span><span class="festpreise__preis preis">189,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/dell-precision-7560-mainboard-reparatur-la-k621p/"><span class="festpreise__name">Dell Precision 7560 Mainboard-Reparatur LA-K621P</span><span class="festpreise__preis preis">189,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/lenovo-legion-pro-5-16irx9-reparatur/"><span class="festpreise__name">Lenovo Legion Pro 5 16IRX9 Reparatur</span><span class="festpreise__preis preis">199,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/apple-macbook-pro-logicboard-reparatur/"><span class="festpreise__name">Apple MacBook Pro Logicboard-Reparatur</span><span class="festpreise__preis preis">179,00 €</span></a></li><li class="festpreise__eintrag"><a class="festpreise__link" href="./ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-reinigung/"><span class="festpreise__name">Acer Notebook-Reparatur mit Diagnose und Reinigung</span><span class="festpreise__preis preis"><span class="festpreise__zusatz">Diagnose</span> 29,90 €</span></a></li>
       </ul>
       <div class="festpreise__aktionen">
         <a class="knopf knopf--primaer" href="./notebook-reparatur/anfrage/">Reparatur anfragen</a>
@@ -383,9 +383,9 @@
     <div class="ablauf-block__text">
       <h2 id="ablauf-titel">So läuft Ihre Reparatur ab</h2>
       <ol class="ablauf ablauf--kompakt">
-<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">1</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-dokument"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 1. </span>Anfrage</h3><p>Sie buchen den passenden Festpreis im Shop oder senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.</p></li>
+<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">1</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-dokument"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 1. </span>Anfrage</h3><p>Sie buchen die Diagnose ab 29,90 € oder eine Reparatur zum Festpreis im Shop. Oder Sie senden uns eine unverbindliche Anfrage mit Modell und Fehlerbeschreibung.</p></li>
 <li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">2</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-paket"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 2. </span>Einsenden</h3><p>Sie schicken uns das Notebook mit Netzteil und Akku gut gepolstert zu. Legen Sie Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</p></li>
-<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">3</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 3. </span>Diagnose und Reparatur</h3><p>Wir suchen den Fehler und senden Ihnen einen Kostenvoranschlag per E-Mail. Repariert wird erst nach Ihrer Freigabe.</p></li>
+<li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">3</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 3. </span>Diagnose und Reparatur</h3><p>Nach einer Diagnose erhalten Sie einen Kostenvoranschlag per E-Mail, repariert wird erst nach Ihrer Freigabe. Eine gebuchte Festpreis-Reparatur führen wir direkt aus.</p></li>
 <li class="ablauf__schritt"><span class="ablauf__nummer" aria-hidden="true">4</span><svg class="ico ablauf__ico" aria-hidden="true"><use href="#i-lkw"></use></svg><h3 class="ablauf__titel"><span class="sr-only">Schritt 4. </span>Rückversand</h3><p>Nach Reinigung und ausführlichem Test geht das Gerät per Paket an Sie zurück. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p></li>
       </ol>
       <div class="knopfreihe">
@@ -402,12 +402,12 @@
       <h2 id="faq-titel">Häufige Fragen</h2>
 <details class="faq__eintrag">
   <summary class="faq__frage"><span>Wie läuft eine Reparatur bei Ihnen ab?</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-unten"></use></svg></summary>
-  <div class="faq__antwort"><p>Sie buchen die Diagnose oder einen Festpreis im Shop und senden uns Ihr Notebook zu. Wir suchen den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück.</p></div>
+  <div class="faq__antwort"><p>Sie buchen die Diagnose oder eine Reparatur zum Festpreis im Shop und senden uns Ihr Notebook zu. Nach der Diagnose schicken wir Ihnen einen Kostenvoranschlag per E-Mail. Nach Ihrer Freigabe reparieren, reinigen und testen wir das Gerät und senden es Ihnen zurück.</p></div>
 </details>
 
 <details class="faq__eintrag">
   <summary class="faq__frage"><span>Was kostet die Diagnose?</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-unten"></use></svg></summary>
-  <div class="faq__antwort"><p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Eine gezielte Mainboard-Diagnose für Acer und Lenovo kostet 59,00 €. Alle Preise verstehen sich inklusive 19 % MwSt.</p></div>
+  <div class="faq__antwort"><p>Die Diagnose mit Kostenvoranschlag kostet 29,90 € für Notebooks von Acer, Asus, HP, Lenovo, Medion und Samsung. Dabei prüfen wir das ganze Gerät. Für Acer und Lenovo gibt es zusätzlich eine Mainboard-Diagnose mit Kostenvoranschlag für 59,00 €, bei der wir den Fehler auf der Platine bis auf das einzelne Bauteil eingrenzen. Was die Reparatur selbst kostet, steht im Kostenvoranschlag. Alle Preise verstehen sich inklusive 19 % MwSt.</p></div>
 </details>
 
 <details class="faq__eintrag">
@@ -484,6 +484,7 @@
           <li><a href="./widerruf/">Widerrufsbelehrung</a></li>
           <li><a href="./datenschutz/">Datenschutz</a></li>
           <li><a href="./versand-und-zahlung/">Versand und Zahlung</a></li>
+          <li><a href="./bildnachweise/">Bildnachweise</a></li>
         </ul>
       </nav>
       <div class="fuss__spalte fuss__kontakt">

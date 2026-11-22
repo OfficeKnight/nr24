@@ -433,6 +433,13 @@ class Build:
         }
         return self.vorlagen.fuelle("_produktkarte", daten)
 
+    @staticmethod
+    def preis_zusatz(a, klasse):
+        """Kurzer Zusatz vor dem Preis, z. B. „Diagnose“, wenn der Preis nicht die ganze Reparatur abdeckt."""
+        if not a.get("preis_label"):
+            return ""
+        return f'<span class="{klasse}">{esc(a["preis_label"])}</span> '
+
     def karten(self, root, liste, ebene="h3"):
         return "\n".join(self.produktkarte(root, a, ebene) for a in liste)
 
@@ -623,7 +630,7 @@ class Build:
         festpreise = "".join(
             f'<li class="festpreise__eintrag"><a class="festpreise__link" href="{root}{self.artikel_pfad(a)}">'
             f'<span class="festpreise__name">{esc(a["name"])}</span>'
-            f'<span class="festpreise__preis preis">{esc(preis_text(a["preis"]))}</span></a></li>'
+            f'<span class="festpreise__preis preis">{self.preis_zusatz(a, "festpreise__zusatz")}{esc(preis_text(a["preis"]))}</span></a></li>'
             for a in fest)
         kacheln = []
         for k in self.kategorien:
@@ -713,7 +720,8 @@ class Build:
             return a["description"]
         teile = [a.get("kurz", a["name"]).rstrip(".") + "."]
         if a.get("art") == "reparatur":
-            teile.append(f"Festpreis {preis_text(a['preis']).replace(chr(160), ' ')} inkl. MwSt.")
+            art = a.get("preis_label") or "Festpreis"
+            teile.append(f"{art} {preis_text(a['preis']).replace(chr(160), ' ')} inkl. MwSt.")
             teile.append("Mit 1 Jahr Gewährleistung auf die Reparatur.")
         else:
             teile.append(f"{a.get('zustand', '')} für {preis_text(a['preis']).replace(chr(160), ' ')} inkl. MwSt.")
@@ -803,7 +811,7 @@ class Build:
                 f'<tr><th scope="row" data-label="Leistung"><a href="{root}{self.artikel_pfad(a)}">{esc(a["name"])}</a></th>'
                 f'<td data-label="Hersteller">{esc(a.get("hersteller", ""))}</td>'
                 f'<td data-label="Platine">{nummer}</td>'
-                f'<td data-label="Festpreis" class="preistabelle__preis"><span class="preis">{esc(preis_text(a["preis"]))}</span></td>'
+                f'<td data-label="Preis" class="preistabelle__preis">{self.preis_zusatz(a, "preistabelle__zusatz")}<span class="preis">{esc(preis_text(a["preis"]))}</span></td>'
                 f'<td class="preistabelle__aktion"><button class="knopf knopf--zweit knopf--klein" type="button" '
                 f'data-wk-add="{esc(a["id"])}">'
                 f'<svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>Buchen</span>'
@@ -901,10 +909,25 @@ class Build:
             f'<span class="auswahl__text">{esc(v.get("text", ""))}</span></span>'
             f'<span class="auswahl__preis preis">{esc(preis_text(v.get("preis", 0)))}</span></label>'
             for i, v in enumerate(self.seite.get("versand", [])))
+        versand_namen = {v["id"]: v["name"] for v in self.seite.get("versand", [])}
+
+        def bedingung(z):
+            nur = z.get("nur_versand")
+            if not nur:
+                return ""
+            if nur not in versand_namen:
+                fehler(f"seite.json: Zahlart {z['id']} verweist auf unbekannte Versandart {nur}")
+                return ""
+            meldung = (f"{z['name']} ist nur mit der Versandart {versand_namen[nur]} möglich. Bitte wählen Sie eine "
+                       f"andere Zahlart oder ändern Sie im Schritt Versand die Versandart.")
+            return f' data-nur-versand="{esc(nur)}" data-kombi-fehler="{esc(meldung)}"'
+
         zahlung = "\n".join(
             f'<label class="auswahl auswahl--option"><input type="radio" name="zahlung" value="{esc(z["id"])}" required'
-            f'{" checked" if i == 0 else ""}><span class="auswahl__inhalt"><span class="auswahl__titel">{esc(z["name"])}</span>'
-            f'<span class="auswahl__text">{esc(z.get("text", ""))}</span></span></label>'
+            f'{bedingung(z)}{" checked" if i == 0 else ""}><span class="auswahl__inhalt"><span class="auswahl__titel">{esc(z["name"])}</span>'
+            f'<span class="auswahl__text">{esc(z.get("text", ""))}</span></span>'
+            + (f'<span class="auswahl__preis preis">+ {esc(preis_text(z["preis"]))}</span>' if z.get("preis") else "")
+            + '</label>'
             for i, z in enumerate(self.seite.get("zahlarten", [])))
         self.einfache_seite("kasse/", "kasse", "kasse",
                             extra={"versand_radios": versand, "zahlung_radios": zahlung}, klasse="seite-formular")
@@ -935,6 +958,41 @@ class Build:
             "foto": self.bild(root, "fotos/werkbank", "Arbeitsplatz mit Werkzeug und Mikroskop in der Werkstatt",
                               "(min-width: 1024px) 1200px, 100vw", "foto", erstes=True, bevorzugt=1600),
         })
+
+    def bildnachweise(self):
+        """Seite mit Urheber, Quelle und Lizenz aller Fotos aus bilder-fotos.json."""
+        s = self.seite.get("bildnachweise")
+        if not s:
+            warnung("seite.json: bildnachweise fehlt, Seite wird übersprungen")
+            return
+        pfad = "bildnachweise/"
+        root = self.root_fuer(pfad)
+        fotos = [(k, v) for k, v in self.manifest.items() if k.startswith("fotos/")]
+        # Fotos mit Namensnennungspflicht zuerst, danach gemeinfreie.
+        fotos.sort(key=lambda kv: (not kv[1].get("lizenz", "").startswith("CC BY"), kv[1].get("motiv", kv[0])))
+        eintraege = []
+        for schluessel, f in fotos:
+            for feld in ("motiv", "urheber", "quelle_url", "lizenz", "lizenz_url"):
+                if not f.get(feld):
+                    fehler(f"bilder-fotos.json: {schluessel} ohne Angabe {feld}")
+            titel = f.get("titel")
+            plattform = f.get("plattform", "der Quelle")
+            name = f"„{titel}“" if titel else f.get("motiv", "")
+            quelle_text = f"{name} bei {plattform}" if titel else f"{name} im {plattform}"
+            bild = self.bild(root, schluessel, "", "(min-width: 1024px) 360px, (min-width: 600px) 45vw, 100vw",
+                             "nachweis__bild", bevorzugt=480)
+            eintraege.append(
+                f'<li class="nachweis">{bild}<div class="nachweis__text">'
+                f'<h3 class="nachweis__titel">{esc(f.get("motiv", ""))}</h3><dl class="nachweis__daten">'
+                f'<div><dt>Titel</dt><dd>{esc(name if titel else "ohne Titel")}</dd></div>'
+                f'<div><dt>Urheber</dt><dd>{esc(f.get("urheber", ""))}</dd></div>'
+                f'<div><dt>Quelle</dt><dd><a href="{esc(f.get("quelle_url", ""))}" rel="noopener">{esc(quelle_text)}</a></dd></div>'
+                f'<div><dt>Lizenz</dt><dd><a href="{esc(f.get("lizenz_url", ""))}" rel="noopener license">{esc(f.get("lizenz", ""))}'
+                f'<span class="sr-only"> Lizenztext für das Foto {esc(name)}</span></a></dd></div>'
+                f'</dl></div></li>')
+        daten = {"s": s, "nachweise": "\n".join(eintraege)}
+        self.seite_schreiben(pfad, "bildnachweise", daten, s["title"], s["description"],
+                             kette=[(s["h1"], pfad)], koerper_klasse="seite-recht")
 
     def rechtsseiten(self):
         reihenfolge = [("impressum", "Impressum"), ("agb", "AGB"), ("widerruf", "Widerrufsbelehrung"),
@@ -1028,6 +1086,7 @@ class Build:
         self.kontakt()
         self.werkstatt()
         self.rechtsseiten()
+        self.bildnachweise()
         self.nicht_gefunden()
         self.daten_js()
         self.sitemap()
@@ -1103,6 +1162,9 @@ def schreiben(dateien):
     return geloescht
 
 
+# Seiten, auf denen Links zu fremden Seiten erlaubt sind (Quellen und Lizenztexte der Fotos).
+EXTERN_ERLAUBT = ("bildnachweise/",)
+
 ATTR_URL = re.compile(r'\s(href|src|srcset|action)="([^"]*)"')
 SPRITE_ID = re.compile(r'<symbol\s+id="([^"]+)"')
 
@@ -1162,8 +1224,11 @@ def pruefen(build, nachsichtig):
                 if re.match(r"^(mailto:|tel:|data:|javascript:)", url):
                     continue
                 if re.match(r"^[a-z]+://", url) or url.startswith("//"):
-                    if attr != "href" or not url.startswith(build.basis):
-                        fehler(f"{rel}: absolute URL {url}")
+                    if attr == "href" and url.startswith(build.basis):
+                        continue                    # canonical
+                    if attr == "href" and s["pfad"] in EXTERN_ERLAUBT and url.startswith("https://"):
+                        continue                    # Quellen und Lizenzen, rel wird unten geprüft
+                    fehler(f"{rel}: absolute URL {url}")
                     continue
                 if url.startswith("/"):
                     fehler(f"{rel}: Pfad beginnt mit / ({url})")
@@ -1182,6 +1247,13 @@ def pruefen(build, nachsichtig):
                              or (ziel_rel == "." and "index.html" in build.dateien))
                 if not vorhanden:
                     fehlend.setdefault(ziel_rel, []).append(rel)
+
+        # Externe Links (nur auf erlaubten Seiten) brauchen rel="noopener".
+        for tag in re.findall(r"<a\b[^>]*>", text):
+            ziel = re.search(r'href="(https?://[^"]*)"', tag)
+            if ziel and not ziel.group(1).startswith(build.basis):
+                if not re.search(r'rel="[^"]*\bnoopener\b', tag):
+                    fehler(f"{rel}: externer Link ohne rel=noopener ({ziel.group(1)})")
 
         # Gedankenstriche
         for treffer in re.finditer(r".{0,30}[–—].{0,30}", text):

@@ -1,0 +1,18 @@
+{# Bildnachweise. Fotos aus src/daten/bilder-fotos.json (titel, urheber, quelle_url, lizenz, lizenz_url), Texte aus seite.json (bildnachweise). #}
+<div class="huelle seitenkopf">
+  <h1>{{ s.h1 }}</h1>
+  <p class="seitenkopf__intro">{{ s.intro }}</p>
+</div>
+<section class="huelle nachweise-abschnitt" aria-labelledby="fotos-titel">
+  <h2 id="fotos-titel">{{ s.fotos_titel }}</h2>
+  <p class="nachweise-abschnitt__text">{{ s.fotos_text }}</p>
+  <ul class="nachweise">
+{{{ nachweise }}}
+  </ul>
+</section>
+<section class="huelle nachweise-abschnitt abschnitt-text" aria-labelledby="bestand-titel">
+  <h2 id="bestand-titel">{{ s.bestand_titel }}</h2>
+  {{{ s.bestand_html }}}
+  <h2>{{ s.schriften_titel }}</h2>
+  {{{ s.schriften_html }}}
+</section>

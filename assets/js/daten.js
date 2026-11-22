@@ -224,8 +224,8 @@ window.NR24 = {
   },
   {
    "id": "a12",
-   "name": "Acer Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "Acer Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/acer-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Acer",
@@ -235,7 +235,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Acer-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle Acer-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 100,
    "bild": {
     "src": "assets/bilder/produkte/notebook-reparatur-werkstatt-1-400.webp",
@@ -247,8 +247,8 @@ window.NR24 = {
   },
   {
    "id": "a13",
-   "name": "Asus Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/asus-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "Asus Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/asus-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Asus",
@@ -258,7 +258,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Asus-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle Asus-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 110,
    "bild": {
     "src": "assets/bilder/fotos/notebook-offen-480.webp",
@@ -270,8 +270,8 @@ window.NR24 = {
   },
   {
    "id": "a14",
-   "name": "HP Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/hp-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "HP Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/hp-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "HP",
@@ -281,7 +281,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle HP-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle HP-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 120,
    "bild": {
     "src": "assets/bilder/fotos/messgeraet-480.webp",
@@ -293,8 +293,8 @@ window.NR24 = {
   },
   {
    "id": "a15",
-   "name": "Lenovo Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/lenovo-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "Lenovo Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/lenovo-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Lenovo",
@@ -304,7 +304,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Lenovo-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle Lenovo-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 130,
    "bild": {
     "src": "assets/bilder/fotos/mainboard-480.webp",
@@ -316,8 +316,8 @@ window.NR24 = {
   },
   {
    "id": "a16",
-   "name": "Medion Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/medion-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "Medion Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/medion-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Medion",
@@ -327,7 +327,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Medion-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle Medion-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 140,
    "bild": {
     "src": "assets/bilder/fotos/werkzeug-480.webp",
@@ -339,8 +339,8 @@ window.NR24 = {
   },
   {
    "id": "a17",
-   "name": "Samsung Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
-   "url": "ersatzteile/reparaturen/samsung-notebook-reparatur-diagnose-kostenvoranschlag/",
+   "name": "Samsung Notebook-Reparatur mit Diagnose und Reinigung",
+   "url": "ersatzteile/reparaturen/samsung-notebook-reparatur-diagnose-reinigung/",
    "kategorie": "reparaturen",
    "kategorie_name": "Reparaturen",
    "hersteller": "Samsung",
@@ -350,7 +350,7 @@ window.NR24 = {
    "zustand": "Dienstleistung",
    "verfuegbar": true,
    "art": "reparatur",
-   "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Samsung-Notebooks.",
+   "kurz": "Diagnose mit Kostenvoranschlag für alle Samsung-Notebooks, Reparatur und Reinigung nach Ihrer Freigabe.",
    "rang": 150,
    "bild": {
     "src": "assets/bilder/fotos/loeten-480.webp",
@@ -658,12 +658,15 @@ window.NR24 = {
   {
    "id": "nachnahme",
    "name": "Nachnahme",
-   "text": "Nachnahmegebühr 6,90 €. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen."
+   "text": "Nachnahmegebühr 6,90 €, sie wird in der Gesamtsumme berücksichtigt. Dazu kommen 2,00 €, die Sie direkt an den Zusteller zahlen. Nur mit Standardversand möglich.",
+   "preis": 6.9,
+   "nur_versand": "standard"
   },
   {
    "id": "bar",
    "name": "Barzahlung bei Abholung",
-   "text": "Nur bei Selbstabholung in unserer Werkstatt möglich."
+   "text": "Nur bei Selbstabholung in unserer Werkstatt möglich.",
+   "nur_versand": "abholung"
   }
  ],
  "mwst": 19
