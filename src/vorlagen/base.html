@@ -1,0 +1,110 @@
+{# Grundgerüst jeder Seite. Kopf, Kategorieleiste, Fuß und Skripte laut Bauplan 7 und 8. #}<!doctype html>
+<html lang="de" data-design="a" data-schrift="1" data-root="{{ root }}">
+<head>
+<meta charset="utf-8">
+{{{ skript_404 }}}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{{ csp }}">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ titel_voll }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+{{{ preloads }}}
+<link rel="stylesheet" href="{{ root }}assets/css/schriften.css">
+<link rel="stylesheet" href="{{ root }}assets/css/themen.css">
+<link rel="stylesheet" href="{{ root }}assets/css/style.css">
+<noscript><style>.kategorieleiste,.filter{display:block!important}.kopf__menue,.filter-umschalter{display:none!important}.schritt[hidden]{display:block!important}</style></noscript>
+<script src="{{ root }}assets/js/demo.js"></script>
+<script src="{{ root }}assets/js/daten.js" defer></script>
+<script src="{{ root }}assets/js/shop.js" defer></script>
+{{{ jsonld }}}
+</head>
+<body class="{{ koerper_klasse }}">
+{% include _ikonen %}
+<a class="skiplink" href="#inhalt">Zum Inhalt springen</a>
+<header class="kopf">
+  <div class="huelle kopf__innen">
+    <a class="wortmarke" href="{{ root }}">Notebook Reparatur <span>24</span></a>
+    <form class="suche" role="search" aria-label="Shop durchsuchen" action="{{ root }}suche/" method="get" data-suche>
+      <label class="sr-only" for="suche-kopf">Suche nach Modell, Teilenummer oder Artikel</label>
+      <input class="suche__feld" id="suche-kopf" type="search" name="q" placeholder="Modell oder Teilenummer suchen" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-kopf-liste">
+      <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span class="sr-only">Suchen</span></button>
+      <ul class="suche__vorschlaege" id="suche-kopf-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
+    </form>
+    <a class="knopf knopf--primaer kopf__anfrage" href="{{ root }}notebook-reparatur/anfrage/"><svg class="ico" aria-hidden="true"><use href="#i-werkzeug"></use></svg><span>Reparatur anfragen</span></a>
+    <a class="kopf__korb" href="{{ root }}warenkorb/"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span class="kopf__korb-text" aria-hidden="true">Warenkorb</span><span class="sr-only">Warenkorb mit </span><span class="zaehler" data-wk-zaehler>0</span><span class="sr-only"> Artikeln</span></a>
+    <button class="kopf__menue" type="button" aria-controls="hauptnavigation" aria-expanded="false" data-menue-umschalter><svg class="ico" aria-hidden="true"><use href="#i-menue"></use></svg><span>Menü</span></button>
+  </div>
+  <nav class="kategorieleiste" id="hauptnavigation" aria-label="Hauptnavigation">
+    <div class="huelle">
+      <ul>
+{{{ navigation }}}
+      </ul>
+    </div>
+  </nav>
+</header>
+{{{ brotkrumen }}}
+<main id="inhalt" tabindex="-1">
+{{{ inhalt }}}
+</main>
+<footer class="fuss">
+  <div class="huelle">
+    <div class="fuss__raster">
+      <div class="fuss__marke">
+        <a class="wortmarke" href="{{ root }}">Notebook Reparatur <span>24</span></a>
+        <ul class="fuss__kennzahlen">
+{{{ kennzahlen_fuss }}}
+        </ul>
+      </div>
+      <nav class="fuss__spalte" aria-labelledby="fuss-shop">
+        <h2 class="fuss__titel" id="fuss-shop">Shop</h2>
+        <ul>
+          <li><a href="{{ root }}ersatzteile/">Alle Ersatzteile</a></li>
+          {{{ fuss_kategorien }}}
+          <li><a href="{{ root }}warenkorb/">Warenkorb</a></li>
+        </ul>
+      </nav>
+      <nav class="fuss__spalte" aria-labelledby="fuss-service">
+        <h2 class="fuss__titel" id="fuss-service">Service</h2>
+        <ul>
+          <li><a href="{{ root }}notebook-reparatur/">Reparatur-Service</a></li>
+          <li><a href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a></li>
+          {{{ fuss_hersteller }}}
+          <li><a href="{{ root }}werkstatt/">Über die Werkstatt</a></li>
+          <li><a href="{{ root }}kontakt/">Kontakt</a></li>
+        </ul>
+      </nav>
+      <nav class="fuss__spalte" aria-labelledby="fuss-recht">
+        <h2 class="fuss__titel" id="fuss-recht">Rechtliches</h2>
+        <ul>
+          <li><a href="{{ root }}impressum/">Impressum</a></li>
+          <li><a href="{{ root }}agb/">AGB</a></li>
+          <li><a href="{{ root }}widerruf/">Widerrufsbelehrung</a></li>
+          <li><a href="{{ root }}datenschutz/">Datenschutz</a></li>
+          <li><a href="{{ root }}versand-und-zahlung/">Versand und Zahlung</a></li>
+        </ul>
+      </nav>
+      <div class="fuss__spalte fuss__kontakt">
+        <h2 class="fuss__titel">Kontakt</h2>
+        <address>
+          <span class="fuss__zeile"><svg class="ico" aria-hidden="true"><use href="#i-ort"></use></svg><span>{{ shop.name }}<br>{{ shop.inhaber }}<br>{{ shop.strasse }}<br>{{ shop.plz }} {{ shop.ort }}</span></span>
+          <a class="fuss__zeile" href="tel:{{ shop.telefon_href }}"><svg class="ico" aria-hidden="true"><use href="#i-telefon"></use></svg><span>{{ shop.telefon }}</span></a>
+          <a class="fuss__zeile" href="mailto:{{ shop.email }}"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><span>{{ shop.email }}</span></a>
+        </address>
+        <table class="zeiten zeiten--fuss">
+          <caption class="sr-only">Öffnungszeiten</caption>
+          {{{ fuss_zeiten }}}
+        </table>
+      </div>
+    </div>
+    <div class="fuss__unten">
+      <p class="fuss__demo"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>{{ shop.demo_hinweis }}</p>
+      <p class="fuss__zahlarten"><span class="sr-only">Zahlarten </span>{{{ fuss_zahlarten }}}</p>
+      <p class="fuss__copy">© {{ jahr }} {{ shop.name }}</p>
+    </div>
+  </div>
+</footer>
+<div class="meldung" id="meldung" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{# Suchergebnisse. shop.js liest ?q= und füllt das Raster. #}
+<div class="huelle seitenkopf seitenkopf--knapp">
+  <h1>{{ s.h1 }}</h1>
+</div>
+<div class="huelle">
+  <div class="suchseite" data-suchseite>
+    <form class="suche suche--seite" role="search" aria-label="Suchbegriff ändern" action="{{ root }}suche/" method="get" data-suche>
+      <label class="sr-only" for="suche-seite">Suchbegriff</label>
+      <input class="suche__feld" id="suche-seite" type="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-seite-liste">
+      <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
+      <ul class="suche__vorschlaege" id="suche-seite-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
+    </form>
+    <p class="suchseite__anzahl" data-suchanzahl aria-live="polite"></p>
+    <div class="raster-produkte" data-suchergebnisse></div>
+    <div class="hinweis hinweis--info" data-suche-leer hidden>
+      <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
+      <p>Zu Ihrer Suche haben wir nichts gefunden. Prüfen Sie die Schreibweise, suchen Sie nach der Teilenummer oder <a href="{{ root }}notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+    </div>
+    <noscript><p class="hinweis hinweis--info">Die Suche benötigt JavaScript. Alle Artikel finden Sie unter <a href="{{ root }}ersatzteile/">Ersatzteile</a>.</p></noscript>
+  </div>
+</div>

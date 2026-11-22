@@ -1,0 +1,12 @@
+{# Rechtsseiten. Der Inhalt kommt als Fragment aus src/inhalte/<slug>.html. #}
+<div class="huelle rechtsseite">
+  <nav class="rechtsseite__nav" aria-label="Rechtliche Informationen">
+    <ul>
+      {{{ seitennav }}}
+    </ul>
+  </nav>
+  <article class="rechtstext abschnitt-text">
+    <h1>{{ s.h1 }}</h1>
+{{{ fragment }}}
+  </article>
+</div>

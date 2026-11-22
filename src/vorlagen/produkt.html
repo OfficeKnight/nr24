@@ -1,0 +1,72 @@
+{# Produktseite. Kaufbox nach Markup-Vertrag, Daten aus artikel.json. #}
+<div class="huelle">
+  <div class="produktseite">
+    <div class="galerie">
+      <div class="galerie__haupt">
+        {{{ galerie_haupt }}}
+      </div>
+      {% if galerie_weitere %}<ul class="galerie__weitere" aria-label="Weitere Bilder">{{{ galerie_weitere }}}</ul>{% endif %}
+    </div>
+    <div class="produktseite__info">
+      <p class="produktseite__kategorie"><a href="{{ kat_url }}">{{ kat.name }}</a></p>
+      <h1 class="produktseite__name">{{ a.name }}</h1>
+      <dl class="produktseite__eckdaten">
+        {% if a.teilenummer %}<div><dt>Teilenummer</dt><dd class="teilenummer">{{ a.teilenummer }}</dd></div>{% endif %}
+        <div><dt>Hersteller</dt><dd>{{ a.hersteller }}</dd></div>
+        <div><dt>Zustand</dt><dd>{{ a.zustand }}</dd></div>
+        <div><dt>Artikelnummer</dt><dd class="teilenummer">{{ a.id }}</dd></div>
+      </dl>
+      <p class="produktseite__kurz">{{ a.kurz }}</p>
+      <form class="kaufbox" data-wk-form="{{ a.id }}">
+        <p class="preis preis--gross">{{ preis }}</p>
+        <p class="kaufbox__mwst">inkl. 19 % MwSt., zzgl. <a href="{{ root }}versand-und-zahlung/">Versand</a></p>
+        <p class="kaufbox__verfuegbar{% if a.verfuegbar %} ist-lieferbar{% endif %}"><svg class="ico" aria-hidden="true"><use href="#{% if a.verfuegbar %}i-check{% else %}i-uhr{% endif %}"></use></svg><span>{{ zustand_satz }}</span></p>
+        <p class="kaufbox__lieferzeit">{{ lieferzeit_label }} {{ a.lieferzeit }}</p>
+        <div class="kaufbox__zeile">
+          <div class="menge">
+            <button class="menge__knopf" type="button" data-menge-minus aria-label="Menge verringern"><svg class="ico" aria-hidden="true"><use href="#i-minus"></use></svg></button>
+            <label class="sr-only" for="menge-{{ a.id }}">Menge</label>
+            <input class="menge__feld eingabe" id="menge-{{ a.id }}" name="menge" type="number" inputmode="numeric" min="1" max="99" value="1">
+            <button class="menge__knopf" type="button" data-menge-plus aria-label="Menge erhöhen"><svg class="ico" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+          </div>
+          <button class="knopf knopf--primaer knopf--block" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
+        </div>
+        {% if ist_reparatur %}<p class="kaufbox__frage">Unsicher, ob das Angebot passt? <a href="{{ anfrage_url }}">Reparatur unverbindlich anfragen</a></p>{% endif %}
+      </form>
+      <ul class="vorteile">
+{{{ kennzahlen }}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="produktdetails">
+    <section class="produktdetails__beschreibung abschnitt-text" aria-labelledby="beschreibung-titel">
+      <h2 id="beschreibung-titel">Beschreibung</h2>
+      {{{ a.beschreibung }}}
+    </section>
+    <div class="produktdetails__seite">
+      <section aria-labelledby="merkmale-titel">
+        <h2 id="merkmale-titel">Merkmale</h2>
+        <table class="merkmale">
+          <tbody>
+{{{ merkmale }}}
+          </tbody>
+        </table>
+      </section>
+      {% if modelle %}<section aria-labelledby="modelle-titel">
+        <h2 id="modelle-titel">Passende Modelle</h2>
+        <ul class="modelle">{{{ modelle }}}</ul>
+      </section>{% endif %}
+    </div>
+  </div>
+
+  <section class="abschnitt abschnitt--eng" aria-labelledby="aehnlich-titel">
+    <div class="abschnitt__kopf">
+      <h2 id="aehnlich-titel">Ähnliche Artikel</h2>
+      <a class="abschnitt__mehr" href="{{ kat_url }}">Alle aus {{ kat.name }}<svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></a>
+    </div>
+    <div class="raster-produkte">
+{{{ aehnlich }}}
+    </div>
+  </section>
+</div>

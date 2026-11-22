@@ -1,0 +1,102 @@
+{
+  "produkte/notebook-reparatur-werkstatt-1": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/led-display-17-3-n17306-l02-1": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/displaykabel-asus-x72-1": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/displaykabel-asus-x72-2": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/grafikkarte-imac-27-hd-6970m-1": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/grafikkarte-imac-27-hd-6970m-2": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/grafikkarte-imac-27-hd-6970m-3": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/grafikkarte-imac-27-hd-6970m-4": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "produkte/amd-notebook-prozessor-1": {
+    "breiten": [
+      400
+    ],
+    "w": 400,
+    "h": 300
+  },
+  "kategorien/displays": {
+    "breiten": [
+      400
+    ],
+    "w": 400,
+    "h": 300
+  },
+  "kategorien/grafikkarten": {
+    "breiten": [
+      400,
+      800
+    ],
+    "w": 800,
+    "h": 600
+  },
+  "kategorien/prozessoren": {
+    "breiten": [
+      400
+    ],
+    "w": 400,
+    "h": 300
+  },
+  "kategorien/reparaturen": {
+    "breiten": [
+      400
+    ],
+    "w": 400,
+    "h": 300
+  }
+}

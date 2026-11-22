@@ -1,0 +1,1440 @@
+{
+  "stand": "2026-11-22",
+  "kategorien": [
+    {
+      "slug": "reparaturen",
+      "name": "Reparaturen",
+      "h1": "Notebook-Reparaturen zum Festpreis",
+      "title": "Notebook-Reparatur zum Festpreis",
+      "description": "Mainboard-Reparatur, Diagnose und Wartung für Acer, Lenovo, Dell, Apple und weitere Notebooks zum Festpreis. Mit 1 Jahr Gewährleistung auf jede Reparatur.",
+      "kurz": "Mainboard-Reparatur, Diagnose und Wartung zum Festpreis.",
+      "einleitung": "<p>Ihr Notebook startet nicht, das Bild bleibt dunkel oder das Gerät schaltet sich sofort wieder ab? In unserer Werkstatt reparieren wir Notebook-Mainboards bis auf Bauteilebene, auch mit BGA-Rework. Hier finden Sie unsere Festpreise für Diagnose und Reparatur, geordnet nach Hersteller und Modell.</p><p>Sie buchen das passende Angebot, senden Ihr Gerät gut verpackt ein und erhalten nach der Prüfung eine Rückmeldung von uns. Auf jede Reparatur geben wir 1 Jahr Gewährleistung. Ist Ihr Modell nicht dabei, stellen Sie uns einfach eine Reparaturanfrage.</p>",
+      "bild": "kategorien/reparaturen",
+      "bild_alt": "Notebook-Mainboard",
+      "reihenfolge": 1,
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen"
+    },
+    {
+      "slug": "displays",
+      "name": "Displays",
+      "h1": "Notebook-Displays und Displaykabel",
+      "title": "Notebook-Displays und Displaykabel",
+      "description": "Gebrauchte und getestete Notebook-Displays in 17 und 17,3 Zoll sowie originale Displaykabel für Asus. Voll funktionsfähig und mit 1 Jahr Gewährleistung.",
+      "kurz": "Getestete Displays und originale Displaykabel.",
+      "einleitung": "<p>Ein defektes Display muss nicht das Ende Ihres Notebooks sein. Wir bieten gebrauchte Displays an, die wir vor dem Verkauf testen, dazu originale Displaykabel. Jedes Teil ist voll funktionsfähig, und Sie erhalten 1 Jahr Gewährleistung.</p><p>Achten Sie beim Kauf auf die genaue Bezeichnung Ihres Displays, etwa N17306-L02 oder LTN170X2-L02. Sind Sie unsicher, nennen Sie uns die Bezeichnung Ihres Displays, und wir prüfen, ob das Teil zu Ihrem Notebook passt.</p>",
+      "bild": "kategorien/displays",
+      "bild_alt": "Notebook-Display von vorne",
+      "reihenfolge": 2,
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display"
+    },
+    {
+      "slug": "grafikkarten",
+      "name": "Grafikkarten",
+      "h1": "Grafikkarten für iMac und Notebook",
+      "title": "Grafikkarten für iMac und Notebook",
+      "description": "Generalüberholte ATI HD 6970M mit neuem Grafikchip für den iMac 27 Zoll A1312 aus 2010 und 2011, als Kauf oder im Austausch gegen Ihre defekte Karte.",
+      "kurz": "Generalüberholte Grafikkarten mit neuem Grafikchip.",
+      "einleitung": "<p>Streifen, Bildfehler oder ein schwarzes Bild können beim iMac auf eine defekte Grafikkarte hindeuten. Wir bieten die ATI HD 6970M für den iMac 27 Zoll A1312 aus den Jahren 2010 und 2011 generalüberholt und mit neuem Grafikchip an. Jede Karte wird vor dem Versand getestet.</p><p>Sie können eine Karte direkt kaufen oder Ihre defekte Karte einsenden und im Austausch eine generalüberholte Karte erhalten. Ist eine Karte gerade nicht vorrätig, fragen Sie gern nach dem nächsten Liefertermin.</p>",
+      "bild": "kategorien/grafikkarten",
+      "bild_alt": "Grafikkarte ATI HD 6970M für den iMac 27 Zoll",
+      "reihenfolge": 3,
+      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook"
+    },
+    {
+      "slug": "prozessoren",
+      "name": "Prozessoren",
+      "h1": "Notebook-Prozessoren",
+      "title": "Notebook-Prozessoren von AMD",
+      "description": "Gebrauchte AMD-Prozessoren für Notebooks mit Sockel S1, getestet und ohne verbogene Pins. Athlon II P320 und Turion 64 X2 TL-56 mit 1 Jahr Gewährleistung.",
+      "kurz": "Getestete AMD-Prozessoren für Sockel S1.",
+      "einleitung": "<p>Hier finden Sie gebrauchte Prozessoren für Notebooks mit AMD-Sockel S1. Jede CPU ist getestet, voll funktionsfähig und hat keine verbogenen Pins.</p><p>Prüfen Sie vor dem Kauf, welche Prozessoren Ihr Notebook unterstützt. Die Prozessoraufschrift, zum Beispiel AMP320SGR22GM, finden Sie auf der CPU. Bei Fragen zur Kompatibilität helfen wir Ihnen gern weiter.</p>",
+      "bild": "kategorien/prozessoren",
+      "bild_alt": "AMD-Prozessor von oben",
+      "reihenfolge": 4,
+      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus"
+    },
+    {
+      "slug": "werkstattbedarf",
+      "name": "Werkstattbedarf",
+      "h1": "Werkstattbedarf für die Elektronikreparatur",
+      "title": "Werkstattbedarf und Messtechnik",
+      "description": "Messtechnik und Verbrauchsmaterial für die Reparatur von Mainboards, darunter ein DDR4-Spannungstester und BGA-Flussmittelcreme von ERSA.",
+      "kurz": "Messtechnik und Verbrauchsmaterial für die Werkstatt.",
+      "einleitung": "<p>Für die Fehlersuche und Reparatur an Notebook-Mainboards bieten wir ausgewählte Messtechnik und Verbrauchsmaterial an.</p><p>Der DDR4-Spannungstester hilft bei der Prüfung von Speichersteckplätzen, die BGA-Flussmittelcreme von ERSA beim Löten an Platinen. Fragen zu Einsatz und Lieferumfang beantworten wir Ihnen gern.</p>",
+      "bild": "fotos/werkzeug",
+      "bild_alt": "Symbolbild Elektronikwerkzeug",
+      "reihenfolge": 5,
+      "quelle_url": null
+    }
+  ],
+  "artikel": [
+    {
+      "id": "a01",
+      "slug": "acer-nitro-5-an515-mainboard-reparatur-la-h431p",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Acer Nitro 5 AN515 Mainboard-Reparatur LA-H431P",
+      "hersteller": "Acer",
+      "modelle": [
+        "Nitro 5 AN515"
+      ],
+      "teilenummer": "LA-H431P",
+      "preis": 189.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur des Mainboards LA-H431P für das Acer Nitro 5 AN515 zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Acer Nitro 5 AN515. Das Angebot gilt für Geräte mit der Platine LA-H431P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur des Mainboards"
+        ],
+        [
+          "Geräte",
+          "Acer Nitro 5 AN515"
+        ],
+        [
+          "Platine",
+          "LA-H431P"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/mainboard",
+          "alt": "Symbolbild Notebook-Mainboard in Nahaufnahme"
+        }
+      ],
+      "beliebt": true,
+      "rang": 10,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a02",
+      "slug": "dell-precision-7560-mainboard-reparatur-la-k621p",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Dell Precision 7560 Mainboard-Reparatur LA-K621P",
+      "hersteller": "Dell",
+      "modelle": [
+        "Precision 7560"
+      ],
+      "teilenummer": "LA-K621P",
+      "preis": 189.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur des Mainboards LA-K621P für die Dell Precision 7560 zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Mainboards Ihres Dell Precision 7560. Das Angebot gilt für Geräte mit der Platine LA-K621P. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Mainboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur des Mainboards"
+        ],
+        [
+          "Geräte",
+          "Dell Precision 7560"
+        ],
+        [
+          "Platine",
+          "LA-K621P"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/loeten",
+          "alt": "Symbolbild Lötarbeit an einer Platine"
+        }
+      ],
+      "beliebt": true,
+      "rang": 20,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a03",
+      "slug": "lenovo-legion-pro-5-16irx9-reparatur",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Lenovo Legion Pro 5 16IRX9 Reparatur",
+      "hersteller": "Lenovo",
+      "modelle": [
+        "Legion Pro 5 16IRX9"
+      ],
+      "teilenummer": null,
+      "preis": 199.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur für Ihr Lenovo Legion Pro 5 16IRX9 zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion Pro 5 16IRX9. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur"
+        ],
+        [
+          "Geräte",
+          "Lenovo Legion Pro 5 16IRX9"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/notebook-offen",
+          "alt": "Symbolbild geöffnetes Notebook"
+        }
+      ],
+      "beliebt": true,
+      "rang": 30,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a04",
+      "slug": "acer-predator-17-g9-793-reparatur",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Acer Predator 17 G9-793 Reparatur",
+      "hersteller": "Acer",
+      "modelle": [
+        "Predator 17 G9-793"
+      ],
+      "teilenummer": null,
+      "preis": 189.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur für Ihr Acer Predator 17 G9-793 zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Acer Predator 17 G9-793. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur"
+        ],
+        [
+          "Geräte",
+          "Acer Predator 17 G9-793"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/messgeraet",
+          "alt": "Symbolbild Messung mit einem Messgerät"
+        }
+      ],
+      "beliebt": true,
+      "rang": 40,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a05",
+      "slug": "lenovo-legion-7-reparatur",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Lenovo Legion 7 Reparatur",
+      "hersteller": "Lenovo",
+      "modelle": [
+        "Legion 7"
+      ],
+      "teilenummer": null,
+      "preis": 249.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur für Ihr Lenovo Legion 7 zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur Ihres Lenovo Legion 7. Unser Schwerpunkt ist die Reparatur von Notebook-Mainboards. Welche Fehlerbilder dieses Angebot abdeckt, steht hier [abgedeckte Fehlerbilder]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche an Ihrem Gerät in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur"
+        ],
+        [
+          "Geräte",
+          "Lenovo Legion 7"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/werkzeug",
+          "alt": "Symbolbild Elektronikwerkzeug"
+        }
+      ],
+      "beliebt": false,
+      "rang": 50,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a06",
+      "slug": "apple-macbook-pro-logicboard-reparatur",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Apple MacBook Pro Logicboard-Reparatur",
+      "hersteller": "Apple",
+      "modelle": [
+        "MacBook Pro"
+      ],
+      "teilenummer": null,
+      "preis": 179.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reparatur des Logicboards Ihres Apple MacBook Pro zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Reparatur des Logicboards Ihres Apple MacBook Pro. Für welche Modelljahre und Platinen das Angebot gilt, steht hier [Modelljahre und Platinennummern]. Sind Sie unsicher, ob das Angebot zu Ihrem Gerät passt, fragen Sie uns vor dem Einsenden gern an.</p><h3>Das umfasst eine solche Reparatur</h3><ul><li>Fehlersuche am Logicboard in unserer Werkstatt</li><li>Reparatur oder Austausch der defekten Bauteile</li><li>Funktionstest des Geräts vor dem Rückversand</li></ul><p>Der Festpreis umfasst [Leistungsumfang im Detail]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Reparatur und senden uns Ihr Gerät gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Wir prüfen das Gerät und melden uns bei Rückfragen bei Ihnen.</li><li>Nach Reparatur und Funktionstest senden wir Ihnen das Gerät zurück.</li></ol><p>Lässt sich ein Gerät nicht reparieren, gilt [Regelung bei nicht reparierbaren Geräten]. Auf die Reparatur erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Reparatur des Logicboards"
+        ],
+        [
+          "Geräte",
+          "Apple MacBook Pro"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Gewährleistung",
+          "1 Jahr auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/mainboard",
+          "alt": "Symbolbild Platine in Nahaufnahme"
+        }
+      ],
+      "beliebt": true,
+      "rang": 60,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a07",
+      "slug": "acer-mainboard-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Acer Mainboard-Diagnose mit Kostenvoranschlag",
+      "hersteller": "Acer",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 59.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Fehlersuche am Mainboard Ihres Acer-Notebooks mit Kostenvoranschlag.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Acer-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Mainboard-Diagnose mit Kostenvoranschlag"
+        ],
+        [
+          "Geräte",
+          "Acer-Notebooks"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/messgeraet",
+          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
+        }
+      ],
+      "beliebt": true,
+      "rang": 70,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a08",
+      "slug": "lenovo-mainboard-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Lenovo Mainboard-Diagnose mit Kostenvoranschlag",
+      "hersteller": "Lenovo",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 59.0,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Fehlersuche am Mainboard Ihres Lenovo-Notebooks mit Kostenvoranschlag.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose des Mainboards Ihres Lenovo-Notebooks. Wir suchen in unserer Werkstatt nach der Fehlerursache und erstellen Ihnen anschließend einen Kostenvoranschlag für die Reparatur. Sie entscheiden danach, ob wir das Gerät reparieren sollen.</p><h3>Das umfasst eine solche Diagnose</h3><ul><li>Prüfung des Mainboards und Eingrenzung des Fehlers</li><li>Kostenvoranschlag für die Reparatur</li><li>Rückmeldung zum Ergebnis vor jeder weiteren Arbeit</li></ul><p>Ob der Diagnosepreis bei einer anschließenden Reparatur angerechnet wird, regelt [Anrechnung des Diagnosepreises]. Die Diagnose dauert [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Diagnose und senden uns Ihr Notebook gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten und eine kurze Fehlerbeschreibung bei.</li><li>Nach der Prüfung erhalten Sie von uns das Ergebnis und den Kostenvoranschlag.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Gerät. Lehnen Sie ihn ab, gilt [Regelung bei abgelehntem Kostenvoranschlag].</li></ol>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Mainboard-Diagnose mit Kostenvoranschlag"
+        ],
+        [
+          "Geräte",
+          "Lenovo-Notebooks"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/notebook-offen",
+          "alt": "Symbolbild geöffnetes Notebook"
+        }
+      ],
+      "beliebt": false,
+      "rang": 80,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a09",
+      "slug": "playstation-4-wartung-reinigung-waermeleitpaste",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Sony PlayStation 4 Wartung mit Reinigung und Wärmeleitpaste",
+      "hersteller": "Sony",
+      "modelle": [
+        "PlayStation 4"
+      ],
+      "teilenummer": null,
+      "preis": 59.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "[Bearbeitungszeit]",
+      "kurz": "Reinigung Ihrer PlayStation 4 und Erneuerung der Wärmeleitpaste zum Festpreis.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Wartung Ihrer Sony PlayStation 4. Wir öffnen die Konsole, reinigen sie und erneuern die Wärmeleitpaste. Eine solche Wartung bietet sich an, wenn sich über die Zeit Staub im Gerät angesammelt hat.</p><h3>Das umfasst eine solche Wartung</h3><ul><li>Öffnen der Konsole</li><li>Reinigung des Innenraums</li><li>Entfernen der alten und Auftragen neuer Wärmeleitpaste</li><li>Zusammenbau und Funktionstest</li></ul><p>Für welche Varianten der Konsole das Angebot gilt, steht hier [unterstützte Varianten der PlayStation 4]. Die Bearbeitungszeit beträgt [Bearbeitungszeit].</p><h3>So gehen Sie vor</h3><ol><li>Sie buchen die Wartung und senden uns Ihre Konsole gut gepolstert verpackt zu. Legen Sie bitte Ihre Kontaktdaten bei.</li><li>Wir warten die Konsole und testen sie vor dem Rückversand.</li><li>Anschließend senden wir Ihnen die Konsole zurück.</li></ol>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Wartung, Reinigung, neue Wärmeleitpaste"
+        ],
+        [
+          "Geräte",
+          "Sony PlayStation 4"
+        ],
+        [
+          "Bearbeitungszeit",
+          "[Bearbeitungszeit]"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/konsole",
+          "alt": "Symbolbild Spielkonsole"
+        }
+      ],
+      "beliebt": true,
+      "rang": 90,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a10",
+      "slug": "ddr4-spannung-tester-analyzer",
+      "kategorie": "werkstattbedarf",
+      "art": "ware",
+      "name": "DDR4 Spannung Tester Analyzer",
+      "hersteller": "[Hersteller]",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 89.0,
+      "zustand": "Neu",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Prüfwerkzeug für DDR4-Speichersteckplätze bei der Fehlersuche an Mainboards.",
+      "beschreibung": "<p>Ein DDR4-Spannungstester ist ein Prüfwerkzeug für die Fehlersuche an Mainboards. Er wird in einen DDR4-Speichersteckplatz gesteckt und zeigt an, ob am Steckplatz Spannung anliegt. So lässt sich eingrenzen, ob ein Fehler an der Speicherversorgung liegt.</p><h3>Angaben zum Artikel</h3><ul><li>Bauform [DIMM oder SO-DIMM]</li><li>Angezeigte Spannungen [angezeigte Spannungen]</li><li>Lieferumfang [Lieferumfang]</li></ul><p>Bei Fragen zum Einsatz des Testers helfen wir Ihnen gern weiter.</p>",
+      "merkmale": [
+        [
+          "Hersteller",
+          "[Hersteller]"
+        ],
+        [
+          "Einsatz",
+          "DDR4-Speichersteckplätze"
+        ],
+        [
+          "Bauform",
+          "[DIMM oder SO-DIMM]"
+        ],
+        [
+          "Lieferumfang",
+          "[Lieferumfang]"
+        ],
+        [
+          "Zustand",
+          "Neu"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/arbeitsspeicher",
+          "alt": "Symbolbild Arbeitsspeicher-Riegel"
+        }
+      ],
+      "beliebt": false,
+      "rang": 200,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a11",
+      "slug": "ersa-bga-flussmittelcreme",
+      "kategorie": "werkstattbedarf",
+      "art": "ware",
+      "name": "ERSA BGA Flussmittelcreme",
+      "hersteller": "ERSA",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 24.9,
+      "zustand": "Neu",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Flussmittel in Cremeform von ERSA für Lötarbeiten an BGA-Bauteilen.",
+      "beschreibung": "<p>Flussmittelcreme von ERSA für Lötarbeiten an BGA-Bauteilen, etwa beim Tausch oder Reballing von Chips auf Mainboards. Die Creme wird vor dem Löten auf die Lötstellen aufgetragen.</p><h3>Angaben zum Artikel</h3><ul><li>Typbezeichnung [Typbezeichnung]</li><li>Inhalt [Inhalt]</li><li>Lieferumfang [Lieferumfang]</li></ul><p>Bitte beachten Sie die Hinweise des Herstellers zu Anwendung und Lagerung.</p>",
+      "merkmale": [
+        [
+          "Hersteller",
+          "ERSA"
+        ],
+        [
+          "Einsatz",
+          "Löten an BGA-Bauteilen"
+        ],
+        [
+          "Typ",
+          "[Typbezeichnung]"
+        ],
+        [
+          "Inhalt",
+          "[Inhalt]"
+        ],
+        [
+          "Zustand",
+          "Neu"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/loeten",
+          "alt": "Symbolbild Lötarbeit an einer Platine"
+        }
+      ],
+      "beliebt": false,
+      "rang": 210,
+      "quelle": "ebay",
+      "quelle_url": null
+    },
+    {
+      "id": "a12",
+      "slug": "acer-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Acer Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "Acer",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Acer-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Acer-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Acer-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle Acer-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 100,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/acer-laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a13",
+      "slug": "asus-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Asus Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "Asus",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Asus-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Asus-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Asus-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle Asus-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/notebook-offen",
+          "alt": "Symbolbild geöffnetes Notebook"
+        },
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 110,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a14",
+      "slug": "hp-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "HP Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "HP",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle HP-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres HP-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle HP-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle HP-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/messgeraet",
+          "alt": "Symbolbild Fehlersuche mit einem Messgerät"
+        },
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 120,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/hp-laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a15",
+      "slug": "lenovo-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Lenovo Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "Lenovo",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Lenovo-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Lenovo-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Lenovo-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle Lenovo-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/mainboard",
+          "alt": "Symbolbild Notebook-Mainboard"
+        },
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 130,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/lenovo-laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a16",
+      "slug": "medion-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Medion Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "Medion",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Medion-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Medion-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Medion-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle Medion-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/werkzeug",
+          "alt": "Symbolbild Elektronikwerkzeug"
+        },
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 140,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/medion-laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a17",
+      "slug": "samsung-notebook-reparatur-diagnose-kostenvoranschlag",
+      "kategorie": "reparaturen",
+      "art": "reparatur",
+      "name": "Samsung Notebook-Reparatur mit Diagnose und Kostenvoranschlag",
+      "hersteller": "Samsung",
+      "modelle": [],
+      "teilenummer": null,
+      "preis": 29.9,
+      "zustand": "Dienstleistung",
+      "verfuegbar": true,
+      "lieferzeit": "Diagnose in 2 bis 3 Werktagen",
+      "kurz": "Fehlersuche mit Kostenvoranschlag und Reparatur für alle Samsung-Notebooks.",
+      "beschreibung": "<p>Mit diesem Angebot beauftragen Sie die Diagnose Ihres Samsung-Notebooks mit Kostenvoranschlag für die Reparatur. Das Angebot gilt für alle Samsung-Modelle. Für Geräte anderer Hersteller fragen Sie gern bei uns an.</p><h3>Typische Fehlerbilder</h3><p>Senden Sie Ihr Notebook ein, wenn einer dieser Fehler auftritt.</p><ul><li>Das Notebook lässt sich einschalten, aber der Bildschirm bleibt dunkel.</li><li>Das Display bleibt weiß.</li><li>Das Bild wird mehrfach dargestellt.</li><li>Streifen, Blöcke oder andere Grafikfehler erscheinen auf dem Display.</li><li>Das Notebook geht an und sofort wieder aus.</li><li>Es erscheint ein Bluescreen.</li></ul><h3>So läuft die Reparatur ab</h3><ol><li>Sie bezahlen den Betrag per Überweisung oder PayPal und senden uns Ihr defektes Notebook mit Netzteil und Akku, sicher und ausreichend gepolstert verpackt. Die Festplatte bauen Sie bitte vorher aus, auf Wunsch kann sie im Gerät bleiben. Legen Sie Ihre Kontaktdaten bei, gern mit Telefonnummer und einer abweichenden Rechnungs- oder Lieferadresse.</li><li>Innerhalb von 2 bis 3 Werktagen nach Eingang prüfen wir Ihr Notebook und senden Ihnen das Ergebnis der Fehlersuche mit einem günstigen Kostenvoranschlag per E-Mail.</li><li>Nehmen Sie den Kostenvoranschlag an, reparieren wir Ihr Notebook innerhalb von 1 bis 14 Werktagen. Das defekte Teil wird gegen ein funktionierendes ersetzt. Außerdem reinigen wir das Kühlsystem und erneuern Wärmeleitpaste und Wärmeleitpads.</li><li>Vor dem Rückversand testen wir Ihr Notebook ausführlich, um weitere Fehlerquellen auszuschließen. Danach senden wir es umgehend in Ihrer Verpackung an Sie zurück.</li></ol><p>Lehnen Sie den Kostenvoranschlag ab, senden wir Ihr Notebook auf unsere Kosten zurück. Der Preis dieses Angebots wird in diesem Fall nicht erstattet.</p><h3>Gewährleistung und Rechnung</h3><p>Auf die ausgeführte Reparatur erhalten Sie 12 Monate Gewährleistung. Sie bekommen eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Leistung",
+          "Diagnose, Kostenvoranschlag und Reparatur"
+        ],
+        [
+          "Geräte",
+          "alle Samsung-Notebooks"
+        ],
+        [
+          "Diagnose",
+          "2 bis 3 Werktage nach Eingang"
+        ],
+        [
+          "Reparaturdauer",
+          "1 bis 14 Werktage nach Freigabe"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate auf die Reparatur"
+        ],
+        [
+          "Zustand",
+          "Dienstleistung"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/loeten",
+          "alt": "Symbolbild Lötarbeit an einer Platine"
+        },
+        {
+          "datei": "produkte/notebook-reparatur-werkstatt-1",
+          "alt": "Notebook-Mainboard in der Infrarot-Lötstation unserer Werkstatt"
+        }
+      ],
+      "beliebt": false,
+      "rang": 150,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-reparaturen/samsung-laptop-notebook-reparatur-detail"
+    },
+    {
+      "id": "a18",
+      "slug": "led-display-17-3-zoll-n17306-l02-glaenzend",
+      "kategorie": "displays",
+      "art": "ware",
+      "name": "17,3 Zoll LED-Display N17306-L02, glänzend",
+      "hersteller": "Chi Mei",
+      "modelle": [
+        "diverse Acer-Notebooks",
+        "diverse Asus-Notebooks",
+        "Fujitsu-Siemens Amilo",
+        "diverse Medion-Notebooks",
+        "diverse Samsung-Notebooks",
+        "diverse Sony-Notebooks",
+        "diverse Gericom-Notebooks",
+        "diverse HP-Notebooks",
+        "diverse Toshiba-Notebooks"
+      ],
+      "teilenummer": "N17306-L02",
+      "preis": 59.0,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Gebrauchtes LED-Display mit 1600 x 900 Pixeln, getestet, ohne Kratzer und ohne Pixelfehler.",
+      "beschreibung": "<p>Gebrauchtes LED-Display N17306-L02 von Chi Mei in 17,3 Zoll mit glänzender Oberfläche. Das Display ist getestet und voll funktionsfähig. Es befindet sich in sehr gutem Zustand, ohne Kratzer und ohne Pixelfehler.</p><h3>Technische Daten</h3><ul><li>Hersteller Chi Mei</li><li>Modell N17306-L02</li><li>Typ LED-Display</li><li>Auflösung 1600 x 900 Pixel</li><li>Oberfläche glänzend</li><li>Anschluss 40 Pin, unten auf der linken Seite wie abgebildet</li></ul><h3>Passende Notebooks</h3><p>Das Display passt in diverse Notebooks von Acer, Asus, Fujitsu-Siemens (Amilo), Medion, Samsung, Sony, Gericom, HP, Toshiba und anderen Herstellern. Brauchen Sie ein Display für ein anderes Modell, fragen Sie uns gern per E-Mail. Die Abbildungen dienen als Beispiel.</p><h3>Lieferumfang</h3><p>LED-Display 17,3 Zoll N17306-L02 mit Anschluss links wie abgebildet.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Teilenummer",
+          "N17306-L02"
+        ],
+        [
+          "Hersteller",
+          "Chi Mei"
+        ],
+        [
+          "Größe",
+          "17,3 Zoll"
+        ],
+        [
+          "Typ",
+          "LED"
+        ],
+        [
+          "Auflösung",
+          "1600 x 900 Pixel"
+        ],
+        [
+          "Oberfläche",
+          "glänzend"
+        ],
+        [
+          "Anschluss",
+          "40 Pin, unten links"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/led-display-17-3-n17306-l02-1",
+          "alt": "LED-Display N17306-L02 von hinten mit Typenschild und Anschluss"
+        }
+      ],
+      "beliebt": true,
+      "rang": 160,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-343-detail"
+    },
+    {
+      "id": "a19",
+      "slug": "tft-display-17-zoll-samsung-ltn170x2-l02-glaenzend",
+      "kategorie": "displays",
+      "art": "ware",
+      "name": "17 Zoll TFT-Display Samsung LTN170X2-L02, glänzend",
+      "hersteller": "Samsung",
+      "modelle": [
+        "Fujitsu-Siemens XA-Serie",
+        "Fujitsu-Siemens XI-Serie",
+        "diverse Fujitsu-Notebooks",
+        "diverse Medion-Notebooks",
+        "diverse Sony-Notebooks",
+        "diverse Acer-Notebooks",
+        "diverse Toshiba-Notebooks",
+        "diverse Dell-Notebooks"
+      ],
+      "teilenummer": "LTN170X2-L02",
+      "preis": 34.9,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Gebrauchtes 17-Zoll-Display mit 1440 x 900 Pixeln und CCFL-Beleuchtung, getestet.",
+      "beschreibung": "<p>Gebrauchtes TFT-Display LTN170X2-L02 von Samsung in 17,0 Zoll mit glänzender Oberfläche. Das Display ist getestet, voll funktionsfähig und in gutem Zustand.</p><h3>Technische Daten</h3><ul><li>Modell LTN170X2-L02 von Samsung</li><li>Diagonale 17,0 Zoll</li><li>Auflösung 1440 x 900 Pixel</li><li>Anschluss 30 Pin</li><li>Hintergrundbeleuchtung CCFL</li><li>Oberfläche glänzend</li></ul><h3>Passende Notebooks</h3><p>Geeignet für Notebooks von Fujitsu, Medion, Sony, Acer, Toshiba, Dell und weiteren Herstellern, unter anderem für die Fujitsu-Siemens-Serien XA und XI.</p><h3>Lieferumfang</h3><p>Display 17,0 Zoll, glänzend. Die Abbildung ist ein Symbolbild.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Teilenummer",
+          "LTN170X2-L02"
+        ],
+        [
+          "Hersteller",
+          "Samsung"
+        ],
+        [
+          "Größe",
+          "17,0 Zoll"
+        ],
+        [
+          "Typ",
+          "TFT, CCFL"
+        ],
+        [
+          "Auflösung",
+          "1440 x 900 Pixel"
+        ],
+        [
+          "Oberfläche",
+          "glänzend"
+        ],
+        [
+          "Anschluss",
+          "30 Pin"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/display",
+          "alt": "Symbolbild Notebook-Display"
+        }
+      ],
+      "beliebt": false,
+      "rang": 190,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-detail"
+    },
+    {
+      "id": "a20",
+      "slug": "displaykabel-asus-x72-x72d-x72dr",
+      "kategorie": "displays",
+      "art": "ware",
+      "name": "Displaykabel für Asus X72, X72D und X72DR",
+      "hersteller": "Asus",
+      "modelle": [
+        "X72",
+        "X72D",
+        "X72DR"
+      ],
+      "teilenummer": null,
+      "preis": 11.9,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Originales Displaykabel für die Asus X72, gebraucht, getestet und in sehr gutem Zustand.",
+      "beschreibung": "<p>Originales Displaykabel für die Asus-Modelle X72, X72D und X72DR. Das Kabel ist gebraucht, getestet, voll funktionsfähig und in sehr gutem Zustand. Die Abbildungen können vom gelieferten Teil abweichen.</p><h3>Bitte beachten Sie</h3><p>Für diese Modelle gibt es Displaykabel in zwei unterschiedlichen Größen. Teilen Sie uns deshalb bitte per E-Mail die Bezeichnung Ihres Displays mit, damit wir Ihnen das passende Kabel senden.</p><h3>Lieferumfang</h3><p>Originales Displaykabel für Asus X72.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Hersteller",
+          "Asus"
+        ],
+        [
+          "Passend für",
+          "X72, X72D, X72DR"
+        ],
+        [
+          "Ausführung",
+          "Originalteil"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/displaykabel-asus-x72-1",
+          "alt": "Displaykabel für Asus X72 in voller Länge"
+        },
+        {
+          "datei": "produkte/displaykabel-asus-x72-2",
+          "alt": "Displaykabel für Asus X72, Stecker und Etikett in Nahaufnahme"
+        }
+      ],
+      "beliebt": false,
+      "rang": 170,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/17,0-tft-notebook-display-samsung-344-detail"
+    },
+    {
+      "id": "a21",
+      "slug": "displaykabel-asus-x70ab-x70ac-x70a-x70af",
+      "kategorie": "displays",
+      "art": "ware",
+      "name": "Displaykabel für Asus X70AB, X70AC, X70A und X70AF",
+      "hersteller": "Asus",
+      "modelle": [
+        "X70AB",
+        "X70AC",
+        "X70A",
+        "X70AF"
+      ],
+      "teilenummer": "1422-00HB0AS",
+      "preis": 9.9,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Originales Displaykabel 1422-00HB0AS für die Asus-Serie X70, gebraucht und getestet.",
+      "beschreibung": "<p>Originales Displaykabel 1422-00HB0AS für die Asus-Serie X70 mit den Modellen X70AB, X70AC, X70A und X70AF. Das Kabel ist gebraucht, getestet, voll funktionsfähig und in gutem Zustand.</p><h3>Bitte beachten Sie</h3><p>Für Ihr Notebook gibt es Displaykabel in zwei Längen, eine kurze und eine lange Version, je nachdem ob der Displayanschluss links oder rechts liegt. Teilen Sie uns bitte per E-Mail die Bezeichnung Ihres Displays mit, dann senden wir Ihnen die passende Version.</p><p>Die Abbildung zeigt beispielhaft das Kabel eines anderen Asus-Modells.</p><h3>Lieferumfang</h3><p>Displaykabel für die Asus-Serie X70.</p><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Teilenummer",
+          "1422-00HB0AS"
+        ],
+        [
+          "Hersteller",
+          "Asus"
+        ],
+        [
+          "Passend für",
+          "X70AB, X70AC, X70A, X70AF"
+        ],
+        [
+          "Ausführung",
+          "Originalteil"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/displaykabel-asus-x72-1",
+          "alt": "Symbolbild, Displaykabel eines ähnlichen Asus-Modells"
+        }
+      ],
+      "beliebt": false,
+      "rang": 180,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/notebook-tft-display/displaykabel-für-asus-x70ab-ac-a-af-serie-detail"
+    },
+    {
+      "id": "a22",
+      "slug": "grafikkarte-imac-27-a1312-ati-hd-6970m-1gb-neuer-grafikchip",
+      "kategorie": "grafikkarten",
+      "art": "ware",
+      "name": "Grafikkarte ATI HD 6970M 1 GB für iMac 27 Zoll A1312 mit neuem Grafikchip",
+      "hersteller": "AMD",
+      "modelle": [
+        "iMac 27 Zoll A1312 (2010)",
+        "iMac 27 Zoll A1312 (2011)"
+      ],
+      "teilenummer": null,
+      "preis": 289.0,
+      "zustand": "Generalüberholt",
+      "verfuegbar": false,
+      "lieferzeit": "Derzeit nicht auf Lager",
+      "kurz": "Generalüberholte ATI HD 6970M mit 1 GB und neuem Grafikchip für den iMac 27 Zoll A1312.",
+      "beschreibung": "<p>Voll funktionsfähige Grafikkarte ATI HD 6970M mit 1 GB Grafikspeicher für den iMac 27 Zoll A1312 aus den Jahren 2010 und 2011. Die Karte ist gebraucht, generalüberholt und mit einem neuen Grafikchip ausgestattet. Sie wurde getestet und ist voll funktionsfähig.</p><p>Die Grafikkarte passt nur in den iMac 27 Zoll A1312 aus 2010 und 2011 mit ATI HD 6970M. Die Abbildungen können vom gelieferten Teil abweichen.</p><h3>Lieferumfang</h3><p>Grafikkarte ohne Kühler, mit neuem Grafikchip.</p><p>Auf diesen Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Grafikchip",
+          "ATI HD 6970M, neu"
+        ],
+        [
+          "Grafikspeicher",
+          "1 GB"
+        ],
+        [
+          "Passend für",
+          "iMac 27 Zoll A1312 aus 2010 und 2011"
+        ],
+        [
+          "Kühler",
+          "nicht enthalten"
+        ],
+        [
+          "Zustand",
+          "Generalüberholt, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-1",
+          "alt": "Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-2",
+          "alt": "Grafikkarte ATI HD 6970M, Grafikchip und Speicher in Nahaufnahme"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-3",
+          "alt": "Neuer AMD-Grafikchip auf der Grafikkarte in Nahaufnahme"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-4",
+          "alt": "Neue AMD-Grafikchips vor der Montage"
+        }
+      ],
+      "beliebt": false,
+      "rang": 220,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-a1312-2011-2010-ati-hd-6970-1gb-grafikkarte-inkl-neu-gpu-detail"
+    },
+    {
+      "id": "a23",
+      "slug": "grafikkarte-imac-27-a1312-ati-hd-6970m-austausch",
+      "kategorie": "grafikkarten",
+      "art": "ware",
+      "name": "Grafikkarte ATI HD 6970M für iMac 27 Zoll A1312 im Austausch",
+      "hersteller": "AMD",
+      "modelle": [
+        "iMac 27 Zoll A1312 (2010)",
+        "iMac 27 Zoll A1312 (2011)"
+      ],
+      "teilenummer": null,
+      "preis": 219.0,
+      "zustand": "Generalüberholt",
+      "verfuegbar": false,
+      "lieferzeit": "Derzeit nicht auf Lager",
+      "kurz": "Generalüberholte ATI HD 6970M mit neuem Grafikchip im Austausch gegen Ihre defekte Karte.",
+      "beschreibung": "<p>Generalüberholte Grafikkarte ATI HD 6970M mit 1 GB oder 2 GB Grafikspeicher für den iMac 27 Zoll A1312 aus 2010 und 2011, im Austausch gegen Ihre defekte Karte. Die Karte ist getestet, voll funktionsfähig und mit einem neuen Grafikchip aus dem Baujahr 2014 ausgestattet.</p><h3>So funktioniert der Austausch</h3><ol><li>Nach dem Kauf senden Sie uns Ihre defekte Grafikkarte HD 6970M komplett mit Kühler und Sensor.</li><li>Innerhalb von 1 bis 3 Werktagen nach Eingang senden wir Ihnen eine generalüberholte und getestete Grafikkarte mit Kühler, neuem Grafikchip und frischer Wärmeleitpaste.</li></ol><p>Bastelkarten oder vollständig zerstörte Karten, etwa nach einem Aufbacken im Backofen, nehmen wir nicht an. Eine bereits einmal reparierte Karte ist in Ordnung.</p><p>Die Grafikkarte passt nur in den iMac 27 Zoll A1312 aus 2010 und 2011 mit ATI HD 6970M. Weitere Teile für den iMac der Jahre 2009 bis 2011 erhalten Sie auf Anfrage per E-Mail.</p><h3>Gewährleistung</h3><p>Auf die Grafikkarte erhalten Sie 12 Monate Gewährleistung und eine ordentliche Rechnung auf Ihren Namen mit ausgewiesener Mehrwertsteuer von 19 %.</p>",
+      "merkmale": [
+        [
+          "Grafikchip",
+          "ATI HD 6970M, neu aus 2014"
+        ],
+        [
+          "Grafikspeicher",
+          "1 GB oder 2 GB"
+        ],
+        [
+          "Passend für",
+          "iMac 27 Zoll A1312 aus 2010 und 2011"
+        ],
+        [
+          "Ablauf",
+          "Austausch gegen Ihre defekte Karte"
+        ],
+        [
+          "Kühler",
+          "enthalten"
+        ],
+        [
+          "Gewährleistung",
+          "12 Monate"
+        ],
+        [
+          "Zustand",
+          "Generalüberholt, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-1",
+          "alt": "Grafikkarte ATI HD 6970M für den iMac 27 Zoll, Gesamtansicht"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-2",
+          "alt": "Grafikkarte ATI HD 6970M, Grafikchip und Speicher in Nahaufnahme"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-3",
+          "alt": "Neuer AMD-Grafikchip auf der Grafikkarte in Nahaufnahme"
+        },
+        {
+          "datei": "produkte/grafikkarte-imac-27-hd-6970m-4",
+          "alt": "Neue AMD-Grafikchips vor der Montage"
+        }
+      ],
+      "beliebt": false,
+      "rang": 230,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/grafik-videokarten-notebook/grafikkarte-imac-27-grafikkarte-gegen-austausch-detail"
+    },
+    {
+      "id": "a24",
+      "slug": "amd-athlon-ii-dual-core-mobile-p320",
+      "kategorie": "prozessoren",
+      "art": "ware",
+      "name": "AMD Athlon II Dual-Core Mobile P320",
+      "hersteller": "AMD",
+      "modelle": [],
+      "teilenummer": "AMP320SGR22GM",
+      "preis": 12.9,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 2,1 GHz, getestet.",
+      "beschreibung": "<p>Gebrauchter Notebook-Prozessor AMD Athlon II Dual-Core Mobile P320 in sehr gutem Zustand. Die CPU ist getestet, voll funktionsfähig und hat keine verbogenen Pins.</p><h3>Technische Daten</h3><ul><li>Prozessoraufschrift AMP320SGR22GM</li><li>Serie AMD Athlon II</li><li>Sockel S1</li><li>Zwei Kerne (Dual-Core)</li><li>Taktfrequenz 2100 MHz pro Kern</li></ul><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Teilenummer",
+          "AMP320SGR22GM"
+        ],
+        [
+          "Hersteller",
+          "AMD"
+        ],
+        [
+          "Serie",
+          "Athlon II"
+        ],
+        [
+          "Sockel",
+          "S1"
+        ],
+        [
+          "Kerne",
+          "2"
+        ],
+        [
+          "Takt",
+          "2100 MHz pro Kern"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/amd-notebook-prozessor-1",
+          "alt": "Symbolbild AMD-Notebook-Prozessor"
+        }
+      ],
+      "beliebt": false,
+      "rang": 240,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-athlon-ii-dual-core-mobile-p320-detail"
+    },
+    {
+      "id": "a25",
+      "slug": "amd-turion-64-x2-tl-56",
+      "kategorie": "prozessoren",
+      "art": "ware",
+      "name": "AMD Turion 64 X2 TL-56 mit 2 x 1,8 GHz",
+      "hersteller": "AMD",
+      "modelle": [],
+      "teilenummer": "TMDTL56HAX5CT",
+      "preis": 9.9,
+      "zustand": "Gebraucht",
+      "verfuegbar": true,
+      "lieferzeit": "[Lieferzeit]",
+      "kurz": "Gebrauchter Notebook-Prozessor für Sockel S1 mit 2 x 1,8 GHz, getestet.",
+      "beschreibung": "<p>Gebrauchter Notebook-Prozessor AMD Turion 64 X2 TL-56 in sehr gutem Zustand. Die CPU ist getestet, voll funktionsfähig und hat keine verbogenen Pins.</p><h3>Technische Daten</h3><ul><li>Prozessoraufschrift TMDTL56HAX5CT</li><li>Hersteller AMD</li><li>Sockel S1</li><li>Zwei Kerne (Dual-Core)</li><li>Taktfrequenz 1800 MHz pro Kern</li><li>Verlustleistung (TDP) 33 Watt</li><li>Codename Tyler</li></ul><p>Auf diesen gebrauchten Artikel erhalten Sie 1 Jahr Gewährleistung.</p>",
+      "merkmale": [
+        [
+          "Teilenummer",
+          "TMDTL56HAX5CT"
+        ],
+        [
+          "Hersteller",
+          "AMD"
+        ],
+        [
+          "Serie",
+          "Turion 64 X2"
+        ],
+        [
+          "Sockel",
+          "S1"
+        ],
+        [
+          "Kerne",
+          "2"
+        ],
+        [
+          "Takt",
+          "1800 MHz pro Kern"
+        ],
+        [
+          "TDP",
+          "33 Watt"
+        ],
+        [
+          "Codename",
+          "Tyler"
+        ],
+        [
+          "Zustand",
+          "Gebraucht, getestet"
+        ]
+      ],
+      "bilder": [
+        {
+          "datei": "produkte/amd-notebook-prozessor-1",
+          "alt": "Symbolbild AMD-Notebook-Prozessor"
+        }
+      ],
+      "beliebt": false,
+      "rang": 250,
+      "quelle": "shop",
+      "quelle_url": "https://www.notebook-reparatur24.de/prozessoren-cpus/amd-turion-64-x2-2x1,8-ghz-tl-56-detail"
+    }
+  ]
+}

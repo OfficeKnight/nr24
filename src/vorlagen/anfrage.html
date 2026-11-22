@@ -1,0 +1,115 @@
+{# Reparaturanfrage in drei Schritten (Markup-Vertrag: data-formular, data-assistent, .schritt). #}
+<div class="huelle formularseite">
+  <div class="formularseite__haupt">
+    <h1>{{ s.h1 }}</h1>
+    <p class="seitenkopf__intro">{{ s.intro }}</p>
+
+    <form class="assistent karte" data-formular="anfrage" data-assistent novalidate>
+      <ol class="schritte">
+        <li data-schritt-anzeige="1" aria-current="step"><span class="schritte__nummer">1</span><span class="schritte__name">Gerät</span></li>
+        <li data-schritt-anzeige="2"><span class="schritte__nummer">2</span><span class="schritte__name">Problem</span></li>
+        <li data-schritt-anzeige="3"><span class="schritte__nummer">3</span><span class="schritte__name">Kontakt</span></li>
+      </ol>
+
+      <fieldset class="schritt" data-schritt="1">
+        <legend class="schritt__titel">Ihr Gerät</legend>
+        <fieldset class="feld-gruppe" data-pflicht-gruppe="1" aria-describedby="anfrage-hersteller-fehler">
+          <legend>Hersteller <span class="feld__pflicht">Pflichtfeld</span></legend>
+          <div class="auswahl-raster">
+{{{ hersteller_radios }}}
+          </div>
+          <p class="feld__fehler" id="anfrage-hersteller-fehler" hidden></p>
+        </fieldset>
+        <div class="feld">
+          <label class="feld__label" for="anfrage-modell">Modellbezeichnung <span class="feld__pflicht">Pflichtfeld</span></label>
+          <input class="eingabe" id="anfrage-modell" name="modell" type="text" required autocomplete="off" aria-describedby="anfrage-modell-hilfe anfrage-modell-fehler" data-fehler="Bitte geben Sie die Modellbezeichnung Ihres Geräts an.">
+          <p class="feld__hilfe" id="anfrage-modell-hilfe">Zum Beispiel Nitro 5 AN515-54. Die Bezeichnung steht meist auf der Unterseite.</p>
+          <p class="feld__fehler" id="anfrage-modell-fehler" hidden></p>
+        </div>
+        <div class="feld">
+          <label class="feld__label" for="anfrage-platine">Platinennummer <span class="feld__optional">optional</span></label>
+          <input class="eingabe eingabe--mono" id="anfrage-platine" name="platine" type="text" autocomplete="off" aria-describedby="anfrage-platine-hilfe">
+          <p class="feld__hilfe" id="anfrage-platine-hilfe">Falls bekannt, zum Beispiel LA-H431P.</p>
+        </div>
+        <div class="schritt__knoepfe">
+          <button class="knopf knopf--primaer" type="button" data-weiter><span>Weiter zum Problem</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="schritt" data-schritt="2" hidden>
+        <legend class="schritt__titel">Das Problem</legend>
+        <fieldset class="feld-gruppe" data-pflicht-gruppe="1" aria-describedby="anfrage-problem-fehler">
+          <legend>Was ist passiert? <span class="feld__pflicht">Pflichtfeld</span></legend>
+          <div class="auswahl-raster auswahl-raster--breit">
+{{{ problem_boxen }}}
+          </div>
+          <p class="feld__fehler" id="anfrage-problem-fehler" hidden></p>
+        </fieldset>
+        <div class="feld">
+          <label class="feld__label" for="anfrage-beschreibung">Beschreibung <span class="feld__optional">optional</span></label>
+          <textarea class="eingabe" id="anfrage-beschreibung" name="beschreibung" rows="5" aria-describedby="anfrage-beschreibung-hilfe"></textarea>
+          <p class="feld__hilfe" id="anfrage-beschreibung-hilfe">Seit wann tritt der Fehler auf, gab es einen Sturz oder Flüssigkeit?</p>
+        </div>
+        <div class="schritt__knoepfe">
+          <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
+          <button class="knopf knopf--primaer" type="button" data-weiter><span>Weiter zu den Kontaktdaten</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="schritt" data-schritt="3" hidden>
+        <legend class="schritt__titel">Ihre Kontaktdaten</legend>
+        <div class="feld-raster">
+          <div class="feld">
+            <label class="feld__label" for="anfrage-name">Name <span class="feld__pflicht">Pflichtfeld</span></label>
+            <input class="eingabe" id="anfrage-name" name="name" type="text" required autocomplete="name" aria-describedby="anfrage-name-fehler" data-fehler="Bitte geben Sie Ihren Namen an.">
+            <p class="feld__fehler" id="anfrage-name-fehler" hidden></p>
+          </div>
+          <div class="feld">
+            <label class="feld__label" for="anfrage-email">E-Mail-Adresse <span class="feld__pflicht">Pflichtfeld</span></label>
+            <input class="eingabe" id="anfrage-email" name="email" type="email" required autocomplete="email" aria-describedby="anfrage-email-fehler" data-fehler="Bitte geben Sie eine gültige E-Mail-Adresse an.">
+            <p class="feld__fehler" id="anfrage-email-fehler" hidden></p>
+          </div>
+          <div class="feld">
+            <label class="feld__label" for="anfrage-telefon">Telefon <span class="feld__optional">optional</span></label>
+            <input class="eingabe" id="anfrage-telefon" name="telefon" type="tel" autocomplete="tel">
+          </div>
+          <div class="feld">
+            <label class="feld__label" for="anfrage-plz">Postleitzahl <span class="feld__optional">optional</span></label>
+            <input class="eingabe" id="anfrage-plz" name="plz" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" aria-describedby="anfrage-plz-fehler" data-fehler="Bitte geben Sie eine fünfstellige Postleitzahl an.">
+            <p class="feld__fehler" id="anfrage-plz-fehler" hidden></p>
+          </div>
+        </div>
+        <div class="feld">
+          <label class="auswahl auswahl--zeile"><input type="checkbox" name="datenschutz" value="1" required aria-describedby="anfrage-datenschutz-fehler" data-fehler="Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu."><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden. Mehr dazu in der <a href="{{ root }}datenschutz/">Datenschutzerklärung</a>.</span></label>
+          <p class="feld__fehler" id="anfrage-datenschutz-fehler" hidden></p>
+        </div>
+        <div class="schritt__knoepfe">
+          <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
+          <button class="knopf knopf--primaer" type="submit"><span>Anfrage absenden</span><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></button>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="formular-erfolg karte" data-formular-erfolg hidden tabindex="-1">
+      <svg class="ico formular-erfolg__ico" aria-hidden="true"><use href="#i-check"></use></svg>
+      <h2>{{ s.erfolg_titel }}</h2>
+      <p>{{ s.erfolg_text }}</p>
+      <div class="formular-erfolg__zusammenfassung" data-erfolg-zusammenfassung></div>
+      <a class="knopf knopf--zweit" href="{{ root }}notebook-reparatur/">Zurück zum Reparatur-Service</a>
+    </div>
+  </div>
+
+  <aside class="formularseite__seite">
+    <div class="karte karte--ruhig">
+      <h2 class="karte__titel">Gut zu wissen</h2>
+      <ul class="vorteile">
+{{{ kennzahlen }}}
+      </ul>
+    </div>
+    <div class="karte karte--ruhig">
+      <h2 class="karte__titel">Lieber persönlich?</h2>
+      <p class="kontaktzeile"><svg class="ico" aria-hidden="true"><use href="#i-telefon"></use></svg><a href="tel:{{ shop.telefon_href }}">{{ shop.telefon }}</a></p>
+      <p class="kontaktzeile"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+    </div>
+  </aside>
+</div>

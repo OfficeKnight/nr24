@@ -1,0 +1,52 @@
+{# Katalog für /ersatzteile/ und alle Kategorien. Filter und Sortierung übernimmt shop.js. #}
+<div class="huelle seitenkopf">
+  <h1>{{ k.h1 }}</h1>
+  <div class="seitenkopf__text">{{{ k.einleitung }}}</div>
+</div>
+<div class="huelle">
+  <div class="katalog" data-katalog>
+    <aside class="filter" id="filter" aria-labelledby="filter-titel">
+      <h2 id="filter-titel">Filter</h2>
+      <form data-filter>
+        {{{ filter_gruppen }}}
+        <fieldset class="feld-gruppe">
+          <legend>Preis in Euro</legend>
+          <div class="filter__preis">
+            <div class="feld">
+              <label class="feld__label" for="preis-min">Von</label>
+              <input class="eingabe" id="preis-min" name="preis_min" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="preis-max">Bis</label>
+              <input class="eingabe" id="preis-max" name="preis_max" type="number" inputmode="numeric" min="0" step="1" placeholder="{{ preis_max }}">
+            </div>
+          </div>
+        </fieldset>
+        <label class="auswahl auswahl--zeile"><input type="checkbox" name="lieferbar" value="1"><span>Nur sofort lieferbar</span></label>
+        <button class="knopf knopf--zweit knopf--klein" type="reset" data-filter-reset>Filter zurücksetzen</button>
+      </form>
+    </aside>
+    <div class="katalog__liste">
+      <div class="katalog__leiste">
+        <p class="katalog__anzahl" data-katalog-anzahl aria-live="polite">{{ anzahl }}</p>
+        <button class="knopf knopf--zweit knopf--klein filter-umschalter" type="button" aria-controls="filter" aria-expanded="false" data-filter-umschalter><svg class="ico" aria-hidden="true"><use href="#i-filter"></use></svg><span>Filter</span></button>
+        <div class="katalog__sortierung">
+          <label for="sortierung">Sortieren nach</label>
+          <select class="eingabe" id="sortierung" data-sortierung>
+            <option value="empfehlung">Empfehlung</option>
+            <option value="preis-auf">Preis aufsteigend</option>
+            <option value="preis-ab">Preis absteigend</option>
+            <option value="name">Name A bis Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="raster-produkte" data-katalog-raster>
+{{{ raster }}}
+      </div>
+      <div class="hinweis hinweis--info" data-katalog-leer hidden>
+        <svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>
+        <p>Keine Artikel passen zu Ihren Filtern. Setzen Sie die Filter zurück oder <a href="{{ root }}notebook-reparatur/anfrage/">fragen Sie uns direkt an</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>

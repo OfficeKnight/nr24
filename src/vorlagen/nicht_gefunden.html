@@ -1,0 +1,25 @@
+{# 404-Seite. Ein kleines Skript im Kopf setzt <base> auf die Wurzel, auch unter /nr24/. #}
+<div class="huelle fehlerseite">
+  <p class="fehlerseite__code" aria-hidden="true">404</p>
+  <h1>{{ s.h1 }}</h1>
+  <p class="fehlerseite__text">{{ s.text }}</p>
+  <form class="suche suche--seite" role="search" aria-label="Seite suchen" action="{{ root }}suche/" method="get" data-suche>
+    <label class="sr-only" for="suche-fehler">Suchbegriff</label>
+    <input class="suche__feld" id="suche-fehler" type="search" name="q" placeholder="Modell, Teilenummer oder Artikel" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-fehler-liste">
+    <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
+    <ul class="suche__vorschlaege" id="suche-fehler-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
+  </form>
+  <div class="knopfreihe knopfreihe--mitte">
+    <a class="knopf knopf--primaer" href="{{ root }}">Zur Startseite</a>
+    <a class="knopf knopf--zweit" href="{{ root }}ersatzteile/">Alle Ersatzteile</a>
+    <a class="knopf knopf--zweit" href="{{ root }}notebook-reparatur/">Reparatur-Service</a>
+  </div>
+</div>
+<section class="abschnitt abschnitt--flaeche" aria-labelledby="beliebt-titel">
+  <div class="huelle">
+    <h2 id="beliebt-titel">{{ seite.start.beliebt_titel }}</h2>
+    <div class="raster-produkte">
+{{{ karten }}}
+    </div>
+  </div>
+</section>

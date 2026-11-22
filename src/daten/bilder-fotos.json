@@ -1,0 +1,13 @@
+{
+  "fotos/arbeitsspeicher": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/display": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/hero": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/konsole": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/loeten": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/mainboard": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/messgeraet": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/notebook-offen": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/paket": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/werkbank": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067},
+  "fotos/werkzeug": {"breiten": [480, 960, 1600], "w": 1600, "h": 1067}
+}

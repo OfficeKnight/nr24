@@ -1,0 +1,71 @@
+{# Hersteller-Seite (SEO-Beispiel), zurzeit nur Acer. Texte aus seite.json unter dem Hersteller-Slug. #}
+<section class="seitenbanner" aria-labelledby="hersteller-h1">
+  <div class="huelle seitenbanner__raster">
+    <div class="seitenbanner__text">
+      <h1 id="hersteller-h1">{{ s.h1 }}</h1>
+      <p class="seitenbanner__intro">{{ s.intro }}</p>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ anfrage_url }}">{{ h.name }}-Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="#festpreise-titel">Festpreise ansehen</a>
+      </div>
+    </div>
+    <div class="seitenbanner__bild">
+      {{{ foto }}}
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--eng" aria-labelledby="modelle-titel">
+  <div class="huelle">
+    <h2 id="modelle-titel">Häufig reparierte {{ h.name }}-Modelle</h2>
+    <ul class="modelle modelle--links">
+      {{{ modelle }}}
+    </ul>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--flaeche" aria-labelledby="fehler-titel">
+  <div class="huelle">
+    <h2 id="fehler-titel">Typische Fehlerbilder</h2>
+    <ul class="fehlerbilder">
+{{{ fehlerbilder }}}
+    </ul>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="festpreise-titel">
+  <div class="huelle">
+    <div class="abschnitt__kopf">
+      <h2 id="festpreise-titel">Festpreise für {{ h.name }}</h2>
+      <a class="abschnitt__mehr" href="{{ root }}ersatzteile/reparaturen/">Alle Festpreise<svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></a>
+    </div>
+    <div class="raster-produkte">
+{{{ karten }}}
+    </div>
+  </div>
+</section>
+
+<div class="huelle text-und-faq">
+  <div class="text-und-faq__text">
+{{{ abschnitte }}}
+  </div>
+  <div class="faq">
+    <h2 id="faq-titel">{{ seite.start.faq_titel }}</h2>
+{{{ faq }}}
+  </div>
+</div>
+
+<section class="abschnitt" aria-labelledby="aufruf-titel">
+  <div class="huelle">
+    <div class="aufruf">
+      <div class="aufruf__text">
+        <h2 id="aufruf-titel">{{ h.name }}-Notebook defekt?</h2>
+        <p>{{ seite.reparatur.preise_hinweis }}</p>
+      </div>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ anfrage_url }}">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="{{ root }}notebook-reparatur/">Zum Reparatur-Service</a>
+      </div>
+    </div>
+  </div>
+</section>

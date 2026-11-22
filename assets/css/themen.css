@@ -1,0 +1,287 @@
+/*
+  Notebook Reparatur 24, Designs und Schrift-Sets (Paket designs).
+
+  Vertrag mit style.css laut Bauplan Abschnitt 6. Jedes Design definiert genau dieselben Variablen.
+  Design A Werkstattgrün ist der Standard (:root), B ist hell und neutral, C ist dunkel.
+  Die Schrift-Sets stehen weiter unten und überschreiben die Schrift-Variablen der Designs
+  (Selektor mit :root, dadurch stärker als die Design-Blöcke).
+  Alle Farbpaare sind auf WCAG AA geprüft (Text 4.5 zu 1, Fokus und Rahmen 3 zu 1).
+  Keine Verläufe.
+*/
+
+/* ---------- Design A Werkstattgrün (Standard) ---------- */
+:root,
+html[data-design="a"] {
+  color-scheme: light;
+
+  --c-grund: #F5F6F2;
+  --c-flaeche: #FFFFFF;
+  --c-flaeche-2: #EEF1EA;
+  --c-text: #0F1A16;
+  --c-text-2: #46524C;
+  --c-linie: #DDE0D8;
+  --c-linie-stark: #737E77;
+
+  --c-marke: #0C3B2E;
+  --c-marke-text: #FFFFFF;
+
+  --c-kopf: #082A21;
+  --c-kopf-text: #FFFFFF;
+  --c-kopf-text-2: #B7CBC1;
+  --c-kopf-linie: #24463B;
+
+  --c-leiste: #0C3B2E;
+  --c-leiste-text: #FFFFFF;
+  --c-leiste-aktiv: #F0A23A;
+
+  --c-fuss: #082A21;
+  --c-fuss-text: #E8F0EC;
+  --c-fuss-text-2: #A9BFB4;
+  --c-fuss-linie: #24463B;
+
+  --c-suche-bg: #FFFFFF;
+  --c-suche-text: #0F1A16;
+  --c-suche-rand: #FFFFFF;
+
+  --c-link: #0F6B4F;
+  --c-link-hover: #0A4A37;
+
+  --c-akzent: #F0A23A;
+  --c-akzent-hover: #E38E1C;
+  --c-akzent-text: #1A1205;
+
+  --c-zweit: #0C3B2E;
+  --c-zweit-hover: #0F6B4F;
+  --c-zweit-text: #0C3B2E;
+
+  --c-fokus: #2385CC;
+
+  --c-erfolg: #1D6B3B;
+  --c-erfolg-bg: #E5F3E9;
+  --c-fehler: #B3261E;
+  --c-fehler-bg: #FCEBEA;
+  --c-warn: #8A5200;
+  --c-warn-bg: #FFF3DD;
+  --c-info-bg: #E7F1EC;
+
+  --c-badge-bg: #E3EEE7;
+  --c-badge-text: #0C3B2E;
+  --c-preis: #0C3B2E;
+  --c-bild-bg: #FFFFFF;
+
+  --c-ph-bg: #FFF1A8;
+  --c-ph-rand: #8A6A00;
+  --c-ph-text: #2A2000;
+
+  --schatten-1: 0 1px 2px rgb(15 26 22 / 0.06), 0 1px 3px rgb(15 26 22 / 0.08);
+  --schatten-2: 0 10px 28px rgb(15 26 22 / 0.12), 0 2px 6px rgb(15 26 22 / 0.06);
+  --r-1: 8px;
+  --r-2: 12px;
+  --breite: 1200px;
+
+  --f-kopf: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 700;
+  --f-kopf-abstand: -0.01em;
+}
+
+/* ---------- Design B Hell und neutral ---------- */
+/* Weiß und Graphit, klarer blauer Akzent. Heller Kopf mit heller Kategorieleiste, Fuß und Markenflächen in Graphit. */
+html[data-design="b"] {
+  color-scheme: light;
+
+  --c-grund: #F4F5F7;
+  --c-flaeche: #FFFFFF;
+  --c-flaeche-2: #F0F2F5;
+  --c-text: #1B1F24;
+  --c-text-2: #4F5661;
+  --c-linie: #DCE0E5;
+  --c-linie-stark: #7A828C;
+
+  --c-marke: #2B3138;
+  --c-marke-text: #FFFFFF;
+
+  --c-kopf: #FFFFFF;
+  --c-kopf-text: #1B1F24;
+  --c-kopf-text-2: #4F5661;
+  --c-kopf-linie: #DCE0E5;
+
+  --c-leiste: #EEF2F7;
+  --c-leiste-text: #1B1F24;
+  --c-leiste-aktiv: #0B63CE;
+
+  --c-fuss: #23282E;
+  --c-fuss-text: #F1F3F5;
+  --c-fuss-text-2: #B4BCC6;
+  --c-fuss-linie: #3A414A;
+
+  --c-suche-bg: #FFFFFF;
+  --c-suche-text: #1B1F24;
+  --c-suche-rand: #0B63CE;
+
+  --c-link: #0A58B8;
+  --c-link-hover: #083F85;
+
+  --c-akzent: #0B63CE;
+  --c-akzent-hover: #0950A8;
+  --c-akzent-text: #FFFFFF;
+
+  --c-zweit: #2B3138;
+  --c-zweit-hover: #0A58B8;
+  --c-zweit-text: #1B1F24;
+
+  --c-fokus: #2F7FDB;
+
+  --c-erfolg: #17653A;
+  --c-erfolg-bg: #E7F4EC;
+  --c-fehler: #B42318;
+  --c-fehler-bg: #FDECEA;
+  --c-warn: #8A4B00;
+  --c-warn-bg: #FFF3E0;
+  --c-info-bg: #EAF2FD;
+
+  --c-badge-bg: #E7F0FC;
+  --c-badge-text: #0A4A9A;
+  --c-preis: #1B1F24;
+  --c-bild-bg: #FFFFFF;
+
+  --c-ph-bg: #FFF1A8;
+  --c-ph-rand: #8A6A00;
+  --c-ph-text: #2A2000;
+
+  --schatten-1: 0 1px 2px rgb(27 31 36 / 0.06), 0 1px 3px rgb(27 31 36 / 0.08);
+  --schatten-2: 0 10px 28px rgb(27 31 36 / 0.12), 0 2px 6px rgb(27 31 36 / 0.06);
+  --r-1: 4px;
+  --r-2: 8px;
+  --breite: 1200px;
+
+  --f-kopf: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 700;
+  --f-kopf-abstand: -0.01em;
+}
+
+/* ---------- Design C Dunkel ---------- */
+/* Dunkle Schieferflächen, Akzent Cyan, Fokus Bernstein. Keine reine Schwarzfläche. */
+html[data-design="c"] {
+  color-scheme: dark;
+
+  --c-grund: #0C1014;
+  --c-flaeche: #12171D;
+  --c-flaeche-2: #1A2129;
+  --c-text: #E6ECF2;
+  --c-text-2: #A3AFBC;
+  --c-linie: #27303A;
+  --c-linie-stark: #6A7888;
+
+  --c-marke: #17699A;
+  --c-marke-text: #FFFFFF;
+
+  --c-kopf: #151B22;
+  --c-kopf-text: #E6ECF2;
+  --c-kopf-text-2: #A3AFBC;
+  --c-kopf-linie: #2A333D;
+
+  --c-leiste: #1B232C;
+  --c-leiste-text: #E6ECF2;
+  --c-leiste-aktiv: #3CC8E0;
+
+  --c-fuss: #10151A;
+  --c-fuss-text: #E6ECF2;
+  --c-fuss-text-2: #A3AFBC;
+  --c-fuss-linie: #27303A;
+
+  --c-suche-bg: #0C1014;
+  --c-suche-text: #E6ECF2;
+  --c-suche-rand: #6A7888;
+
+  --c-link: #5CCFE6;
+  --c-link-hover: #9BE3F2;
+
+  --c-akzent: #3CC8E0;
+  --c-akzent-hover: #6AD6EA;
+  --c-akzent-text: #061418;
+
+  --c-zweit: #5CCFE6;
+  --c-zweit-hover: #9BE3F2;
+  --c-zweit-text: #5CCFE6;
+
+  --c-fokus: #FFC857;
+
+  --c-erfolg: #5BD38F;
+  --c-erfolg-bg: #0F2A1C;
+  --c-fehler: #FF8F85;
+  --c-fehler-bg: #351416;
+  --c-warn: #F5B94F;
+  --c-warn-bg: #2E220B;
+  --c-info-bg: #11283A;
+
+  --c-badge-bg: #10313D;
+  --c-badge-text: #8FE0F0;
+  --c-preis: #E6ECF2;
+  --c-bild-bg: #FFFFFF;
+
+  --c-ph-bg: #FFF1A8;
+  --c-ph-rand: #8A6A00;
+  --c-ph-text: #2A2000;
+
+  --schatten-1: 0 1px 2px rgb(0 0 0 / 0.35), 0 1px 3px rgb(0 0 0 / 0.25);
+  --schatten-2: 0 12px 32px rgb(0 0 0 / 0.45), 0 2px 6px rgb(0 0 0 / 0.3);
+  --r-1: 6px;
+  --r-2: 10px;
+  --breite: 1200px;
+
+  --f-kopf: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 700;
+  --f-kopf-abstand: -0.01em;
+}
+
+/* ---------- Schrift-Sets ---------- */
+/* 1 Space Grotesk für Überschriften und Inter für Text (Standard), 2 nur Inter, 3 IBM Plex Sans. */
+html[data-schrift="1"]:root {
+  --f-kopf: "Space Grotesk", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 700;
+  --f-kopf-abstand: -0.01em;
+}
+
+html[data-schrift="2"]:root {
+  --f-kopf: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 700;
+  --f-kopf-abstand: -0.02em;
+}
+
+html[data-schrift="3"]:root {
+  --f-kopf: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-text: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --f-kopf-gewicht: 600;
+  --f-kopf-abstand: 0;
+}
+
+/* ---------- Platzhalter-Markierung ---------- */
+/* Ohne data-platzhalter="an" sieht .ph aus wie normaler Text. */
+html[data-platzhalter="an"] .ph {
+  padding: 0 0.25em;
+  border: 1.5px dashed var(--c-ph-rand);
+  border-radius: 4px;
+  background: var(--c-ph-bg);
+  color: var(--c-ph-text);
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (forced-colors: active) {
+  html[data-platzhalter="an"] .ph {
+    border-color: CanvasText;
+    border-style: dashed;
+  }
+}

@@ -1,0 +1,89 @@
+{# Reparatur-Service. Festpreise aus artikel.json (art = reparatur). #}
+<section class="seitenbanner" aria-labelledby="reparatur-h1">
+  <div class="huelle seitenbanner__raster">
+    <div class="seitenbanner__text">
+      <h1 id="reparatur-h1">{{ s.h1 }}</h1>
+      <p class="seitenbanner__intro">{{ s.intro }}</p>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="#preise-titel">Festpreise ansehen</a>
+      </div>
+      <ul class="seitenbanner__kennzahlen">
+{{{ kennzahlen }}}
+      </ul>
+    </div>
+    <div class="seitenbanner__bild">
+      {{{ foto }}}
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="leistungen-titel">
+  <div class="huelle">
+    <h2 id="leistungen-titel">Unsere Leistungen</h2>
+    <ul class="leistungen">
+{{{ leistungen }}}
+    </ul>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--flaeche" aria-labelledby="ablauf-titel">
+  <div class="huelle">
+    <h2 id="ablauf-titel">{{ seite.start.ablauf_titel }}</h2>
+    <ol class="ablauf">
+{{{ ablauf }}}
+    </ol>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="preise-titel">
+  <div class="huelle">
+    <div class="abschnitt__kopf">
+      <div>
+        <h2 id="preise-titel">{{ s.preise_titel }}</h2>
+        <p class="abschnitt__text">{{ s.preise_text }}</p>
+      </div>
+    </div>
+    <table class="preistabelle">
+      <caption class="sr-only">{{ s.preise_titel }}</caption>
+      <thead>
+        <tr><th scope="col">Leistung</th><th scope="col">Hersteller</th><th scope="col">Platine</th><th scope="col" class="preistabelle__preis">Festpreis</th><th scope="col"><span class="sr-only">Aktion</span></th></tr>
+      </thead>
+      <tbody>
+{{{ preise }}}
+      </tbody>
+    </table>
+    <p class="preistabelle__hinweis">{{ s.preise_hinweis }}</p>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--flaeche" aria-label="Fragen und Hersteller">
+  <div class="huelle zwei-spalten">
+    <div class="faq">
+      <h2 id="faq-titel">{{ seite.start.faq_titel }}</h2>
+{{{ faq }}}
+    </div>
+    <div class="hersteller">
+      <h2 id="hersteller-titel">{{ seite.start.hersteller_titel }}</h2>
+      <p>{{ seite.start.hersteller_text }}</p>
+      <ul class="hersteller__liste">
+        {{{ hersteller }}}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="aufruf-titel">
+  <div class="huelle">
+    <div class="aufruf">
+      <div class="aufruf__text">
+        <h2 id="aufruf-titel">{{ aufruf_titel }}</h2>
+        <p>{{ aufruf_text }}</p>
+      </div>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="{{ root }}kontakt/">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </div>
+</section>

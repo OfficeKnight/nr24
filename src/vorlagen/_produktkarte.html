@@ -1,0 +1,15 @@
+{# Produktkarte laut Markup-Vertrag. shop.js erzeugt für Suchergebnisse dieselbe Struktur. #}<article class="produkt" data-id="{{ a.id }}" data-name="{{ a.name }}" data-preis="{{ preis_attr }}" data-hersteller="{{ a.hersteller }}" data-zustand="{{ a.zustand }}" data-kategorie="{{ a.kategorie }}" data-rang="{{ a.rang }}" data-verfuegbar="{{ verfuegbar }}">
+  <a class="produkt__bildlink" href="{{ url }}" tabindex="-1" aria-hidden="true">
+    {{{ bild }}}
+  </a>
+  <div class="produkt__text">
+    <p class="produkt__kategorie">{{ kategorie_name }}</p>
+    <{{ ebene }} class="produkt__name"><a href="{{ url }}">{{ a.name }}</a></{{ ebene }}>
+    {% if a.teilenummer %}<p class="produkt__nummer teilenummer">{{ a.teilenummer }}</p>{% endif %}
+    <p class="produkt__zustand">{{ zustand_satz }}</p>
+  </div>
+  <div class="produkt__fuss">
+    <p class="produkt__preis preis">{{ preis }}</p>
+    <button class="knopf knopf--primaer knopf--klein" type="button" data-wk-add="{{ a.id }}" aria-label="{{ a.name }} in den Warenkorb legen"><svg class="ico" aria-hidden="true"><use href="#i-korb"></use></svg><span>In den Warenkorb</span></button>
+  </div>
+</article>

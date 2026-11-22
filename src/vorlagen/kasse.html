@@ -1,0 +1,175 @@
+{# Kasse in vier Schritten (Markup-Vertrag). Versand- und Zahlarten aus seite.json. #}
+<div class="huelle seitenkopf seitenkopf--knapp">
+  <h1>{{ s.h1 }}</h1>
+</div>
+<div class="huelle">
+  <div class="leer-zustand karte" data-kasse-leer hidden>
+    <svg class="ico leer-zustand__ico" aria-hidden="true"><use href="#i-korb"></use></svg>
+    <h2>Ihr Warenkorb ist leer</h2>
+    <p>Legen Sie zuerst Artikel in den Warenkorb, dann können Sie die Kasse ausprobieren.</p>
+    <div class="knopfreihe knopfreihe--mitte">
+      <a class="knopf knopf--primaer" href="{{ root }}ersatzteile/">Zu den Ersatzteilen</a>
+    </div>
+  </div>
+
+  <form class="kasse" data-kasse novalidate>
+    <ol class="schritte">
+      <li data-schritt-anzeige="1" aria-current="step"><span class="schritte__nummer">1</span><span class="schritte__name">Adresse</span></li>
+      <li data-schritt-anzeige="2"><span class="schritte__nummer">2</span><span class="schritte__name">Versand</span></li>
+      <li data-schritt-anzeige="3"><span class="schritte__nummer">3</span><span class="schritte__name">Zahlart</span></li>
+      <li data-schritt-anzeige="4"><span class="schritte__nummer">4</span><span class="schritte__name">Übersicht</span></li>
+    </ol>
+    <div class="kasse__raster">
+      <div class="kasse__schritte">
+
+        <fieldset class="schritt karte" data-schritt="1">
+          <legend class="schritt__titel">Rechnungsadresse</legend>
+          <div class="feld-raster">
+            <div class="feld">
+              <label class="feld__label" for="kasse-vorname">Vorname <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-vorname" name="vorname" type="text" required autocomplete="given-name" aria-describedby="kasse-vorname-fehler" data-fehler="Bitte geben Sie Ihren Vornamen an.">
+              <p class="feld__fehler" id="kasse-vorname-fehler" hidden></p>
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="kasse-nachname">Nachname <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-nachname" name="nachname" type="text" required autocomplete="family-name" aria-describedby="kasse-nachname-fehler" data-fehler="Bitte geben Sie Ihren Nachnamen an.">
+              <p class="feld__fehler" id="kasse-nachname-fehler" hidden></p>
+            </div>
+            <div class="feld feld--breit">
+              <label class="feld__label" for="kasse-firma">Firma <span class="feld__optional">optional</span></label>
+              <input class="eingabe" id="kasse-firma" name="firma" type="text" autocomplete="organization">
+            </div>
+            <div class="feld feld--breit">
+              <label class="feld__label" for="kasse-strasse">Straße und Hausnummer <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-strasse" name="strasse" type="text" required autocomplete="street-address" aria-describedby="kasse-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer an.">
+              <p class="feld__fehler" id="kasse-strasse-fehler" hidden></p>
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="kasse-plz">Postleitzahl <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-plz" name="plz" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required autocomplete="postal-code" aria-describedby="kasse-plz-fehler" data-fehler="Bitte geben Sie eine fünfstellige Postleitzahl an.">
+              <p class="feld__fehler" id="kasse-plz-fehler" hidden></p>
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="kasse-ort">Ort <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-ort" name="ort" type="text" required autocomplete="address-level2" aria-describedby="kasse-ort-fehler" data-fehler="Bitte geben Sie Ihren Ort an.">
+              <p class="feld__fehler" id="kasse-ort-fehler" hidden></p>
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="kasse-land">Land <span class="feld__pflicht">Pflichtfeld</span></label>
+              <select class="eingabe" id="kasse-land" name="land" required autocomplete="country-name">
+                <option value="Deutschland">Deutschland</option>
+                <option value="Österreich">Österreich</option>
+              </select>
+            </div>
+            <div class="feld">
+              <label class="feld__label" for="kasse-telefon">Telefon <span class="feld__optional">optional</span></label>
+              <input class="eingabe" id="kasse-telefon" name="telefon" type="tel" autocomplete="tel">
+            </div>
+            <div class="feld feld--breit">
+              <label class="feld__label" for="kasse-email">E-Mail-Adresse <span class="feld__pflicht">Pflichtfeld</span></label>
+              <input class="eingabe" id="kasse-email" name="email" type="email" required autocomplete="email" aria-describedby="kasse-email-hilfe kasse-email-fehler" data-fehler="Bitte geben Sie eine gültige E-Mail-Adresse an.">
+              <p class="feld__hilfe" id="kasse-email-hilfe">An diese Adresse ginge die Bestellbestätigung.</p>
+              <p class="feld__fehler" id="kasse-email-fehler" hidden></p>
+            </div>
+          </div>
+          <label class="auswahl auswahl--zeile"><input type="checkbox" name="liefer_abweichend" value="1" aria-controls="kasse-lieferadresse" data-lieferadresse-umschalter><span>Lieferung an eine abweichende Adresse</span></label>
+          <div class="lieferadresse" id="kasse-lieferadresse" data-lieferadresse hidden>
+            <h3 class="lieferadresse__titel">Lieferadresse</h3>
+            <div class="feld-raster">
+              <div class="feld">
+                <label class="feld__label" for="kasse-liefer-vorname">Vorname <span class="feld__pflicht">Pflichtfeld</span></label>
+                <input class="eingabe" id="kasse-liefer-vorname" name="liefer_vorname" type="text" required autocomplete="shipping given-name" aria-describedby="kasse-liefer-vorname-fehler" data-fehler="Bitte geben Sie den Vornamen für die Lieferung an.">
+                <p class="feld__fehler" id="kasse-liefer-vorname-fehler" hidden></p>
+              </div>
+              <div class="feld">
+                <label class="feld__label" for="kasse-liefer-nachname">Nachname <span class="feld__pflicht">Pflichtfeld</span></label>
+                <input class="eingabe" id="kasse-liefer-nachname" name="liefer_nachname" type="text" required autocomplete="shipping family-name" aria-describedby="kasse-liefer-nachname-fehler" data-fehler="Bitte geben Sie den Nachnamen für die Lieferung an.">
+                <p class="feld__fehler" id="kasse-liefer-nachname-fehler" hidden></p>
+              </div>
+              <div class="feld feld--breit">
+                <label class="feld__label" for="kasse-liefer-strasse">Straße und Hausnummer <span class="feld__pflicht">Pflichtfeld</span></label>
+                <input class="eingabe" id="kasse-liefer-strasse" name="liefer_strasse" type="text" required autocomplete="shipping street-address" aria-describedby="kasse-liefer-strasse-fehler" data-fehler="Bitte geben Sie Straße und Hausnummer für die Lieferung an.">
+                <p class="feld__fehler" id="kasse-liefer-strasse-fehler" hidden></p>
+              </div>
+              <div class="feld">
+                <label class="feld__label" for="kasse-liefer-plz">Postleitzahl <span class="feld__pflicht">Pflichtfeld</span></label>
+                <input class="eingabe" id="kasse-liefer-plz" name="liefer_plz" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required autocomplete="shipping postal-code" aria-describedby="kasse-liefer-plz-fehler" data-fehler="Bitte geben Sie eine fünfstellige Postleitzahl für die Lieferung an.">
+                <p class="feld__fehler" id="kasse-liefer-plz-fehler" hidden></p>
+              </div>
+              <div class="feld">
+                <label class="feld__label" for="kasse-liefer-ort">Ort <span class="feld__pflicht">Pflichtfeld</span></label>
+                <input class="eingabe" id="kasse-liefer-ort" name="liefer_ort" type="text" required autocomplete="shipping address-level2" aria-describedby="kasse-liefer-ort-fehler" data-fehler="Bitte geben Sie den Ort für die Lieferung an.">
+                <p class="feld__fehler" id="kasse-liefer-ort-fehler" hidden></p>
+              </div>
+            </div>
+          </div>
+          <div class="schritt__knoepfe">
+            <button class="knopf knopf--primaer" type="button" data-weiter><span>Weiter zum Versand</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="schritt karte" data-schritt="2" hidden>
+          <legend class="schritt__titel">Versandart</legend>
+          <div class="auswahl-liste">
+{{{ versand_radios }}}
+          </div>
+          <div class="schritt__knoepfe">
+            <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
+            <button class="knopf knopf--primaer" type="button" data-weiter><span>Weiter zur Zahlart</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="schritt karte" data-schritt="3" hidden>
+          <legend class="schritt__titel">Zahlart</legend>
+          <div class="auswahl-liste">
+{{{ zahlung_radios }}}
+          </div>
+          <div class="schritt__knoepfe">
+            <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
+            <button class="knopf knopf--primaer" type="button" data-weiter><span>Weiter zur Übersicht</span><svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="schritt karte" data-schritt="4" hidden>
+          <legend class="schritt__titel">Übersicht</legend>
+          <div class="uebersicht">
+            <div class="uebersicht__block">
+              <div class="uebersicht__kopf"><h3>Adresse</h3><button class="knopf-text" type="button" data-gehe-zu="1">Ändern</button></div>
+              <div data-uebersicht-adresse></div>
+            </div>
+            <div class="uebersicht__block">
+              <div class="uebersicht__kopf"><h3>Versand</h3><button class="knopf-text" type="button" data-gehe-zu="2">Ändern</button></div>
+              <div data-uebersicht-versand></div>
+            </div>
+            <div class="uebersicht__block">
+              <div class="uebersicht__kopf"><h3>Zahlart</h3><button class="knopf-text" type="button" data-gehe-zu="3">Ändern</button></div>
+              <div data-uebersicht-zahlung></div>
+            </div>
+          </div>
+          <h3 class="uebersicht__titel">Artikel</h3>
+          <ul class="uebersicht__positionen" data-uebersicht-positionen></ul>
+          <div class="feld">
+            <label class="auswahl auswahl--zeile"><input type="checkbox" name="agb" value="1" required aria-describedby="kasse-agb-fehler" data-fehler="Bitte bestätigen Sie die AGB und die Widerrufsbelehrung."><span>Ich habe die <a href="{{ root }}agb/">AGB</a> und die <a href="{{ root }}widerruf/">Widerrufsbelehrung</a> gelesen.</span></label>
+            <p class="feld__fehler" id="kasse-agb-fehler" hidden></p>
+          </div>
+          <button class="knopf knopf--primaer knopf--block" type="submit" disabled aria-describedby="demo-bestellhinweis">Zahlungspflichtig bestellen</button>
+          <p class="hinweis hinweis--info" id="demo-bestellhinweis">{{ s.demo_text }}</p>
+          <div class="schritt__knoepfe">
+            <button class="knopf knopf--zweit" type="button" data-zurueck><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Zurück</span></button>
+          </div>
+        </fieldset>
+      </div>
+
+      <aside class="wk-summe" aria-labelledby="kasse-summe-titel">
+        <h2 class="wk-summe__titel" id="kasse-summe-titel">Ihre Bestellung</h2>
+        <dl class="wk-summe__zeilen">
+          <div><dt>Zwischensumme</dt><dd data-wk-zwischensumme></dd></div>
+          <div><dt>Versand</dt><dd data-wk-versand></dd></div>
+          <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
+          <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
+        </dl>
+        <p class="wk-summe__hinweis"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>{{ shop.demo_hinweis }}</p>
+      </aside>
+    </div>
+  </form>
+</div>

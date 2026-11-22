@@ -1,0 +1,32 @@
+{# Über die Werkstatt. Texte aus seite.json (werkstatt). #}
+<div class="huelle seitenkopf">
+  <h1>{{ s.h1 }}</h1>
+  <p class="seitenkopf__intro">{{ s.intro }}</p>
+</div>
+<div class="huelle">
+  <div class="breitbild">
+    {{{ foto }}}
+  </div>
+</div>
+<section class="vertrauen vertrauen--hell" aria-label="Kennzahlen">
+  <ul class="huelle vertrauen__liste">
+{{{ kennzahlen }}}
+  </ul>
+</section>
+<div class="huelle werkstatt">
+{{{ abschnitte }}}
+</div>
+<section class="abschnitt" aria-labelledby="aufruf-titel">
+  <div class="huelle">
+    <div class="aufruf">
+      <div class="aufruf__text">
+        <h2 id="aufruf-titel">{{ seite.start.festpreise_titel }}</h2>
+        <p>{{ seite.start.festpreise_text }}</p>
+      </div>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="{{ root }}kontakt/">Kontakt</a>
+      </div>
+    </div>
+  </div>
+</section>

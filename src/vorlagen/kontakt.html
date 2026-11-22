@@ -1,0 +1,75 @@
+{# Kontakt mit Musterdaten, Öffnungszeiten und Formular. #}
+<div class="huelle seitenkopf">
+  <h1>{{ s.h1 }}</h1>
+  <p class="seitenkopf__intro">{{ s.intro }}</p>
+</div>
+<div class="huelle formularseite formularseite--kontakt">
+  <div class="formularseite__haupt">
+    <form class="karte" data-formular="kontakt" novalidate>
+      <h2 class="karte__titel">Nachricht schreiben</h2>
+      <div class="feld-raster">
+        <div class="feld">
+          <label class="feld__label" for="kontakt-name">Name <span class="feld__pflicht">Pflichtfeld</span></label>
+          <input class="eingabe" id="kontakt-name" name="name" type="text" required autocomplete="name" aria-describedby="kontakt-name-fehler" data-fehler="Bitte geben Sie Ihren Namen an.">
+          <p class="feld__fehler" id="kontakt-name-fehler" hidden></p>
+        </div>
+        <div class="feld">
+          <label class="feld__label" for="kontakt-email">E-Mail-Adresse <span class="feld__pflicht">Pflichtfeld</span></label>
+          <input class="eingabe" id="kontakt-email" name="email" type="email" required autocomplete="email" aria-describedby="kontakt-email-fehler" data-fehler="Bitte geben Sie eine gültige E-Mail-Adresse an.">
+          <p class="feld__fehler" id="kontakt-email-fehler" hidden></p>
+        </div>
+        <div class="feld">
+          <label class="feld__label" for="kontakt-telefon">Telefon <span class="feld__optional">optional</span></label>
+          <input class="eingabe" id="kontakt-telefon" name="telefon" type="tel" autocomplete="tel">
+        </div>
+        <div class="feld">
+          <label class="feld__label" for="kontakt-betreff">Betreff <span class="feld__pflicht">Pflichtfeld</span></label>
+          <select class="eingabe" id="kontakt-betreff" name="betreff" required aria-describedby="kontakt-betreff-fehler" data-fehler="Bitte wählen Sie einen Betreff.">
+            <option value="">Bitte wählen</option>
+            {{{ betreffe }}}
+          </select>
+          <p class="feld__fehler" id="kontakt-betreff-fehler" hidden></p>
+        </div>
+        <div class="feld feld--breit">
+          <label class="feld__label" for="kontakt-nachricht">Nachricht <span class="feld__pflicht">Pflichtfeld</span></label>
+          <textarea class="eingabe" id="kontakt-nachricht" name="nachricht" rows="6" required aria-describedby="kontakt-nachricht-fehler" data-fehler="Bitte schreiben Sie uns eine Nachricht."></textarea>
+          <p class="feld__fehler" id="kontakt-nachricht-fehler" hidden></p>
+        </div>
+      </div>
+      <div class="feld">
+        <label class="auswahl auswahl--zeile"><input type="checkbox" name="datenschutz" value="1" required aria-describedby="kontakt-datenschutz-fehler" data-fehler="Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu."><span>Ich bin einverstanden, dass meine Angaben zur Beantwortung verwendet werden. Mehr dazu in der <a href="{{ root }}datenschutz/">Datenschutzerklärung</a>.</span></label>
+        <p class="feld__fehler" id="kontakt-datenschutz-fehler" hidden></p>
+      </div>
+      <button class="knopf knopf--primaer" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><span>Nachricht senden</span></button>
+    </form>
+    <div class="formular-erfolg karte" data-formular-erfolg hidden tabindex="-1">
+      <svg class="ico formular-erfolg__ico" aria-hidden="true"><use href="#i-check"></use></svg>
+      <h2>{{ s.erfolg_titel }}</h2>
+      <p>{{ s.erfolg_text }}</p>
+      <div class="formular-erfolg__zusammenfassung" data-erfolg-zusammenfassung></div>
+      <a class="knopf knopf--zweit" href="{{ root }}">Zur Startseite</a>
+    </div>
+  </div>
+  <aside class="formularseite__seite">
+    <div class="karte karte--ruhig">
+      <h2 class="karte__titel">So erreichen Sie uns</h2>
+      <address class="kontaktblock">
+        <p class="kontaktzeile"><svg class="ico" aria-hidden="true"><use href="#i-ort"></use></svg><span>{{ shop.name }}<br>{{ shop.inhaber }}<br>{{ shop.strasse }}<br>{{ shop.plz }} {{ shop.ort }}</span></p>
+        <p class="kontaktzeile"><svg class="ico" aria-hidden="true"><use href="#i-telefon"></use></svg><a href="tel:{{ shop.telefon_href }}">{{ shop.telefon }}</a></p>
+        <p class="kontaktzeile"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+      </address>
+    </div>
+    <div class="karte karte--ruhig">
+      <h2 class="karte__titel"><svg class="ico" aria-hidden="true"><use href="#i-uhr"></use></svg>Öffnungszeiten</h2>
+      <table class="zeiten">
+        <caption class="sr-only">Öffnungszeiten</caption>
+        {{{ zeiten }}}
+      </table>
+    </div>
+    <div class="karte karte--ruhig">
+      <h2 class="karte__titel">Reparatur geplant?</h2>
+      <p>Mit der Reparaturanfrage erhalten Sie schneller eine Einschätzung.</p>
+      <a class="knopf knopf--zweit knopf--block" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+    </div>
+  </aside>
+</div>

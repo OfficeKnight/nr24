@@ -1,0 +1,34 @@
+{# Warenkorb. Positionen rendert shop.js aus localStorage. #}
+<div class="huelle seitenkopf seitenkopf--knapp">
+  <h1>{{ s.h1 }}</h1>
+</div>
+<div class="huelle">
+  <div class="warenkorb" data-warenkorb>
+    <div class="leer-zustand karte" data-wk-leer hidden>
+      <svg class="ico leer-zustand__ico" aria-hidden="true"><use href="#i-korb"></use></svg>
+      <h2>Ihr Warenkorb ist leer</h2>
+      <p>Stöbern Sie in unseren Ersatzteilen oder buchen Sie eine Reparatur zum Festpreis.</p>
+      <div class="knopfreihe knopfreihe--mitte">
+        <a class="knopf knopf--primaer" href="{{ root }}ersatzteile/">Zu den Ersatzteilen</a>
+        <a class="knopf knopf--zweit" href="{{ root }}notebook-reparatur/">Zum Reparatur-Service</a>
+      </div>
+    </div>
+    <div class="warenkorb__inhalt" data-wk-inhalt>
+      <div class="warenkorb__liste">
+        <ul class="wk-liste" data-wk-liste></ul>
+        <a class="knopf-text warenkorb__weiter" href="{{ root }}ersatzteile/"><svg class="ico" aria-hidden="true"><use href="#i-pfeil-links"></use></svg><span>Weiter einkaufen</span></a>
+      </div>
+      <aside class="wk-summe" aria-labelledby="wk-summe-titel">
+        <h2 class="wk-summe__titel" id="wk-summe-titel">Zusammenfassung</h2>
+        <dl class="wk-summe__zeilen">
+          <div><dt>Zwischensumme</dt><dd data-wk-zwischensumme></dd></div>
+          <div><dt>Versand</dt><dd data-wk-versand></dd></div>
+          <div class="wk-summe__gesamt"><dt>Gesamt</dt><dd data-wk-gesamt></dd></div>
+          <div class="wk-summe__mwst"><dt>enthaltene MwSt.</dt><dd data-wk-mwst></dd></div>
+        </dl>
+        <a class="knopf knopf--primaer knopf--block" href="{{ root }}kasse/">Zur Kasse</a>
+        <p class="wk-summe__hinweis"><svg class="ico" aria-hidden="true"><use href="#i-info"></use></svg>{{ shop.demo_hinweis }}</p>
+      </aside>
+    </div>
+  </div>
+</div>

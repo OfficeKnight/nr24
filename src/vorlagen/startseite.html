@@ -1,0 +1,103 @@
+{# Startseite. Texte aus seite.json (start), Listen werden in build.py erzeugt. #}
+<section class="hero" aria-labelledby="start-h1">
+  <div class="huelle hero__raster">
+    <div class="hero__text">
+      <h1 id="start-h1">{{ s.h1 }}</h1>
+      <p class="hero__intro">{{ s.intro }}</p>
+      <div class="hero__suche">
+        <label class="hero__suchlabel" for="suche-start">{{ s.suche_titel }}</label>
+        <form class="suche suche--gross" role="search" aria-label="Modellsuche" action="{{ root }}suche/" method="get" data-suche>
+          <svg class="ico suche__lupe" aria-hidden="true"><use href="#i-lupe-modell"></use></svg>
+          <input class="suche__feld" id="suche-start" type="search" name="q" placeholder="Modell oder Teilenummer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-start-liste" aria-describedby="suche-start-hilfe">
+          <button class="suche__knopf" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-suche"></use></svg><span>Suchen</span></button>
+          <ul class="suche__vorschlaege" id="suche-start-liste" role="listbox" aria-label="Vorschläge" hidden></ul>
+        </form>
+        <p class="hero__suchhilfe" id="suche-start-hilfe">{{ s.suche_text }}</p>
+      </div>
+      <ul class="schnellsuche" aria-label="Häufige Suchen">
+        {{{ schnellsuche }}}
+      </ul>
+    </div>
+    <aside class="festpreise" aria-labelledby="festpreise-titel">
+      <div class="festpreise__kopf">
+        <svg class="ico" aria-hidden="true"><use href="#i-euro"></use></svg>
+        <h2 class="festpreise__titel" id="festpreise-titel">{{ s.festpreise_titel }}</h2>
+      </div>
+      <p class="festpreise__text">{{ s.festpreise_text }}</p>
+      <ul class="festpreise__liste">
+        {{{ festpreise }}}
+      </ul>
+      <div class="festpreise__aktionen">
+        <a class="knopf knopf--primaer" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit-hell" href="{{ root }}ersatzteile/reparaturen/">Alle Festpreise</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="vertrauen" aria-label="Kennzahlen">
+  <ul class="huelle vertrauen__liste">
+{{{ kennzahlen }}}
+  </ul>
+</section>
+
+<section class="abschnitt" aria-labelledby="kategorien-titel">
+  <div class="huelle">
+    <div class="abschnitt__kopf">
+      <h2 id="kategorien-titel">{{ s.kategorien_titel }}</h2>
+      <a class="abschnitt__mehr" href="{{ root }}ersatzteile/">Alle Ersatzteile<svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></a>
+    </div>
+    <ul class="kacheln">
+{{{ kacheln }}}
+    </ul>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--flaeche" aria-labelledby="beliebt-titel">
+  <div class="huelle">
+    <div class="abschnitt__kopf">
+      <div>
+        <h2 id="beliebt-titel">{{ s.beliebt_titel }}</h2>
+        <p class="abschnitt__text">{{ s.beliebt_text }}</p>
+      </div>
+      <a class="abschnitt__mehr" href="{{ root }}ersatzteile/">Zum Sortiment<svg class="ico" aria-hidden="true"><use href="#i-pfeil-rechts"></use></svg></a>
+    </div>
+    <div class="raster-produkte">
+{{{ beliebt }}}
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="ablauf-titel">
+  <div class="huelle ablauf-block">
+    <div class="ablauf-block__bild">
+      {{{ foto_werkstatt }}}
+    </div>
+    <div class="ablauf-block__text">
+      <h2 id="ablauf-titel">{{ s.ablauf_titel }}</h2>
+      <ol class="ablauf ablauf--kompakt">
+{{{ ablauf }}}
+      </ol>
+      <div class="knopfreihe">
+        <a class="knopf knopf--primaer" href="{{ root }}notebook-reparatur/anfrage/">Reparatur anfragen</a>
+        <a class="knopf knopf--zweit" href="{{ root }}notebook-reparatur/">Zum Reparatur-Service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--flaeche" aria-label="Fragen und Hersteller">
+  <div class="huelle zwei-spalten">
+    <div class="faq">
+      <h2 id="faq-titel">{{ s.faq_titel }}</h2>
+{{{ faq }}}
+    </div>
+    <div class="hersteller">
+      <h2 id="hersteller-titel">{{ s.hersteller_titel }}</h2>
+      <p>{{ s.hersteller_text }}</p>
+      <ul class="hersteller__liste">
+        {{{ hersteller }}}
+      </ul>
+    </div>
+  </div>
+</section>
