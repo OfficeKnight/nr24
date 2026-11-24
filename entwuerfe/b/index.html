@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf B, Typenschild | Notebook Reparatur 24</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf B der Startseite: Modellnummer vom Typenschild eingeben und den Festpreis für die Reparatur sehen.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Sofia Sans";font-weight:1 1000;font-display:swap;src:url("../schriften/sofia-sans-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Sofia Sans Extra Condensed";font-weight:1 1000;font-display:swap;src:url("../schriften/sofia-sans-extra-condensed-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+
+:root{
+  --gehaeuse:#1C1F22;
+  --gehaeuse-2:#25292D;
+  --kante:#33383D;
+  --schrift-hell:#E6E8E9;
+  --schrift-hell-2:#B4BBC1;
+  --etikett:#E9EBEC;
+  --etikett-2:#DADDDF;
+  --druck:#101214;
+  --druck-2:#3C4248;
+  --gelb:#FFD21F;
+  --gelb-tief:#E9BC00;
+  --schmal:"Sofia Sans Extra Condensed",ui-sans-serif,sans-serif;
+  --text:"Sofia Sans",ui-sans-serif,system-ui,sans-serif;
+  --rand:clamp(1rem,4vw,3rem);
+}
+*{box-sizing:border-box}
+html{color-scheme:dark;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--gehaeuse);color:var(--schrift-hell);font:400 1.0625rem/1.55 var(--text)}
+::selection{background:var(--gelb);color:var(--druck)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+:focus-visible{outline:3px solid var(--gelb);outline-offset:3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+img{max-width:100%;display:block}
+
+/* Entwurfsleiste */
+.entwurf{background:#0E1012;color:var(--schrift-hell-2);font:600 .85rem/1.3 var(--schmal);letter-spacing:.08em;text-transform:uppercase;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem var(--rand);flex-wrap:wrap}
+.entwurf nav{display:flex;gap:.25rem}
+.entwurf nav a{padding:.25rem .6rem;border:1px solid var(--kante);text-decoration:none;color:var(--schrift-hell)}
+.entwurf nav a[aria-current]{background:var(--gelb);border-color:var(--gelb);color:var(--druck)}
+
+/* Kopf */
+.kopf{display:flex;align-items:center;gap:1.5rem;justify-content:space-between;padding:1rem var(--rand);max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.marke{font:800 1.6rem/1 var(--schmal);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:var(--schrift-hell)}
+.marke span{color:var(--gelb)}
+.kopf nav ul{display:flex;gap:.25rem;margin:0;padding:0;list-style:none;flex-wrap:wrap}
+.kopf nav a{display:block;padding:.5rem .8rem;font:700 1.1rem/1 var(--schmal);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--schrift-hell-2);border-radius:4px}
+.kopf nav a:hover,.kopf nav a[aria-current]{color:var(--schrift-hell);background:var(--gehaeuse-2)}
+
+/* Gehäuseunterseite */
+.boden{max-width:1360px;margin:0 auto;padding:0 var(--rand) clamp(2rem,5vw,4rem)}
+.platte{position:relative;border-radius:28px;background:
+  radial-gradient(120% 80% at 30% 0%,#2A2F33 0%,transparent 60%),
+  linear-gradient(180deg,#23272B,#1A1D20);
+  box-shadow:inset 0 1px 0 #3A4045,inset 0 -2px 0 #0D0F11,0 30px 60px -30px rgba(0,0,0,.7);
+  padding:clamp(2.5rem,6vw,5.5rem) clamp(1.25rem,5vw,5rem) clamp(3rem,6vw,5rem);
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(2rem,4vw,4rem);align-items:start;overflow:hidden}
+/* Lüftungsschlitze */
+.schlitze{position:absolute;right:clamp(1.25rem,5vw,5rem);top:clamp(1.25rem,3vw,2.25rem);width:min(42%,460px);height:64px;
+  background:repeating-linear-gradient(90deg,#0B0D0E 0 7px,transparent 7px 15px);
+  -webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  border-radius:4px;opacity:.9}
+.fuss{position:absolute;width:74px;height:22px;border-radius:11px;background:linear-gradient(180deg,#121416,#0A0B0C);box-shadow:inset 0 1px 0 #2A2E32,0 2px 3px rgba(0,0,0,.5)}
+.fuss.lo{left:42px;top:30px}.fuss.ro{right:42px;bottom:30px}.fuss.lu{left:42px;bottom:30px}
+.schraube{position:absolute;width:16px;height:16px}
+.s1{left:30%;top:22px}.s2{right:30px;top:120px}.s3{left:24px;top:46%}.s4{right:46%;bottom:18px}
+
+/* Typenschild */
+.schild{position:relative;background:var(--etikett);color:var(--druck);border-radius:6px;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 10px 24px -12px rgba(0,0,0,.6),0 2px 3px rgba(0,0,0,.35);
+  padding:clamp(1.1rem,2.5vw,1.75rem);z-index:1}
+.schild::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--druck);border-radius:3px;pointer-events:none}
+.schild-kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.4rem .5rem .9rem;border-bottom:1.5px solid var(--druck)}
+.schild-kopf .hersteller{font:900 1.05rem/1 var(--schmal);letter-spacing:.14em;text-transform:uppercase}
+.schild-kopf .typ{display:block;margin-top:.4rem;font:700 .72rem/1.25 var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--druck-2)}
+.schild-kopf{padding-right:9rem}
+h1{font:850 clamp(2.6rem,5.4vw,4.4rem)/.9 var(--schmal);text-transform:uppercase;letter-spacing:.005em;margin:1.1rem .5rem .75rem;text-wrap:balance}
+.schild .unter{margin:0 .5rem 1.25rem;max-width:36rem;font-size:1.08rem;color:var(--druck-2)}
+.zeile{display:grid;grid-template-columns:9.5rem 1fr;border-top:1.5px solid var(--druck);margin:0 .5rem}
+.zeile>.feldname{font:800 .78rem/1.15 var(--text);letter-spacing:.08em;text-transform:uppercase;padding:1rem .75rem 1rem 0;border-right:1.5px solid var(--druck)}
+.zeile>.feldname small{display:block;font-weight:600;letter-spacing:.04em;color:var(--druck-2);margin-top:.2rem}
+.eingabe{display:flex;align-items:stretch;min-width:0}
+.eingabe input{flex:1;min-width:0;border:0;background:transparent;font:800 clamp(1.5rem,3vw,2.1rem)/1 var(--schmal);letter-spacing:.06em;text-transform:uppercase;color:var(--druck);padding:.7rem .9rem}
+.eingabe input::placeholder{color:#565F66;text-transform:none;letter-spacing:.01em;font-weight:600}
+.eingabe input:focus{outline:none;background:#F6F7F7}
+.eingabe button{border:0;background:var(--druck);color:var(--etikett);font:800 1.1rem/1 var(--schmal);letter-spacing:.1em;text-transform:uppercase;padding:0 1.25rem;cursor:pointer;margin:.45rem 0 .45rem .45rem;border-radius:3px}
+.eingabe button:hover{background:#2C3236}
+.eingabe:focus-within{box-shadow:inset 0 -3px 0 var(--druck)}
+.hilfe{margin:0 .5rem;padding:.6rem 0 .9rem 10.25rem;border-top:1px dashed var(--druck-2);font-size:.92rem;color:var(--druck-2)}
+.hilfe button{font:inherit;color:var(--druck);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.hilfe .chips{display:inline-flex;gap:.35rem;flex-wrap:wrap;margin-left:.35rem;vertical-align:middle}
+.hilfe .chips button{font:800 .8rem/1 var(--schmal);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--druck);padding:.3rem .45rem;border-radius:3px}
+.hilfe .chips button:hover{background:var(--druck);color:var(--etikett)}
+.treffer{list-style:none;margin:0 .5rem;padding:0}
+.treffer li{display:grid;grid-template-columns:9.5rem 1fr auto auto;align-items:center;border-top:1.5px solid var(--druck)}
+.treffer .feldname{font:800 .78rem/1.15 var(--text);letter-spacing:.08em;text-transform:uppercase;padding:.85rem .75rem .85rem 0;border-right:1.5px solid var(--druck);align-self:stretch;display:flex;align-items:center}
+.treffer .was{padding:.6rem .9rem;font:700 1.02rem/1.25 var(--text)}
+.treffer .was small{display:block;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--druck-2)}
+.treffer .betrag{font:850 1.9rem/1 var(--schmal);font-variant-numeric:tabular-nums;padding:0 .9rem;white-space:nowrap}
+.treffer a{font:800 1rem/1 var(--schmal);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;background:var(--gelb);color:var(--druck);padding:.7rem .9rem;border-radius:3px;border:1.5px solid var(--druck)}
+.treffer a:hover{background:var(--gelb-tief)}
+.treffer .leer{display:block;padding:1rem 0;font-size:1rem}
+.treffer .leer a{background:none;border:0;padding:0;text-decoration:underline;letter-spacing:0;text-transform:none;font:700 1rem/1 var(--text)}
+.marken{display:flex;align-items:center;gap:clamp(.75rem,2vw,1.5rem);margin:0 .5rem;padding:1rem 0 .35rem;border-top:1.5px solid var(--druck);flex-wrap:wrap}
+.marken .code{height:46px;width:auto;flex:none}
+.marken dl{display:flex;gap:.5rem;margin:0;flex-wrap:wrap}
+.marken dl div{border:1.5px solid var(--druck);border-radius:3px;padding:.4rem .55rem;display:flex;align-items:center;gap:.45rem}
+.marken dt{font:850 1.25rem/1 var(--schmal);font-variant-numeric:tabular-nums}
+.marken dd{margin:0;font:700 .72rem/1.2 var(--text);letter-spacing:.06em;text-transform:uppercase;max-width:7.5rem}
+
+/* Aufkleber */
+.aufkleber{position:absolute;right:-18px;top:-26px;width:156px;height:156px;border-radius:50%;background:var(--gelb);color:var(--druck);
+  display:grid;place-content:center;text-align:center;transform:rotate(9deg);box-shadow:0 8px 16px -8px rgba(0,0,0,.6),inset 0 0 0 5px var(--gelb),inset 0 0 0 6.5px var(--druck);z-index:2}
+.aufkleber b{display:block;font:900 1.65rem/.9 var(--schmal);text-transform:uppercase}
+.aufkleber span{display:block;font:700 .78rem/1.15 var(--text);margin-top:.35rem;padding:0 1.25rem}
+
+/* rechte Spalte: Hinweis */
+.hinweis{padding-top:clamp(4rem,8vw,6.5rem);color:var(--schrift-hell)}
+.hinweis h2{font:800 clamp(1.7rem,2.6vw,2.2rem)/1 var(--schmal);text-transform:uppercase;letter-spacing:.02em;margin:0 0 1rem}
+.hinweis p{margin:0 0 1.25rem;color:var(--schrift-hell-2);max-width:28rem}
+.unterseite{width:100%;max-width:340px;height:auto;margin:.5rem 0 1.5rem}
+.hinweis ol{margin:0;padding:0;list-style:none;display:grid;gap:.6rem;max-width:28rem}
+.hinweis ol li{display:grid;grid-template-columns:2rem 1fr;gap:.6rem;color:var(--schrift-hell-2);font-size:.98rem}
+.hinweis ol b{color:var(--schrift-hell);font-weight:700}
+.hinweis ol span.n{font:850 1.3rem/1.2 var(--schmal);color:var(--gelb)}
+
+/* Abschnitte */
+.abschnitt{max-width:1360px;margin:0 auto;padding:clamp(3rem,7vw,6rem) var(--rand) 0}
+.abschnitt>h2{font:850 clamp(2.4rem,5vw,4rem)/.92 var(--schmal);text-transform:uppercase;margin:0 0 .75rem;letter-spacing:.005em;text-wrap:balance}
+.abschnitt>p{margin:0 0 2rem;max-width:44rem;color:var(--schrift-hell-2);font-size:1.08rem}
+
+/* Preisetikett lang */
+.liste{background:var(--etikett);color:var(--druck);border-radius:6px;position:relative;padding:clamp(.9rem,2vw,1.4rem);box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.liste::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--druck);border-radius:3px;pointer-events:none}
+.liste table{width:100%;border-collapse:collapse;position:relative}
+.liste th,.liste td{padding:.8rem .75rem;text-align:left;border-top:1.5px solid var(--druck);vertical-align:middle}
+.liste thead th{border-top:0;font:800 .74rem/1.15 var(--text);letter-spacing:.1em;text-transform:uppercase;color:var(--druck-2)}
+.liste .geraet{font:800 1.4rem/1.05 var(--schmal);letter-spacing:.03em;text-transform:uppercase}
+.liste .platine{font:700 .85rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase}
+.liste .strich svg{height:30px;width:auto;display:block}
+.liste .betrag{font:850 1.75rem/1 var(--schmal);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.liste td:last-child,.liste th:last-child{text-align:right}
+.liste a{font:800 1rem/1 var(--schmal);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;background:var(--druck);color:var(--etikett);padding:.65rem .85rem;border-radius:3px;white-space:nowrap;display:inline-block}
+.liste a:hover{background:#2C3236}
+.liste tbody tr:hover{background:var(--etikett-2)}
+.liste tfoot td{font-size:.95rem;color:var(--druck-2)}
+.liste tfoot a{background:var(--gelb);color:var(--druck);border:1.5px solid var(--druck)}
+.liste tfoot a:hover{background:var(--gelb-tief)}
+
+/* Hinweisetikett Ablauf */
+.ablauf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;margin:0;padding:clamp(.9rem,2vw,1.4rem);background:var(--etikett);color:var(--druck);border-radius:6px;position:relative;box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.ablauf::before{content:"";position:absolute;inset:7px;border:1.5px solid var(--druck);border-radius:3px;pointer-events:none}
+.ablauf li{padding:1.25rem 1.25rem 1.4rem;border-left:1.5px solid var(--druck);position:relative}
+.ablauf li:first-child{border-left:0}
+.ablauf svg{width:54px;height:54px;display:block;margin-bottom:.9rem}
+.ablauf h3{font:850 1.5rem/1 var(--schmal);text-transform:uppercase;margin:0 0 .45rem;letter-spacing:.02em}
+.ablauf p{margin:0;font-size:.98rem;color:var(--druck-2)}
+
+/* Teile als kleine Etiketten */
+.teile{display:flex;flex-wrap:wrap;gap:1rem;margin:0;padding:0;list-style:none}
+.teile a{display:grid;grid-template-columns:auto 1fr;gap:.2rem .9rem;align-items:center;background:var(--etikett);color:var(--druck);text-decoration:none;padding:.85rem 1.1rem .85rem .85rem;border-radius:5px;box-shadow:0 8px 18px -10px rgba(0,0,0,.6);min-width:15rem;position:relative}
+.teile a::before{content:"";position:absolute;inset:5px;border:1.5px solid var(--druck);border-radius:3px}
+.teile .kz{grid-row:span 2;font:900 1.2rem/1 var(--schmal);letter-spacing:.08em;background:var(--druck);color:var(--etikett);padding:.7rem .55rem;border-radius:2px}
+.teile b{font:850 1.35rem/1 var(--schmal);text-transform:uppercase}
+.teile small{font:700 .78rem/1.2 var(--text);letter-spacing:.04em;color:var(--druck-2)}
+.teile a:hover{background:#F6F7F7}
+
+/* Fuß */
+.fusszeile{max-width:1360px;margin:clamp(3rem,7vw,6rem) auto 0;padding:2rem var(--rand) 2.5rem;border-top:1px solid var(--kante);display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;color:var(--schrift-hell-2);font-size:.95rem}
+.fusszeile b{display:block;color:var(--schrift-hell);font:800 1.05rem/1.2 var(--schmal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.fusszeile ul{margin:0;padding:0;list-style:none;display:grid;gap:.3rem}
+.fusszeile p{margin:0}
+.kleingedruckt{max-width:1360px;margin:0 auto;padding:0 var(--rand) 2rem;font-size:.82rem;color:#8E979E}
+
+@media (max-width:1020px){
+  .platte{grid-template-columns:minmax(0,1fr)}
+  .hinweis{padding-top:0}
+  .ablauf{grid-template-columns:1fr 1fr}
+  .ablauf li:nth-child(3){border-left:0}
+  .ablauf li:nth-child(n+3){border-top:1.5px solid var(--druck)}
+  .fusszeile{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .platte{border-radius:20px;padding-top:4.5rem}
+  .schlitze{width:60%;height:40px;left:20%;right:auto}
+  .fuss.lo,.s1,.s3,.s4{display:none}
+  .aufkleber{width:118px;height:118px;right:-10px;top:-46px}
+  .aufkleber b{font-size:1.25rem}
+  .aufkleber span{font-size:.66rem;padding:0 .9rem}
+  .schild-kopf{padding-right:6.5rem}
+  .zeile{grid-template-columns:1fr}
+  .zeile>.feldname{border-right:0;padding:.75rem 0 .1rem}
+  .eingabe input{padding:.6rem 0}
+  .hilfe{padding-left:0}
+  .treffer li{grid-template-columns:1fr auto;padding:.5rem 0}
+  .treffer .feldname{display:none}
+  .treffer .was{grid-column:1/-1;padding:.25rem 0}
+  .treffer .betrag{padding:0}
+  .liste thead{display:none}
+  .liste table,.liste tbody,.liste tr,.liste td{display:block}
+  .liste tbody tr{display:grid;grid-template-columns:1fr auto;gap:.3rem .75rem;padding:.85rem .5rem;border-top:1.5px solid var(--druck)}
+  .liste tbody td{border:0;padding:0}
+  .liste td.strich{display:none}
+  .liste td.geraet-z{grid-column:1/-1}
+  .liste tfoot tr{display:grid;gap:.75rem;padding:.85rem .5rem;border-top:1.5px solid var(--druck)}
+  .liste tfoot td{border:0;padding:0;text-align:left!important}
+  .ablauf{grid-template-columns:1fr}
+  .ablauf li{border-left:0!important;border-top:1.5px solid var(--druck)}
+  .ablauf li:first-child{border-top:0}
+  .teile a{min-width:0;width:100%}
+  .fusszeile{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="schraube" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#15181A" stroke="#3A4045"/><circle cx="8" cy="8" r="5" fill="#2B3034"/><path d="M5.4 5.4l5.2 5.2M10.6 5.4l-5.2 5.2" stroke="#0E1012" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<div class="entwurf" role="region" aria-label="Entwurfsauswahl">
+  <span>Entwurf B, Typenschild. Musterdaten, keine Bestellung möglich.</span>
+  <nav aria-label="Entwürfe"><a href="../">Übersicht</a><a href="../a/">A</a><a href="../b/" aria-current="page">B</a><a href="../c/">C</a><a href="../../">Demo</a></nav>
+</div>
+
+<header class="kopf">
+  <a class="marke" href="./">Notebook Reparatur <span>24</span></a>
+  <nav aria-label="Hauptnavigation"><ul>
+    <li><a href="./" aria-current="page">Reparatur</a></li>
+    <li><a href="../../ersatzteile/">Ersatzteile</a></li>
+    <li><a href="../../werkstatt/">Werkstatt</a></li>
+    <li><a href="../../kontakt/">Kontakt</a></li>
+    <li><a href="../../warenkorb/">Warenkorb</a></li>
+  </ul></nav>
+</header>
+
+<main>
+<div class="boden">
+  <div class="platte">
+    <span class="schlitze" aria-hidden="true"></span>
+    <span class="fuss lo" aria-hidden="true"></span><span class="fuss lu" aria-hidden="true"></span><span class="fuss ro" aria-hidden="true"></span>
+    <svg class="schraube s1" aria-hidden="true"><use href="#schraube"/></svg><svg class="schraube s2" aria-hidden="true"><use href="#schraube"/></svg><svg class="schraube s3" aria-hidden="true"><use href="#schraube"/></svg><svg class="schraube s4" aria-hidden="true"><use href="#schraube"/></svg>
+
+    <div class="schild">
+      <div class="aufkleber" aria-hidden="true"><div><b>Preis vor dem Versand</b><span>Festpreis je Modell</span></div></div>
+      <div class="schild-kopf">
+        <span class="hersteller">Notebook Reparatur 24<span class="typ">Mainboard-Reparatur auf Bauteilebene</span></span>
+      </div>
+      <h1>Notebook startet nicht? Reparatur zum Festpreis.</h1>
+      <p class="unter">Geben Sie die Modellnummer von Ihrem Typenschild ein. Sie sehen sofort, was die Reparatur kostet, und schicken erst danach ein.</p>
+      <form id="suche" role="search" action="../../suche/">
+        <div class="zeile">
+          <label class="feldname" for="modell">Modell<small>Model No.</small></label>
+          <div class="eingabe">
+            <input id="modell" name="q" type="search" autocomplete="off" placeholder="z. B. AN515 oder Legion 7" aria-controls="treffer" aria-describedby="status">
+            <button type="submit">Preis</button>
+          </div>
+        </div>
+        <p class="hilfe">Beispiele<span class="chips"><button type="button" data-q="AN515">AN515</button><button type="button" data-q="Legion">Legion</button><button type="button" data-q="Precision">Precision</button><button type="button" data-q="MacBook">MacBook</button></span></p>
+        <p class="vh" id="status" aria-live="polite"></p>
+        <ul class="treffer" id="treffer"></ul>
+      </form>
+      <div class="marken">
+        <svg class="code" id="code-kopf" viewBox="0 0 160 46" aria-hidden="true"></svg>
+        <dl>
+          <div><dt>100 %</dt><dd>positiv bewertet bei eBay</dd></div>
+          <div><dt>4.900+</dt><dd>Artikel verkauft</dd></div>
+          <div><dt>1 Jahr</dt><dd>Gewährleistung auf Reparaturen</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <aside class="hinweis" aria-labelledby="hinweis-titel">
+      <h2 id="hinweis-titel">Wo steht die Modellnummer?</h2>
+      <p>Drehen Sie Ihr Notebook um. Auf dem Schild an der Unterseite steht sie hinter „Model“ oder „Modell“, bei Acer zum Beispiel AN515-55.</p>
+      <svg class="unterseite" viewBox="0 0 340 210" role="img" aria-labelledby="us-titel">
+        <title id="us-titel">Skizze einer Notebook-Unterseite mit markiertem Typenschild</title>
+        <rect x="6" y="6" width="328" height="198" rx="18" fill="none" stroke="#B4BBC1" stroke-width="2"/>
+        <g stroke="#B4BBC1" stroke-width="2.5" stroke-linecap="round">
+          <path d="M190 30v22M200 30v22M210 30v22M220 30v22M230 30v22M240 30v22M250 30v22M260 30v22M270 30v22M280 30v22M290 30v22"/>
+        </g>
+        <rect x="26" y="20" width="40" height="12" rx="6" fill="none" stroke="#B4BBC1" stroke-width="2"/>
+        <rect x="274" y="178" width="40" height="12" rx="6" fill="none" stroke="#B4BBC1" stroke-width="2"/>
+        <rect x="26" y="178" width="40" height="12" rx="6" fill="none" stroke="#B4BBC1" stroke-width="2"/>
+        <rect x="110" y="112" width="120" height="56" rx="4" fill="#FFD21F"/>
+        <path d="M122 126h52M122 138h80M122 150h64" stroke="#101214" stroke-width="3"/>
+      </svg>
+      <ol>
+        <li><span class="n">1</span><span><b>Modell eingeben</b> und den Festpreis ablesen.</span></li>
+        <li><span class="n">2</span><span><b>Nicht dabei?</b> Diagnose ab 29,90 € buchen oder kostenlos anfragen.</span></li>
+        <li><span class="n">3</span><span><b>Einschicken</b> und nach dem Test mit Gewährleistung zurückbekommen.</span></li>
+      </ol>
+    </aside>
+  </div>
+</div>
+
+<section class="abschnitt" aria-labelledby="preise-titel">
+  <h2 id="preise-titel">Alle Festpreise</h2>
+  <p>Jedes Angebot gilt für das genannte Modell oder die genannte Platine. Preise inklusive 19 % MwSt., Stand 22.11.2026.</p>
+  <div class="liste">
+    <table>
+      <thead><tr><th scope="col">Gerät</th><th scope="col">Platine</th><th scope="col"><span class="vh">Strichcode</span></th><th scope="col" style="text-align:right">Preis</th><th scope="col"><span class="vh">Aktion</span></th></tr></thead>
+      <tbody id="liste"></tbody>
+      <tfoot><tr><td colspan="3">Ihr Modell fehlt? Diagnose mit Kostenvoranschlag ab 29,90 €, repariert wird erst nach Ihrer Zustimmung.</td><td colspan="2"><a href="../../notebook-reparatur/anfrage/">Kostenlos anfragen</a></td></tr></tfoot>
+    </table>
+  </div>
+</section>
+
+<section class="abschnitt" aria-labelledby="ablauf-titel">
+  <h2 id="ablauf-titel">So kommt es zurück</h2>
+  <p>Die Reparatur läuft per Post. Sie wissen bei jedem Schritt, was passiert und was es kostet.</p>
+  <ol class="ablauf">
+    <li><svg viewBox="0 0 54 54" fill="none" stroke="#101214" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="6" width="36" height="42" rx="3"/><path d="M17 18h20M17 26h20M17 34h12"/></svg><h3>Buchen</h3><p>Festpreis buchen, Diagnose ab 29,90 € oder eine kostenlose Anfrage senden.</p></li>
+    <li><svg viewBox="0 0 54 54" fill="none" stroke="#101214" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M6 18l21-10 21 10v20L27 48 6 38z"/><path d="M6 18l21 10 21-10M27 28v20"/></svg><h3>Einschicken</h3><p>Gut gepolstert mit Netzteil und Akku, Fehlerbeschreibung und Kontaktdaten beilegen.</p></li>
+    <li><svg viewBox="0 0 54 54" fill="none" stroke="#101214" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="12" width="38" height="30" rx="2"/><path d="M15 12V6M23 12V6M31 12V6M39 12V6M15 48v-6M23 48v-6M31 48v-6M39 48v-6"/><rect x="20" y="21" width="14" height="12"/></svg><h3>Reparieren</h3><p>Wir messen die Platine, ersetzen das defekte Bauteil und testen das Gerät ausführlich.</p></li>
+    <li><svg viewBox="0 0 54 54" fill="none" stroke="#101214" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M27 6l17 6v13c0 11-7 18-17 23C17 43 10 36 10 25V12z"/><path d="M19 27l6 6 11-12"/></svg><h3>Zurück</h3><p>Rückversand per Paket, 1 Jahr Gewährleistung auf die Reparatur.</p></li>
+  </ol>
+</section>
+
+<section class="abschnitt" aria-labelledby="teile-titel">
+  <h2 id="teile-titel">Ersatzteile</h2>
+  <p>Geprüfte Teile aus der Werkstatt, zum Selbsteinbau oder für Ihre eigene Reparatur.</p>
+  <ul class="teile">
+    <li><a href="../../ersatzteile/displays/"><span class="kz">LCD</span><b>Displays</b><small><span data-teile="displays"></span> Artikel, Panels und Kabel</small></a></li>
+    <li><a href="../../ersatzteile/grafikkarten/"><span class="kz">GPU</span><b>Grafikkarten</b><small><span data-teile="grafikkarten"></span> Artikel für iMac 27 Zoll</small></a></li>
+    <li><a href="../../ersatzteile/prozessoren/"><span class="kz">CPU</span><b>Prozessoren</b><small><span data-teile="prozessoren"></span> Artikel für Notebooks</small></a></li>
+    <li><a href="../../ersatzteile/werkstattbedarf/"><span class="kz">WKZ</span><b>Werkstattbedarf</b><small><span data-teile="werkstattbedarf"></span> Artikel, Tester und Flussmittel</small></a></li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <div class="fusszeile">
+    <div><b>Notebook Reparatur 24</b><p>Max Mustermann<br>Musterstraße 1, 12345 Musterstadt</p></div>
+    <div><b>Kontakt</b><ul><li><a href="tel:+491234567890">01234 567890</a></li><li><a href="mailto:info@example.com">info@example.com</a></li></ul></div>
+    <div><b>Geöffnet</b><ul><li>Mo bis Fr [9 bis 18 Uhr]</li><li>Sa [9 bis 13 Uhr]</li></ul></div>
+    <div><b>Rechtliches</b><ul><li><a href="../../impressum/">Impressum</a></li><li><a href="../../datenschutz/">Datenschutz</a></li><li><a href="../../agb/">AGB</a></li><li><a href="../../widerruf/">Widerruf</a></li></ul></div>
+  </div>
+  <p class="kleingedruckt">Entwurf B. Strichcodes sind Gestaltung und nicht lesbar. Alle Preise inklusive 19 % MwSt.</p>
+</footer>
+
+<script src="../daten.js"></script>
+<script>
+(function(){
+  var D=window.NR24, euro=new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'});
+  function strich(svg,text,w,h){
+    var x=2,s=0,out='';for(var i=0;i<text.length;i++)s=(s*31+text.charCodeAt(i))>>>0;
+    while(x<w-4){s=(s*1103515245+12345)>>>0;var bw=1+((s>>16)%3);out+='<rect x="'+x+'" y="0" width="'+bw+'" height="'+h+'" fill="#101214"/>';x+=bw+1+((s>>20)%3)}
+    svg.setAttribute('viewBox','0 0 '+w+' '+h);svg.innerHTML=out;
+  }
+  strich(document.getElementById('code-kopf'),'NR24 Reparatur',160,46);
+  function geraet(r){
+    if(/PlayStation/.test(r.n))return 'Sony PlayStation 4';
+    if(/Diagnose/.test(r.n))return r.h+' Mainboard-Diagnose';
+    return (r.h+' '+(r.m||r.n.replace(r.h,'').replace(/(Mainboard-|Logicboard-)?Reparatur.*$/,''))).trim();
+  }
+  var tb=document.getElementById('liste');
+  D.reparaturen.filter(function(r){return r.p>=59}).sort(function(a,b){return b.p-a.p}).forEach(function(r){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td class="geraet-z"><span class="geraet"></span></td><td class="platine"></td><td class="strich"><svg aria-hidden="true"></svg></td><td class="betrag">'+euro.format(r.p)+'</td><td><a href="'+r.u+'">Buchen</a></td>';
+    tr.querySelector('.geraet').textContent=geraet(r);
+    tr.querySelector('.platine').textContent=r.t||'alle Platinen';
+    tr.querySelector('a').setAttribute('aria-label',r.n+' buchen');
+    strich(tr.querySelector('svg'),r.n,120,30);
+    tb.appendChild(tr);
+  });
+  document.querySelectorAll('[data-teile]').forEach(function(el){el.textContent=D.teile[el.dataset.teile]});
+
+  var f=document.getElementById('suche'),q=document.getElementById('modell'),out=document.getElementById('treffer'),st=document.getElementById('status');
+  function norm(s){return s.toLowerCase().replace(/[\s\-_]/g,'')}
+  function zeige(){
+    var v=norm(q.value);out.innerHTML='';
+    if(v.length<2){st.textContent='';return}
+    var t=D.reparaturen.filter(function(r){return norm(r.n+' '+r.m+' '+r.t+' '+r.h).indexOf(v)>-1}).slice(0,4);
+    if(!t.length){out.innerHTML='<li><span class="leer">Für dieses Modell gibt es noch keinen Festpreis. <a href="../../notebook-reparatur/anfrage/">Diagnose oder kostenlose Anfrage</a></span></li>';st.textContent='Kein Treffer';return}
+    t.forEach(function(r){
+      var li=document.createElement('li');
+      li.innerHTML='<span class="feldname">Festpreis</span><span class="was"></span><span class="betrag">'+euro.format(r.p)+'</span><a href="'+r.u+'">Buchen</a>';
+      li.querySelector('.was').textContent=r.n;
+      if(r.t){var s=document.createElement('small');s.textContent='Platine '+r.t;li.querySelector('.was').appendChild(s)}
+      out.appendChild(li);
+    });
+    st.textContent=t.length+' Treffer';
+  }
+  q.addEventListener('input',zeige);
+  f.addEventListener('submit',function(e){e.preventDefault();zeige();var a=out.querySelector('a');if(a)a.focus()});
+  document.querySelectorAll('.chips button').forEach(function(b){b.addEventListener('click',function(){q.value=b.dataset.q;zeige();q.focus()})});
+})();
+</script>
+</body>
+</html>

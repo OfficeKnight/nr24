@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entwurf C, Preistafel | Notebook Reparatur 24</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Entwurf C der Startseite: alle Festpreise für Notebook-Reparaturen auf einer Preistafel.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Big Shoulders Display";font-weight:100 900;font-display:swap;src:url("../schriften/big-shoulders-display-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:"Public Sans";font-weight:100 900;font-display:swap;src:url("../schriften/public-sans-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+
+:root{
+  --grund:#121110;
+  --tafel:#0A0908;
+  --rahmen:#24211E;
+  --rahmen-2:#34302B;
+  --text:#F1ECE4;
+  --text-2:#BDB4A8;
+  --led:#FFB01F;
+  --led-glut:rgba(255,176,31,.45);
+  --geist:#2A221A;
+  --gruen:#5FD38A;
+  --schild:"Big Shoulders Display",ui-sans-serif,sans-serif;
+  --fliess:"Public Sans",ui-sans-serif,system-ui,sans-serif;
+  --rand:clamp(1rem,4vw,3rem);
+}
+*{box-sizing:border-box}
+html{color-scheme:dark;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--grund);color:var(--text);font:400 1.0625rem/1.6 var(--fliess)}
+::selection{background:var(--led);color:var(--tafel)}
+a{color:var(--text);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{color:var(--led)}
+:focus-visible{outline:3px solid var(--led);outline-offset:3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+img{max-width:100%;display:block}
+
+.entwurf{background:#000;color:var(--text-2);font:700 .9rem/1.3 var(--schild);letter-spacing:.1em;text-transform:uppercase;display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem var(--rand);flex-wrap:wrap}
+.entwurf nav{display:flex;gap:.25rem}
+.entwurf nav a{padding:.25rem .65rem;border:1px solid var(--rahmen-2);text-decoration:none;color:var(--text)}
+.entwurf nav a[aria-current]{background:var(--led);color:var(--tafel);border-color:var(--led)}
+
+.kopf{max-width:1360px;margin:0 auto;padding:1.1rem var(--rand);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.marke{font:900 1.75rem/1 var(--schild);text-transform:uppercase;letter-spacing:.03em;text-decoration:none;color:var(--text)}
+.marke b{color:var(--led);font-weight:900}
+.kopf ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.kopf ul a{display:block;padding:.45rem .8rem;font:800 1.15rem/1 var(--schild);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--text-2)}
+.kopf ul a:hover,.kopf ul a[aria-current]{color:var(--text)}
+.kopf ul a[aria-current]{box-shadow:inset 0 -2px 0 var(--led)}
+
+/* Erster Bildschirm */
+.start{max-width:1360px;margin:0 auto;padding:clamp(1.5rem,4vw,3.5rem) var(--rand) clamp(3rem,6vw,5rem);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+h1{font:900 clamp(3rem,6.4vw,5.6rem)/.92 var(--schild);text-transform:uppercase;letter-spacing:.005em;margin:0 0 1.5rem;text-wrap:balance}
+h1 span{color:var(--led)}
+.start-text>p{margin:0 0 2rem;max-width:30rem;color:var(--text-2);font-size:1.12rem}
+.filter label{display:block;font:800 1.05rem/1 var(--schild);letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-bottom:.6rem}
+.filter .feld{display:flex;border:2px solid var(--rahmen-2);background:var(--tafel);border-radius:4px}
+.filter .feld:focus-within{border-color:var(--led);box-shadow:0 0 0 4px rgba(255,176,31,.15)}
+.filter input{flex:1;min-width:0;border:0;background:transparent;color:var(--text);font:700 1.6rem/1 var(--schild);letter-spacing:.06em;text-transform:uppercase;padding:.9rem 1rem}
+.filter input::placeholder{color:#8B8276;text-transform:none;letter-spacing:.02em;font-weight:600}
+.filter input:focus{outline:none}
+.filter input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.filter button[type=reset]{border:0;background:none;color:var(--text-2);font:700 1rem/1 var(--schild);letter-spacing:.1em;text-transform:uppercase;padding:0 1rem;cursor:pointer}
+.filter button[type=reset]:hover{color:var(--led)}
+.filter .hinweis{margin:.75rem 0 0;font-size:.95rem;color:var(--text-2);min-height:1.6em}
+.filter .hinweis a{color:var(--led);font-weight:700}
+.ausweg{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--rahmen)}
+.ausweg p{margin:0;color:var(--text-2);font-size:.98rem;flex:1 1 14rem}
+.knopf{display:inline-block;font:900 1.2rem/1 var(--schild);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--tafel);background:var(--led);padding:.95rem 1.4rem;border-radius:4px}
+.knopf:hover{color:var(--tafel);background:#FFC452}
+
+/* Preistafel */
+.tafel{background:var(--tafel);border-radius:10px;padding:clamp(.9rem,2vw,1.4rem);box-shadow:inset 0 0 0 2px var(--rahmen),inset 0 0 0 8px #161412,inset 0 0 0 10px var(--rahmen-2),0 40px 80px -40px #000;position:relative}
+.tafel-kopf{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem .9rem 1rem;border-bottom:2px solid var(--rahmen)}
+.tafel-kopf h2{font:900 clamp(1.4rem,2.4vw,2rem)/1 var(--schild);letter-spacing:.1em;text-transform:uppercase;margin:0}
+.tafel-kopf span{font:800 .95rem/1 var(--schild);letter-spacing:.14em;text-transform:uppercase;color:var(--text-2)}
+.reihen{list-style:none;margin:0;padding:0}
+.reihe{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:.5rem 1.25rem;padding:.8rem .9rem;border-bottom:2px solid #1A1715}
+.reihe:last-child{border-bottom:0}
+.reihe .schild{font:800 clamp(1.15rem,1.9vw,1.5rem)/1.05 var(--schild);letter-spacing:.06em;text-transform:uppercase;color:var(--text)}
+.reihe .schild small{display:block;font:700 .78rem/1.2 var(--schild);letter-spacing:.14em;color:var(--text-2);margin-top:.2rem}
+.ziffern{display:flex;align-items:flex-end;gap:3px;height:clamp(40px,4.4vw,56px)}
+.ziffern svg{height:100%;width:auto;overflow:visible}
+.ziffern .seg{fill:var(--geist)}
+.ziffern .an{fill:var(--led);filter:drop-shadow(0 0 3px var(--led-glut))}
+.ziffern .klein{height:62%}
+.reihe a{font:900 1rem/1 var(--schild);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--led);border:2px solid var(--led);padding:.6rem .75rem;border-radius:3px;white-space:nowrap}
+.reihe a:hover{background:var(--led);color:var(--tafel)}
+.reihe.aus .schild,.reihe.aus .schild small{color:#5C554C}
+.reihe.aus .ziffern .an{fill:var(--geist);filter:none}
+.reihe.aus a{color:#5C554C;border-color:var(--rahmen-2);pointer-events:none}
+.tafel-fuss{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem .9rem .3rem;border-top:2px solid var(--rahmen);font:700 .9rem/1.2 var(--schild);letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.tafel-fuss b{color:var(--gruen);font-weight:800}
+
+/* Abschnitte */
+.band{border-top:1px solid var(--rahmen)}
+.innen{max-width:1360px;margin:0 auto;padding:clamp(3rem,7vw,6rem) var(--rand)}
+.band h2{font:900 clamp(2.4rem,5vw,4.2rem)/.9 var(--schild);text-transform:uppercase;margin:0 0 1rem;text-wrap:balance}
+.band .lead{max-width:42rem;color:var(--text-2);margin:0 0 2.5rem;font-size:1.1rem}
+
+/* Diagnose */
+.diagnose{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.diag-tafel{background:var(--tafel);border-radius:10px;box-shadow:inset 0 0 0 2px var(--rahmen),inset 0 0 0 8px #161412,inset 0 0 0 10px var(--rahmen-2);padding:1.5rem 1.75rem;display:grid;gap:1.25rem}
+.diag-tafel .reihe{padding:.4rem 0;border:0;grid-template-columns:minmax(0,1fr) auto}
+.diag-tafel .ziffern{height:clamp(56px,6vw,84px)}
+.diagnose ul{margin:1.5rem 0 0;padding:0;list-style:none;display:grid;gap:.75rem}
+.diagnose li{display:grid;grid-template-columns:1.5rem 1fr;gap:.6rem;color:var(--text-2)}
+.diagnose li svg{width:20px;height:20px;margin-top:.25rem;stroke:var(--gruen)}
+
+/* Ablauf als Lauftext-Schritte */
+.schritte{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--rahmen)}
+.schritte li{padding:1.5rem 1.5rem 0 0;position:relative}
+.schritte li::before{content:"";position:absolute;top:-6px;left:0;width:10px;height:10px;border-radius:50%;background:var(--led)}
+.schritte h3{font:900 1.75rem/1 var(--schild);text-transform:uppercase;letter-spacing:.03em;margin:0 0 .5rem}
+.schritte p{margin:0;color:var(--text-2);font-size:1rem;max-width:20rem}
+
+/* Vertrauen und Teile */
+.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem)}
+.anzeige{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:2px solid var(--rahmen)}
+.anzeige li{display:grid;grid-template-columns:9rem 1fr;align-items:center;gap:1rem;padding:1rem 0;border-bottom:2px solid var(--rahmen)}
+.anzeige b{font:900 2.3rem/1 var(--schild);color:var(--led);font-variant-numeric:tabular-nums}
+.anzeige span{color:var(--text-2)}
+.teile{list-style:none;margin:0;padding:0;border-top:2px solid var(--rahmen)}
+.teile a{display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;padding:1.05rem 0;border-bottom:2px solid var(--rahmen);text-decoration:none}
+.teile b{font:900 1.7rem/1 var(--schild);text-transform:uppercase;letter-spacing:.04em}
+.teile span{font:800 1rem/1 var(--schild);letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
+.teile a:hover b,.teile a:hover span{color:var(--led)}
+
+footer{border-top:1px solid var(--rahmen)}
+.fuss{max-width:1360px;margin:0 auto;padding:2.5rem var(--rand);display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;color:var(--text-2);font-size:.95rem}
+.fuss b{display:block;font:900 1.15rem/1 var(--schild);letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:.6rem}
+.fuss ul{margin:0;padding:0;list-style:none;display:grid;gap:.3rem}
+.fuss p{margin:0}
+
+@media (max-width:1040px){
+  .start{grid-template-columns:minmax(0,1fr)}
+  .diagnose,.zwei{grid-template-columns:minmax(0,1fr)}
+  .schritte{grid-template-columns:1fr 1fr;row-gap:2rem}
+  .fuss{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .reihe{grid-template-columns:minmax(0,1fr) auto;padding:.8rem .4rem}
+  .reihe .schild{grid-column:1/-1}
+  .ziffern{height:38px}
+  .tafel-kopf{flex-direction:column;gap:.4rem}
+  .schritte{grid-template-columns:1fr}
+  .anzeige li{grid-template-columns:6.5rem 1fr}
+  .fuss{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="entwurf" role="region" aria-label="Entwurfsauswahl">
+  <span>Entwurf C, Preistafel. Musterdaten, keine Bestellung möglich.</span>
+  <nav aria-label="Entwürfe"><a href="../">Übersicht</a><a href="../a/">A</a><a href="../b/">B</a><a href="../c/" aria-current="page">C</a><a href="../../">Demo</a></nav>
+</div>
+
+<header class="kopf">
+  <a class="marke" href="./">Notebook Reparatur <b>24</b></a>
+  <nav aria-label="Hauptnavigation"><ul>
+    <li><a href="./" aria-current="page">Reparatur</a></li>
+    <li><a href="../../ersatzteile/">Ersatzteile</a></li>
+    <li><a href="../../werkstatt/">Werkstatt</a></li>
+    <li><a href="../../kontakt/">Kontakt</a></li>
+    <li><a href="../../warenkorb/">Warenkorb</a></li>
+  </ul></nav>
+</header>
+
+<main>
+<div class="start">
+  <div class="start-text">
+    <h1>Der Preis steht. <span>Bevor Sie einschicken.</span></h1>
+    <p>Wir reparieren Notebook-Mainboards auf Bauteilebene. Für viele Modelle gilt ein fester Preis, mit 1 Jahr Gewährleistung. Suchen Sie Ihr Gerät auf der Tafel.</p>
+    <form class="filter" id="filter" role="search" action="../../suche/">
+      <label for="modell">Ihr Modell</label>
+      <div class="feld">
+        <input id="modell" name="q" type="search" autocomplete="off" placeholder="z. B. Nitro, Legion, MacBook" aria-controls="reihen" aria-describedby="hinweis">
+        <button type="reset">Alle</button>
+      </div>
+      <p class="hinweis" id="hinweis" aria-live="polite">Tippen Sie, und die Tafel zeigt nur noch passende Preise.</p>
+    </form>
+    <div class="ausweg">
+      <p>Ihr Modell steht nicht auf der Tafel? Die Diagnose klärt den Preis, repariert wird erst nach Ihrer Zustimmung.</p>
+      <a class="knopf" href="../../notebook-reparatur/anfrage/">Reparatur anfragen</a>
+    </div>
+  </div>
+
+  <section class="tafel" aria-labelledby="tafel-titel">
+    <div class="tafel-kopf"><h2 id="tafel-titel">Mainboard-Reparatur</h2><span>Festpreis in Euro</span></div>
+    <ul class="reihen" id="reihen"></ul>
+    <div class="tafel-fuss"><span>Inkl. 19 % MwSt.</span><span><b>1 Jahr</b> Gewährleistung</span><span>Stand 22.11.2026</span></div>
+  </section>
+</div>
+
+<section class="band" aria-labelledby="diag-titel">
+  <div class="innen diagnose">
+    <div>
+      <h2 id="diag-titel">Kein Festpreis? Erst messen, dann entscheiden.</h2>
+      <p class="lead">Für Notebooks ohne festes Angebot buchen Sie die Diagnose. Wir finden den Fehler und schicken Ihnen einen Kostenvoranschlag per E-Mail.</p>
+      <ul>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg><span>Ganzes Gerät für Acer, Asus, HP, Lenovo, Medion und Samsung</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg><span>Auf Bauteilebene der Platine für Acer und Lenovo</span></li>
+        <li><svg viewBox="0 0 20 20" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5"/></svg><span>Repariert wird erst nach Ihrer Freigabe</span></li>
+      </ul>
+    </div>
+    <div class="diag-tafel">
+      <div class="reihe"><span class="schild">Diagnose<small>Ganzes Gerät</small></span><span class="ziffern" data-preis="29.9"></span></div>
+      <div class="reihe"><span class="schild">Diagnose<small>Bauteilebene</small></span><span class="ziffern" data-preis="59"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="ablauf-titel">
+  <div class="innen">
+    <h2 id="ablauf-titel">So läuft es</h2>
+    <p class="lead">Die Reparatur läuft per Post, Sie müssen nicht in die Werkstatt kommen.</p>
+    <ol class="schritte">
+      <li><h3>Buchen</h3><p>Festpreis oder Diagnose im Shop buchen, oder kostenlos anfragen.</p></li>
+      <li><h3>Einschicken</h3><p>Notebook mit Netzteil und Akku gut gepolstert verpacken, Fehlerbeschreibung beilegen.</p></li>
+      <li><h3>Reparieren</h3><p>Wir finden das defekte Bauteil, ersetzen es und testen das Gerät ausführlich.</p></li>
+      <li><h3>Zurück</h3><p>Rückversand per Paket, mit 1 Jahr Gewährleistung auf die Reparatur.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-label="Erfahrung und Ersatzteile">
+  <div class="innen zwei">
+    <div>
+      <h2>Bei eBay seit Jahren bewährt</h2>
+      <ul class="anzeige">
+        <li><b>100 %</b><span>positive Bewertungen bei eBay</span></li>
+        <li><b>4.900+</b><span>verkaufte Artikel bei eBay</span></li>
+        <li><b>1 Jahr</b><span>Gewährleistung auf jede Reparatur</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Ersatzteile</h2>
+      <ul class="teile">
+        <li><a href="../../ersatzteile/displays/"><b>Displays</b><span><span data-teile="displays"></span> Artikel</span></a></li>
+        <li><a href="../../ersatzteile/grafikkarten/"><b>Grafikkarten</b><span><span data-teile="grafikkarten"></span> Artikel</span></a></li>
+        <li><a href="../../ersatzteile/prozessoren/"><b>Prozessoren</b><span><span data-teile="prozessoren"></span> Artikel</span></a></li>
+        <li><a href="../../ersatzteile/werkstattbedarf/"><b>Werkstattbedarf</b><span><span data-teile="werkstattbedarf"></span> Artikel</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fuss">
+    <div><b>Notebook Reparatur 24</b><p>Max Mustermann<br>Musterstraße 1, 12345 Musterstadt</p></div>
+    <div><b>Kontakt</b><ul><li><a href="tel:+491234567890">01234 567890</a></li><li><a href="mailto:info@example.com">info@example.com</a></li></ul></div>
+    <div><b>Geöffnet</b><ul><li>Mo bis Fr [9 bis 18 Uhr]</li><li>Sa [9 bis 13 Uhr]</li></ul></div>
+    <div><b>Rechtliches</b><ul><li><a href="../../impressum/">Impressum</a></li><li><a href="../../datenschutz/">Datenschutz</a></li><li><a href="../../agb/">AGB</a></li><li><a href="../../widerruf/">Widerruf</a></li></ul></div>
+  </div>
+</footer>
+
+<script src="../daten.js"></script>
+<script>
+(function(){
+  var D=window.NR24, euro=new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'});
+  /* Siebensegment: Segmente a b c d e f g als Polygone in einer 40 x 70 Zelle */
+  var SEG={
+    a:'7,2 33,2 28,7 12,7', b:'34,3 38,7 38,32 34,35 29,31 29,8', c:'34,37 38,40 38,63 34,67 29,62 29,40',
+    d:'12,63 28,63 33,68 7,68', e:'6,37 11,40 11,62 6,67 2,63 2,40', f:'6,3 11,8 11,31 6,35 2,32 2,7', g:'7,35 12,31 28,31 33,35 28,39 12,39'
+  };
+  var MAP={'0':'abcdef','1':'bc','2':'abdeg','3':'abcdg','4':'bcfg','5':'acdfg','6':'acdefg','7':'abc','8':'abcdefg','9':'abcdfg',' ':'','-':'g'};
+  function zelle(ch,klein){
+    var on=MAP[ch]||'',s='<svg viewBox="0 0 40 70" class="'+(klein?'klein':'')+'" aria-hidden="true">';
+    for(var k in SEG)s+='<polygon class="seg'+(on.indexOf(k)>-1?' an':'')+'" points="'+SEG[k]+'"/>';
+    return s+'</svg>';
+  }
+  function komma(){return '<svg viewBox="0 0 12 70" aria-hidden="true"><polygon class="seg an" points="3,60 10,60 10,67 5,74 3,74 5,67 3,67"/></svg>'}
+  function anzeige(el,preis){
+    var t=preis.toFixed(2).split('.'),ganz=t[0].padStart(3,' ');
+    var h='';for(var i=0;i<ganz.length;i++)h+=zelle(ganz[i]);
+    h+=komma()+zelle(t[1][0],1)+zelle(t[1][1],1);
+    el.innerHTML=h+'<span class="vh">'+euro.format(preis)+'</span>';
+  }
+  function geraet(r){
+    if(/PlayStation/.test(r.n))return ['Sony PlayStation 4','Wartung und Reinigung'];
+    if(/Diagnose/.test(r.n))return [r.h+' Mainboard','Diagnose mit Kostenvoranschlag'];
+    var name=(r.h+' '+(r.m||r.n.replace(r.h,'').replace(/(Mainboard-|Logicboard-)?Reparatur.*$/,''))).trim();
+    return [name,r.t?'Platine '+r.t:'Reparatur'];
+  }
+  var ul=document.getElementById('reihen');
+  var reihen=D.reparaturen.filter(function(r){return r.p>=59}).sort(function(a,b){return b.p-a.p});
+  reihen.forEach(function(r){
+    var li=document.createElement('li');li.className='reihe';
+    var g=geraet(r);
+    li.innerHTML='<span class="schild"><span class="n"></span><small></small></span><span class="ziffern"></span><a href="'+r.u+'">Buchen</a>';
+    li.querySelector('.n').textContent=g[0];li.querySelector('small').textContent=g[1];
+    li.querySelector('a').setAttribute('aria-label',r.n+' buchen');
+    anzeige(li.querySelector('.ziffern'),r.p);
+    li.dataset.such=(r.n+' '+r.m+' '+r.t+' '+r.h).toLowerCase().replace(/[\s\-_]/g,'');
+    ul.appendChild(li);
+  });
+  document.querySelectorAll('.diag-tafel .ziffern').forEach(function(el){anzeige(el,parseFloat(el.dataset.preis))});
+  document.querySelectorAll('[data-teile]').forEach(function(el){el.textContent=D.teile[el.dataset.teile]});
+
+  var f=document.getElementById('filter'),q=document.getElementById('modell'),h=document.getElementById('hinweis'),grund=h.textContent;
+  function filtern(){
+    var v=q.value.toLowerCase().replace(/[\s\-_]/g,''),n=0;
+    ul.querySelectorAll('.reihe').forEach(function(li){var an=!v||li.dataset.such.indexOf(v)>-1;li.classList.toggle('aus',!an);li.setAttribute('aria-hidden',an?'false':'true');if(an)n++});
+    if(!v){h.textContent=grund;return}
+    if(!n){h.innerHTML='Kein Festpreis für „<span></span>“. <a href="../../notebook-reparatur/anfrage/">Diagnose oder Anfrage</a> klärt den Preis.';h.querySelector('span').textContent=q.value;return}
+    h.textContent=n+(n==1?' Preis passt zu Ihrer Eingabe.':' Preise passen zu Ihrer Eingabe.');
+  }
+  q.addEventListener('input',filtern);
+  f.addEventListener('reset',function(){setTimeout(filtern,0)});
+  f.addEventListener('submit',function(e){e.preventDefault();filtern();var a=ul.querySelector('.reihe:not(.aus) a');if(a)a.focus()});
+})();
+</script>
+</body>
+</html>
